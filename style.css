@@ -63,7 +63,7 @@ align-items: center;
     transition: all 0.3s ease 0s;
 }
 .lin li a:hover{
-    color: green;
+    color: greenyellow;
 }
 .lin{
     position: fixed;
