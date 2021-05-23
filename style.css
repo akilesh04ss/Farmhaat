@@ -1,16 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Recursive:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Reggae+One&display=swap');
+
 *{
     margin: 0;
     background-color: rgba(253, 249, 249, 0) !important;
-    /* opacity: 2%; */
 }
  
 body{
     margin: 0;
     padding: 0;
-    /* background-image:url(bk.gif) !important  ;
-    background-size:cover; */
+
     
 }
 .back{
@@ -19,7 +19,9 @@ body{
     height: 657px;
     z-index: -1;
     opacity: 0.9;
+    filter: blur(150%);
 }
+
 .head{
     box-sizing:border-box;
     margin: 0;
@@ -362,6 +364,8 @@ label #cancel{
     position: absolute;
     color: white;
     bottom: 340px;
+    font-family: 'Reggae+One', serif;
+    font-weight: 100px;
     letter-spacing: 5px;
     left: 200px;
     top: 260px;
