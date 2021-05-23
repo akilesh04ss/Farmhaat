@@ -1,23 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Recursive:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Reggae+One&display=swap');
-
 *{
     margin: 0;
+    padding: 0;
     background-color: rgba(253, 249, 249, 0) !important;
 }
- 
 body{
     margin: 0;
-    padding: 0;    
-}
-.back{
-    position: absolute;
-    width: 1366px;
-    height: 625px;
-    z-index: -1;
-    opacity: 0.9;
-    filter: blur(150%);
+    padding: 0;
 }
 
 .head{
@@ -25,18 +16,14 @@ body{
     margin: 0;
     padding: 0;
     bottom: 10px;
+    background-color: #042331 !important;
 
-}
-.we{
-    font-family: 'Recursive', sans-serif;
-    font-weight: 500px;
-    font-size: 100%;
 }
 li,a, button{
     font-family: 'Red Hat Display', sans-serif;
     font-weight: bold;
     font-size: 20px;
-    color: #ececec;
+    color: bisque;
     text-decoration: none;
 }
 header {
@@ -45,13 +32,7 @@ header {
     align-items: center;
     padding: 10px 15px;
 }
-.logo{
-cursor: pointer;
-    position: relative;
-    left: 0px;
-    border-radius: 50%;
-    border: 1px rgb(8, 238, 65) solid;
-}
+
 .lin li{
 list-style: none;
 align-items: center;
@@ -78,7 +59,7 @@ align-items: center;
     display:inline-block !important;
     width: 0;
     height: 2px;
-    background-color:#fff ;
+    background-color:black ;
     transition: width .3s;
 }
 .lin>li>.co:hover::after{
@@ -93,7 +74,7 @@ transition: width .3s;
         display:inline-block;
         width: 0;
         height: 2px;
-    background-color:#fff ;
+    background-color:black ;
     transition: width .3s;
 }
 .lin>li>.o:hover::after{
@@ -108,29 +89,12 @@ transition: width .3s;
     display:inline-block;        
     width: 0;        
     height: 2px;
-    background-color:white ;
+    background-color:black ;
     transition: width .3s;
 }        
 .lin>li>.oc:hover::after{
     width: 100%;
     transition: width .3s;
-}
-.we{
-    position: relative;
-    left: -200px;
-    bottom: -140px;
-    cursor: pointer;
-    transition: all 0.3s ease 0s;
-    transition-property: color;
-    
-}
-.we a:hover{
-    color: white;
-    text-shadow: 0 0 10px greenyellow,
-                 /* 0 0 20px #fff, */
-                 0 0 40px greenyellow,
-                 0 0 80px greenyellow;
-                 /* 0 0 120px #fff; */
 }
 .cta{
     position:relative;
@@ -163,8 +127,8 @@ button::before{
     left: 0px;
     width: 10px;
     height: 10px;
-    border-top: 2px solid #21ebff;
-    border-left: 2px solid #21ebff;
+    border-top: 2px solid #21ebff !important;
+    border-left: 2px solid #21ebff !important;
     transition: 0.5s;  
 }
 button:hover:before{
@@ -203,7 +167,7 @@ button{
     
 .sidebar header {
         font-size: 35px;
-        color: white;
+        color: black ;
         text-align: right;
         line-height: 70px;
         background-color: #063146;
@@ -218,7 +182,7 @@ button{
         line-height: 65px;
         text-align: left;
         font-size: 20px;
-        color: white;
+        color: black !important;
         padding-right: 40px;
         box-sizing: border-box;
         border-top: 1px solid rgba(255, 255, 255, .1);
@@ -257,7 +221,7 @@ label #btn {
         right: 15px;
         top: 40px;
         font-size: 20px;
-        color: rgb(23, 235, 250);
+        color: rgb(23, 235, 250) !important;
         padding: 6px 12px;
         transition: all .5s;
 }
@@ -267,7 +231,7 @@ label #cancel {
         right: 100px;
         top: 65px;
         font-size: 30px;
-        color: white;
+        color: black !important;
         padding: 4px 9px;
         transition: all .5s ease;
 }
@@ -287,100 +251,4 @@ label #cancel{
 #check:checked~label #cancel {
         left: 1280px;
         
-}
-
-.social{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    margin: 0;
-    padding: 0;
-    display: flex;
-    position: relative;
-    bottom: -420px;
-
-}
-.social>a{
-  list-style: none;
-  position: relative;
-  width: 50px;
-  height: 50px;
-  display: block;
-  text-align: center;
-  margin: 0 10px;
-  border-radius: 50%;
-  padding: 6px;
-  box-sizing: border-box;
-  text-decoration: none;
-  box-shadow: 0 10px 15px
-  rgba(0,0,0,0.3);
-  background: linear-gradient(0deg,#ddd,#fff);
-  transition: 0.5s;
-  
-}   
-
-.social>a:hover{
-    box-shadow: 0 2px 5px
-    rgba(0,0,0,0.3);
-    transform: translate(0, -20px);
-    text-decoration: none;
-}
-
-
-.social >a >.fab{
-    list-style: none;
-    width: 100%;
-    height: 100%;
-    display: block;
-    background: linear-gradient(0deg,#fff,#ddd);
-    border-radius: 50%;
-    line-height: calc(43px - 1px);
-    font-size: 29px;
-    text-align:center;
-    justify-content:center;
-    color: #262626;
-    transition: 0.5s;
-    position: relative;
-}
-.social>a:nth-child(1):hover>.fab{
-   color: #3b5998;
-}
-.social>a:nth-child(2):hover>.fab{
-    color: #d6249f;
- }
- .social>a:nth-child(3):hover>.fab{
-    color: #075e54;
- }
- .social>a:nth-child(4):hover>.fab{
-    color: #00acee;
- }
- .social>a:nth-child(5):hover>.fab{
-     color:  #c4302b;
- }
-.ce{
-    position: absolute;
-    color: white;
-    bottom: 340px;
-    font-family: 'Reggae+One', serif;
-    font-weight: 100px;
-    letter-spacing: 5px;
-    left: 100px;
-    top: 260px;
-    font-size: 4ch;
-}
-.button{
-    position: relative;
-    bottom: -150px;
-    left: 500px;
-}
-h1{
-font-size:7ch;
-}
-.end{
-    position: absolute;
-    bottom: 20px;
-    left: 700px;
-    font-size: 2.7ch;
-    color: white;
 }
