@@ -537,6 +537,7 @@ footer{
     height: 300px;
     background: #111 !important;
     color: #78fee0;
+    font-size: 20px !important;
 }
 .main-content{
     display: flex;
@@ -546,9 +547,18 @@ footer{
     padding: 10px 70px;
 }
 .box .h2{
-    font-size: 1.125rem;
+    font-size: 4ch;
     font-weight: 600;
     text-transform: capitalize;
+
+}
+.center>h2{
+    margin-bottom: 30px;
+    margin-left: 60px;
+}
+.left>h2{
+    margin-bottom: 30px;
+    margin-left: 60px;
 }
 .box .content{
     margin: 20px 0 0 0;
@@ -586,29 +596,29 @@ footer{
 }
 .ctas{
     position: absolute;
-    top: 150px;
-    left: 650;
+    top: 200px;
+    left: 550px;
 }
-textarea{
-    background: white !important;
-    /* border-radius: 30px; */
+.right>h2{
+    font-size: 20px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font-weight: 600 !important;
+    margin-left: 20px;
 }
-input{
-    background: white !important;
-    /* border-radius: 10px; */
+.contents ul li{
+    margin-bottom: 10px;
+    list-style: none;
+    margin-left: 50px;
+    font-weight: 600;
+    font-size: 20px !important;
 }
-.msg{
-    padding: 3px 10px;
+.contents ul li a{
+    font-weight: 600;
+    font-size: 20px !important;
+    color: #78fee0 !important;
 }
-.usr{
-    padding: 5px 10px;
-}
-.btns{
-    position: absolute;
-    /* top: 123px; */
-    bottom: 20;
-    left: 1000px;
-}
+
 /* .circle {
     border: 0px solid;
     border-radius:  15px 50px;

@@ -1,11 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+}
 body{
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-    background: #34495e;
+    /* background: #34495e; */
+       background-color:#84fab0; 
+    /* background-color: #8fd3f4 !important;  */
+    /* background:-webkit-linear-gradient(right,#8fd3f4,#84fab0) ; */
 }
 .box{
     width: 300px;
+    height: 300px;
     padding: 40px;
     position: absolute;
     top: 50%;
@@ -18,8 +26,12 @@ body{
     color: white;
     text-transform: uppercase;
     font-weight: 500;
+    position: relative;
+    bottom: 20px;
+    left: -10px;
+    padding: 0px;
 }
-.box input[type ="text"], .box input[type = "password"]{
+.box input[type ="text"],.box input[type = "password"] {
     border: 0;
     background: none;
     display: block;
@@ -33,6 +45,8 @@ body{
     border-radius: 24px;
     transition: 0.25s;
 }
+
+
 .box input[type ="text"]:focus , .box input[type = "password"]:focus{
   width: 300px;
   border: 1px solid #2ecc71 !important;
@@ -67,7 +81,7 @@ body{
     cursor: pointer; 
     position: absolute;
     left: 200px;
-    top: 290px; 
+    top: 310px; 
 }
 .box input[type ="button"]:hover{
     background: #2ecc71;
@@ -75,7 +89,7 @@ body{
 .sign{
     color: white;
     position: absolute;
-    bottom: 10px;
+    bottom: 30px;
     left: 100px;
 }
 /* li a button{
