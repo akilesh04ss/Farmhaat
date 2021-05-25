@@ -195,7 +195,7 @@ button{
 .sidebar {
         position: fixed;
         right: -300px;
-        width: 250px;
+        width: 290px;
         height: 51%;
         background-color: #042331;
         transition: all .5s ease;

@@ -7,13 +7,14 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
     <link rel="stylesheet" href="@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');">
-    <link rel="stylesheet" href="./stylep.css">
+    <link rel="stylesheet" href="./stylec.css">
     <link rel="stylesheet" href="./jquery.nice-number.css">
 </head>
 <body>
     <header >
         <div class="lj">
-             <img  class ="logo" src="/logonew.png" alt="logo" width="80px">   </div>
+             <img  class ="logo" src="/logonew.png" alt="logo" width="80px">   
+        </div>
                 
              <nav>
                  <ul class="lin">
@@ -22,13 +23,28 @@
                      <li><a class="co" href="./investors.html">Investors</a></li>
                      <li><a class="o" href="./about.html">About</a></li>
                  </ul>
-                 <a class = "cta" href="./feedback.html"><button>Cart</button></a>
-                 <a class = "cta" href="#"><button>Log out</button></a>
-                 
-             </nav>
-         </header>
-     </div>
- </div>
+                 <a class = "cta" href="./feedback.html"><button>Get in Touch</button></a>
+                </nav>
+        </div>
+    </header>
+</div>
+<input type="checkbox" id="check">
+    <label for="check">
+        <i class="fas fa-bars" id="btn"></i>
+        <i class="fas fa-times" id="cancel"></i>
+        
+        </label>
+    <div class="sidebar">
+        <header>Menu</header>
+        <ul>
+            <li><a href="#"><i class="fas fa-home"></i>Home</a></li>
+            <li><a href="./login.html"><i class="fas fa-user-circle"></i>User</a></li>
+            <li><a href="#"><i class="fas fa-cart-plus"></i>Cart</a></li>
+            <li><a href="./feedback.html"><i class="fas fa-truck-loading"></i>Ordered item</a></li>
+            <li><a href="#"><i class="fas fa-sign-out-alt"></i>Log out</a></li>
+        </ul>
+    </div>
+
  <div class="container">
      <div class="card">
          <div class="imgBx">
@@ -51,7 +67,11 @@
                 <h3>Price(Rs/kg) :</h3>
                 <span>200.00</span>
             </div>
-            <a href="#">cart it!</a>
+            <div class="tprice">
+                <h3> Total Price(Rs) :</h3>
+                <span>200.00</span>
+            </div>
+            <a href="#">Buy</a>
          </div>
      </div>
  </div>
