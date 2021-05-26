@@ -37,6 +37,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6CFA89', end
     background-color: #042331 !important;
 
 }
+
 li,a, button{
     font-family: 'Red Hat Display', sans-serif;
     font-weight: bold;
@@ -85,33 +86,36 @@ align-items: center;
 width: 100%;
 transition: width .3s;
 }
-.lin>li>.o::after{
+.lin>li>.oc::after{
     content: '';
     position: relative;
     left: 0px;
         top: -15px;
         display:inline-block;
-        width: 0;
+        width: 0%;
         height: 2px;
     background-color:white ;
     transition: width .3s;
 }
-.lin>li>.o:hover::after{
+.lin>li>.oc:hover:after{
     width: 100%;
     transition: width .3s;
 }
-.lin>li>.oc{
-    color: greenyellow !important;
-}
-.lin>li>.oc::after{
+.lin>li>.o::after{
     content: '';
     position: relative;
     left: 0px;
     bottom: 15px;
     display:inline-block;        
-    width: 100%;        
+    width: 0%;        
     height: 2px;
-    background-color:white ;}        
+    background-color:white ;
+    transition: width .3s;
+}        
+.lin>li>.o:hover::after{
+    width: 100%;
+    transition: width .3s;
+}
 .lin>li>.oce::after{
     content: '';
     position: relative;
@@ -180,206 +184,62 @@ button{
     left: 0px;
     bottom: 20px;
 }
-.sidebar {
-    position: fixed;
-    right: -300px;
-    width: 290px;
-    height: 70%;
-    background-color: rgba(253, 249, 249, 0)  !important;
-    transition: all .5s ease;
+.con{
+    margin: 60px auto;
+    border: 5px double gray;
+    width: 70%;
+    height: 550px;
 }
-
-.sidebar header {
-    font-size: 35px;
-    color: white;
-    text-align: right;
-    line-height: 70px;
-    background-color: rgba(253, 249, 249, 0) !important;
-    padding-left: 0px;
-    user-select: none;
-}
-
-.sidebar ul a {
-    display: block;
-    height: 100%;
-    width: 100%;
-    line-height: 65px;
-    text-align: left;
-    font-size: 20px;
-    color: white;
-    padding-right: 40px;
-    box-sizing: border-box;
-    border-top: 1px solid rgba(255, 255, 255, .1);
-    border-bottom: 1px solid black;
-    transition: .4s;
-}
-ul>li{
-    list-style: none;
-}
-ul>li>a:hover .fas {
-    padding-left: 40px;
-}
-
-.sidebar ul a i {
-    margin-right: 16px;
-    font-size: 20px;
-}
-
-#check {
-    display: none;
-}
-
-label #btn {
-    position: absolute;
-    cursor: pointer;
-    background-color: #e76892d7;
-    border-radius: 3px;
-}
-
-label #cancel {
-    position: absolute;
-    cursor: pointer;
-    background-color: #e76892d7;
-    border-radius: 3px;
-}
-
-label #btn {
-    right: 15px;
-    top: 30px;
-    font-size: 20px;
-    color: rgb(23, 235, 250);
-    padding: 6px 12px;
-    transition: all .5s;
-}
-
-label #cancel {
-    z-index: 1111;
-    right: 100px;
-    top: 65px;
-    font-size: 30px;
-    color: white;
-    padding: 4px 9px;
-    transition: all .5s ease;
-}
-label #cancel{
-    position: relative;
-}
-
-#check:checked~.sidebar {
-    right: 0px;
-}
-
-#check:checked~label #btn {
-    right: 0px;
-    opacity: 0;
-    pointer-events: none;
-}
-#check:checked~label #cancel {
-    left: 1280px;
-    
-}
-.container{
-    font-family: 'Poppins', sans-serif;
-    position: relative;
+table{
+    font-size: 1.3rem !important;
+    width: 80%;
+    border-collapse: collapse;
     display: flex;
-    position: absolute;
-    left: 100px;
-    top: 150px;
+    flex-wrap: wrap;
+    margin: 0px;
 }
-.container .card{
+.inf{
     position: relative;
-    width: 320px;
-    height: 600px;
-    background: #232323 !important;
-    border-radius: 20px;
-    overflow: hidden;
-}
-.container .card::before{
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: #9bdc28;
-    clip-path: circle(150px at 80% 20%);
-    transition: 0.5s ease-in-out;
-}
-.container .card:hover:before{
-    clip-path: circle(300px at 80% -20%);
-}
-.container .card::after{
-    content: 'Coir Brick';
-    position: absolute;
-    left: 05%;
-    top: 47%;
-    width: 100%;
-    height: 100%;
-    font-size: 7em;
-    font-weight: 800;
-    font-style: italic;
-    color: rgba(255, 255, 255, 0.04) !important;
-}
-.container .card .imgBx{
-    position: absolute;
-    top:30%;
-    transform: translateY(-50%);
-    z-index: 10000;
-    width: 100%;
-    height: 220px;
-    transition: 0.5s;
+    left: 200px;
+    bottom: 200px;
+    font-size: 22px;
 }
 
-.container .card .imgBx img{
-    position: absolute;
-    top:40%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    width: 250px;
-}
-.container .card .contentBx{
-    position: absolute;
-    bottom: 240px;
-    width: 100%;
-    height: 60px;
-    text-align: center;
-    transition: 1s;
-    z-index: 10;
-}
-.container .card .contentBx h2{
+td{
     position: relative;
-    font-weight: 600;
-    letter-spacing: 1;
-    color: #fff;
-}
-.container .card .contentBx .quantity,
-.container .card .contentBx .price,
-.container .card .contentBx .tprice{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px 20px;
-    opacity: 1;
+    left: -50px;
+    padding: 15px  00px 5px 5px;
 }
 
-.container .card .contentBx .quantity h3,
-.container .card .contentBx .tprice h3{
-    color: #fff;
-    font-weight: 300;
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-right: 10px;
+.sa{
+    font-size: 1.3rem !important;
+    position: relative;
+    top: 400px;
+    left: 160px;
 }
-.container .card .contentBx .price h3{
-    color: #fff;
-    font-weight: 300;
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-right: 150px;
+.sa>a{
+    font-size: 25px;
 }
-.container .card .contentBx .quantity input{
+.btnss{
+    position: relative;
+    top:170px;
+    left:450px;
+    background-color: #21ebff !important;
+    color: #111;
+    border: 2px solid black;
+    border-radius: 50px;
+}
+.inf>h1{
+    position: relative;
+    bottom: 180px;
+    left: 250px;
+}
+small{
+    position: relative;
+    bottom: 160px;
+    left: 250px;
+}
+.con table tr td .inf input{
     width: 40px;
     font-size: 14px;
     margin: 0 5px;
@@ -387,8 +247,11 @@ label #cancel{
     border: none;
     outline: none;
     background: #fff !important;
+    position: relative;
+    left:360px;
+    bottom:160px;
 }
-.container .card .contentBx .quantity   button{
+.con table tr td .inf   button{
     background-color: white !important;
     margin:  0 05px;
     padding: 0 5px;
@@ -398,59 +261,33 @@ label #cancel{
     border-radius: 8px;
     font-size: 20px;
     color: #111 !important;
-    top:0px;
+    position: relative;
+    left:360px;
+    bottom:160px;
 }
-.container .card .contentBx .quantity   button:hover{
-    box-shadow: 0 0 0px ;
+.inf>p{
+    position: relative;
+    bottom:140px;
+    left:250px;
+    font-size: 18px;
 }
-
-.container .card .contentBx .price span{
-    width: 56px;
-    height: 26px;
-    text-align: center;
-    line-height: 26px;
-    font-size: 14px;
-    display: inline-block;
-    color: #111 !important;
-    background: #fff !important;
-    margin: 0 45px;
-    transition: 0.5s;
-    border-radius: 4px;
-    position: absolute;
-    left: 50%;
-}
-.container .card .contentBx .tprice span{
-    width: 56px;
-    height: 26px;
-    text-align: center;
-    line-height: 26px;
-    font-size: 14px;
-    display: inline-block;
-    color: #111 !important;
-    background: #fff !important;
-    margin: 0 35px;
-    transition: 0.5s;
-    border-radius: 4px;
-}
-.container .card .contentBx .quantity span:hover,
-.container .card .contentBx .price span:hover,
-.container .card .contentBx .tprice span:hover{
-    background: #9bdc28 !important;
-}
-.container .card .contentBx a{
-    display: inline-block;
-    padding: 10px 10px;
-    background: #fff !important;
-    border-radius: 4px;
-    margin-top: 10px;
-    text-decoration: none;
-    font-weight: 600;
-    color: #111;
-    opacity: 1;
+td img{
+    width: 300px;
+    height: 300px;
+     margin-left: 150px; 
+    margin-right: 10px;
+    position: relative;
+    bottom: 120px;
+    left: -50px;
+    border: 2px solid;
+    border-radius: 15px 50px;
+    -webkit-box-shadow: 5px 5px 10px 7px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 5px 5px 10px 7px rgba(0, 0, 0, 1);
+    box-shadow: 5px 5px 10px 7px rgba(0, 0, 0, 1);
 }
 footer{
     position: absolute;
-    bottom: -1200px;
+    bottom: -550px;
     width: 100%;
     height: 300px;
     background: #111 !important;
@@ -462,7 +299,7 @@ footer{
 }
 .main-content .box{
     flex-basis: 50%;
-    padding: 10px 70px;
+    padding: 10px 50px;
 }
 .box .h2{
     font-size: 4ch;
@@ -515,7 +352,7 @@ footer{
 .ctas{
     position: absolute;
     top: 200px;
-    left: 550px;
+    left: 500px;
 }
 .right>h2{
     font-size: 20px;
@@ -536,6 +373,3 @@ footer{
     font-size: 20px !important;
     color: #78fee0 !important;
 }
-
-
-

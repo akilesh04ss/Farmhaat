@@ -5,10 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./stylevd.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
-    <link rel="stylesheet" href="@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');">
-    <link rel="stylesheet" href="./stylec.css">
-    <link rel="stylesheet" href="./jquery.nice-number.css">
 </head>
 <body>
     <header >
@@ -28,54 +26,42 @@
         </div>
     </header>
 </div>
-<input type="checkbox" id="check">
-    <label for="check">
-        <i class="fas fa-bars" id="btn"></i>
-        <i class="fas fa-times" id="cancel"></i>
-        
-        </label>
-    <div class="sidebar">
-        <header>Menu</header>
-        <ul>
-            <li><a href="#"><i class="fas fa-home"></i>Home</a></li>
-            <li><a href="./login.html"><i class="fas fa-user-circle"></i>User</a></li>
-            <li><a href="#"><i class="fas fa-cart-plus"></i>Cart</a></li>
-            <li><a href="./feedback.html"><i class="fas fa-truck-loading"></i>Ordered item</a></li>
-            <li><a href="#"><i class="fas fa-sign-out-alt"></i>Log out</a></li>
-        </ul>
-    </div>
-
- <div class="container">
-     <div class="card">
-         <div class="imgBx">
-             <img src="./oir.jpg" alt="coir brick">
-         </div>
-         <div class="contentBx">
-             <h2>Coir Brick</h2>
-             <div class="quantity">
-                 <h3>Quantity(kg) :</h3>
-                 <input type="number" value="1" min="1">
-                 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
-                 <script  src="./jquery.nice-number.js"></script>
-                 <script>$(function(){
-
-                    $('input[type="number"]').niceNumber();
-                  
-                  });</script>
-             </div>
-             <div class="price">
-                <h3>Price(Rs/kg) :</h3>
-                <span>200.00</span>
-            </div>
-            <div class="tprice">
-                <h3> Total Price(Rs) :</h3>
-                <span>200.00</span>
-            </div>
-            <a href="#">Buy</a>
-         </div>
-     </div>
- </div>
- <footer>
+<div class="con">
+    <table>
+        <tr><td>
+            <img src="./oir.jpg" alt="">
+            <div class="inf">
+                <h2>Coir Brick</h2>
+                <small>Price: 200</small>
+                <br>
+            </div></td>
+            <td>
+               <p class="rp">Ordered Date: 19th April</p> 
+            </td>
+            <td>
+                <p class="pr">Delivery Date: 20th April</p> 
+             </td>
+        </tr>
+        <tr>
+            <p class="qw">Quantity:2</p>
+        </tr>
+        <tr>
+            <p class="ad">Adrress: <br> 2/827,Vellagoundan Thottam, Ganapathipalayam,Tirupur-5</p>
+        </tr>
+    
+        <tr>
+            <p class="sa">Description:<br>* It will come in brick form of 5 KG. <br>
+                * Useful for potting mix, maintain water level.<br>
+                * Put directly into the water to convert it into powder form.<br>
+                * Useful for indoor & outdoor potted plants.</p>
+           
+        </tr>
+        <tr>
+            <button class="btnss">Feedback</button>
+        </tr>
+    </table>
+</div>
+<footer>
     <div class="main-content">
         <div class="left box">
             <h2>Contact us</h2>

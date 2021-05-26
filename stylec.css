@@ -245,9 +245,9 @@ td img{
 }
 .line {
     border-top:  1px solid #dddfe6 !important;
-    width: 1030px;
+    width: 990px;
     position: relative;
-    left: 50px;
+    left: 100px;
     top: 130px;
     max-width: 1050px
 }
@@ -308,7 +308,7 @@ footer{
 }
 .main-content .box{
     flex-basis: 50%;
-    padding: 10px 70px;
+    padding: 10px 50px;
 }
 .box .h2{
     font-size: 4ch;
@@ -361,7 +361,7 @@ footer{
 .ctas{
     position: absolute;
     top: 200px;
-    left: 550px;
+    left: 500px;
 }
 .right>h2{
     font-size: 20px;

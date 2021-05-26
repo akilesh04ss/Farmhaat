@@ -184,190 +184,100 @@ button{
     left: 0px;
     bottom: 20px;
 }
-
-
-
-.cart{
+.con{
     margin: 60px auto;
+    border: 5px double gray;
+    width: 70%;
+    height: 400px;
 }
 table{
-    width: 100%;
+    font-size: 1.3rem !important;
+    width: 80%;
     border-collapse: collapse;
-}
-.info{
     display: flex;
     flex-wrap: wrap;
     margin: 0px;
 }
-th{
+.inf{
     position: relative;
-    left: 50px;
-    text-align: left;
-    padding: 05px;
-    color: #fff !important;
-    background: #ff523b !important;
-    font-weight: normal;
+    left: 200px;
+    bottom: 200px;
+    font-size: 22px;
 }
-.dd{
-    position: relative;
-    left: -190px;
-}
+
 td{
     position: relative;
-    left: -100px;
-    padding: 15px  00px 5px 15px;
+    left: -50px;
+    padding: 15px  00px 5px 5px;
 }
+
  .pr{
     position: relative;
-    left: -400px;
+    left: 200px;
+    font-size: 1.3rem !important;
+    bottom: 135px;
 }
-.price{
+.rp{
     position: relative;
-    left: -580px;
+    left: 150px;
+    font-size: 1.3rem !important;
+    bottom: 135px;
 }
-.rs{
+.qw{
+    position: absolute;
+    left: 340px;
+    font-size: 1.3rem !important;
+    top: 300px;
+}
+.ad{
+    position: absolute;
+    left: 340px;
+    top:340px;
+    font-size: 1.3rem !important;
+}
+.sa{
+    font-size: 1.3rem !important;
     position: relative;
-    left:-370px;
+    top: 230px;
+    left: 160px;
 }
-.line {
-    border-top:  1px solid #dddfe6 !important;
-    width: 680px;
+.btnss{
     position: relative;
-    left: 50px;
-    top: 110px;
-    max-width: 1050px
+    top:210px;
+    left:650px;
+    background-color: #21ebff !important;
+    color: #111;
 }
-td a{
-    color: #ff52ff !important;
-    font-size: 12px;
-    position: relative;
-    left: -350px;
-}
+btnss:hover{
+    border-radius: 50px;
+    box-shadow: 0 0 50px #21ebff;
+    transition-delay: 0.5s;
+    }
+
 td img{
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
      margin-left: 150px; 
     margin-right: 10px;
+    position: relative;
+    bottom: 120px;
+    left: -50px;
 } 
-.containerc {
-    font-family: 'Poppins', sans-serif;
-    position: relative;
-    display: flex;
-    position: absolute;
-    left: 700px;
-    top: 200px;
-}
-.containerc .sim{
-    position: relative;
-    font-weight: 600;
-    letter-spacing: 1;
-    color: #fff;
-    top:-50px;
-    left: 230px;
-}
-.containerc .sim:hover{
-    color: rgb(126, 114, 114);
-}
-.containerc .card{
-    position: relative;
-    width: 270px;
-    height: 300px;
-    background: #232323 !important;
-    border-radius: 20px;
-    overflow: hidden;
-}
-.containerc .card::before{
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: #9bdc28;
-    clip-path: circle(150px at 80% 20%);
-    transition: 0.5s ease-in-out;
-}
-.containerc .card:hover:before{
-    clip-path: circle(300px at 80% -20%);
-}
-.containerc .card::after{
-    content: 'Coir Brick';
-    position: absolute;
-    left: 05%;
-    top: 40%;
-    width: 100%;
-    height: 100%;
-    font-size: 5em;
-    font-weight: 800;
-    font-style: italic;
-    color: rgba(255, 255, 255, 0.04) !important;
-}
-.containerc .card .imgBx{
-    position: absolute;
-    top:30%;
-    transform: translateY(-50%);
-    z-index: 10000;
-    width: 70%;
-    height: 220px;
-}
-.containerc .card .imgBx img{
-    position: absolute;
-    top:60%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    width: 150px;
-}
-.containerc .card .contentBx{
-    position: absolute;
-    bottom: 40px;
-    width: 100%;
-    height: 60px;
-    text-align: center;
-    transition: 1s;
-    z-index: 10;
-}
-
-.containerc .card .contentBx h2{
-    position: relative;
-    font-weight: 600;
-    letter-spacing: 1;
-    color: #fff;
-}
-
-.containerc .card .contentBx  a{
-    background-color: white !important;
-    margin:  0 05px;
-    padding: 0 5px;
-    width: 40px;
-    border: none;
-    outline: none;
-    border-radius: 8px;
-    font-size: 20px;
-    color: #111 !important;
-    position: relative;
-    top:30px;
-}
-.containerc .card .contentBx a:hover{
-    box-shadow: 0 0 0px ;
-}
-
-
 footer{
     position: absolute;
-    bottom: auto;
+    bottom: -550px;
     width: 100%;
     height: 300px;
     background: #111 !important;
     color: #78fee0;
     font-size: 20px !important;
-    margin-top: 150px;
 }
 .main-content{
     display: flex;
 }
 .main-content .box{
     flex-basis: 50%;
-    padding: 10px 70px;
+    padding: 10px 50px;
 }
 .box .h2{
     font-size: 4ch;
@@ -420,7 +330,7 @@ footer{
 .ctas{
     position: absolute;
     top: 200px;
-    left: 550px;
+    left: 500px;
 }
 .right>h2{
     font-size: 20px;

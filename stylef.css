@@ -17,7 +17,6 @@ body{
 .container{
     background: #fff;
     width: 800px;
-    /* height: auto; */
     max-width: 800px;
     padding: 25px 40px 10px 40px;
     position: absolute;

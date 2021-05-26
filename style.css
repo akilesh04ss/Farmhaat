@@ -4,7 +4,7 @@
 
 *{
     margin: 0;
-    background-color: rgba(253, 249, 249, 0) !important;
+    background-color: rgba(253, 249, 249, 0) !important;    
 }
  
 body{
@@ -13,8 +13,8 @@ body{
 }
 .back{
     position: absolute;
-    width: 1366px;
-    height: 625px;
+    width: 1241.5px;
+    height: 568px;
     z-index: -1;
     opacity: 0.9;
     filter: blur(150%);
@@ -52,69 +52,70 @@ cursor: pointer;
     border-radius: 50%;
     border: 1px rgb(8, 238, 65) solid;
 }
+
 .lin li{
-list-style: none;
-align-items: center;
-    display: inline-flex;
+    list-style: none;
     align-items: center;
-    padding: 0px 10px;
-}
-.lin li a{
-    transition: all 0.3s ease 0s;
-}
-.lin li a:hover{
-    color: greenyellow;
-}
-.lin{
-    position: fixed;
-    left: 130px;
-    top: 35px;
-    
-}
-.lin>li>.co::after{
-    content: '';
-    position: relative;
-    top:-20px;
-    display:inline-block !important;
-    width: 0;
-    height: 2px;
-    background-color:#fff ;
-    transition: width .3s;
-}
-.lin>li>.co:hover::after{
-width: 100%;
-transition: width .3s;
-}
-.lin>li>.o::after{
-    content: '';
-    position: relative;
-    left: 0px;
-        top: -20px;
-        display:inline-block;
+        display: inline-flex;
+        align-items: center;
+        padding: 0px 10px;
+    }
+    .lin li a{
+        transition: all 0.3s ease 0s;
+    }
+    .lin li a:hover{
+        color: greenyellow;
+    }
+    .lin{
+        position: absolute;
+        left: 130px;
+        top: 35px;
+        
+    }
+    .lin>li>.co::after{
+        content: '';
+        position: relative;
+        top:-15px;
+        display:inline-block !important;
         width: 0;
         height: 2px;
-    background-color:#fff ;
-    transition: width .3s;
-}
-.lin>li>.o:hover::after{
+        background-color:white ;
+        transition: width .3s;
+    }
+    .lin>li>.co:hover::after{
     width: 100%;
     transition: width .3s;
-}
-.lin>li>.oc::after{
-    content: '';
-    position: relative;
-    left: 0px;
-    bottom: 20px;
-    display:inline-block;        
-    width: 0;        
-    height: 2px;
-    background-color:white ;
-    transition: width .3s;
-}        
-.lin>li>.oc:hover::after{
-    width: 100%;
-    transition: width .3s;
-}
+    }
+ .lin>li>.oc::after{
+        content: '';
+        position: relative;
+        left: 0px;
+            top: -15px;
+            display:inline-block;
+            width: 0%;
+            height: 2px;
+        background-color:white ;
+        transition: width .3s;
+    }
+    .lin>li>.oc:hover:after{
+        width: 100%;
+        transition: width .3s;
+    } 
+    .lin>li>.o::after{
+        content: '';
+        position: relative;
+        left: 0px;
+        bottom: 15px;
+        display:inline-block;        
+        width: 0%;        
+        height: 2px;
+        background-color:white ;
+        transition: width .3s;
+    }        
+    .lin>li>.o:hover::after{
+        width: 100%;
+        transition: width .3s;
+    }
 .we{
     position: relative;
     left: -200px;
@@ -127,10 +128,8 @@ transition: width .3s;
 .we a:hover{
     color: white;
     text-shadow: 0 0 10px greenyellow,
-                 /* 0 0 20px #fff, */
                  0 0 40px greenyellow,
                  0 0 80px greenyellow;
-                 /* 0 0 120px #fff; */
 }
 .cta{
     position:relative;
@@ -192,101 +191,101 @@ button{
     bottom: 10px;
 }
 
+
 .sidebar {
-        position: fixed;
-        right: -300px;
-        width: 290px;
-        height: 51%;
-        background-color: #042331;
-        transition: all .5s ease;
+    position: fixed;
+    bottom: 200px;
+    right: -300px;
+    width: 290px;
+    height: 51%;
+    background-color: #042331;
+    transition: all .5s ease;
 }
-    
+
 .sidebar header {
-        font-size: 35px;
-        color: white;
-        text-align: right;
-        line-height: 70px;
-        background-color: #063146;
-        padding-left: -100px;
-        user-select: none;
+    font-size: 35px;
+    color: white;
+    text-align: left;
+    line-height: 70px;
+    background-color: #063146;
+    padding-left: 20px;
+    user-select: none;
 }
-    
+
 .sidebar ul a {
-        display: block;
-        height: 100%;
-        width: 100%;
-        line-height: 65px;
-        text-align: left;
-        font-size: 20px;
-        color: white;
-        padding-right: 40px;
-        box-sizing: border-box;
-        border-top: 1px solid rgba(255, 255, 255, .1);
-        border-bottom: 1px solid black;
-        transition: .4s;
+    display: block;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    line-height: 65px;
+    text-align: left;
+    font-size: 20px;
+    color: white;
+    padding-left: 40px;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(255, 255, 255, .1);
+    border-bottom: 1px solid black;
+    transition: .4s;
 }
-    
-ul>li>a:hover .fas {
-        padding-left: 40px;
+
+.sidebar>ul li:hover a {
+    padding-left: 50px;
 }
-    
+
 .sidebar ul a i {
-        margin-right: 16px;
-        font-size: 20px;
+    margin-right: 16px;
+    font-size: 20px;
 }
-    
+
 #check {
-        display: none;
+    display: none;
 }
-    
+
 label #btn {
-        position: absolute;
-        cursor: pointer;
-        background-color: #e76892d7;
-        border-radius: 3px;
+    position: absolute;
+    cursor: pointer;
+    background-color: #e76892d7;
+    border-radius: 3px;
 }
-    
+
 label #cancel {
-        position: absolute;
-        cursor: pointer;
-        background-color: #e76892d7;
-        border-radius: 3px;
+    position: relative;
+    cursor: pointer;
+    background-color: #a17886d7;
+    border-radius: 3px;
 }
-    
+
 label #btn {
-        right: 15px;
-        top: 40px;
-        font-size: 20px;
-        color: rgb(23, 235, 250);
-        padding: 6px 12px;
-        transition: all .5s;
+    left: 1180px;
+    top: 35px;
+    font-size: 20px;
+    color: rgb(23, 235, 250);
+    padding: 6px 12px;
+    transition: all .5s;
 }
-    
+
 label #cancel {
-        z-index: 1111;
-        right: 100px;
-        top: 65px;
-        font-size: 30px;
-        color: white;
-        padding: 4px 9px;
-        transition: all .5s ease;
+    z-index: 1111;
+    right: 50px;
+    top: 0px;
+    font-size: 30px;
+    color: white ;
+    padding: 4px 9px;
+    transition: all .5s ease;
 }
-label #cancel{
-        position: relative;
-}
-    
+
 #check:checked~.sidebar {
-        right: 0px;
+    right: 0px;
 }
-    
+
 #check:checked~label #btn {
-        right: 0px;
-        opacity: 0;
-        pointer-events: none;
+    right: 0px;
+    opacity: 0;
+    pointer-events: none;
 }
+
 #check:checked~label #cancel {
-        left: 1280px;
-        
+    left: 1180px;
 }
 
 .social{
@@ -298,7 +297,7 @@ label #cancel{
     padding: 0;
     display: flex;
     position: relative;
-    bottom: -420px;
+    bottom: -380px;
 
 }
 .social>a{
@@ -380,7 +379,7 @@ font-size:7ch;
 .end{
     position: absolute;
     bottom: 20px;
-    left: 700px;
+    left: 600px;
     font-size: 2.7ch;
     color: white;
 }

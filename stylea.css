@@ -186,7 +186,7 @@ button{
     font-size: 5ch;
     position: absolute;
     left:40px;
-    bottom: 400px;
+    bottom: 350px;
 }
 .our>p::after{
     content: '';
@@ -258,7 +258,7 @@ button{
 }
 .imge{
     position: absolute;
-    left: 890px;
+    left: 800px;
     bottom: -450px;
     width: 350px ;
     border: 2px solid;
@@ -290,8 +290,7 @@ button{
   box-shadow: 0 10px 15px
   rgba(0,0,0,0.3);
   background: linear-gradient(0deg,#ddd,#fff);
-  transition: 0.5s;
-  
+  transition: 0.5s;  
 }   
 
 .icon>a:hover {
@@ -318,7 +317,7 @@ button{
 
 .icon>.re{
     position: absolute;
-    right: 1150px;
+    right: 1100px;
     bottom: -750px;
     width: 90px;
   height: 100px;
@@ -329,14 +328,14 @@ button{
 
 .icon>.best{
     position: absolute;
-    right:940px;
+    right:900px;
     bottom: -740px;
     display: flexbox;
     font-size: 2.5ch;   
 }
 .icon>.cycle{
     position: absolute;
-    right:975px;
+    right:930px;
     bottom: -730px;
     font-size: 3ch;
 }
@@ -492,7 +491,7 @@ button{
 }
 .icon>.org{
     position: absolute;
-    right: 1150px;
+    right: 1100px;
     bottom: -900px;
     width: 90px;
   height: 100px;
@@ -503,14 +502,14 @@ button{
 
 .icon>.proo{ 
     position: absolute;
-    right:1000px;
+    right:960px;
     bottom: -900px;
     display: flexbox;
     font-size: 2.5ch;   
 }
  .icon>.organic{
     position: absolute;
-    right:995px;
+    right:960px;
     bottom: -890px;
     font-size: 3ch;
 }
@@ -525,6 +524,7 @@ button{
         text-shadow: 2px 2px 2px gray;
     background-color:black ;
 }
+
 footer{
     position: absolute;
     bottom: -1200px;
@@ -539,7 +539,7 @@ footer{
 }
 .main-content .box{
     flex-basis: 50%;
-    padding: 10px 70px;
+    padding: 10px 50px;
 }
 .box .h2{
     font-size: 4ch;
@@ -592,7 +592,7 @@ footer{
 .ctas{
     position: absolute;
     top: 200px;
-    left: 550px;
+    left: 500px;
 }
 .right>h2{
     font-size: 20px;
