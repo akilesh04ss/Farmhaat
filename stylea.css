@@ -328,7 +328,7 @@ button{
 
 .icon>.best{
     position: absolute;
-    right:900px;
+    right:950px;
     bottom: -740px;
     display: flexbox;
     font-size: 2.5ch;   
@@ -387,7 +387,7 @@ button{
 }  
 .icon>.thumb{
     position: absolute;
-    right: 380px;
+    right: 340px;
     bottom: -750px;
     width: 90px;
   height: 100px;
@@ -397,14 +397,14 @@ button{
 }
 .icon>.good{ 
     position: absolute;
-    right:120px;
+    right:100px;
     bottom: -720px;
     display: flexbox;
     font-size: 2.5ch;   
 }
  .icon>.prod{
     position: absolute;
-    right:275px;
+    right:255px;
     bottom: -710px;
     font-size: 3ch;
 }
@@ -421,7 +421,7 @@ button{
 }
 .icon>.cl{
     position: absolute;
-    right: 375px;
+    right: 340px;
     bottom: -900px;
     width: 90px;
   height: 100px;
@@ -432,14 +432,14 @@ button{
 
 .icon>.ity{ 
     position: absolute;
-    right:185px;
+    right:160px;
     bottom: -870px;
     display: flexbox;
     font-size: 2.5ch;   
 }
  .icon>.qual{
     position: absolute;
-    right:275px;
+    right:250px;
     bottom: -860px;
     font-size: 3ch;
 }
@@ -605,6 +605,7 @@ footer{
     margin-bottom: 10px;
     list-style: none;
     margin-left: 50px;
+    font-family: 'Roboto', sans-serif !important;
     font-weight: 600;
     font-size: 20px !important;
 }
