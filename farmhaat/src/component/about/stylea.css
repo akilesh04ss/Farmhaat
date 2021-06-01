@@ -9,8 +9,7 @@
 body{
     margin: 0;
     padding: 0;
-    background-color: #85FFBD;
-background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
+    background-image: linear-gradient(to right, #92fe9d 0%, #00c9ff 100%);
 }
 
 .head{
@@ -176,6 +175,8 @@ button{
 .our>p{
     font-size: 5ch;
     position: absolute;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif !important;
+    font-style: italic;
     left:40px;
     bottom: 350px;
 }
@@ -194,10 +195,11 @@ button{
     width: 60%;
     position: absolute;
     left: 30px;
-    bottom: -640px;
+    bottom: -700px;
     font-size: 2.35ch;
     justify-content: center;
     align-items: center;
+    font-family:cursive !important;
 }
 .mis{
     width: 300px;
@@ -214,7 +216,10 @@ button{
     position: absolute;
     left:350px;
     top:560px;
-    font-size: 3ch;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif !important;
+    font-style: italic;
+    font-size: 3.5ch;
+    color:  green;
 }
 .enter{
     position: absolute;
@@ -222,6 +227,7 @@ button{
     left: 270px;
     top: 600px;
     font-size: 2.0ch;
+    font-family:cursive !important;
 }
 .vis{
     width: 300px;
@@ -239,7 +245,10 @@ button{
     position: absolute;
     left:960px;
     top:560px;
-    font-size: 3ch;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif !important;
+    font-style: italic;
+    font-size: 3.5ch;
+    color:  green;
 }
 .venter{
     position: absolute;
@@ -247,13 +256,14 @@ button{
     left: 870px;
     top: 600px;
     font-size: 2.0ch;
+    font-family:cursive !important;
 }
 .imge{
     position: absolute;
-    left: 860px;
-    bottom: -550px;
+    left: 890px;
+    bottom: -600px;
     width: 350px ;
-    border: 2px solid;
+    border: 8px groove greenyellow;
     border-radius: 15px 50px;
     -webkit-box-shadow: 5px 5px 10px 7px rgba(0, 0, 0, 1);
     -moz-box-shadow: 5px 5px 10px 7px rgba(0, 0, 0, 1);
@@ -292,7 +302,7 @@ button{
     text-decoration: none;
 }
 
-.icon>a >.fas{
+.icon>a {
     list-style: none;
     width: 100%;
     height: 100%;
@@ -310,25 +320,26 @@ button{
 .icon>.re{
     position: absolute;
     right: 1100px;
-    bottom: -750px;
-    width: 90px;
+    bottom: -1050px;
+    width: 95px;
   height: 100px;
+  border: rgba(0, 0, 0, 0.3) groove 5px;
 }
-.icon>.re:hover i{
+.icon>.re:hover {
     background: green !important;
 }
 
 .icon>.best{
     position: absolute;
-    right:950px;
-    bottom: -740px;
+    right:860px;
+    bottom: -1040px;
     display: flexbox;
     font-size: 2.5ch;   
 }
 .icon>.cycle{
     position: absolute;
-    right:930px;
-    bottom: -730px;
+    right:902px;
+    bottom: -1030px;
     font-size: 3ch;
 }
 .icon>.cycle::after{
@@ -344,26 +355,27 @@ button{
 }
 .icon>.coin{
     position: absolute;
-    right: 780px;
-    bottom: -750px;
-    width: 90px;
+    right: 740px;
+    bottom: -1050px;
+    width: 95px;
   height: 100px;
+  border: rgba(0, 0, 0, 0.3) groove 5px;
 }
-.icon>.coin:hover i{
+.icon>.coin:hover {
     background: gold !important;
 }
 
 .icon>.reason{ 
     position: absolute;
-    right:530px;
-    bottom: -730px;
+    right:460px;
+    bottom: -1040px;
     display: flexbox;
     font-size: 2.5ch;   
 }
  .icon>.price{
     position: absolute;
-    right:585px;
-    bottom: -720px;
+    right:530px;
+    bottom: -1030px;
     font-size: 3ch;
 }
  .icon>.price::after{
@@ -380,24 +392,25 @@ button{
 .icon>.thumb{
     position: absolute;
     right: 340px;
-    bottom: -750px;
-    width: 90px;
+    bottom: -1250px;
+    width: 95px;
   height: 100px;
+  border: rgba(0, 0, 0, 0.3) groove 5px;
 }
-.icon>.thumb:hover i{
+.icon>.thumb:hover {
     background: #3b5998 !important;
 }
 .icon>.good{ 
     position: absolute;
-    right:100px;
-    bottom: -720px;
+    right:55px;
+    bottom: -1240px;
     display: flexbox;
     font-size: 2.5ch;   
 }
  .icon>.prod{
     position: absolute;
-    right:255px;
-    bottom: -710px;
+    right:235px;
+    bottom: -1230px;
     font-size: 3ch;
 }
  .icon>.prod::after{
@@ -414,25 +427,28 @@ button{
 .icon>.cl{
     position: absolute;
     right: 340px;
-    bottom: -900px;
-    width: 90px;
+    bottom: -1050px;
+    width: 95px;
   height: 100px;
+  border: rgba(0, 0, 0, 0.3) groove 5px;
+  
+  
 }
-.icon>.cl:hover i{
+.icon>.cl:hover {
     background: #c4302b !important;
 }
 
 .icon>.ity{ 
     position: absolute;
-    right:160px;
-    bottom: -870px;
+    right:140px;
+    bottom: -1040px;
     display: flexbox;
     font-size: 2.5ch;   
 }
  .icon>.qual{
     position: absolute;
-    right:250px;
-    bottom: -860px;
+    right:240px;
+    bottom: -1030px;
     font-size: 3ch;
 }
  .icon>.qual::after{
@@ -448,26 +464,27 @@ button{
 }
 .icon>.ser{
     position: absolute;
-    right: 780px;
-    bottom: -900px;
-    width: 90px;
+    right: 740px;
+    bottom: -1250px;
+    width: 95px;
   height: 100px;
+  border: rgba(0, 0, 0, 0.3) groove 5px;
 }
-.icon>.ser:hover i{
+.icon>.ser:hover {
     background: #329FFF !important;
 }
 
 .icon>.bes{ 
     position: absolute;
-    right:580px;
-    bottom: -880px;
+    right:535px;
+    bottom: -1240px;
     display: flexbox;
     font-size: 2.5ch;   
 }
  .icon>.vice{
     position: absolute;
-    right:675px;
-    bottom: -860px;
+    right:645px;
+    bottom: -1235px;
     font-size: 3ch;
 }
  .icon>.vice::after{
@@ -484,25 +501,26 @@ button{
 .icon>.org{
     position: absolute;
     right: 1100px;
-    bottom: -900px;
-    width: 90px;
+    bottom: -1250px;
+    width: 95px;
   height: 100px;
+  border: rgba(0, 0, 0, 0.3) groove 5px;
 }
-.icon>.org:hover i{
+.icon>.org:hover{
     background: greenyellow !important;
 }
 
 .icon>.proo{ 
     position: absolute;
-    right:960px;
-    bottom: -900px;
+    right:920px;
+    bottom: -1240px;
     display: flexbox;
     font-size: 2.5ch;   
 }
  .icon>.organic{
     position: absolute;
-    right:960px;
-    bottom: -890px;
+    right:930px;
+    bottom: -1230px;
     font-size: 3ch;
 }
  .icon>.organic::after{
@@ -519,12 +537,14 @@ button{
 
 footer{
     position: absolute;
-    bottom: -2000px;
+    bottom: -1400px;
     width: 100%;
     height: 300px;
+    line-height: 30px;
     background: #111 !important;
     color: #78fee0;
     font-size: 20px !important;
+    font-style: italic;
 }
 .main-content{
     display: flex;
@@ -566,25 +586,22 @@ footer{
     line-height: 40px;
     text-align: center;
     font-size: 18px;
+    padding: 5px;
     border-radius: 5px;
     transition: 0.3s;
+    position: relative;
+    top:20px;
+    /* background: #ddd !important; */
 }
+
 .left .content .social a span:hover{
     background: #f12020 !important;
 }
-.center>.content{
-    line-height: 30px;
-}
-.email{
-    padding: 20px 0 10px 10px;
-}
-.phone{
-    padding: 0px 10px;
-}
+
 .ctas{
     position: absolute;
-    top: 200px;
-    left: 500px;
+    top: 230px;
+    left: 550px;
 }
 .right>h2{
     font-size: 20px;
@@ -595,15 +612,19 @@ footer{
 }
 .contents ul li{
     margin-bottom: 10px;
-    list-style: none;
     margin-left: 50px;
-    font-family: 'Roboto', sans-serif !important;
+    /* font-family: 'Roboto', sans-serif !important; */
     font-weight: 600;
     font-size: 20px !important;
 }
 .contents ul li a{
     font-weight: 600;
+    line-height: 30px;
+    /* font-family: 'Courier Ne', Courier, monospace; */
     font-size: 20px !important;
     color: #78fee0 !important;
 }
 
+.center .content .place{
+    line-height: 40px;
+}

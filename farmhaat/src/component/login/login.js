@@ -1,9 +1,13 @@
 import React from 'react'
 import './stylel.css'
+import bk from '../../assets/bk.gif'
 
 function Login() {
     return (
         <div>
+            <div className="back">
+                <img className="back" src={bk} />
+            </div>
         <form className="box" action="" method="POST">
             <h1>Login</h1>
             <input type="text" name="" value="" placeholder="Username"/>

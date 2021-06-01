@@ -17,13 +17,13 @@ function Centero(){
                         <img src={coir} />
                         <div>
                             <br></br>
-                            <p>Coir Brick</p>
+                            <p className="bri">Coir Brick</p>
                         </div>
                     </div>
                 </td>
                 <td className="rs">Rs 200</td>
                 <td className="pr">20th April</td>
-                <td className="a"><a href="./viewdetials.html">View detials</a></td>
+                <td className="a"><a href="./viewdetials.html">View details</a></td>
             </tr>
             <div className="line"></div>
             <tr>
@@ -32,14 +32,14 @@ function Centero(){
                         <img src={coir} ></img>
                         <div>
                             <br></br>
-                            <p>Coir Brick</p>
+                            <p className="bri">Coir Brick</p>
                         </div>
                    </div>
                    
                 </td>
                 <td className="rs">Rs 200</td>
                 <td className="pr">20th April</td>
-                <td className ="view"><a href="./viewdetials.html" className="view">View detials</a></td>
+                <td className ="view"><a href="./viewdetials.html" className="view">View details</a></td>
             </tr>
         </table>
     </div>

@@ -1,5 +1,11 @@
 import React from 'react'
 import './style.css'
+import {faFacebook} from "@fortawesome/free-brands-svg-icons"
+import {faInstagram} from "@fortawesome/free-brands-svg-icons"
+import {faWhatsapp} from "@fortawesome/free-brands-svg-icons"
+import {faTwitter} from "@fortawesome/free-brands-svg-icons"
+import {faYoutube} from "@fortawesome/free-brands-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Center() {
     return (
@@ -9,17 +15,17 @@ function Center() {
         </div>
         <footer>
         <div className="social">
-            <a href="#" > <span className="fab fa-facebook" ></span></a>
-            <a href="#"> <span className="fab fa-instagram" ></span></a>
-            <a href="https://www.youtube.com/watch?v=eiGdsH1g20k"> <span className="fab fa-whatsapp"></span></a>
-            <a href="https://www.youtube.com/watch?v=eiGdsH1g20k"><span className="fab fa-twitter" ></span></a>
-            <a href="#"><span  className="fab fa-youtube"></span></a>
+            <a href="#" > <span ><FontAwesomeIcon className="fb" icon={faFacebook} color="black" /></span></a>
+            <a href="#"> <span><FontAwesomeIcon className="insta" icon={faInstagram} color="black" /></span></a>
+            <a href="https://www.youtube.com/watch?v=eiGdsH1g20k"> <span><FontAwesomeIcon className="wht" icon={faWhatsapp} color="black" /></span></a>
+            <a href="https://www.youtube.com/watch?v=eiGdsH1g20k"><span><FontAwesomeIcon className="twt" icon={faTwitter} color="black" /></span></a>
+            <a href="#"><span><FontAwesomeIcon className="utb" icon={faYoutube} color="black" /></span></a>
         </div>
     </footer>
-    <div class="ce">
+    <div className="ce">
         <p>LET US GO WITH THE FLOW OF NATURE!</p>
     </div>
-    <a href="./about.html"><button className="button">Take a tour</button></a>
+    <a href="./about.html" ><button className="button">Take a tour</button></a>
     <div className="end">
         <p>Copyrights <i class="fa fa-copyright" aria-hidden="true"></i>  2020 - 2021 Farmhaat Industry. Powered by Akilesh</p>
     </div>

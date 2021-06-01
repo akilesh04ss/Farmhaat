@@ -9,17 +9,7 @@
 body{
     margin: 0;
     padding: 0;
-    background: #6CFA89 !important;
-
-background: linear-gradient(0deg, #6CFA89 20%, #8fd3f4 100%) !important;
-
-background: -webkit-linear-gradient(0deg, #6CFA89 20%, #8fd3f4 100%) !important;
-
-background: -moz-linear-gradient(0deg, #6CFA89 20%, #8fd3f4 100%) !important;
-
-background: -o-linear-gradient(0deg, #6CFA89 20%, #8fd3f4 100%) !important;
-
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6CFA89', endColorstr='#8fd3f4',GradientType=1 ) !important;
+    background-image: linear-gradient(to right, #92fe9d 0%, #00c9ff 100%) !important;
 }
 .logo{
     cursor: pointer;
@@ -188,7 +178,7 @@ button{
     margin: 60px auto;
     border: 5px double gray;
     width: 70%;
-    height: 550px;
+    height: 600px;
 }
 table{
     font-size: 1.3rem !important;
@@ -198,11 +188,29 @@ table{
     flex-wrap: wrap;
     margin: 0px;
 }
+.op{
+    font-family: 'Times New Roman', Times, serif !important;
+    font-style: italic;
+    color: #111 !important;
+    font-size: 30px;
+}
+.pt , .qt{
+    font-size: 20px;
+}
+.qt{
+    font-size: 30px;
+}
 .inf{
+    font-family: 'Times New Roman', Times, serif !important;
+    font-style: italic;
     position: relative;
     left: 200px;
     bottom: 200px;
     font-size: 22px;
+}
+.oin{
+    position: relative;
+    top: -50px;
 }
 
 td{
@@ -216,15 +224,16 @@ td{
     position: relative;
     top: -100px;
     left: 160px;
+    line-height: 40px;
 }
 .sa>a{
     font-size: 25px;
 }
 .btnss{
     position: relative;
-    top:-230px;
+    top:-300px;
     left:650px;
-    background-color: #21ebff !important;
+    background-color: #fff !important;
     color: #111;
     border: 2px solid black;
     border-radius: 50px;
@@ -249,7 +258,7 @@ small{
     background: #fff !important;
     position: relative;
     left:370px;
-    bottom:60px;
+    bottom:55px;
 }
 .con table tr td .inf   button{
     background-color: white !important;
@@ -265,6 +274,12 @@ small{
     left:360px;
     bottom:160px;
 }
+.btnss{
+    background-color: #8ba7f5 !important;
+}
+.btnss:hover{
+    background: #965ef7 !important;
+}
 .inf>p{
     position: relative;
     bottom:30px;
@@ -279,20 +294,19 @@ td img{
     position: relative;
     bottom: -30px;
     left: -50px;
-    border: 2px solid;
+    border: 8px groove greenyellow;
     border-radius: 15px 50px;
-    -webkit-box-shadow: 5px 5px 10px 7px rgba(0, 0, 0, 1);
-    -moz-box-shadow: 5px 5px 10px 7px rgba(0, 0, 0, 1);
-    box-shadow: 5px 5px 10px 7px rgba(0, 0, 0, 1);
 }
 footer{
     position: absolute;
-    bottom: -550px;
+    bottom: -1400px;
     width: 100%;
     height: 300px;
+    line-height: 30px;
     background: #111 !important;
     color: #78fee0;
     font-size: 20px !important;
+    font-style: italic;
 }
 .main-content{
     display: flex;
@@ -334,25 +348,22 @@ footer{
     line-height: 40px;
     text-align: center;
     font-size: 18px;
+    padding: 5px;
     border-radius: 5px;
     transition: 0.3s;
+    position: relative;
+    top:20px;
+    /* background: #ddd !important; */
 }
+
 .left .content .social a span:hover{
     background: #f12020 !important;
 }
-.center>.content{
-    line-height: 30px;
-}
-.email{
-    padding: 20px 0 10px 10px;
-}
-.phone{
-    padding: 0px 10px;
-}
+
 .ctas{
     position: absolute;
-    top: 200px;
-    left: 500px;
+    top: 230px;
+    left: 550px;
 }
 .right>h2{
     font-size: 20px;
@@ -363,13 +374,19 @@ footer{
 }
 .contents ul li{
     margin-bottom: 10px;
-    list-style: none;
     margin-left: 50px;
+    /* font-family: 'Roboto', sans-serif !important; */
     font-weight: 600;
     font-size: 20px !important;
 }
 .contents ul li a{
     font-weight: 600;
+    line-height: 30px;
+    /* font-family: 'Courier Ne', Courier, monospace; */
     font-size: 20px !important;
     color: #78fee0 !important;
+}
+
+.center .content .place{
+    line-height: 40px;
 }
