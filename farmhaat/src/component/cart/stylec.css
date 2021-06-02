@@ -212,13 +212,13 @@ td{
     position: relative;
     left: 270px;
     top: -70px;
-    font-size: 20px !important;
+    font-size: 23px !important;
 }
 .ten{
     position: relative;
     left: -720px;
     top:-90px;
-    /* font-size: 20px !important; */
+    font-size: 23px !important;
 }
 td input{
     width:40px;
@@ -235,19 +235,19 @@ td input{
 .inpu{
     position: relative;
     left: -645px;
-    top:-40px;
+    top:-50px;
 }
  .pr{
-    position: relative;
-    left: -290px;
-    top:-20px;
-    font-size: 20px !important;
+    position: absolute;
+    left: 990px;
+    top:245px;
+    font-size: 22px !important;
 }
 .pri{
-    position: relative;
-    left: -320px;
-    top:-40px;
-    /* font-size: 20px !important; */
+    position: absolute;
+    left: 990px;
+    top:410px;
+    font-size: 22px !important;
 }
 .quan{
     position: relative;
@@ -258,7 +258,7 @@ td input{
     left: -260px;
 }
 td a{
-    color: #ff52ff !important;
+    color: green !important;
     font-size: 12px;
 }
 td img{

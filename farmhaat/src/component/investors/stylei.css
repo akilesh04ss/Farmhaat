@@ -9,6 +9,7 @@
 body{
     margin: 0;
     padding: 0;
+    background-image: linear-gradient(to right, #92fe9d 0%, #00c9ff 100%) !important;
 }
 .logo{
     cursor: pointer;
@@ -179,7 +180,7 @@ textarea{
     outline: none;
 }
 .container{
-    background: #fff;
+    background: #fff !important;
     width: 800px;
     /* height: auto; */
     max-width: 800px;

@@ -1,12 +1,24 @@
 import React from 'react'
-
-function View() {
+import './stylev.css';
+import logo from '../../assets/logonew.png'
+import coir from '../../assets/oir.jpg'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {faPhoneAlt} from "@fortawesome/free-solid-svg-icons"
+import {faEnvelope} from "@fortawesome/free-solid-svg-icons"
+import {faStreetView} from "@fortawesome/free-solid-svg-icons"
+import {faFacebook} from "@fortawesome/free-brands-svg-icons"
+import {faInstagram} from "@fortawesome/free-brands-svg-icons"
+import {faYoutube} from "@fortawesome/free-brands-svg-icons"
+import {faWhatsapp} from "@fortawesome/free-brands-svg-icons"
+import {faTwitter} from "@fortawesome/free-brands-svg-icons"
+function View(props) {
     return (
         <div>
-        <div className="head">
+            {/* <h1>hi {props.name}</h1> */}
+              <div className="head">
     <header >
         <div className="lj">
-            <img  className ="logo" src="/logonew.png" alt="logo" width="80px"/>   
+            <img  className ="logo" src={logo} alt="logo" width="80px"/>   
         </div>
         <nav>
             <ul className="lin">
@@ -22,19 +34,19 @@ function View() {
     <div className="con">
     <table>
         <tr><td>
-            <img src="./oir.jpg" alt=""/>
+            <img src={coir} alt=""/>
             <div className="inf">
-                <h1>Coir Brick</h1>
-                <small>Price(Rs/Kg): 200</small>
+                <h1 className="oin">Coir Brick</h1>
+                <small className="pt">Price(Rs/Kg): 200</small>
                 <br></br>
-                <p>Quantity(kg) :</p>
+                <p className="qt">Quantity(kg) :</p>
                 <input type="number" value="1" min="1"/>
             </div>
             </td>
             </tr>
     
         <tr>
-            <p class="sa"><a>Description:</a><br></br>* It will come in brick form of 5 KG. <br></br>
+            <p class="sa"><a className="op">Description:</a><br></br>* It will come in brick form of 5 KG. <br></br>
                 * Useful for potting mix, maintain water level.<br></br>
                 * Put directly into the water to convert it into powder form.<br></br>
                 * Useful for indoor & outdoor potted plants.</p>
@@ -45,25 +57,25 @@ function View() {
         </tr>
     </table>
 </div>
-        <footer>
+<footer>
         <div className="main-content">
             <div className="left box">
                 <h2>Contact us</h2>
                 <div className="content">
                     <div className="phone">
-                        <span className="fas fa-phone-alt"></span>
-                        <span className="Text">0421-123456 &nbsp; +91 8190029732</span>
-                    </div>
+                        <span><FontAwesomeIcon icon={faPhoneAlt}/></span>
+                        <span className="pho">&nbsp; 0421 123456 &nbsp;+91 8190029732</span>
+                    </div><br></br>
                     <div className="email">
-                        <span className="fas fa-envelope"></span>
-                        <span className="Text">contact.farmhaat@gmail.com</span>
+                        <span><FontAwesomeIcon icon={faEnvelope}/></span>
+                        <span className="mail">&nbsp;&nbsp;contact.farmhaat@gmail.com</span>
                     </div>
                     <div className="social">
-                        <a href="#"> <span className="fab fa-facebook" ></span></a>
-                        <a href="#"> <span className="fab fa-instagram" ></span></a>
-                        <a href="#"> <span className="fab fa-whatsapp"></span></a>
-                        <a href="#"><span className="fab fa-twitter" ></span></a>
-                        <a href="#"><span  className="fab fa-youtube"></span></a>
+                        <a href="#"> <span><FontAwesomeIcon icon={faFacebook}/></span></a>
+                        <a href="#"> <span><FontAwesomeIcon icon={faInstagram}/></span></a>
+                        <a href="#"> <span><FontAwesomeIcon icon={faWhatsapp}/></span></a>
+                        <a href="#"><span><FontAwesomeIcon icon={faTwitter}/></span></a>
+                        <a href="#"><span><FontAwesomeIcon icon={faYoutube}/></span></a>
                     </div>
                 </div>
             </div>
@@ -71,10 +83,10 @@ function View() {
                 <h2>Address</h2>
                 <div className="content">
                     <div className="place">
-                        <span className="fas fa-map-marker-alt"></span>
-                        <span className="Text">2/827, Vellagoundan Thottam, Ganapathipalayam, Tirupur - 641605</span>
+                        <span><FontAwesomeIcon icon={faStreetView}/></span>
+                        <span className="Text">&nbsp;&nbsp;2/827, Vellagoundan Thottam, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ganapathipalayam, <br></br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tirupur -641605</span>
                     </div>
-                    <a className = "ctas" href="https://www.google.co.in/maps/place/Vellagoundan+Thottam/@11.0418939,77.3373403,16z/data=!4m12!1m5!8m4!1e4!2s117202927009810744605!3m1!1e1!3m5!1s0x3ba9a9e86124b215:0xa552b05896b8138e!8m2!3d11.0377253!4d77.3373566!16s%2Fg%2F11pb17br0b?hl=en"><button>Locate us</button></a>
+                    <a className = "ctas" href="https://www.google.co.in/maps/place/Vellagoundan+Thottam/@11.0379345,77.3374261,17z/data=!4m12!1m5!8m4!1e4!2s117202927009810744605!3m1!1e1!3m5!1s0x3ba9a9e86124b215:0xa552b05896b8138e!8m2!3d11.0377253!4d77.3373566!16s%2Fg%2F11pb17br0b?hl=en"><button>Locate us</button></a>
                 </div>
             </div>
             <div className="right box">

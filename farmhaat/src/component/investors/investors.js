@@ -1,11 +1,20 @@
 import React from 'react'
 import './stylei.css'
 import logo from '../../assets/logonew.png'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {faPhoneAlt} from "@fortawesome/free-solid-svg-icons"
+import {faEnvelope} from "@fortawesome/free-solid-svg-icons"
+import {faStreetView} from "@fortawesome/free-solid-svg-icons"
+import {faFacebook} from "@fortawesome/free-brands-svg-icons"
+import {faInstagram} from "@fortawesome/free-brands-svg-icons"
+import {faYoutube} from "@fortawesome/free-brands-svg-icons"
+import {faWhatsapp} from "@fortawesome/free-brands-svg-icons"
+import {faTwitter} from "@fortawesome/free-brands-svg-icons"
 
 function Investors() {
     return (
         <div>
-        <div className="head">
+                    <div className="head">
    <header >
        <div className="lj">
            <img  className ="logo" src={logo} alt="logo" width="80px"/>   
@@ -13,8 +22,8 @@ function Investors() {
        <nav>
            <ul className="lin">
                 <li><a class="oce" href="./home.html">Home</a></li>
-                <li><a class="oc" href="./product.html">Products</a></li>
-                <li><a class="co" href="./investors.html">Investors</a></li>
+                <li><a class="co" href="./product.html">Products</a></li>
+                <li><a class="oc" href="./investors.html">Investors</a></li>
                 <li><a class="o" href="./about.html">About</a></li>
            </ul>
            <a className = "cta" href="./feedback.html"><button>Get in Touch</button></a>
@@ -70,7 +79,7 @@ function Investors() {
         </form>
 </div>
 <marquee behavior="" direction="">
-    <h1>NOTE: The waste that you sell should not contain plastics and other elctronic waste. The waste should be packed properly before the pickup. </h1>
+    <h1 className="kud">NOTE: The waste that you sell should not contain plastics and other elctronic waste. The waste should be packed properly before the pickup. </h1>
 </marquee>
    <footer>
         <div className="main-content">
@@ -78,19 +87,19 @@ function Investors() {
                 <h2>Contact us</h2>
                 <div className="content">
                     <div className="phone">
-                        <span className="fas fa-phone-alt"></span>
-                        <span className="Text">0421-123456 &nbsp; +91 8190029732</span>
-                    </div>
+                        <span><FontAwesomeIcon icon={faPhoneAlt}/></span>
+                        <span className="pho">&nbsp; 0421 123456 &nbsp;+91 8190029732</span>
+                    </div><br></br>
                     <div className="email">
-                        <span className="fas fa-envelope"></span>
-                        <span className="Text">contact.farmhaat@gmail.com</span>
+                        <span><FontAwesomeIcon icon={faEnvelope}/></span>
+                        <span className="mail">&nbsp;&nbsp;contact.farmhaat@gmail.com</span>
                     </div>
                     <div className="social">
-                        <a href="#"> <span className="fab fa-facebook" ></span></a>
-                        <a href="#"> <span className="fab fa-instagram" ></span></a>
-                        <a href="#"> <span className="fab fa-whatsapp"></span></a>
-                        <a href="#"><span className="fab fa-twitter" ></span></a>
-                        <a href="#"><span  className="fab fa-youtube"></span></a>
+                        <a href="#"> <span><FontAwesomeIcon icon={faFacebook}/></span></a>
+                        <a href="#"> <span><FontAwesomeIcon icon={faInstagram}/></span></a>
+                        <a href="#"> <span><FontAwesomeIcon icon={faWhatsapp}/></span></a>
+                        <a href="#"><span><FontAwesomeIcon icon={faTwitter}/></span></a>
+                        <a href="#"><span><FontAwesomeIcon icon={faYoutube}/></span></a>
                     </div>
                 </div>
             </div>
@@ -98,10 +107,10 @@ function Investors() {
                 <h2>Address</h2>
                 <div className="content">
                     <div className="place">
-                        <span className="fas fa-map-marker-alt"></span>
-                        <span className="Text">2/827, Vellagoundan Thottam, Ganapathipalayam, Tirupur - 641605</span>
+                        <span><FontAwesomeIcon icon={faStreetView}/></span>
+                        <span className="Text">&nbsp;&nbsp;2/827, Vellagoundan Thottam, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ganapathipalayam, <br></br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tirupur -641605</span>
                     </div>
-                    <a className = "ctas" href="https://www.google.co.in/maps/place/Vellagoundan+Thottam/@11.0418939,77.3373403,16z/data=!4m12!1m5!8m4!1e4!2s117202927009810744605!3m1!1e1!3m5!1s0x3ba9a9e86124b215:0xa552b05896b8138e!8m2!3d11.0377253!4d77.3373566!16s%2Fg%2F11pb17br0b?hl=en"><button>Locate us</button></a>
+                    <a className = "ctas" href="https://www.google.co.in/maps/place/Vellagoundan+Thottam/@11.0379345,77.3374261,17z/data=!4m12!1m5!8m4!1e4!2s117202927009810744605!3m1!1e1!3m5!1s0x3ba9a9e86124b215:0xa552b05896b8138e!8m2!3d11.0377253!4d77.3373566!16s%2Fg%2F11pb17br0b?hl=en"><button>Locate us</button></a>
                 </div>
             </div>
             <div className="right box">
