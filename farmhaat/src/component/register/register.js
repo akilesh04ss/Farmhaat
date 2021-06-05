@@ -1,63 +1,66 @@
-import React from 'react'
-import './styler.css'
-import plant from '../../assets/img.gif';
+import React from "react";
+import "./register.css";
+import plant from "../../assets/img.gif";
 function Register() {
-    return (
-        <div>
-             <div className="container">
-        <div className="form">
-            <div className="heading">
-                <h1>Registration Form</h1>
+  return (
+    <div className="regbk">
+      <div className="regcontainer">
+        <div className="regform">
+          <div className="regheading">
+            <h1 className="regh1">Registration Form</h1>
+          </div>
+          <div className="regwrap">
+            <div className="regf1">
+              <label className="reglabel">First Name*</label>
+              <input className="reginput" type="text" required />
+              <span className="regfocusinput"></span>
             </div>
-            <div className="wrap">
-                <div className="f1">
-                    <label>First Name*</label>
-                    <input type="text" required/>
-                    <span className="focus-input"></span>
-                </div>
-                <div class="f2">
-                    <label>Second Name*</label>
-                    <input type="text" required/>
-                    <span className="focus-input"></span>
-                </div>
+            <div class="regf2">
+              <label className="reglabel">Second Name*</label>
+              <input className="reginput" type="text" required />
+              <span className="regfocusinput"></span>
             </div>
-            <div className="wrap2">
-                <label>Username*</label>
-                <input type="text" required/>
-                <span className="focus-input2"></span>
+          </div>
+          <div className="regwrap2">
+            <label className="reglabel">Username*</label>
+            <input className="reginput" type="text" required />
+            <span className="regfocusinput2"></span>
+          </div>
+          <div className="regwrap">
+            <div className="regf1">
+              <label className="reglabel">E-mail*</label>
+              <input className="reginput" type="email" required />
+              <span className="regfocusinput"></span>
             </div>
-            <div className="wrap">
-                <div className="f1">
-                <label>E-mail*</label>
-                <input type="email" required/>
-                <span className="focus-input"></span></div>
-                <div className="f2">
-                <label>Phone*</label>
-                <input type="text" required/>
-                <span className="focus-input"></span></div>
+            <div className="regf2">
+              <label className="reglabel">Phone*</label>
+              <input className="reginput" type="text" required />
+              <span className="regfocusinput"></span>
             </div>
-            <div className="wrap2">
-                <label>Address*</label>
-                <input type="text" required/>
-                <span className="focus-input2"></span>
-            </div>
-            <div className="wrap2">
-                <label>Password*</label>
-                <input type="password" required/>
-                <span className="focus-input2"></span>
-            </div>
-            <div className="wrap2">
-                <label>Confirm password*</label>
-                <input type="password" required/>
-                <span className="focus-input2"></span>
-            </div>
-            <button className="btn">Register</button>
-        </div>      
-        <div className="image">
-        <img  className="img" src={plant} alt="image"/></div>
+          </div>
+          <div className="regwrap2">
+            <label className="reglabel">Address*</label>
+            <input className="reginput" type="text" required />
+            <span className="regfocusinput2"></span>
+          </div>
+          <div className="regwrap2">
+            <label className="reglabel">Password*</label>
+            <input className="reginput" type="password" required />
+            <span className="regfocusinput2"></span>
+          </div>
+          <div className="regwrap2">
+            <label className="reglabel">Confirm password*</label>
+            <input className="reginput" type="password" required />
+            <span className="regfocusinput2"></span>
+          </div>
+          <button className="regbtn">Register</button>
+        </div>
+        <div className="regimage">
+          <img className="regimg" src={plant} alt="imge" />
+        </div>
+      </div>
     </div>
-    </div>
-    )
+  );
 }
 
-export default Register
+export default Register;

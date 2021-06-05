@@ -1,16 +1,13 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Recursive:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Reggae+One&display=swap");
-* {
-  margin: 0;
-  padding: 0;
-  background-color: rgba(253, 249, 249, 0) !important;
-}
-body {
+
+.abtbackground {
   margin: 0;
   padding: 0;
   background-image: linear-gradient(to right, #92fe9d 0%, #00c9ff 100%);
-} */
+  height: 2000px;
+}
 
 .abthead {
   box-sizing: border-box;
@@ -36,7 +33,7 @@ body {
 .abtbutton1 {
   font-family: "Red Hat Display", sans-serif;
   font-weight: bold;
-  font-size: 25px;
+  font-size: 20px;
   font-style: italic;
   color: bisque;
   text-decoration: none;
@@ -152,7 +149,6 @@ body {
 .abtbutton1:hover {
   background-color: #21ebff !important;
   color: #111;
-  /* border-radius: 50px; */
   box-shadow: 0 0 50px #21ebff;
   transition-delay: 0.5s;
 }
@@ -165,7 +161,6 @@ body {
   height: 10px;
   border-bottom: 2px solid #21ebff !important;
   border-right: 2px solid #21ebff !important;
-  /* border-radius: 35%; */
   transition: 0.5s;
 }
 .abtbutton1:hover:after {
@@ -181,7 +176,6 @@ body {
   height: 10px;
   border-top: 2px solid #21ebff;
   border-left: 2px solid #21ebff;
-  /* border-radius: 15%; */
   transition: 0.5s;
 }
 .abtbutton1:hover:before {
@@ -607,7 +601,6 @@ body {
   transition: 0.3s;
   position: relative;
   top: 20px;
-  /* background: #ddd !important; */
 }
 
 .abtleft .abtcontent .abtsocial .abtsociala .abtsocialspan:hover {
@@ -631,7 +624,6 @@ body {
   border-radius: 50px;
   background-color: #21ebff !important;
   color: #111;
-  /* border-radius: 50px; */
   box-shadow: 0 0 50px #21ebff;
   transition-delay: 0.5s;
 }
@@ -645,19 +637,17 @@ body {
   margin-bottom: 30px;
   text-transform: uppercase;
   font-weight: 600 !important;
-  margin-left: 40px;
+  margin-left: 80px;
 }
 .abtcontents .abtrightul .abtrightli {
   margin-bottom: 10px;
   margin-left: 30px;
-  /* font-family: 'Roboto', sans-serif !important; */
   font-weight: 600;
   font-size: 20px !important;
 }
 .abtcontents .abtrightul .abtrightli .abtrighta {
   font-weight: 600;
   line-height: 30px;
-  /* font-family: 'Courier Ne', Courier, monospace; */
   font-size: 20px !important;
   color: #78fee0 !important;
   text-decoration: none;

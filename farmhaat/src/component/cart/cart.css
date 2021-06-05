@@ -1,12 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Recursive:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Reggae+One&display=swap");
-/* * {
-  margin: 0;
-  padding: 0;
-  background-color: rgba(253, 249, 249, 0) !important;
-}
-body {
+
+.cartbackground {
   margin: 0;
   padding: 0;
   background-image: linear-gradient(
@@ -14,7 +10,8 @@ body {
     #92fe9d 0%,
     #00c9ff 100%
   ) !important;
-} */
+  height: 1300px;
+}
 .cartlogo {
   cursor: pointer;
   position: relative;
@@ -40,7 +37,7 @@ body {
   font-family: "Red Hat Display", sans-serif;
   font-weight: bold;
   font-style: italic;
-  font-size: 25px;
+  font-size: 20px;
   color: bisque;
   margin-right: 10px;
   text-decoration: none;
@@ -158,7 +155,6 @@ body {
 .cartbutton1:hover {
   background-color: #21ebff !important;
   color: #111;
-  /* border-radius: 50px; */
   box-shadow: 0 0 50px #21ebff;
   transition-delay: 0.5s;
 }
@@ -171,7 +167,6 @@ body {
   height: 10px;
   border-bottom: 2px solid #21ebff !important;
   border-right: 2px solid #21ebff !important;
-  /* border-radius: 35%; */
   transition: 0.5s;
 }
 .cartbutton1:hover:after {
@@ -187,7 +182,6 @@ body {
   height: 10px;
   border-top: 2px solid #21ebff;
   border-left: 2px solid #21ebff;
-  /* border-radius: 15%; */
   transition: 0.5s;
 }
 .cartbutton1:hover:before {
@@ -219,7 +213,6 @@ body {
   padding: 05px;
   font-family: "Times New Roman", Times, serif !important;
   font-style: italic;
-  /* font-weight:bolder; */
   color: #fff !important;
   background: green !important;
   font-size: 2.5ch;
@@ -258,7 +251,6 @@ body {
 }
 .cartd .carinpu {
   position: absolute;
-  /* right: 600px; */
   left: -558px;
   top: -30px;
 }
@@ -303,22 +295,17 @@ body {
   margin-right: 20px;
 }
 .carp1 {
-  /* color: #21ebff; */
   font-weight: bolder;
   font-size: 30px;
   padding-bottom: 0;
 }
 .cartoh {
-  /* margin-bottom: 1000px; */
   position: relative;
-  /* left: 990px; */
-  /* top: -0px; */
   bottom: 50px;
   left: -990px;
   width: 100px;
   height: 90px;
   position: relative;
-  /* top: 0px; */
   margin-left: 150px;
   margin-right: 20px;
 }
@@ -449,7 +436,6 @@ body {
   transition: 0.3s;
   position: relative;
   top: 20px;
-  /* background: #ddd !important; */
 }
 
 .cartleft .cartcontent .cartsocial .cartsociala .cartsocialspan:hover {
@@ -473,7 +459,6 @@ body {
   border-radius: 50px;
   background-color: #21ebff !important;
   color: #111;
-  /* border-radius: 50px; */
   box-shadow: 0 0 50px #21ebff;
   transition-delay: 0.5s;
 }
@@ -492,14 +477,12 @@ body {
 .cartcontents .cartrightul .cartrightli {
   margin-bottom: 10px;
   margin-left: 50px;
-  /* font-family: 'Roboto', sans-serif !important; */
   font-weight: 600;
   font-size: 20px !important;
 }
-.cartcontents .cartrightul .cartrightli > a {
+.cartcontents .cartrightul .cartrightli .cartrighta {
   font-weight: 800;
   line-height: 30px;
-  /* font-family: 'Courier Ne', Courier, monospace; */
   font-size: 20px !important;
   color: #78fee0 !important;
   text-decoration: none;

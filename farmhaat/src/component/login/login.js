@@ -1,24 +1,37 @@
 import React from "react";
-import "./stylel.css";
+import "./login.css";
 import bk from "../../assets/bk.gif";
 
 function Login() {
   return (
     <div>
-      <div className="back">
-        <img className="back" src={bk} />
+      <div className="logback">
+        <img className="logback" src={bk} />
       </div>
-      <form className="box" action="" method="POST">
-        <h1>Login</h1>
-        <input type="text" name="" value="" placeholder="Username" />
-        <input type="password" name="" value="" placeholder="Password" />
-        <p className="sign">New user ?</p>
+      <form className="logbox" action="" method="POST">
+        <h1 className="logh1">Login</h1>
         <input
+          className="loginput"
+          type="text"
+          name=""
+          value=""
+          placeholder="Username"
+        />
+        <input
+          className="loginput"
+          type="password"
+          name=""
+          value=""
+          placeholder="Password"
+        />
+        <p className="logsign">New user ?</p>
+        <input
+          className="loginput"
           type="button"
           value="Sign up"
-          onclick="window.location='./register.html'"
+          onclick="window.location=''../register/register.js"
         />
-        <input type="Submit" name="" value="Login" />
+        <input className="loginput" type="Submit" name="" value="Login" />
       </form>
     </div>
   );

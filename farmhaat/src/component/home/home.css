@@ -31,21 +31,21 @@
 }
 
 .div,
-.oc {
+.ocd {
   font-weight: bold;
   font-size: 20px;
   color: #ececec;
   text-decoration: none;
 }
 .div,
-.o {
+.od {
   font-weight: bold;
   font-size: 20px;
   color: #ececec;
   text-decoration: none;
 }
 .div,
-.co {
+.cod {
   font-family: "Red Hat Display", sans-serif;
   font-weight: bold;
   font-size: 20px;
@@ -267,7 +267,6 @@
   color: white;
   text-align: left;
   line-height: 70px;
-  /* background-color:; */
   padding-left: 20px;
   user-select: none;
 }
@@ -312,14 +311,12 @@ label #btn {
   position: absolute;
   cursor: pointer;
   color: white !important;
-  /* background-color: white !important; */
   border-radius: 7px;
 }
 
 label #cancel {
   position: relative;
   cursor: pointer;
-  /* background-color:  rgba(253, 249, 249, 0) !important ; */
   border-radius: 50%;
 }
 
@@ -503,8 +500,6 @@ label #cancel {
 
 .we {
   font-size: 7ch;
-
-  /* overflow: hidden; */
 }
 
 .farmhaat {
@@ -516,4 +511,8 @@ label #cancel {
   left: 640px;
   font-size: 2.7ch;
   color: white;
+}
+.homei {
+  padding-right: 7px;
+  padding-left: 7px;
 }

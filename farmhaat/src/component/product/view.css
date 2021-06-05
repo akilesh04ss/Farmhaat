@@ -1,26 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Recursive:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Reggae+One&display=swap");
-/* *{
-    margin: 0;
-    padding: 0;
-    background-color: rgba(253, 249, 249, 0) !important;
+
+.viewchdiv {
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(
+    to right,
+    #92fe9d 0%,
+    #00c9ff 100%
+  ) !important;
+  height: 1800px;
 }
-body{
-    margin: 0;
-    padding: 0;
-     background-color: #85FFBD;
-    background-image: linear-gradient(to right, #92fe9d 0%, #00c9ff 100%) !important;
-} */
-.vdlogo {
+.viewlogo {
   cursor: pointer;
   position: relative;
   left: 0px;
+  top: 20px;
   border-radius: 50%;
   border: 1px rgb(8, 238, 65) solid;
 }
 
-.vdhead {
+.viewhead {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -28,21 +29,20 @@ body{
   background-color: #042331 !important;
 }
 
-.vdli,
-.vdoc,
-.vdco,
-.vdoce,
-.vdo,
-.vdbutton1 {
+.viewli,
+.viewoce,
+.viewco,
+.viewo,
+.viewoc,
+.viewbutton1 {
   font-family: "Red Hat Display", sans-serif;
   font-weight: bold;
-  font-size: 25px;
-  color: bisque;
+  font-size: 20px;
   font-style: italic;
-  margin-right: 10px;
+  color: bisque;
   text-decoration: none;
 }
-.vdheader {
+.viewheader {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -50,28 +50,29 @@ body{
   background-color: #042331 !important;
 }
 
-.vdlin .vdli {
+.viewlin .viewli {
   list-style: none;
   align-items: center;
   display: inline-flex;
   align-items: center;
+  margin-right: 10px;
   padding: 0px 10px;
 }
-.vdlin .vdli .vdco .vdoc .vdo .vdoce {
+.viewlin .viewli .viewoc .viewco .viewoce .viewo {
   transition: all 0.3s ease 0s;
 }
-.vdlin .vdli .vdo:hover,
-.vdlin .vdli .vdoc:hover,
-.vdlin .vdli .vdoce:hover,
-.vdlin .vdli .vdco:hover {
+.viewlin .viewli .viewo:hover,
+.viewlin .viewli .viewoc:hover,
+.viewlin .viewli .viewco:hover,
+.viewlin .viewli .viewoce:hover {
   color: greenyellow;
 }
-.vdlin {
+.viewlin {
   position: absolute;
-  left: 110px;
-  top: 15px;
+  left: 80px;
+  top: 35px;
 }
-.vdlin > .vdli > .vdco::after {
+.viewlin > .viewli > .viewco::after {
   content: "";
   position: relative;
   top: -15px;
@@ -81,11 +82,11 @@ body{
   background-color: white;
   transition: width 0.3s;
 }
-.vdlin > .vdli > .vdco:hover::after {
+.viewlin > .viewli > .viewco:hover::after {
   width: 100%;
   transition: width 0.3s;
 }
-.vdlin > .vdli > .vdoc::after {
+.viewlin > .viewli > .viewoc::after {
   content: "";
   position: relative;
   left: 0px;
@@ -96,26 +97,12 @@ body{
   background-color: white;
   transition: width 0.3s;
 }
-.vdlin > .vdli > .vdoc:hover:after {
+.viewlin > .viewli > .viewoc:hover:after {
   width: 100%;
   transition: width 0.3s;
 }
-.vdlin > .vdli > .vdo::after {
-  content: "";
-  position: relative;
-  left: 0px;
-  bottom: 15px;
-  display: inline-block;
-  width: 0%;
-  height: 2px;
-  background-color: white;
-  transition: width 0.3s;
-}
-.vdlin > .vdli > .vdo:hover::after {
-  width: 100%;
-  transition: width 0.3s;
-}
-.vdlin > .vdli > .vdoce::after {
+
+.viewlin > .viewli > .viewoce::after {
   content: "";
   position: relative;
   left: 0px;
@@ -126,17 +113,32 @@ body{
   background-color: white;
   transition: width 0.3s;
 }
-.vdlin > .vdli > .vdoce:hover::after {
+.viewlin > .viewli > .viewoce:hover::after {
   width: 100%;
   transition: width 0.3s;
 }
-.vdcta {
+.viewlin > .viewli > .viewo::after {
+  content: "";
   position: relative;
-  left: -40px;
-  bottom: -10px;
+  left: 0px;
+  bottom: 15px;
+  display: inline-block;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s;
+}
+.viewlin > .viewli > .viewo:hover::after {
+  width: 100%;
+  transition: width 0.3s;
+}
+.viewcta {
+  position: relative;
+  left: 1100px;
+  bottom: 30px;
 }
 
-.vdbutton1 {
+.viewbutton1 {
   margin: 0 15px;
   padding: 9px 25px;
   color: #21ebff;
@@ -146,17 +148,15 @@ body{
   font-size: 20px;
   border: none;
   overflow: hidden;
-  background: rgba(253, 249, 249, 0);
   transition: 0.5s;
 }
-.vdbutton1:hover {
+.viewbutton1:hover {
   background-color: #21ebff !important;
   color: #111;
-  /* border-radius: 50px; */
   box-shadow: 0 0 50px #21ebff;
   transition-delay: 0.5s;
 }
-.vdbutton1::after {
+.viewbutton1::after {
   content: "";
   position: absolute;
   bottom: 0px;
@@ -165,14 +165,13 @@ body{
   height: 10px;
   border-bottom: 2px solid #21ebff !important;
   border-right: 2px solid #21ebff !important;
-  /* border-radius: 35%; */
   transition: 0.5s;
 }
-.vdbutton1:hover:after {
+.viewbutton1:hover:after {
   width: 100%;
   height: 100%;
 }
-.vdbutton1::before {
+.viewbutton1::before {
   content: "";
   position: absolute;
   top: 0px;
@@ -181,169 +180,191 @@ body{
   height: 10px;
   border-top: 2px solid #21ebff;
   border-left: 2px solid #21ebff;
-  /* border-radius: 15%; */
   transition: 0.5s;
 }
-.vdbutton1:hover:before {
+.viewbutton1:hover:before {
   width: 100%;
   height: 100%;
 }
-.vdbutton1 {
+.viewbutton1 {
   position: relative;
   left: 0px;
   bottom: 20px;
+  background-color: rgba(253, 249, 249, 0);
 }
-
-.vdcon {
+.viewcon {
   margin: 60px auto;
   border: 5px double gray;
   width: 70%;
-  height: 450px;
+  height: 600px;
 }
-.vdtable {
+.viewtable {
   font-size: 1.3rem !important;
   width: 80%;
   border-collapse: collapse;
   display: flex;
   flex-wrap: wrap;
   margin: 0px;
-  font-family: cursive !important;
-  font-style: italic;
 }
-.vdinf {
-  position: relative;
-  left: 200px;
-  bottom: 80px;
-  font-size: 22px;
+.viewop {
   font-family: "Times New Roman", Times, serif !important;
   font-style: italic;
+  color: #111 !important;
+  font-size: 45px;
+  font-weight: bold;
+}
+.viewpt,
+.viewqt {
+  font-size: 20px;
+}
+.viewqt {
+  font-size: 30px;
+}
+.viewinf {
+  font-family: "Times New Roman", Times, serif !important;
+  font-style: italic;
+  position: relative;
+  left: 200px;
+  bottom: 200px;
+  font-size: 22px;
+}
+.viewoin {
+  position: relative;
+  top: -50px;
 }
 
-.vdtd {
+.viewtd {
   position: relative;
   left: -50px;
   padding: 15px 00px 5px 5px;
 }
 
-.vdpr {
-  position: relative;
-  left: 200px;
+.viewsa {
   font-size: 1.3rem !important;
+  position: relative;
+  top: -200px;
+  left: 160px;
+  font-family: cursive;
+  line-height: 40px;
+}
+.viewsa > .viewop {
+  font-size: 25px;
+}
+
+.viewinf > .viewoin {
+  position: relative;
   bottom: 10px;
+  left: 250px;
 }
-.vdrp {
+.viewpt {
   position: relative;
-  left: 150px;
-  font-size: 1.3rem !important;
-  bottom: 10px;
+  bottom: -40px;
+  left: 250px;
 }
-.vdqw {
-  position: absolute;
+.viewcon .viewtable .viewtr .viewtd .viewinf .viewinput {
+  width: 40px;
+  font-size: 14px;
+  margin: 0 5px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  text-align: center;
+  padding-right: 0px !important;
+  border: 1px white;
+  border-radius: 5px;
+  outline: none;
+  background: #fff !important;
+  position: relative;
   left: 370px;
-  font-size: 1.3rem !important;
-  top: 300px;
+  bottom: 120px;
 }
-.vdad {
-  position: absolute;
-  left: 370px;
-  top: 340px;
-  font-size: 1.3rem !important;
-}
-.vdsa {
-  font-size: 1.3rem !important;
-  position: relative;
-  top: 0px;
-  left: 170px;
-}
-.vdbtnss {
-  position: relative;
-  top: 140px;
-  left: 180px;
-  background-color: #21ebff !important;
-  color: #111 !important;
-  /* margin: 0 15px;*/
-  padding: 9px 25px;
-  color: #21ebff;
-  text-decoration: none;
-  text-transform: capitalize;
-  letter-spacing: 2px;
-  font-size: 20px;
-  border: 5px groove black;
-  /* border: none; */
-  /* overflow: hidden; */
-  /* background: rgba(253, 249, 249, 0); */
-  transition: 0.5s;
-}
-.vdbtnss:hover {
+
+.viewbtnss {
+  margin: 0 05px;
+  padding: 10px 5px;
+  width: 200px;
+  border: 2px solid black;
+  outline: none;
   border-radius: 50px;
-  box-shadow: 0 0 50px #21ebff;
-  transition-delay: 0.5s;
+  font-size: 20px;
+  color: #111 !important;
+  background-color: #8ba7f5 !important;
+  cursor: pointer;
+  position: absolute;
+  bottom: 130px;
+  left: 590px;
 }
-.vdinf .vdh2 {
-  position: relative;
-  left: 20px;
-  bottom: 10px;
-  /* color: #042331; */
+.viewbtnss:hover {
+  background: #965ef7 !important;
 }
-.vdinf .vdsmall {
+.viewinf > .viewqt {
   position: relative;
-  left: 20px;
   bottom: 30px;
-  /* color: #042331; */
+  left: 250px;
+  font-size: 18px;
 }
-.vdtd .vdimg {
-  width: 100px;
-  height: 100px;
+.viewtd .viewimg {
+  width: 300px;
+  height: 300px;
   margin-left: 150px;
   margin-right: 10px;
   position: relative;
   bottom: -30px;
   left: -50px;
+  border: 8px groove greenyellow;
+  border-radius: 15px 50px;
 }
-.vdfooter {
+.viewpt {
+  position: relative;
+  bottom: 70px;
+}
+.viewqt {
+  position: relative;
+  bottom: 80px !important;
+}
+.viewfooter {
   position: absolute;
-  bottom: auto;
+  bottom: -1400px;
   width: 100%;
-  height: 310px;
+  height: 320px;
   line-height: 30px;
   background: #111 !important;
   color: #78fee0;
   font-size: 20px !important;
   font-style: italic;
 }
-.vdmaincontent {
+.viewmaincontent {
   display: flex;
 }
-.vdmaincontent .vdbox {
+.viewmaincontent .viewbox {
   flex-basis: 50%;
   padding: 10px 50px;
 }
-.vdbox .vdh2 {
+.viewbox .h2 {
   font-size: 4ch;
   font-weight: 600;
   text-transform: capitalize;
 }
-.vdcenter > .vdaddress {
+.viewcenter > .viewadd {
   margin-bottom: 30px;
   margin-left: 60px;
 }
-.vdleft > .vdcontact {
+.viewleft > .viewcontact {
   margin-bottom: 30px;
   margin-left: 60px;
 }
-.vdbox .vdcontent {
+.viewbox .viewcontent {
   margin: 20px 0 0 0;
 }
-.vdleft .vdcontent {
+.viewleft .viewcontent {
   text-align: justify;
 }
-.vdleft .vdcontent .vdsocial {
+.viewleft .viewcontent .viewsocial {
   margin: 20px 0 0 0;
 }
-.vdleft .vdcontent .vdsocial .vdsociala {
+.viewleft .viewcontent .viewsocial .viewasoc {
   padding: 0 7px;
 }
-.vdleft .vdcontent .vdsocial .vdsociala .vdsocialspan {
+.viewleft .viewcontent .viewsocial .viewasoc .viewspansoc {
   height: 40px;
   width: 40px;
   background: #1a1a1a !important;
@@ -355,13 +376,12 @@ body{
   transition: 0.3s;
   position: relative;
   top: 20px;
-  /* background: #ddd !important; */
 }
 
-.vdleft .vdcontent .vdsocial .vdsociala .vdsocialspan:hover {
+.viewleft .viewcontent .viewsocial .viewasoc .viewspansoc:hover {
   background: #f12020 !important;
 }
-.vdbutton2 {
+.viewbutton2 {
   margin: 0 15px;
   padding: 9px 25px;
   color: #21ebff;
@@ -374,43 +394,40 @@ body{
   transition: 0.5s;
   background-color: #111;
 }
-.vdbutton2:hover {
+.viewbutton2:hover {
   border: 1px #21ebff;
   border-radius: 50px;
   background-color: #21ebff !important;
   color: #111;
-  /* border-radius: 50px; */
   box-shadow: 0 0 50px #21ebff;
   transition-delay: 0.5s;
 }
-.vdctas {
+.viewctas {
   position: absolute;
   top: 230px;
   left: 550px;
 }
-.vdright > .vdquick {
-  font-size: 25px;
-  margin-bottom: 30px;
-  text-transform: capitalize;
-  font-weight: 800 !important;
-  margin-left: 40px;
+.viewright > .viewquick {
+  font-size: 27px;
+  margin-bottom: 35px;
+  text-transform: uppercase;
+  font-weight: bold !important;
+  margin-left: 20px;
 }
-.vdcontents .vdrightul .vdrightli {
+.viewcontents .viewulright .viewliright {
   margin-bottom: 10px;
   margin-left: 50px;
-  /* font-family: 'Roboto', sans-serif !important; */
   font-weight: 600;
   font-size: 20px !important;
 }
-.vdcontents .vdrightul .vdrightli .vdrighta {
+.viewcontents .viewulright .viewliright > a {
   font-weight: 600;
   line-height: 30px;
-  /* font-family: 'Courier Ne', Courier, monospace; */
   font-size: 20px !important;
-  color: #78fee0 !important;
   text-decoration: none;
+  color: #78fee0 !important;
 }
 
-.vdcenter .vdcontent .vdplace {
+.viewcenter .viewcontent .viewplace {
   line-height: 40px;
 }

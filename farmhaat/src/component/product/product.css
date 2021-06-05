@@ -1,14 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Recursive:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Reggae+One&display=swap");
-.prductw {
+.pw {
   margin: 0;
   padding: 0;
-  /* background-color: rgba(253, 249, 249, 0) !important; */
-  background: green !important;
-}
-.pw {
-  background-color: #042331 !important;
+  background-image: linear-gradient(
+    to right,
+    #92fe9d 0%,
+    #00c9ff 100%
+  ) !important;
+  height: 1400px;
 }
 
 .losgo {
@@ -57,8 +58,8 @@
 .do {
   font-family: "Red Hat Display", sans-serif;
   font-weight: bold;
-  margin-right: 10px;
-  font-size: 10px;
+  margin-right: 20px;
+  font-size: 05px;
   color: bisque;
   text-decoration: none;
 }
@@ -162,6 +163,11 @@
   left: -30px;
   bottom: -10px;
 }
+.ctdas {
+  position: relative;
+  left: -30px;
+  bottom: -10px;
+}
 
 .bttdn1 {
   margin: 0 15px;
@@ -178,7 +184,6 @@
 .bttdn1:hover {
   background-color: #21ebff !important;
   color: #111;
-  /* border-radius: 50px; */
   box-shadow: 0 0 50px #21ebff;
   transition-delay: 0.5s;
 }
@@ -191,7 +196,6 @@
   height: 10px;
   border-bottom: 2px solid #21ebff !important;
   border-right: 2px solid #21ebff !important;
-  /* border-radius: 35%; */
   transition: 0.5s;
 }
 .bttdn1:hover:after {
@@ -207,7 +211,6 @@
   height: 10px;
   border-top: 2px solid #21ebff;
   border-left: 2px solid #21ebff;
-  /* border-radius: 15%; */
   transition: 0.5s;
 }
 .bttdn1:hover:before {
@@ -421,8 +424,6 @@
   transition: 0.3s;
   position: relative;
   top: 10px;
-  /* color: #fff !important; */
-  /* background: #ddd !important; */
 }
 
 .lefts .cdntent .prosocial .proa .prospan:hover {
@@ -446,43 +447,9 @@
   border-radius: 50px;
   background-color: #21ebff !important;
   color: #111;
-  /* border-radius: 50px; */
   box-shadow: 0 0 50px #21ebff;
   transition-delay: 0.5s;
 }
-/* .addbtton::after{
-    content: '';
-    position: absolute;
-    bottom: 0px;
-    right: 15px;
-    overflow: hidden;
-    width: 10px;
-    height: 10px;
-    border-bottom: 2px solid  #21ebff !important;
-    border-right: 2px solid #21ebff !important;
-    border-radius: 35%;
-    transition: 0.5s;  
-}
-.addbtton:hover:after{
-    width: 85%;
-    height: 100%;
-}
- .addbtton::before{
-    content: '';
-    position: absolute;
-    top: 0px;
-    left: 15px;
-     width: 10px;
-    height: 10px;
-    border-top: 2px solid  #21ebff;
-    border-left: 2px solid  #21ebff;
-    border-radius: 15%;
-    transition: 0.5s;   
-} 
-.addbtton:hover:before{
-    width: 100%;
-    height: 100%;
-} */
 .addctas {
   position: absolute;
   top: 230px;
@@ -494,7 +461,6 @@
   bottom: 5px;
   margin-bottom: 20px;
   text-transform: uppercase;
-  /* font-weight: 600 !important; */
   margin-left: 20px;
   font-size: 3ch;
   font-weight: 600;
@@ -503,7 +469,6 @@
 .cdntents .rightsul .rightsli {
   margin-bottom: 10px;
   margin-left: 50px;
-  /* font-family: 'Roboto', sans-serif !important; */
   font-weight: 600;
   font-size: 20px !important;
 }
@@ -511,7 +476,6 @@
   font-weight: 600;
   line-height: 30px;
   text-decoration: none;
-  /* font-family: 'Courier Ne', Courier, monospace; */
   font-size: 20px !important;
   color: #78fee0 !important;
 }

@@ -1,146 +1,238 @@
-import React from 'react';
-import './stylec.css'
-import log from '../../assets/logonew.png'
-import coir from '../../assets/oir.jpg'
+import React from "react";
+import "./cart.css";
+import { Link } from "react-router-dom";
+import log from "../../assets/logonew.png";
+import coir from "../../assets/oir.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {faPhoneAlt} from "@fortawesome/free-solid-svg-icons"
-import {faEnvelope} from "@fortawesome/free-solid-svg-icons"
-import {faStreetView} from "@fortawesome/free-solid-svg-icons"
-import {faFacebook} from "@fortawesome/free-brands-svg-icons"
-import {faInstagram} from "@fortawesome/free-brands-svg-icons"
-import {faYoutube} from "@fortawesome/free-brands-svg-icons"
-import {faWhatsapp} from "@fortawesome/free-brands-svg-icons"
-import {faTwitter} from "@fortawesome/free-brands-svg-icons"
+import { faPhoneAlt } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faStreetView } from "@fortawesome/free-solid-svg-icons";
+import { faFacebook } from "@fortawesome/free-brands-svg-icons";
+import { faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { faYoutube } from "@fortawesome/free-brands-svg-icons";
+import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 
 function Cart() {
-                    
-    return (
-        <div>
-                         <div className="head">
-        <header >
-            <div className="lj">
-                <img  className ="logo" src={log} alt="logo" width="80px"/>   
-            </div>
-            <nav>
-                <ul className="lin">
-                     <li><a class="oce" href="./home.html">Home</a></li>
-                     <li><a class="oc" href="./product.html">Products</a></li>
-                     <li><a class="co" href="./investors.html">Investors</a></li>
-                     <li><a class="o" href="./about.html">About</a></li>
-                </ul>
-                <a className = "cta" href="./feedback.html"><button>Get in Touch</button></a>
-            </nav>
-        </header>
+  return (
+    <div className="cartbackground">
+      <div className="carthead">
+        <div className="cartheader">
+          <div className="cartlj">
+            <img className="cartlogo" src={log} alt="logo" width="80px" />
+          </div>
+          <nav>
+            <ul className="cartlin">
+              <li className="cartli">
+                <Link className="cartoce" to="/">
+                  Home
+                </Link>
+              </li>
+              <li className="cartli">
+                <Link className="cartoc" to="/product">
+                  Products
+                </Link>
+              </li>
+              <li className="cartli">
+                <Link className="cartco" to="/investors">
+                  Investors
+                </Link>
+              </li>
+              <li className="cartli">
+                <Link className="carto" to="/about">
+                  About
+                </Link>
+              </li>
+            </ul>
+            <Link className="cartcta" to="/feedback">
+              <button className="cartbutton1">Get in Touch</button>
+            </Link>
+          </nav>
         </div>
-        <div className="container cart">
-        <table>
-            <tr>
-                <th>Product</th>
-                <th className="quan">Quantity</th>
-                <th className="sub">Amount</th>
-            </tr>
-            <tr>
-                <td>
-                    <div className="info">
-                        <img src={coir} />
-                        <div className="con">
-                            <p>Coir Brick</p>
-                            <small>Price(Rs/kg): 200</small>
-                            <br></br>
-                            <a href="#">Remove</a>
-                        </div>
-                    </div>
-                </td>
-                <td className="inp"><input type="number" value="1" min="1"/>
-
-                </td>
-                <td className="pr">200</td>
-            </tr>
-            <tr>
-        <div className="line"></div>
-    <td>
-                    <div classname="info">
-                        <img className="toh" src={coir} />
-                        <div className="ten">
-                            <p>Coir Brick</p>
-                            <small>Price(Rs/kg): 200</small>
-                            <br></br>
-                            <a href="#">Remove</a>
-                        </div>
-                    </div>
-                </td>
-                <td className="inpu"><input type="number" value="1" /></td>
-                <td class="pri">200</td>
-            </tr>
-        </table> 
-        </div>
-        <div className="container cart">
-            <div class="total">
-            <table>
-                <tr>
-                    <td>Sub-total</td>
-                    <td>Rs 400</td>
-                </tr>
-                <tr>
-                    <td>tax</td>
-                    <td>Rs 10</td>
-                </tr>
-                <tr>
-                    <td>Total</td>
-                    <td>Rs 410</td>
-                </tr>
-                <tr><button class="buy">Buy</button></tr>
-            </table>
-        </div>
-        </div>
-        <footer>
-        <div className="main-content">
-            <div className="left box">
-                <h2>Contact us</h2>
-                <div className="content">
-                    <div className="phone">
-                        <span><FontAwesomeIcon icon={faPhoneAlt}/></span>
-                        <span className="pho">&nbsp; 0421 123456 &nbsp;+91 8190029732</span>
-                    </div><br></br>
-                    <div className="email">
-                        <span><FontAwesomeIcon icon={faEnvelope}/></span>
-                        <span className="mail">&nbsp;&nbsp;contact.farmhaat@gmail.com</span>
-                    </div>
-                    <div className="social">
-                        <a href="#"> <span><FontAwesomeIcon icon={faFacebook}/></span></a>
-                        <a href="#"> <span><FontAwesomeIcon icon={faInstagram}/></span></a>
-                        <a href="#"> <span><FontAwesomeIcon icon={faWhatsapp}/></span></a>
-                        <a href="#"><span><FontAwesomeIcon icon={faTwitter}/></span></a>
-                        <a href="#"><span><FontAwesomeIcon icon={faYoutube}/></span></a>
-                    </div>
+      </div>
+      <div className="carcontainer carcart">
+        <table className="cartable">
+          <tr className="cartr">
+            <th className="carth">Product</th>
+            <th className="carth carquan">Quantity</th>
+            <th className="carth carsub">Amount</th>
+          </tr>
+          <tr className="cartr">
+            <td className="cartd">
+              <div className="carinfo">
+                <img className="carimg" src={coir} />
+                <div className="carcon">
+                  <p className="carp1">Coir Brick</p>
+                  <small className="carsmall">Price(Rs/kg): 200</small>
+                  <br></br>
+                  <a className="cara1" href="#">
+                    Remove
+                  </a>
                 </div>
-            </div>
-            <div className="center box">
-                <h2>Address</h2>
-                <div className="content">
-                    <div className="place">
-                        <span><FontAwesomeIcon icon={faStreetView}/></span>
-                        <span className="Text">&nbsp;&nbsp;2/827, Vellagoundan Thottam, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ganapathipalayam, <br></br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tirupur -641605</span>
-                    </div>
-                    <a className = "ctas" href="https://www.google.co.in/maps/place/Vellagoundan+Thottam/@11.0379345,77.3374261,17z/data=!4m12!1m5!8m4!1e4!2s117202927009810744605!3m1!1e1!3m5!1s0x3ba9a9e86124b215:0xa552b05896b8138e!8m2!3d11.0377253!4d77.3373566!16s%2Fg%2F11pb17br0b?hl=en" target="-blank"><button>Locate us</button></a>
+              </div>
+            </td>
+            <td className="cartd ">
+              <input
+                className="carinput carinp"
+                type="number"
+                value="1"
+                min="1"
+              />
+            </td>
+            <td className="cartd carpr">200</td>
+          </tr>
+          <tr className="cartr">
+            <div className="carline"></div>
+            <td className="cartd">
+              <div classname="carinfo">
+                <img className="cartoh" src={coir} />
+                <div className="carten">
+                  <p className="carp1">Coir Brick</p>
+                  <small className="carsmall">Price(Rs/kg): 200</small>
+                  <br></br>
+                  <a className="cara1" href="#">
+                    Remove
+                  </a>
                 </div>
-            </div>
-            <div className="right box">
-                <h2>Quick links</h2>
-                <div className="contents">
-                    <ul>
-                        <li><a href="./home.html">Home</a></li>
-                        <li><a href="./feedback.html">Feedback</a></li>
-                        <li><a href="./product.html">Product</a></li>
-                        <li><a href="./investors.html">Investor</a></li>
-                        <li><a href="./register.html">Register</a></li>
-                    </ul>
-                </div>
-            </div>
+              </div>
+            </td>
+            <td className="cartd">
+              <input className="carinput carinpu" type="number" value="1" />
+            </td>
+            <td class="cartd carpri">200</td>
+          </tr>
+        </table>
+      </div>
+      <div className="carcontainer carcart">
+        <div class="cartotal">
+          <table className="cartable">
+            <tr className="cartr">
+              <td className="cartd">Sub-total</td>
+              <td className="cartd">Rs 400</td>
+            </tr>
+            <tr className="cartr">
+              <td className="cartd">tax</td>
+              <td className="cartd">Rs 10</td>
+            </tr>
+            <tr className="cartr">
+              <td className="cartd">Total</td>
+              <td className="cartd">Rs 410</td>
+            </tr>
+            <tr className="cartr">
+              <button className="carbuy">Buy</button>
+            </tr>
+          </table>
         </div>
-    </footer>
+      </div>
+      <div className="cartfooter">
+        <div className="cartmaincontent">
+          <div className="cartleft cartbox">
+            <h2 className="cartleftcontact">Contact us</h2>
+            <div className="cartcontent">
+              <div className="cartphone">
+                <span>
+                  <FontAwesomeIcon icon={faPhoneAlt} />
+                </span>
+                <span className="cartpho">
+                  &nbsp; 0421 123456 &nbsp;+91 8190029732
+                </span>
+              </div>
+              <br></br>
+              <div className="cartemail">
+                <span>
+                  <FontAwesomeIcon icon={faEnvelope} />
+                </span>
+                <span className="cartmail">
+                  &nbsp;&nbsp;contact.farmhaat@gmail.com
+                </span>
+              </div>
+              <div className="cartsocial">
+                <a className="cartsociala" href="www.facebook.com">
+                  <span className="cartsocialspan">
+                    <FontAwesomeIcon icon={faFacebook} color="white" />
+                  </span>
+                </a>
+                <a className="cartsociala" href="www.instagram.com">
+                  <span className="cartsocialspan">
+                    <FontAwesomeIcon icon={faInstagram} color="white" />
+                  </span>
+                </a>
+                <a className="cartsociala" href="www.whatsapp.com">
+                  <span className="cartsocialspan">
+                    <FontAwesomeIcon icon={faWhatsapp} color="white" />
+                  </span>
+                </a>
+                <a className="cartsociala" href="www.twitter.com">
+                  <span className="cartsocialspan">
+                    <FontAwesomeIcon icon={faTwitter} color="white" />
+                  </span>
+                </a>
+                <a className="cartsociala" href="www.youtube.com">
+                  <span className="cartsocialspan">
+                    <FontAwesomeIcon icon={faYoutube} color="white" />
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className="cartcenter cartbox">
+            <h2 className="cartaddress">Address</h2>
+            <div className="cartcontent">
+              <div className="cartplace">
+                <span>
+                  <FontAwesomeIcon icon={faStreetView} />
+                </span>
+                <span className="cartText">
+                  &nbsp;&nbsp;2/827, Vellagoundan Thottam,
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ganapathipalayam, <br></br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tirupur -641605
+                </span>
+              </div>
+              <a
+                className="cartctas"
+                href="https://www.google.co.in/maps/place/Vellagoundan+Thottam/@11.0379345,77.3374261,17z/data=!4m12!1m5!8m4!1e4!2s117202927009810744605!3m1!1e1!3m5!1s0x3ba9a9e86124b215:0xa552b05896b8138e!8m2!3d11.0377253!4d77.3373566!16s%2Fg%2F11pb17br0b?hl=en"
+                target="-blank"
+              >
+                <button className="cartbutton2">Locate us</button>
+              </a>
+            </div>
+          </div>
+          <div className="cartright cartbox">
+            <h2 className="cartquick">Quick links</h2>
+            <div className="cartcontents">
+              <ul className="cartrightul">
+                <li className="cartrightli">
+                  <Link className="cartrighta" to="/">
+                    Home
+                  </Link>
+                </li>
+                <li className="cartrightli">
+                  <Link className="cartrighta" to="/feedback">
+                    Feedback
+                  </Link>
+                </li>
+                <li className="cartrightli">
+                  <Link className="cartrighta" to="/product">
+                    Product
+                  </Link>
+                </li>
+                <li className="cartrightli">
+                  <Link className="cartrighta" to="/investors">
+                    Investor
+                  </Link>
+                </li>
+                <li className="cartrightli">
+                  <Link className="cartrighta" to="/register">
+                    Register
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
-    )
+      </div>
+    </div>
+  );
 }
 
-export default Cart
+export default Cart;

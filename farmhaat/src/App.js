@@ -1,19 +1,16 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Aboutch from "./component/about/checkin/aboutch";
-import Cartch from "./component/cart/checks/cartch";
+import About from "./component/about/about";
+import Cart from "./component/cart/cart";
 import Home from "./component/home/home";
-import Feedbackch from "./component/feedback/checking/feedbackch";
-import Loginch from "./component/login/checkinh/loginch";
-import Registerch from "./component/register/checkim/registerch";
-import Investorsch from "./component/investors/checkin/investorsch";
-import Ordereditemch from "./component/ordered item/check/ordereditemch";
-import Viewdetailsch from "./component/ordered item/check/viewdetailsch";
-// import Product from './component/product/product'
-// import View from './component/product/view'
-// import Chh from './component/home/chh'
-import Viewch from ".//component/product/checks/viewch";
-import Productch from "./component/product/checks/productch";
+import Feedback from "./component/feedback/feedback";
+import Login from "./component/login/login";
+import Register from "./component/register/register";
+import Investors from "./component/investors/investors";
+import Ordereditem from "./component/ordered item/ordereditem";
+import Viewdetails from "./component/ordered item/viewdetails";
+import View from "./component/product/view";
+import Product from "./component/product/product";
 
 function App() {
   return (
@@ -24,34 +21,34 @@ function App() {
             <Home />
           </Route>
           <Route path="/about">
-            <Aboutch />
+            <About />
           </Route>
           <Route path="/product">
-            <Productch />
+            <Product />
           </Route>
           <Route path="/investors">
-            <Investorsch />
+            <Investors />
           </Route>
           <Route path="/feedback">
-            <Feedbackch />
+            <Feedback />
           </Route>
           <Route path="/view">
-            <Viewch />
+            <View />
           </Route>
           <Route path="/viewdetails">
-            <Viewdetailsch />
+            <Viewdetails />
           </Route>
           <Route path="/ordereditem">
-            <Ordereditemch />
+            <Ordereditem />
           </Route>
           <Route path="/cart">
-            <Cartch />
+            <Cart />
           </Route>
           <Route path="/register">
-            <Registerch />
+            <Register />
           </Route>
           <Route path="/login">
-            <Loginch />
+            <Login />
           </Route>
         </Switch>
       </>

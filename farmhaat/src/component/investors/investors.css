@@ -1,16 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Recursive:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Reggae+One&display=swap");
-/* *{
-    margin: 0;
-    padding: 0;
-    background-color: rgba(253, 249, 249, 0) !important;
+
+.invbackground {
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(
+    to right,
+    #92fe9d 0%,
+    #00c9ff 100%
+  ) !important;
+  height: 1000px;
 }
-body{
-    margin: 0;
-    padding: 0;
-    background-image: linear-gradient(to right, #92fe9d 0%, #00c9ff 100%) !important;
-} */
 .invlogo {
   cursor: pointer;
   position: relative;
@@ -34,7 +35,7 @@ body{
 .invbutton1 {
   font-family: "Red Hat Display", sans-serif;
   font-weight: bold;
-  font-size: 25px;
+  font-size: 20px;
   font-style: italic;
   color: bisque;
   text-decoration: none;
@@ -147,7 +148,6 @@ body{
 .invbutton1:hover {
   background-color: #21ebff !important;
   color: #111;
-  /* border-radius: 50px; */
   box-shadow: 0 0 50px #21ebff;
   transition-delay: 0.5s;
 }
@@ -160,7 +160,6 @@ body{
   height: 10px;
   border-bottom: 2px solid #21ebff !important;
   border-right: 2px solid #21ebff !important;
-  /* border-radius: 35%; */
   transition: 0.5s;
 }
 .invbutton1:hover:after {
@@ -176,7 +175,6 @@ body{
   height: 10px;
   border-top: 2px solid #21ebff;
   border-left: 2px solid #21ebff;
-  /* border-radius: 15%; */
   transition: 0.5s;
 }
 .invbutton1:hover:before {
@@ -341,8 +339,6 @@ body{
   font-family: "Times New Roman", Times, serif !important;
   font-style: italic;
   color: green;
-  /* position: absolute; */
-  /* top:-200px; */
 }
 
 .invfooter {
@@ -400,7 +396,6 @@ body{
   transition: 0.3s;
   position: relative;
   top: 20px;
-  /* background: #ddd !important; */
 }
 
 .invleft .invcontent .invsocial .invaleft .invspanleft:hover {
@@ -424,7 +419,6 @@ body{
   border-radius: 50px;
   background-color: #21ebff !important;
   color: #111;
-  /* border-radius: 50px; */
   box-shadow: 0 0 50px #21ebff;
   transition-delay: 0.5s;
 }
@@ -434,16 +428,15 @@ body{
   left: 550px;
 }
 .invright > .invquick {
-  font-size: 20px;
+  font-size: 24px;
   margin-bottom: 30px;
   text-transform: uppercase;
-  font-weight: 600 !important;
-  margin-left: 50px;
+  font-weight: 800 !important;
+  margin-left: 40px;
 }
 .invcontents .invul2 .invli2 {
   margin-bottom: 10px;
   margin-left: 50px;
-  /* font-family: 'Roboto', sans-serif !important; */
   font-weight: 600;
   font-size: 20px !important;
 }
@@ -451,7 +444,6 @@ body{
   font-weight: 600;
   line-height: 30px;
   text-decoration: none;
-  /* font-family: 'Courier Ne', Courier, monospace; */
   font-size: 20px !important;
   color: #78fee0 !important;
 }

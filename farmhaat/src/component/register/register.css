@@ -1,12 +1,7 @@
-/* *{
-    box-sizing: border-box;
+.regbk {
+  font-family: "Montserrat" sans-serif;
+  box-sizing: border-box;
 }
-body{
-    margin: 0;
-    padding: 0;
-    background-color: #ced3e7;
-    font-family: 'Montserrat' sans-serif;
-} */
 .reginput {
   outline: none;
   border: none;
@@ -89,8 +84,6 @@ body{
   margin-top: 10px;
   margin-bottom: 0px;
   padding-bottom: 2px;
-  /* position: relative;
-    left: 20px; */
 }
 .reginput {
   display: block;
@@ -100,8 +93,6 @@ body{
   color: #0f0f0f;
   font-weight: 500;
   padding: 10px 0px;
-  /* position: relative;
-    left: 200px; */
 }
 .regbtn {
   margin-top: 20px;

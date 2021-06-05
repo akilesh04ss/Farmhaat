@@ -1,5 +1,5 @@
 import React from "react";
-import "./check/home.css";
+import "./home.css";
 import { Link } from "react-router-dom";
 import { faFacebook } from "@fortawesome/free-brands-svg-icons";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
@@ -10,14 +10,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import logo from "../../assets/logonew.png";
 import bk from "../../assets/bk.gif";
 import cancel from "../../assets/more4.png";
-import { faHome } from "@fortawesome/free-solid-svg-icons";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { faUserCircle } from "@fortawesome/free-solid-svg-icons";
 import { faCartPlus } from "@fortawesome/free-solid-svg-icons";
 import { faTruckLoading } from "@fortawesome/free-solid-svg-icons";
 import { faSignOutAlt } from "@fortawesome/free-solid-svg-icons";
 import { faCopyright } from "@fortawesome/free-solid-svg-icons";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 function Home() {
   return (
     <div className="homew">
@@ -32,26 +30,24 @@ function Home() {
 
           <nav>
             <ul className="link">
-              {/* <Link to="/product"> */}
               <li className="div">
-                <a className="od">Products</a>
+                <Link to="/product" className="od">
+                  Products
+                </Link>
               </li>
-              {/* </Link> */}
-              {/* <Link to="/investor"> */}
               <li className="div">
-                <a className="cod">Investors</a>
+                <Link to="/investors" className="cod">
+                  Investors
+                </Link>
               </li>
-              {/* </Link> */}
-              {/* <Link to="/about"> */}
               <li className="div">
-                <a className="ocd">About</a>
+                <Link to="/about" className="ocd">
+                  About
+                </Link>
               </li>
-              {/* </Link> */}
             </ul>
-            <Link to="/feedback">
-              <a className="ctad" href="./feedback.html">
-                <button className="btton1">Get in Touch</button>
-              </a>
+            <Link className="ctad" to="/feedback">
+              <button className="btton1">Get in Touch</button>
             </Link>
           </nav>
         </div>
@@ -69,36 +65,36 @@ function Home() {
         <div className="heders">Menu</div>
         <ul className="ul">
           <li className="li">
-            <a className="ak" href="./login.html">
+            <Link className="ak" to="/login">
               <i>
                 <FontAwesomeIcon icon={faUserCircle} />
               </i>
               User
-            </a>
+            </Link>
           </li>
           <li className="li">
-            <a className="ak" href="./cart.html">
+            <Link className="ak" to="./cart">
               <i>
                 <FontAwesomeIcon icon={faCartPlus} />
               </i>
               Cart
-            </a>
+            </Link>
           </li>
           <li className="li">
-            <a className="ak" href="./oredered item.html">
+            <Link className="ak" to="/ordereditem">
               <i>
                 <FontAwesomeIcon icon={faTruckLoading} />
               </i>
               Ordered item
-            </a>
+            </Link>
           </li>
           <li className="li">
-            <a className="ak" href="#">
+            <Link className="ak" to="/">
               <i>
                 <FontAwesomeIcon icon={faSignOutAlt} />
               </i>
               Log out
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
@@ -108,14 +104,12 @@ function Home() {
         </div>
       </div>
       <div className="soc">
-        <a href="#">
-          {" "}
+        <a href="www.facebook.com">
           <span>
             <FontAwesomeIcon className="fb" icon={faFacebook} color="black" />
           </span>
         </a>
-        <a href="#">
-          {" "}
+        <a href="www.instagram.com">
           <span>
             <FontAwesomeIcon
               className="insta"
@@ -124,18 +118,17 @@ function Home() {
             />
           </span>
         </a>
-        <a href="https://www.youtube.com/watch?v=eiGdsH1g20k">
-          {" "}
+        <a href="www.whatsapp.com">
           <span>
             <FontAwesomeIcon className="wht" icon={faWhatsapp} color="black" />
           </span>
         </a>
-        <a href="https://www.youtube.com/watch?v=eiGdsH1g20k">
+        <a href="www.twitter.com">
           <span>
             <FontAwesomeIcon className="twt" icon={faTwitter} color="black" />
           </span>
         </a>
-        <a href="#">
+        <a href="www.youtube.com" target="blank">
           <span>
             <FontAwesomeIcon className="utb" icon={faYoutube} color="black" />
           </span>
@@ -144,15 +137,15 @@ function Home() {
       <div className="ce">
         <p>LET US GO WITH THE FLOW OF NATURE!</p>
       </div>
-      <a href="./about.html">
+      <Link to="/about">
         <button className="btton3">Take a tour</button>
-      </a>
+      </Link>
       <div className="end">
         <p>
-          Copyrights{" "}
-          <i>
+          Copyrights
+          <i className="homei">
             <FontAwesomeIcon icon={faCopyright} />
-          </i>{" "}
+          </i>
           2020 - 2021 Farmhaat Industry. Powered by Akilesh
         </p>
       </div>

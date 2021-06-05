@@ -1,7 +1,8 @@
 import React from "react";
 import "./ordereditem.css";
-import logo from "../../../assets/logonew.png";
-import coir from "../../../assets/oir.jpg";
+import { Link } from "react-router-dom";
+import logo from "../../assets/logonew.png";
+import coir from "../../assets/oir.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhoneAlt } from "@fortawesome/free-solid-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
@@ -11,9 +12,9 @@ import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faYoutube } from "@fortawesome/free-brands-svg-icons";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
-function Ordereditemch() {
+function Ordereditem() {
   return (
-    <div>
+    <div className="oibackground">
       <div className="orihead">
         <div className="oriheader">
           <div className="orilj">
@@ -22,29 +23,29 @@ function Ordereditemch() {
           <nav>
             <ul className="orilin">
               <li className="orili">
-                <a className="orioce" href="./home.html">
+                <Link className="orioce" to="/">
                   Home
-                </a>
+                </Link>
               </li>
               <li className="orili">
-                <a className="orioc" href="./product.html">
+                <Link className="orioc" to="/product">
                   Products
-                </a>
+                </Link>
               </li>
               <li className="orili">
-                <a className="orico" href="./investors.html">
+                <Link className="orico" to="/investors">
                   Investors
-                </a>
+                </Link>
               </li>
               <li className="orili">
-                <a className="orio" href="./about.html">
+                <Link className="orio" to="/about">
                   About
-                </a>
+                </Link>
               </li>
             </ul>
-            <a className="oricta" href="./feedback.html">
+            <Link className="oricta" to="/feedback">
               <button className="oributton1">Get in Touch</button>
-            </a>
+            </Link>
           </nav>
         </div>
       </div>
@@ -68,7 +69,7 @@ function Ordereditemch() {
             <td className="orirs oritd">Rs 200</td>
             <td className="oripr oritd">20th April</td>
             <td className="oria oritd">
-              <a href="./viewdetials.html">View details</a>
+              <Link to="/viewdetails">View details</Link>
             </td>
           </tr>
           <div className="oriline"></div>
@@ -85,9 +86,9 @@ function Ordereditemch() {
             <td className="orirs oritd">Rs 200</td>
             <td className="oripr oritd">20th April</td>
             <td className="oriview oritd">
-              <a href="./viewdetials.html" className="oriview">
+              <Link to="/viewdetails" className="oriview">
                 View details
-              </a>
+              </Link>
             </td>
           </tr>
         </table>
@@ -100,7 +101,9 @@ function Ordereditemch() {
           </div>
           <div className="oricontentBx">
             <h2 className="orih22">Coir Brick</h2>
-            <a className="oriaw">view it!</a>
+            <Link to="/view" className="oriaw">
+              view it!
+            </Link>
           </div>
         </div>
       </div>
@@ -127,27 +130,27 @@ function Ordereditemch() {
                 </span>
               </div>
               <div className="orisocial">
-                <a className="orisociala" href="#">
+                <a className="orisociala" href="www.facebook.com">
                   <span className="orisocialspan">
                     <FontAwesomeIcon icon={faFacebook} color="white" />
                   </span>
                 </a>
-                <a className="orisociala" href="#">
+                <a className="orisociala" href="www.instagram.com">
                   <span className="orisocialspan">
                     <FontAwesomeIcon icon={faInstagram} color="white" />
                   </span>
                 </a>
-                <a className="orisociala" href="#">
+                <a className="orisociala" href="www.whatsapp.com">
                   <span className="orisocialspan">
                     <FontAwesomeIcon icon={faWhatsapp} color="white" />
                   </span>
                 </a>
-                <a className="orisociala" href="#">
+                <a className="orisociala" href="www.twitter.com">
                   <span className="orisocialspan">
                     <FontAwesomeIcon icon={faTwitter} color="white" />
                   </span>
                 </a>
-                <a className="orisociala" href="#">
+                <a className="orisociala" href="www.youtube.com">
                   <span className="orisocialspan">
                     <FontAwesomeIcon icon={faYoutube} color="white" />
                   </span>
@@ -181,29 +184,29 @@ function Ordereditemch() {
             <div className="oricontents">
               <ul className="orirightul">
                 <li className="orirightli">
-                  <a className="oririghta" href="./home.html">
+                  <Link className="oririghta" to="/">
                     Home
-                  </a>
+                  </Link>
                 </li>
                 <li className="orirightli">
-                  <a className="oririghta" href="./feedback.html">
+                  <Link className="oririghta" to="/feedback">
                     Feedback
-                  </a>
+                  </Link>
                 </li>
                 <li className="orirightli">
-                  <a className="oririghta" href="./product.html">
+                  <Link className="oririghta" to="/product">
                     Product
-                  </a>
+                  </Link>
                 </li>
                 <li className="orirightli">
-                  <a className="oririghta" href="./investors.html">
+                  <Link className="oririghta" to="/investors">
                     Investor
-                  </a>
+                  </Link>
                 </li>
                 <li className="orirightli">
-                  <a className="oririghta" href="./register.html">
+                  <Link className="oririghta" to="/register">
                     Register
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -214,4 +217,4 @@ function Ordereditemch() {
   );
 }
 
-export default Ordereditemch;
+export default Ordereditem;

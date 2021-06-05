@@ -1,7 +1,8 @@
 import React from "react";
-import logo from "../../../assets/logonew.png";
+import { Link } from "react-router-dom";
+import logo from "../../assets/logonew.png";
 import "./viewdetails.css";
-import coir from "../../../assets/oir.jpg";
+import coir from "../../assets/oir.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhoneAlt } from "@fortawesome/free-solid-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
@@ -13,7 +14,7 @@ import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 function Viewdetails() {
   return (
-    <div>
+    <div className="vdbk">
       <div className="vdhead">
         <div className="vdheader">
           <div className="vdlj">
@@ -22,29 +23,29 @@ function Viewdetails() {
           <nav>
             <ul className="vdlin">
               <li className="vdli">
-                <a className="vdoce" href="./home.html">
+                <Link className="vdoce" to="/">
                   Home
-                </a>
+                </Link>
               </li>
               <li className="vdli">
-                <a className="vdoc" href="./product.html">
+                <Link className="vdoc" to="/product">
                   Products
-                </a>
+                </Link>
               </li>
               <li className="vdli">
-                <a className="vdco" href="./investors.html">
+                <Link className="vdco" to="/investors">
                   Investors
-                </a>
+                </Link>
               </li>
               <li className="vdli">
-                <a className="vdo" href="./about.html">
+                <Link className="vdo" to="/about">
                   About
-                </a>
+                </Link>
               </li>
             </ul>
-            <a className="vdcta" href="./feedback.html">
+            <Link className="vdcta" to="/feedback">
               <button className="vdbutton1">Get in Touch</button>
-            </a>
+            </Link>
           </nav>
         </div>
       </div>
@@ -85,7 +86,9 @@ function Viewdetails() {
             </p>
           </tr>
           <tr>
-            <button class="vdbtnss">Feedback</button>
+            <Link to="/feedback">
+              <button class="vdbtnss">Feedback</button>
+            </Link>
           </tr>
         </table>
       </div>
@@ -112,27 +115,27 @@ function Viewdetails() {
                 </span>
               </div>
               <div className="vdsocial">
-                <a className="vdsociala" href="#">
+                <a className="vdsociala" href="www.facebook.com">
                   <span className="vdsocialspan">
                     <FontAwesomeIcon icon={faFacebook} color="white" />
                   </span>
                 </a>
-                <a className="vdsociala" href="#">
+                <a className="vdsociala" href="www.instagram.com">
                   <span className="vdsocialspan">
                     <FontAwesomeIcon icon={faInstagram} color="white" />
                   </span>
                 </a>
-                <a className="vdsociala" href="#">
+                <a className="vdsociala" href="www.whatsapp.com">
                   <span className="vdsocialspan">
                     <FontAwesomeIcon icon={faWhatsapp} color="white" />
                   </span>
                 </a>
-                <a className="vdsociala" href="#">
+                <a className="vdsociala" href="www.twitter.com">
                   <span className="vdsocialspan">
                     <FontAwesomeIcon icon={faTwitter} color="white" />
                   </span>
                 </a>
-                <a className="vdsociala" href="#">
+                <a className="vdsociala" href="www.youtube.com">
                   <span className="vdsocialspan">
                     <FontAwesomeIcon icon={faYoutube} color="white" />
                   </span>
@@ -166,29 +169,29 @@ function Viewdetails() {
             <div className="vdcontents">
               <ul className="vdrightul">
                 <li className="vdrightli">
-                  <a className="vdrighta" href="./home.html">
+                  <Link className="vdrighta" to="/">
                     Home
-                  </a>
+                  </Link>
                 </li>
                 <li className="vdrightli">
-                  <a className="vdrighta" href="./feedback.html">
+                  <Link className="vdrighta" to="/feedback">
                     Feedback
-                  </a>
+                  </Link>
                 </li>
                 <li className="vdrightli">
-                  <a className="vdrighta" href="./product.html">
+                  <Link className="vdrighta" to="/product">
                     Product
-                  </a>
+                  </Link>
                 </li>
                 <li className="vdrightli">
-                  <a className="vdrighta" href="./investors.html">
+                  <Link className="vdrighta" to="/investors">
                     Investor
-                  </a>
+                  </Link>
                 </li>
                 <li className="vdrightli">
-                  <a className="vdrighta" href="./register.html">
+                  <Link className="vdrighta" to="/register">
                     Register
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
