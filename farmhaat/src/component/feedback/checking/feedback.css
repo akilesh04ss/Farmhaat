@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+/* *{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 150vh;
+    padding: 40px;
+    background: linear-gradient(115deg,#8fd3f4  5%,#84fab0 95%);
+} */
+.feedcontainer {
+  background: #fff;
+  width: 800px;
+  height: 500px;
+  max-width: 800px;
+  padding: 25px 40px 10px 40px;
+  position: absolute;
+  bottom: 050px;
+  left: 280px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+.feedcontainer .feedtext {
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+  background: -webkit-linear-gradient(right, #8fd3f4, #84fab0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.feedcontainer .feedform {
+  padding: 30px 0 0 0 0;
+}
+.feedcontainer .feedform .feedformrow {
+  display: flex;
+  margin: 32px 0;
+}
+.feedform .feedformrow .feedinputdata {
+  width: 100%;
+  height: 40px;
+  margin: 0 20px;
+  position: relative;
+}
+.feedform .feedformrow .feedtextarea {
+  height: 20px;
+}
+.feedinputdata .feedinput,
+.feedtextarea .feedtextareainp {
+  display: block;
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 17px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.12);
+}
+.feedinputdata .feedinput:focus ~ .feedlabel,
+.feedtextarea .feedtextareainp:focus ~ .feedlabel,
+.feedinputdata .feedinput:valid ~ .feedlabel,
+.feedtextarea .feedtextareainp:valid ~ .feedlabel {
+  transform: translate(0, -10px);
+  color: #84fab0;
+  /* border: none; */
+  /* outline: none; */
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+.feedtextarea .feedtextareainp {
+  /* border: none; */
+  outline: none;
+  resize: none;
+  padding-top: 10px;
+}
+.feedinputdata .feedlabel {
+  position: absolute;
+  bottom: 40px;
+  font-size: 16px;
+  pointer-events: none;
+}
+.feedtextarea {
+  position: absolute;
+  width: 86%;
+  left: 60px;
+  bottom: 251px !important;
+  background: #fff;
+}
+.feedtextarea .feedlabel {
+  position: absolute;
+  bottom: 40px;
+}
+.feedinputdata .feedunderline {
+  position: absolute;
+  bottom: -3px;
+  height: 2px;
+  /* border: none; */
+  width: 101%;
+  /* outline: none; */
+}
+.feedtextarea .feedunderline {
+  position: absolute;
+  bottom: -14px;
+  height: 2px;
+  /* border: none; */
+  width: 101%;
+  /* outline: none; */
+}
+.feedinputdata .feedunderline::before,
+.feedinputdata .feedunderline::after {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  /* border: none; */
+  /* outline: none; */
+  background: #8fd3f4;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+.feedtextarea .feedunderline::before,
+.feedtextarea .feedunderline::after {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  /* border: none; */
+  /* outline: none; */
+  background: #8fd3f4;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+.feedinputdata .feedinput:focus ~ .feedunderline::before,
+.feedunderline::after,
+.feedtextarea .feedtextareainp:focus ~ .feedunderline::before,
+.feedunderline:after,
+.feedinputdata .feedinput:valid ~ .feedunderline::before,
+.feedunderline::after,
+.feedtextarea .feedtextareainp:valid ~ .feedunderline::before,
+.feedunderline::after {
+  transform: scaleX(1);
+  /* border: none; */
+  /* outline: none; */
+}
+.feedsubmitbtn .feedinputdata {
+  height: 45px !important;
+  width: 25% !important;
+  overflow: hidden;
+  position: relative;
+  top: 60px;
+}
+.feedsubmitbtn .feedinputdata .feedinner {
+  height: 100%;
+  width: 300%;
+  position: absolute;
+  left: -100%;
+  background: -webkit-linear-gradient(right, #8fd3f4, #84fab0);
+  transition: all 0.3s;
+}
+.feedsubmitbtn .feedinputdata:hover .feedinner {
+  left: 0;
+}
+.feedsubmitbtn .feedinputdata .feedinput {
+  position: relative;
+  z-index: 2;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+}

@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
-*{
+/* *{
     margin: 0;
     padding: 0;
     outline: none;
@@ -13,7 +13,7 @@ body{
     min-height: 150vh;
     padding: 40px;
     background: linear-gradient(115deg,#8fd3f4  5%,#84fab0 95%);
-}
+} */
 .container{
     background: #fff;
     width: 800px;

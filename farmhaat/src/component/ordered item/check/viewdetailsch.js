@@ -1,0 +1,202 @@
+import React from "react";
+import logo from "../../../assets/logonew.png";
+import "./viewdetails.css";
+import coir from "../../../assets/oir.jpg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPhoneAlt } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faStreetView } from "@fortawesome/free-solid-svg-icons";
+import { faFacebook } from "@fortawesome/free-brands-svg-icons";
+import { faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { faYoutube } from "@fortawesome/free-brands-svg-icons";
+import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import { faTwitter } from "@fortawesome/free-brands-svg-icons";
+function Viewdetails() {
+  return (
+    <div>
+      <div className="vdhead">
+        <div className="vdheader">
+          <div className="vdlj">
+            <img className="vdlogo" src={logo} alt="logo" width="80px" />
+          </div>
+          <nav>
+            <ul className="vdlin">
+              <li className="vdli">
+                <a className="vdoce" href="./home.html">
+                  Home
+                </a>
+              </li>
+              <li className="vdli">
+                <a className="vdoc" href="./product.html">
+                  Products
+                </a>
+              </li>
+              <li className="vdli">
+                <a className="vdco" href="./investors.html">
+                  Investors
+                </a>
+              </li>
+              <li className="vdli">
+                <a className="vdo" href="./about.html">
+                  About
+                </a>
+              </li>
+            </ul>
+            <a className="vdcta" href="./feedback.html">
+              <button className="vdbutton1">Get in Touch</button>
+            </a>
+          </nav>
+        </div>
+      </div>
+      <div className="vdcon">
+        <table className="vdtable">
+          <tr>
+            <td className="vdtd">
+              <img className="vdimg" src={coir} alt="" />
+              <div className="vdinf">
+                <h2 className="vdh2">Coir Brick</h2>
+                <small className="vdsmall">Price: 200</small>
+                <br></br>
+              </div>
+            </td>
+            <td className="vdtd">
+              <p className="vdrp">Ordered Date: 19th April</p>
+            </td>
+            <td className="vdtd">
+              <p className="vdpr">Delivery Date: 20th April</p>
+            </td>
+          </tr>
+          <tr>
+            <p className="vdqw">Quantity:2</p>
+          </tr>
+          <tr>
+            <p className="vdad">
+              Adrress: <br></br> 2/827,Vellagoundan Thottam,
+              Ganapathipalayam,Tirupur-5
+            </p>
+          </tr>
+
+          <tr>
+            <p className="vdsa">
+              Description:<br></br>* It will come in brick form of 5 KG.{" "}
+              <br></br>* Useful for potting mix, maintain water level.<br></br>*
+              Put directly into the water to convert it into powder form.
+              <br></br>* Useful for indoor & outdoor potted plants.
+            </p>
+          </tr>
+          <tr>
+            <button class="vdbtnss">Feedback</button>
+          </tr>
+        </table>
+      </div>
+      <div className="vdfooter">
+        <div className="vdmaincontent">
+          <div className="vdleft vdbox">
+            <h2 className="vdcontact">Contact us</h2>
+            <div className="vdcontent">
+              <div className="vdphone">
+                <span>
+                  <FontAwesomeIcon icon={faPhoneAlt} />
+                </span>
+                <span className="pho">
+                  &nbsp; 0421 123456 &nbsp;+91 8190029732
+                </span>
+              </div>
+              <br></br>
+              <div className="vdemail">
+                <span>
+                  <FontAwesomeIcon icon={faEnvelope} />
+                </span>
+                <span className="vdmail">
+                  &nbsp;&nbsp;contact.farmhaat@gmail.com
+                </span>
+              </div>
+              <div className="vdsocial">
+                <a className="vdsociala" href="#">
+                  <span className="vdsocialspan">
+                    <FontAwesomeIcon icon={faFacebook} color="white" />
+                  </span>
+                </a>
+                <a className="vdsociala" href="#">
+                  <span className="vdsocialspan">
+                    <FontAwesomeIcon icon={faInstagram} color="white" />
+                  </span>
+                </a>
+                <a className="vdsociala" href="#">
+                  <span className="vdsocialspan">
+                    <FontAwesomeIcon icon={faWhatsapp} color="white" />
+                  </span>
+                </a>
+                <a className="vdsociala" href="#">
+                  <span className="vdsocialspan">
+                    <FontAwesomeIcon icon={faTwitter} color="white" />
+                  </span>
+                </a>
+                <a className="vdsociala" href="#">
+                  <span className="vdsocialspan">
+                    <FontAwesomeIcon icon={faYoutube} color="white" />
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className="vdcenter vdbox">
+            <h2 className="vdaddress">Address</h2>
+            <div className="vdcontent">
+              <div className="vdplace">
+                <span>
+                  <FontAwesomeIcon icon={faStreetView} />
+                </span>
+                <span className="vdText">
+                  &nbsp;&nbsp;2/827, Vellagoundan Thottam,
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ganapathipalayam, <br></br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tirupur -641605
+                </span>
+              </div>
+              <a
+                className="vdctas"
+                href="https://www.google.co.in/maps/place/Vellagoundan+Thottam/@11.0379345,77.3374261,17z/data=!4m12!1m5!8m4!1e4!2s117202927009810744605!3m1!1e1!3m5!1s0x3ba9a9e86124b215:0xa552b05896b8138e!8m2!3d11.0377253!4d77.3373566!16s%2Fg%2F11pb17br0b?hl=en"
+              >
+                <button className="vdbutton2">Locate us</button>
+              </a>
+            </div>
+          </div>
+          <div className="vdright vdbox">
+            <h2 className="vdquick">Quick links</h2>
+            <div className="vdcontents">
+              <ul className="vdrightul">
+                <li className="vdrightli">
+                  <a className="vdrighta" href="./home.html">
+                    Home
+                  </a>
+                </li>
+                <li className="vdrightli">
+                  <a className="vdrighta" href="./feedback.html">
+                    Feedback
+                  </a>
+                </li>
+                <li className="vdrightli">
+                  <a className="vdrighta" href="./product.html">
+                    Product
+                  </a>
+                </li>
+                <li className="vdrightli">
+                  <a className="vdrighta" href="./investors.html">
+                    Investor
+                  </a>
+                </li>
+                <li className="vdrightli">
+                  <a className="vdrighta" href="./register.html">
+                    Register
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default Viewdetails;

@@ -1,0 +1,668 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Recursive:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Reggae+One&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  background-color: rgba(253, 249, 249, 0) !important;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(to right, #92fe9d 0%, #00c9ff 100%);
+} */
+
+.abthead {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  bottom: 10px;
+  background-color: #111 !important;
+}
+
+.abtlogo {
+  cursor: pointer;
+  position: relative;
+  left: 0px;
+  border-radius: 50%;
+  border: 1px rgb(8, 238, 65) solid;
+}
+
+.abtli,
+.abtoc,
+.abtco,
+.abto,
+.abtoce,
+.abtbutton1 {
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: bold;
+  font-size: 25px;
+  font-style: italic;
+  color: bisque;
+  text-decoration: none;
+}
+.abtheader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+}
+
+.abtlin .abtli {
+  list-style: none;
+  align-items: center;
+  display: inline-flex;
+  align-items: center;
+  padding: 0px 10px;
+}
+.abtlin .abtli .abtoc,
+.abtco,
+.abto,
+.abtoce {
+  margin-right: 10px;
+  transition: all 0.3s ease 0s;
+}
+.abtlin .abtli .abtco:hover,
+.abtlin .abtli .abto:hover,
+.abtlin .abtli .abtoc:hover,
+.abtlin .abtli .abtoce:hover {
+  color: greenyellow;
+}
+.abtlin {
+  position: absolute;
+  left: 120px;
+  top: 15px;
+}
+.abtlin > .abtli > .abtco::after {
+  content: "";
+  position: relative;
+  top: -15px;
+  display: inline-block !important;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s;
+}
+.abtlin > .abtli > .abtco:hover::after {
+  width: 100%;
+  transition: width 0.3s;
+}
+.abtlin > .abtli > .abtoc::after {
+  content: "";
+  position: relative;
+  left: 0px;
+  top: -15px;
+  display: inline-block;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+}
+.abtlin > .abtli > .abtoc {
+  color: greenyellow !important;
+}
+.abtlin > .abtli > .abto::after {
+  content: "";
+  position: relative;
+  left: 0px;
+  bottom: 15px;
+  display: inline-block;
+  width: 0%;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s;
+}
+.abtlin > .abtli > .abto:hover::after {
+  width: 100%;
+  transition: width 0.3s;
+}
+.abtlin > .abtli > .abtoce::after {
+  content: "";
+  position: relative;
+  left: 0px;
+  bottom: 15px;
+  display: inline-block;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s;
+}
+.abtlin > .abtli > .abtoce:hover::after {
+  width: 100%;
+  transition: width 0.3s;
+}
+.abtcta {
+  position: relative;
+  left: -40px;
+  bottom: -10px;
+}
+
+.abtbutton1 {
+  margin: 0 15px;
+  padding: 9px 25px;
+  color: #21ebff;
+  text-decoration: none;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  font-size: 20px;
+  border: none;
+  overflow: hidden;
+  background: rgba(253, 249, 249, 0);
+  transition: 0.5s;
+}
+.abtbutton1:hover {
+  background-color: #21ebff !important;
+  color: #111;
+  /* border-radius: 50px; */
+  box-shadow: 0 0 50px #21ebff;
+  transition-delay: 0.5s;
+}
+.abtbutton1::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  width: 10px;
+  height: 10px;
+  border-bottom: 2px solid #21ebff !important;
+  border-right: 2px solid #21ebff !important;
+  /* border-radius: 35%; */
+  transition: 0.5s;
+}
+.abtbutton1:hover:after {
+  width: 100%;
+  height: 100%;
+}
+.abtbutton1::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #21ebff;
+  border-left: 2px solid #21ebff;
+  /* border-radius: 15%; */
+  transition: 0.5s;
+}
+.abtbutton1:hover:before {
+  width: 100%;
+  height: 100%;
+}
+.abtbutton1 {
+  position: relative;
+  left: 0px;
+  bottom: 20px;
+}
+
+.abtour > .abtcont {
+  font-size: 5ch;
+  position: absolute;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif !important;
+  font-style: italic;
+  left: 40px;
+  bottom: 350px;
+}
+.abtour > .abtcont::after {
+  content: "";
+  position: relative;
+  left: 0px;
+  top: -35px;
+  display: inline-block;
+  width: 45%;
+  height: 3px;
+  text-shadow: 2px 2px 2px gray;
+  background-color: black;
+}
+.abtprofile {
+  width: 60%;
+  position: absolute;
+  left: 30px;
+  bottom: -680px;
+  font-size: 2.35ch;
+  justify-content: center;
+  align-items: center;
+  font-family: cursive !important;
+}
+.abtmis {
+  width: 300px;
+  position: absolute;
+  left: 250px;
+  top: 240px;
+  border: 1px solid;
+  border-radius: 15px;
+  -webkit-box-shadow: 5px 5px 10px 7px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 5px 5px 10px 7px rgba(0, 0, 0, 1);
+  box-shadow: 5px 5px 10px 7px #000000;
+}
+.abtmisi {
+  position: absolute;
+  left: 350px;
+  top: 460px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif !important;
+  font-style: italic;
+  font-size: 3.5ch;
+  color: green;
+}
+.abtenter {
+  position: absolute;
+  width: 21%;
+  left: 270px;
+  top: 520px;
+  font-size: 2ch;
+  font-family: cursive !important;
+}
+.abtvis {
+  width: 300px;
+  height: 230px;
+  position: absolute;
+  left: 850px;
+  top: 240px;
+  border: 1px;
+  border-radius: 15px;
+  -webkit-box-shadow: 5px 5px 10px 7px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 5px 5px 10px 7px rgba(0, 0, 0, 1);
+  box-shadow: 5px 5px 10px 7px rgba(0, 0, 0, 1);
+}
+.abtvisi {
+  position: absolute;
+  left: 960px;
+  top: 460px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif !important;
+  font-style: italic;
+  font-size: 3.5ch;
+  color: green;
+}
+.abtventer {
+  position: absolute;
+  width: 21%;
+  left: 870px;
+  top: 520px;
+  font-size: 2ch;
+  font-family: cursive !important;
+}
+.abtimge {
+  position: absolute;
+  left: 890px;
+  bottom: -550px;
+  width: 350px;
+  border: 8px groove greenyellow;
+  border-radius: 15px 50px;
+  -webkit-box-shadow: 5px 5px 10px 7px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 5px 5px 10px 7px rgba(0, 0, 0, 1);
+  box-shadow: 5px 5px 10px 7px rgba(0, 0, 0, 1);
+}
+.abticon {
+  position: relative;
+  top: 300px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+.abticon > a {
+  list-style: none;
+  width: 150px;
+  height: 100px;
+  display: block;
+  text-align: center;
+  margin: 0 10px;
+  padding: 6px;
+  box-sizing: border-box;
+  text-decoration: none;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(0deg, #ddd, #fff);
+  transition: 0.5s;
+}
+
+.abticon > a:hover {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transform: translate(0px, 10px);
+  text-decoration: none;
+}
+
+.abticon > a {
+  list-style: none;
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: linear-gradient(0deg, #fff, #ddd);
+  line-height: calc(83px - 1px);
+  font-size: 49px;
+  text-align: center;
+  justify-content: center;
+  color: #262626;
+  transition: 0.5s;
+  position: relative;
+}
+
+.abticon > .abtre {
+  position: absolute;
+  right: 1100px;
+  bottom: -1040px;
+  width: 95px;
+  height: 100px;
+  border: rgba(0, 0, 0, 0.3) groove 5px;
+}
+.abticon > .abtre:hover {
+  background: green !important;
+}
+
+.abticon > .abtbest {
+  position: absolute;
+  right: 860px;
+  bottom: -1040px;
+  display: flexbox;
+  font-size: 2.5ch;
+}
+.abticon > .abtcycle {
+  position: absolute;
+  right: 902px;
+  bottom: -1030px;
+  font-size: 3ch;
+}
+.abticon > .abtcycle::after {
+  content: "";
+  position: relative;
+  left: 05px;
+  top: -15px;
+  display: inline-block;
+  width: 45%;
+  height: 3px;
+  text-shadow: 2px 2px 2px gray;
+  background-color: black;
+}
+.abticon > .abtcoin {
+  position: absolute;
+  right: 740px;
+  bottom: -1040px;
+  width: 95px;
+  height: 100px;
+  border: rgba(0, 0, 0, 0.3) groove 5px;
+}
+.abticon > .abtcoin:hover {
+  background: gold !important;
+}
+
+.abticon > .abtreason {
+  position: absolute;
+  right: 460px;
+  bottom: -1040px;
+  display: flexbox;
+  font-size: 2.5ch;
+}
+.abticon > .abtprice {
+  position: absolute;
+  right: 530px;
+  bottom: -1030px;
+  font-size: 3ch;
+}
+.abticon > .abtprice::after {
+  content: "";
+  position: relative;
+  left: 0px;
+  top: -15px;
+  display: inline-block;
+  width: 45%;
+  height: 3px;
+  text-shadow: 2px 2px 2px gray;
+  background-color: black;
+}
+.abticon > .abtthumb {
+  position: absolute;
+  right: 340px;
+  bottom: -1240px;
+  width: 95px;
+  height: 100px;
+  border: rgba(0, 0, 0, 0.3) groove 5px;
+}
+.abticon > .abtthumb:hover {
+  background: #3b5998 !important;
+}
+.abticon > .abtgood {
+  position: absolute;
+  right: 55px;
+  bottom: -1240px;
+  display: flexbox;
+  font-size: 2.5ch;
+}
+.abticon > .abtprod {
+  position: absolute;
+  right: 235px;
+  bottom: -1230px;
+  font-size: 3ch;
+}
+.abticon > .abtprod::after {
+  content: "";
+  position: relative;
+  left: 0px;
+  top: -15px;
+  display: inline-block;
+  width: 55%;
+  height: 3px;
+  text-shadow: 2px 2px 2px gray;
+  background-color: black;
+}
+.abticon > .abtcl {
+  position: absolute;
+  right: 340px;
+  bottom: -1040px;
+  width: 95px;
+  height: 100px;
+  border: rgba(0, 0, 0, 0.3) groove 5px;
+}
+.abticon > .abtcl:hover {
+  background: #c4302b !important;
+}
+
+.abticon > .abtity {
+  position: absolute;
+  right: 140px;
+  bottom: -1040px;
+  display: flexbox;
+  font-size: 2.5ch;
+}
+.abticon > .abtqual {
+  position: absolute;
+  right: 240px;
+  bottom: -1030px;
+  font-size: 3ch;
+}
+.abticon > .abtqual::after {
+  content: "";
+  position: relative;
+  left: 0px;
+  top: -15px;
+  display: inline-block;
+  width: 45%;
+  height: 3px;
+  text-shadow: 2px 2px 2px gray;
+  background-color: black;
+}
+.abticon > .abtser {
+  position: absolute;
+  right: 740px;
+  bottom: -1240px;
+  width: 95px;
+  height: 100px;
+  border: rgba(0, 0, 0, 0.3) groove 5px;
+}
+.abticon > .abtser:hover {
+  background: #329fff !important;
+}
+
+.abticon > .abtbes {
+  position: absolute;
+  right: 535px;
+  bottom: -1240px;
+  display: flexbox;
+  font-size: 2.5ch;
+}
+.abticon > .abtvice {
+  position: absolute;
+  right: 645px;
+  bottom: -1235px;
+  font-size: 3ch;
+}
+.abticon > .abtvice::after {
+  content: "";
+  position: relative;
+  left: 0px;
+  top: -15px;
+  display: inline-block;
+  width: 45%;
+  height: 3px;
+  text-shadow: 2px 2px 2px gray;
+  background-color: black;
+}
+.abticon > .abtorg {
+  position: absolute;
+  right: 1100px;
+  bottom: -1240px;
+  width: 95px;
+  height: 100px;
+  border: rgba(0, 0, 0, 0.3) groove 5px;
+}
+.abticon > .abtorg:hover {
+  background: greenyellow !important;
+}
+
+.abticon > .abtproo {
+  position: absolute;
+  right: 920px;
+  bottom: -1240px;
+  display: flexbox;
+  font-size: 2.5ch;
+}
+.abticon > .abtorganic {
+  position: absolute;
+  right: 930px;
+  bottom: -1230px;
+  font-size: 3ch;
+}
+.abticon > .abtorganic::after {
+  content: "";
+  position: relative;
+  left: 0px;
+  top: -15px;
+  display: inline-block;
+  width: 45%;
+  height: 3px;
+  text-shadow: 2px 2px 2px gray;
+  background-color: black;
+}
+
+.abtfooter {
+  position: absolute;
+  bottom: -1400px;
+  width: 100%;
+  height: 310px;
+  line-height: 30px;
+  background: #111 !important;
+  color: #78fee0;
+  font-size: 20px !important;
+  font-style: italic;
+}
+.abtmaincontent {
+  display: flex;
+}
+.abtmaincontent .abtbox {
+  flex-basis: 50%;
+  padding: 10px 50px;
+}
+.abtbox .abth2 {
+  font-size: 4ch;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.abtcenter > .abtaddress {
+  margin-bottom: 30px;
+  margin-left: 60px;
+}
+.abtleft > .abtcontact {
+  margin-bottom: 30px;
+  margin-left: 60px;
+}
+.abtbox .abtcontent {
+  margin: 20px 0 0 0;
+}
+.abtleft .abtcontent {
+  text-align: justify;
+}
+.abtleft .abtcontent .abtsocial {
+  margin: 20px 0 0 0;
+}
+.abtleft .abtcontent .abtsocial .abtsociala {
+  padding: 0 7px;
+}
+.abtleft .abtcontent .abtsocial .abtsociala .abtsocialspan {
+  height: 40px;
+  width: 40px;
+  background: #1a1a1a !important;
+  line-height: 40px;
+  text-align: center;
+  font-size: 18px;
+  padding: 5px;
+  border-radius: 5px;
+  transition: 0.3s;
+  position: relative;
+  top: 20px;
+  /* background: #ddd !important; */
+}
+
+.abtleft .abtcontent .abtsocial .abtsociala .abtsocialspan:hover {
+  background: #f12020 !important;
+}
+.abtbutton2 {
+  margin: 0 15px;
+  padding: 9px 25px;
+  color: #21ebff;
+  text-decoration: none;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  font-size: 20px;
+  border: none;
+  overflow: hidden !important;
+  transition: 0.5s;
+  background-color: #111;
+}
+.abtbutton2:hover {
+  border: 1px #21ebff;
+  border-radius: 50px;
+  background-color: #21ebff !important;
+  color: #111;
+  /* border-radius: 50px; */
+  box-shadow: 0 0 50px #21ebff;
+  transition-delay: 0.5s;
+}
+.abtctas {
+  position: absolute;
+  top: 230px;
+  left: 550px;
+}
+.abtright > .abtquicks {
+  font-size: 20px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  font-weight: 600 !important;
+  margin-left: 40px;
+}
+.abtcontents .abtrightul .abtrightli {
+  margin-bottom: 10px;
+  margin-left: 30px;
+  /* font-family: 'Roboto', sans-serif !important; */
+  font-weight: 600;
+  font-size: 20px !important;
+}
+.abtcontents .abtrightul .abtrightli .abtrighta {
+  font-weight: 600;
+  line-height: 30px;
+  /* font-family: 'Courier Ne', Courier, monospace; */
+  font-size: 20px !important;
+  color: #78fee0 !important;
+  text-decoration: none;
+}
+
+.abtcenter .abtcontent .place {
+  line-height: 40px;
+}

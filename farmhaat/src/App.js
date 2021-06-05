@@ -1,60 +1,61 @@
-
-import React from 'react';
-import {BrowserRouter as Router,Route,Switch} from 'react-router-dom';
-// import About from './component/about/about'
-// import Cart from './component/cart/cart'
-import Home from './component/home/home'
-// import Feedback from './component/feedback/feedback'
-// import Login from './component/login/login'
-import Register from './component/register/register'
-// import Investors from './component/investors/investors'
-// import Orderediterm from './component/ordered item/ordered item'
-// import Viewdetails from './component/ordered item/view details'
+import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Aboutch from "./component/about/checkin/aboutch";
+import Cartch from "./component/cart/checks/cartch";
+import Home from "./component/home/home";
+import Feedbackch from "./component/feedback/checking/feedbackch";
+import Loginch from "./component/login/checkinh/loginch";
+import Registerch from "./component/register/checkim/registerch";
+import Investorsch from "./component/investors/checkin/investorsch";
+import Ordereditemch from "./component/ordered item/check/ordereditemch";
+import Viewdetailsch from "./component/ordered item/check/viewdetailsch";
 // import Product from './component/product/product'
 // import View from './component/product/view'
+// import Chh from './component/home/chh'
+import Viewch from ".//component/product/checks/viewch";
+import Productch from "./component/product/checks/productch";
 
-function App(){
-  return(
-    <Router >
-    <>
-    <Switch>
-    <Route path="/About">
-    {/* <About /> */}
-    </Route>
-    <Route path="/Cart">
-    {/* <Cart /> */}
-    </Route>
-    <Route exact path ="/">
-    <Home /> 
-    </Route>
-    <Route path ="/Investors">
-    {/* <Investors /> */}
-    </Route>
-    <Route  path ="/Ordered-item">
-    {/* <Orderediterm /> */}
-    </Route>
-    <Route path ="/View-details">
-    {/* <Viewdetails /> */}
-    </Route>
-    <Route path ="/Product">
-    {/* <Product /> */}
-    </Route>
-    <Route path ="/View-it">
-    {/* <View /> */}
-    </Route>
-    <Route path ="/Login">
-     {/* <Login /> */}
-    </Route>
-    <Route path ="/Feedback">
-    {/* <Feedback /> */}
-    </Route>
-    <Route path ="/Register">
-    {/* <Register /> */}
-    </Route>
-    </Switch>
-
-</>
-</Router>
-)
+function App() {
+  return (
+    <Router>
+      <>
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/about">
+            <Aboutch />
+          </Route>
+          <Route path="/product">
+            <Productch />
+          </Route>
+          <Route path="/investors">
+            <Investorsch />
+          </Route>
+          <Route path="/feedback">
+            <Feedbackch />
+          </Route>
+          <Route path="/view">
+            <Viewch />
+          </Route>
+          <Route path="/viewdetails">
+            <Viewdetailsch />
+          </Route>
+          <Route path="/ordereditem">
+            <Ordereditemch />
+          </Route>
+          <Route path="/cart">
+            <Cartch />
+          </Route>
+          <Route path="/register">
+            <Registerch />
+          </Route>
+          <Route path="/login">
+            <Loginch />
+          </Route>
+        </Switch>
+      </>
+    </Router>
+  );
 }
-export default App
+export default App;

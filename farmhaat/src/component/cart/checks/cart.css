@@ -1,0 +1,510 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Recursive:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Reggae+One&display=swap");
+/* * {
+  margin: 0;
+  padding: 0;
+  background-color: rgba(253, 249, 249, 0) !important;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(
+    to right,
+    #92fe9d 0%,
+    #00c9ff 100%
+  ) !important;
+} */
+.cartlogo {
+  cursor: pointer;
+  position: relative;
+  left: 0px;
+  border-radius: 50%;
+  border: 1px rgb(8, 238, 65) solid;
+}
+
+.carthead {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  bottom: 10px;
+  background-color: #042331 !important;
+}
+
+.cartli,
+.cartoc,
+.cartco,
+.cartoce,
+.carto,
+.cartbutton1 {
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 25px;
+  color: bisque;
+  margin-right: 10px;
+  text-decoration: none;
+}
+.cartheader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  background-color: #042331 !important;
+}
+
+.cartlin .cartli {
+  list-style: none;
+  align-items: center;
+  display: inline-flex;
+  align-items: center;
+  padding: 0px 10px;
+}
+.lin .cartli .cartco,
+.cartoc,
+.cartoce,
+.carto {
+  transition: all 0.3s ease 0s;
+}
+.cartlin .cartli .cartoc:hover,
+.cartlin .cartli .cartoce:hover,
+.cartlin .cartli .cartco:hover,
+.cartlin .cartli .carto:hover {
+  color: greenyellow;
+}
+.cartlin {
+  position: absolute;
+  left: 110px;
+  top: 15px;
+}
+.cartlin > .cartli > .cartco::after {
+  content: "";
+  position: relative;
+  top: -15px;
+  display: inline-block !important;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s;
+}
+.cartlin > .cartli > .cartco:hover::after {
+  width: 100%;
+  transition: width 0.3s;
+}
+.cartlin > .cartli > .cartoc::after {
+  content: "";
+  position: relative;
+  left: 0px;
+  top: -15px;
+  display: inline-block;
+  width: 0%;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s;
+}
+.cartlin > .cartli > .cartoc:hover:after {
+  width: 100%;
+  transition: width 0.3s;
+}
+.cartlin > .cartli > .carto::after {
+  content: "";
+  position: relative;
+  left: 0px;
+  bottom: 15px;
+  display: inline-block;
+  width: 0%;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s;
+}
+.cartlin > .cartli > .carto:hover::after {
+  width: 100%;
+  transition: width 0.3s;
+}
+.cartlin > .cartli > .cartoce::after {
+  content: "";
+  position: relative;
+  left: 0px;
+  bottom: 15px;
+  display: inline-block;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s;
+}
+.cartlin > .cartli > .cartoce:hover::after {
+  width: 100%;
+  transition: width 0.3s;
+}
+.cartcta {
+  position: relative;
+  left: -40px;
+  bottom: -10px;
+}
+
+.cartbutton1 {
+  margin: 0 15px;
+  padding: 9px 25px;
+  color: #21ebff;
+  text-decoration: none;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  font-size: 20px;
+  border: none;
+  overflow: hidden;
+  background: rgba(253, 249, 249, 0);
+  transition: 0.5s;
+}
+.cartbutton1:hover {
+  background-color: #21ebff !important;
+  color: #111;
+  /* border-radius: 50px; */
+  box-shadow: 0 0 50px #21ebff;
+  transition-delay: 0.5s;
+}
+.cartbutton1::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  width: 10px;
+  height: 10px;
+  border-bottom: 2px solid #21ebff !important;
+  border-right: 2px solid #21ebff !important;
+  /* border-radius: 35%; */
+  transition: 0.5s;
+}
+.cartbutton1:hover:after {
+  width: 100%;
+  height: 100%;
+}
+.cartbutton1::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #21ebff;
+  border-left: 2px solid #21ebff;
+  /* border-radius: 15%; */
+  transition: 0.5s;
+}
+.cartbutton1:hover:before {
+  width: 100%;
+  height: 100%;
+}
+.cartbutton1 {
+  position: relative;
+  left: 0px;
+  bottom: 20px;
+}
+
+.carcart {
+  margin: 60px auto;
+}
+.cartable {
+  width: 80%;
+  border-collapse: collapse;
+}
+.carinfo .carin {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0px;
+}
+.carth {
+  position: relative;
+  left: 150px;
+  text-align: left;
+  padding: 05px;
+  font-family: "Times New Roman", Times, serif !important;
+  font-style: italic;
+  /* font-weight:bolder; */
+  color: #fff !important;
+  background: green !important;
+  font-size: 2.5ch;
+}
+.cartd {
+  position: relative;
+  left: 0px;
+  font-family: "Times New Roman", Times, serif !important;
+  font-style: italic;
+  font-size: 18px !important;
+  padding: 15px 00px 5px 5px;
+}
+.carcon {
+  position: relative;
+  left: 270px;
+  top: -100px;
+  font-size: 23px !important;
+}
+.carten {
+  position: relative;
+  left: -720px;
+  top: -180px;
+  font-size: 23px !important;
+}
+.cartd .carinput {
+  width: 40px;
+  height: 30px;
+  padding: 5px;
+  position: relative;
+  left: 100px;
+}
+.cartd .carinp {
+  position: relative;
+  left: -280px;
+  top: -50px;
+}
+.cartd .carinpu {
+  position: absolute;
+  /* right: 600px; */
+  left: -558px;
+  top: -30px;
+}
+.carpr {
+  position: absolute;
+  left: 1020px;
+  top: 245px;
+  font-size: 22px !important;
+}
+.carpri {
+  position: absolute;
+  left: 1020px;
+  top: 430px;
+  font-size: 22px !important;
+}
+.carquan {
+  position: relative;
+  left: -300px;
+}
+.carsub {
+  position: relative;
+  left: -260px;
+}
+.cartd .cara1 {
+  color: green !important;
+  font-size: 18px;
+}
+.carsmall {
+  position: relative;
+  bottom: 20px;
+}
+.cara1 {
+  position: relative;
+  bottom: 20px;
+}
+.cartd .carimg {
+  width: 100px;
+  height: 90px;
+  position: relative;
+  top: 30px;
+  margin-left: 150px;
+  margin-right: 20px;
+}
+.carp1 {
+  /* color: #21ebff; */
+  font-weight: bolder;
+  font-size: 30px;
+  padding-bottom: 0;
+}
+.cartoh {
+  /* margin-bottom: 1000px; */
+  position: relative;
+  /* left: 990px; */
+  /* top: -0px; */
+  bottom: 50px;
+  left: -990px;
+  width: 100px;
+  height: 90px;
+  position: relative;
+  /* top: 0px; */
+  margin-left: 150px;
+  margin-right: 20px;
+}
+.cartotal {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 20px !important;
+}
+.cartotal .cartable {
+  border-top: 3px solid green !important;
+  width: 340px;
+  position: relative;
+  left: -200px;
+  top: -220px;
+  max-width: 350px;
+}
+.carline {
+  border-top: 1px solid #dddfe6 !important;
+  width: 990px;
+  position: relative;
+  left: 150px;
+  top: -80px;
+  max-width: 1050px;
+}
+.cartd:last-child {
+  text-align: right;
+}
+.carth:last-child {
+  text-align: right;
+}
+.carbuy {
+  background-color: white !important;
+  margin: 0 05px;
+  padding: 0 15px;
+  width: 80px;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  font-size: 20px;
+  color: whitesmoke !important;
+  position: relative;
+  top: 10px;
+  left: 268px;
+  align-items: center;
+  height: 45px;
+  border: 2px solid greenyellow;
+  border-radius: 40px;
+  background: #111 !important;
+}
+.carbuy:hover {
+  box-shadow: 4px 3px 8px 4px #263859;
+}
+.carcontainer .cartable .cartr .cartd .carinput {
+  width: 40px;
+  font-size: 14px;
+  margin: 0 5px;
+  padding: 7px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  background: #fff !important;
+}
+.carcontainer .cartable .cartr .cartd .carbuy {
+  background-color: white !important;
+  margin: 0 05px;
+  padding: 0 5px;
+  width: 40px;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  font-size: 20px;
+  color: #111 !important;
+  top: 0px;
+  left: 100px;
+}
+.cartfooter {
+  position: absolute;
+  bottom: auto;
+  width: 100%;
+  height: 310px;
+  line-height: 30px;
+  background: #111 !important;
+  color: #78fee0;
+  font-size: 20px !important;
+  font-style: italic;
+}
+.cartmaincontent {
+  display: flex;
+}
+.cartmaincontent .cartbox {
+  flex-basis: 50%;
+  padding: 10px 50px;
+}
+.cartbox .carth2 {
+  font-size: 4ch;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.cartcenter > .cartaddress {
+  margin-bottom: 30px;
+  margin-left: 80px;
+}
+.cartleft > .cartleftcontact {
+  margin-bottom: 30px;
+  margin-left: 80px;
+}
+.cartbox .cartcontent {
+  margin: 20px 0 0 0;
+}
+.cartleft .cartcontent {
+  text-align: justify;
+}
+.cartleft .cartcontent .cartsocial {
+  margin: 20px 0 0 0;
+}
+.cartleft .cartcontent .cartsocial .cartsociala {
+  padding: 0 7px;
+}
+.cartleft .cartcontent .cartsocial .cartsociala .cartsocialspan {
+  height: 40px;
+  width: 40px;
+  background: #1a1a1a !important;
+  line-height: 40px;
+  text-align: center;
+  font-size: 18px;
+  padding: 5px;
+  border-radius: 5px;
+  transition: 0.3s;
+  position: relative;
+  top: 20px;
+  /* background: #ddd !important; */
+}
+
+.cartleft .cartcontent .cartsocial .cartsociala .cartsocialspan:hover {
+  background: #f12020 !important;
+}
+.cartbutton2 {
+  margin: 0 15px;
+  padding: 9px 25px;
+  color: #21ebff;
+  text-decoration: none;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  font-size: 20px;
+  border: none;
+  overflow: hidden !important;
+  transition: 0.5s;
+  background-color: #111;
+}
+.cartbutton2:hover {
+  border: 1px #21ebff;
+  border-radius: 50px;
+  background-color: #21ebff !important;
+  color: #111;
+  /* border-radius: 50px; */
+  box-shadow: 0 0 50px #21ebff;
+  transition-delay: 0.5s;
+}
+.cartctas {
+  position: absolute;
+  top: 230px;
+  left: 550px;
+}
+.cartright > .cartquick {
+  font-size: 25px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  font-weight: 800 !important;
+  margin-left: 40px;
+}
+.cartcontents .cartrightul .cartrightli {
+  margin-bottom: 10px;
+  margin-left: 50px;
+  /* font-family: 'Roboto', sans-serif !important; */
+  font-weight: 600;
+  font-size: 20px !important;
+}
+.cartcontents .cartrightul .cartrightli > a {
+  font-weight: 800;
+  line-height: 30px;
+  /* font-family: 'Courier Ne', Courier, monospace; */
+  font-size: 20px !important;
+  color: #78fee0 !important;
+  text-decoration: none;
+}
+
+.cartcenter .cartcontent .cartplace {
+  line-height: 40px;
+}

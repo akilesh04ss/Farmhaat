@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Recursive:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Reggae+One&display=swap');
-*{
+/* *{
     margin: 0;
     padding: 0;
     background-color: rgba(253, 249, 249, 0) !important;
@@ -11,7 +11,7 @@ body{
     padding: 0;
      background-color: #85FFBD;
     background-image: linear-gradient(to right, #92fe9d 0%, #00c9ff 100%) !important;
-}
+} */
 .logo{
     cursor: pointer;
         position: relative;
