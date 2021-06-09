@@ -227,15 +227,31 @@
   font-size: 1.3rem !important;
   bottom: 10px;
 }
+.vdrpdiv {
+  display: flex;
+}
+.vdprdiv {
+  display: flex;
+}
 .vdrp {
   position: relative;
   left: 150px;
   font-size: 1.3rem !important;
   bottom: 10px;
 }
+.vdqwdiv {
+  display: flex;
+}
+
 .vdqw {
   position: absolute;
   left: 370px;
+  font-size: 1.3rem !important;
+  top: 300px;
+}
+.vdqws {
+  position: absolute;
+  left: 470px;
   font-size: 1.3rem !important;
   top: 300px;
 }
@@ -245,7 +261,19 @@
   top: 340px;
   font-size: 1.3rem !important;
 }
+.vdads {
+  position: absolute;
+  left: 370px;
+  top: 380px;
+  font-size: 1.3rem !important;
+}
 .vdsa {
+  font-size: 1.3rem !important;
+  position: relative;
+  top: 10px;
+  left: 170px;
+}
+.vdsas {
   font-size: 1.3rem !important;
   position: relative;
   top: 0px;

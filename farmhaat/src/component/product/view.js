@@ -3,6 +3,18 @@ import "./view.css";
 import { Link } from "react-router-dom";
 import logo from "../../assets/logonew.png";
 import coir from "../../assets/oir.jpg";
+import peat from "./../../assets/peat.jpg";
+import mix from "../../assets//soil.jpg";
+import comp from "../../assets/compost.jpg";
+import hydro from "../../assets/hydro.jpg";
+import moist from "../../assets/clay.jpg";
+import chip from "../../assets/chips.jpg";
+import manure from "../../assets/cow.jpg";
+import disc from "../../assets/disc.jpg";
+import soil from "../../assets/coco soil.jpg";
+import spl from "../../assets/sl.jpg";
+import mesh from "../../assets/mesh.jpg";
+import { useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhoneAlt } from "@fortawesome/free-solid-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
@@ -12,7 +24,125 @@ import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faYoutube } from "@fortawesome/free-brands-svg-icons";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
-function View() {
+function View(props) {
+  var id = props.match.params.name;
+  var nameid = id.slice(1);
+  console.log(nameid);
+  var productitems = [
+    {
+      name: "Coir Brick",
+      price: "200",
+      img: coir,
+      des1: "It will come in powder form of 1 KG.",
+      des2: "Useful for potting mix, maintain water level.",
+      des3: "Put directly into the water to convert it into powder form.",
+      des4: "Useful for indoor & outdoor potted plants.",
+    },
+    {
+      name: "Coco peat",
+      price: "99",
+      img: peat,
+      des1: "It will come in brick form of 5 KG.",
+      des2: "Useful for potting mix, maintain water level.",
+      des3: "Put directly into the water to convert it into powder form.",
+      des4: "Useful for indoor & outdoor potted plants.",
+    },
+    {
+      name: "Soil Mix",
+      price: "499",
+      img: mix,
+      des1: " Mix of Vermicompost, coco soil, neem cake.",
+      des2: "Quantity: 5Kg Soil Mix",
+      des3: "Useful as a fertilizer for every type of plants.",
+      des4: "Useful as potting media.",
+    },
+    {
+      name: "Vermicompost",
+      price: "192",
+      img: comp,
+      des1: "1 Kg Packet of Vermicompost",
+      des2: "Useful for all types of garden plants.",
+      des3: "Directly apply on potted plants.",
+      des4: "Repeat fertilizers between 30 to 45 days.",
+    },
+    {
+      name: "Hydro clay balls",
+      price: "700",
+      img: hydro,
+      des1: "Combine it with any plant solutions and foundation need for garden.",
+      des2: " Easy for harvest and transplantation.",
+      des3: "Help to keep insects and bacteria away from the plant during growth.",
+      des4: "It helps to drain excess water.",
+    },
+    {
+      name: "Moist clay balls ",
+      price: "450",
+      img: moist,
+      des1: "1 Kg 16mm Moist ball.",
+      des2: "Easy for harvest and transplantation.",
+      des3: "Help to keep insects and bacteria away from the plant during growth.",
+      des4: "It helps to drain excess water.",
+    },
+    {
+      name: "Coco chips",
+      price: "199",
+      img: chip,
+      des1: "Its a package of 1Kg.",
+      des2: "Improves the soil fertility and water absorption",
+      des3: "Put a layer of this chips in between the soil layers.",
+      des4: "Useful for indoor & outdoor potted plants.",
+    },
+    {
+      name: "Coir Disc",
+      price: "450",
+      img: disc,
+      des1: "Improves the water holding capacity.",
+      des2: "This pack contains 500g of coir discs in a packet.",
+      des3: "Apply this in between the soil.",
+      des4: "Useful for indoor & outdoor potted plants.",
+    },
+    {
+      name: "Cow Manure",
+      price: "330",
+      img: manure,
+      des1: "Useful as a fertilizer for every type of plants.",
+      des2: "1kg packet.",
+      des3: "Prepared only from cow dung.",
+      des4: "Improves the strength of the plant.",
+    },
+    {
+      name: "Coir soil",
+      price: "217",
+      img: soil,
+      des1: "Enriches the water content.",
+      des2: "1kg packet.",
+      des3: "Mix with the soil before plantng.",
+      des4: "Useful for indoor & outdoor potted plants.",
+    },
+    {
+      name: "Coir Mesh",
+      price: "950",
+      img: mesh,
+      des1: "10Nos",
+      des2: "spread over the top layer of the soil.",
+      des3: "Decreases water evaporation.",
+      des4: "Useful for indoor & outdoor potted plants.",
+    },
+    {
+      name: "Special organic manure mixture",
+      price: "550",
+      img: spl,
+      des1: "Useful as a fertilizer for every type of plants.",
+      des2: "Special manure prepared out of orgaic wastes (like kitchen wastes), 1kg packet.",
+      des3: "Improves the nutrirnt content",
+      des4: "Useful for indoor & outdoor potted plants.",
+    },
+  ];
+  var viewitem = productitems.filter((aa) => aa.name == nameid);
+  console.log("viewitems", viewitem);
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
   return (
     <div className="viewchdiv">
       <div className="viewhead">
@@ -53,10 +183,12 @@ function View() {
         <table className="viewtable">
           <tr className="viewtr">
             <td className="viewtd">
-              <img className="viewimg" src={coir} alt="" />
+              <img className="viewimg" src={viewitem[0].img} alt="" />
               <div className="viewinf">
-                <h1 className="viewoin">Coir Brick</h1>
-                <small className="viewpt">Price(Rs/Kg): 200</small>
+                <h1 className="viewoin">{viewitem[0].name}</h1>
+                <small className="viewpt">
+                  Price(Rs/Kg): {viewitem[0].price}
+                </small>
                 <br></br>
                 <p className="viewqt">Quantity(kg) :</p>
                 <input className="viewinput" type="number" value="1" min="1" />
@@ -67,10 +199,9 @@ function View() {
           <tr className="viewtr">
             <p class="viewsa">
               <a className="viewop">Description:</a>
-              <br></br>* It will come in brick form of 5 KG. <br></br>* Useful
-              for potting mix, maintain water level.<br></br>* Put directly into
-              the water to convert it into powder form.<br></br>* Useful for
-              indoor & outdoor potted plants.
+              <br></br>* {viewitem[0].des1} <br></br>* {viewitem[0].des2}
+              <br></br>* {viewitem[0].des3}
+              <br></br>* {viewitem[0].des4}
             </p>
           </tr>
           <tr className="viewtr">

@@ -12,7 +12,11 @@ import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faYoutube } from "@fortawesome/free-brands-svg-icons";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
+import { useEffect } from "react";
 function Viewdetails() {
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
   return (
     <div className="vdbk">
       <div className="vdhead">
@@ -61,27 +65,41 @@ function Viewdetails() {
               </div>
             </td>
             <td className="vdtd">
-              <p className="vdrp">Ordered Date: 19th April</p>
+              <div className="vdrpdiv">
+                <p className="vdrp">Ordered Date:</p>
+                <p className="vdrp"> 19th April</p>
+              </div>
             </td>
             <td className="vdtd">
-              <p className="vdpr">Delivery Date: 20th April</p>
+              <div className="vdprdiv">
+                <p className="vdpr">Delivery Date:</p>
+                <p className="vdpr"> 20th April</p>
+              </div>
             </td>
           </tr>
           <tr>
-            <p className="vdqw">Quantity:2</p>
+            <div className="vdqwdiv">
+              <p className="vdqw">Quantity:</p>
+              <p className="vdqws">2</p>
+            </div>
           </tr>
           <tr>
-            <p className="vdad">
-              Adrress: <br></br> 2/827,Vellagoundan Thottam,
-              Ganapathipalayam,Tirupur-5
+            <p className="vdad">Adrress: </p>
+            <br></br>
+            <p className="vdads">
+              {" "}
+              2/827,Vellagoundan Thottam, Ganapathipalayam,Tirupur-5
             </p>
           </tr>
 
           <tr>
             <p className="vdsa">
-              Description:<br></br>* It will come in brick form of 5 KG.{" "}
-              <br></br>* Useful for potting mix, maintain water level.<br></br>*
-              Put directly into the water to convert it into powder form.
+              Description:<br></br>
+            </p>
+            <p className="vdsas">
+              * It will come in brick form of 5 KG. <br></br>* Useful for
+              potting mix, maintain water level.<br></br>* Put directly into the
+              water to convert it into powder form.
               <br></br>* Useful for indoor & outdoor potted plants.
             </p>
           </tr>

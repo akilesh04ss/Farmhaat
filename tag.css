@@ -1,0 +1,538 @@
+body {
+    font-family: "Times New Roman", Times, serif;
+    background: linear-gradient( 90deg, #1f005c, #350168, #4e0274, #6a0380, #8b058b, #970780, #a30971, #af0b5f);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+.tag-logo {
+    position: fixed;
+    left: 15px;
+    top: 10px;
+    width: 50px;
+    border-radius: 40%;
+    border: 3px solid rgb(8, 128, 48);
+    visibility: visible;
+}
+
+.tag-logo1 {
+    position: fixed;
+    font-size: 25px;
+    top: 20px;
+    left: 80px;
+    background: #05f1e6;
+    background: -webkit-linear-gradient(to right, #05f1e6 0%, hotpink 100%);
+    background: -moz-linear-gradient(to right, #05f1e6 0%, hotpink 100%);
+    background: linear-gradient(to right, #05f1e6 0%, hotpink 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.tag-menu {
+    position: relative;
+    top: 10px;
+    left: 30%;
+    width: 35%;
+    height: 8%;
+    border-radius: 20px;
+}
+
+.tag-menu .tag-ul .tag-a {
+    font-size: 25px;
+    text-decoration: none;
+    padding: 10px 15px;
+    float: left;
+    text-align: center;
+    color: greenyellow;
+    display: block;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.tag-menu .tag-ul .tag-li .tag-a:hover {
+    padding-bottom: 10px;
+    border-bottom-style: solid;
+    border-bottom-width: 3.1px;
+    width: fit-content;
+    border-bottom-color: #9dd3a8;
+    background: #f29c08;
+    background: linear-gradient(20deg, #f29c08 0%, #ff0d45 67%);
+    background: -webkit-linear-gradient(20deg, #f29c08 0%, #ff0d45 67%);
+    background: -moz-linear-gradient(20deg, #f29c08 0%, #ff0d45 67%);
+    background: -o-linear-gradient(20deg, #f29c08 0%, #ff0d45 67%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='F29C08', endColorstr='#FF0D45', GradientType=1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bolder;
+    /* text-shadow: 0 0 4px #fff, 0 0 4px #fff, 0 0 8px #fff, 0 0 10px #fff, 0 0 12px #0fa, 0 0 16px #0fa, 0 0 20px #0fa, 0 0 22px #0fa, 0 0 24px #0fa; */
+}
+
+.tag-container {
+    position: fixed;
+    top: 70px;
+    width: 20%;
+    height: 100%;
+    background-color: aquamarine;
+    margin-left: 5px;
+}
+
+.tag-container .tag-h3 {
+    font-size: 30px;
+    position: absolute;
+    padding: 2px 15px;
+    left: 20px;
+}
+
+.tag-container .tag-content .tagcon-a .tagcon-p {
+    position: relative;
+    line-height: 2;
+    font-size: 20px;
+    padding: 5px 20px;
+    top: 50px;
+    left: 20px;
+    cursor: pointer;
+    color: #1f212b;
+}
+
+.tag-container .tag-content .tagcon-a .tagcon-p:hover {
+    color: #1f005c;
+    font-weight: bold;
+}
+
+.tag-content .tcon-h3 {
+    position: absolute;
+    font-size: 30px;
+    top: 100px;
+    left: 50%;
+}
+
+.tag-content .tcon-part1 .tcon-ul {
+    position: absolute;
+}
+
+.tag-content .tcon-part1 .tcon-ul .tcon-li .tcon-x1 {
+    position: relative;
+    top: 150px;
+    left: 250px;
+    font-size: 23px;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.tag-content .tcon-part1 .tcon-ul .tcon-li .tcon-x2 {
+    position: relative;
+    top: 130px;
+    left: 250px;
+    font-size: 23px;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.tag-content .tcon-part1 .tcon-ul .tcon-li .tcon-x3 {
+    position: relative;
+    top: 90px;
+    left: 250px;
+    font-size: 23px;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.tag-content .tcon-head1 .tcon-xmp {
+    position: absolute;
+    top: 450px;
+    left: 550px;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 30px;
+}
+
+.tag-content .tcon-part2 .tp2-li .tcon-x4 {
+    position: absolute;
+    top: 580px;
+    left: 400px;
+    white-space: nowrap;
+    font-size: 23px;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.tag-content .tcon-part2 .tcon-x5 {
+    position: absolute;
+    top: 640px;
+    left: 400px;
+    font-size: 23px;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.tag-content .tcon-part2 .tcon-x6 {
+    position: absolute;
+    top: 700px;
+    left: 400px;
+    font-size: 23px;
+    font-family: "Times New Roman", Times, serif;
+    white-space: nowrap;
+}
+
+.tag-content .tcon-part3 .tcon-h3 {
+    position: absolute;
+    top: 800px;
+    left: 48%;
+}
+
+.tag-content .tcon-part3 .tcon-x7 {
+    position: absolute;
+    top: 870px;
+    left: 400px;
+    font-size: 23px;
+    font-family: "Times New Roman", Times, serif;
+    white-space: nowrap;
+}
+
+.tag-content .tcon-part3 .tcon-x8 {
+    position: absolute;
+    top: 920px;
+    left: 400px;
+    font-size: 23px;
+    font-family: "Times New Roman", Times, serif;
+    white-space: nowrap;
+}
+
+.tag-content .tcon-part3 .tcon-x9 {
+    position: absolute;
+    top: 970px;
+    left: 400px;
+    font-size: 23px;
+    font-family: "Times New Roman", Times, serif;
+    white-space: nowrap;
+}
+
+.tag-content .tcon-part3 .tcon-head3 {
+    position: absolute;
+    top: 1050px;
+    left: 725px;
+    font-size: 30px;
+}
+
+.tag-content .tcon-part3 .tcon-x10 {
+    position: absolute;
+    top: 1130px;
+    left: 400px;
+    font-size: 23px;
+    font-family: "Times New Roman", Times, serif;
+    white-space: nowrap;
+}
+
+.tag-content .tcon-part3 .tcon-head4 {
+    position: absolute;
+    top: 1190px;
+    left: 725px;
+    font-size: 30px;
+}
+
+.tag-content .tcon-part3 .tcon-x11 {
+    position: absolute;
+    top: 1240px;
+    left: 400px;
+    font-size: 23px;
+    font-family: "Times New Roman", Times, serif;
+    white-space: nowrap;
+}
+
+.tag-content .tcon-part3 .tcon-p2 {
+    position: absolute;
+    top: 1280px;
+    left: 400px;
+    line-height: 2;
+    font-size: 23px;
+    font-family: "Times New Roman", Times, serif;
+    white-space: nowrap;
+}
+
+.tag-content .tcon-part3 .tcon-head5 {
+    position: absolute;
+    top: 1400px;
+    left: 725px;
+    font-size: 30px;
+}
+
+.tag-content .tcon-part3 .tcon-x12 {
+    position: absolute;
+    top: 1460px;
+    left: 400px;
+    font-size: 23px;
+    font-family: "Times New Roman", Times, serif;
+    white-space: nowrap;
+}
+
+.tag-content .tcon-part3 .tcon-p3 {
+    position: absolute;
+    top: 1510px;
+    left: 400px;
+    font-size: 23px;
+    font-family: "Times New Roman", Times, serif;
+    white-space: nowrap;
+}
+
+.tcon-btn .tcon-btna1 {
+    position: relative;
+    border: 2px solid;
+    border-radius: 15px;
+    border-color: black;
+    background: #060b07;
+    background: linear-gradient(0deg, #060b07 0%, #8cfff8 100%);
+    background: -webkit-linear-gradient(0deg, #060b07 0%, #8cfff8 100%);
+    background: -moz-linear-gradient(0deg, #060b07 0%, #8cfff8 100%);
+    background: -o-linear-gradient(0deg, #060b07 0%, #8cfff8 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='060B07', endColorstr='#8CFFF8', GradientType=1);
+    color: wheat;
+    font-size: 30px;
+    padding: 5px 30px;
+    top: 1600px;
+    left: 80%;
+}
+
+.tcon-btn .tcon-btna1:hover {
+    text-shadow: 1px 1px 1px red, 3px 3px 5px blue;
+}
+
+.tcon-btn .tcon-btna2 {
+    position: relative;
+    border: 2px solid;
+    border-radius: 15px;
+    border-color: black;
+    background: #060b07;
+    background: linear-gradient(0deg, #060b07 0%, #8cfff8 100%);
+    background: -webkit-linear-gradient(0deg, #060b07 0%, #8cfff8 100%);
+    background: -moz-linear-gradient(0deg, #060b07 0%, #8cfff8 100%);
+    background: -o-linear-gradient(0deg, #060b07 0%, #8cfff8 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='060B07', endColorstr='#8CFFF8', GradientType=1);
+    color: wheat;
+    font-size: 30px;
+    padding: 5px 20px;
+    top: 1600px;
+    left: 20%;
+}
+
+.tcon-btn .tcon-btna2:hover {
+    text-shadow: 1px 1px 1px red, 3px 3px 5px blue;
+}
+
+.tag-foo {
+    position: relative;
+    background: #1f212b;
+    width: 79.6%;
+    height: 60%;
+    box-sizing: border-box;
+    bottom: 0px;
+    margin: 0;
+    padding: 0;
+    top: 250%;
+    left: 305.5px;
+    overflow: hidden;
+}
+
+.tmain-content {
+    display: flex;
+    /* position: absolute; */
+}
+
+.tmain-content .tleft-box {
+    border: none;
+}
+
+.tmain-content .tleft-box .tleft-h2 {
+    font-size: 30px;
+    line-height: 1;
+    color: #005792;
+    left: 50px;
+    top: 30px;
+    position: relative;
+}
+
+.tmain-content .tleft-box .tleft-ul .tleft-li .tleft-a {
+    position: relative;
+    display: block;
+    font-size: 25px;
+    line-height: 2;
+    padding-top: 10px;
+    margin-left: 10px;
+    color: #e4d1d3;
+    text-align: center;
+    left: 30px;
+    top: 50px;
+    cursor: pointer;
+}
+
+.tmain-content .tleft-box .tleft-ul .tleft-li .tleft-a:hover {
+    color: white;
+    border-bottom: #f29c08;
+    padding-bottom: 5px;
+    border-bottom-style: solid;
+    border-bottom-width: 3.1px;
+}
+
+.tmain-content .tcenter-box {
+    position: absolute;
+    display: block;
+    border: none;
+    width: 300px;
+    height: 300px;
+    top: 30px;
+    left: 35%;
+}
+
+.tmain-content .tcenter-box .tce-h2 {
+    position: absolute;
+    font-size: 30px;
+    left: 45px;
+    top: 4.5px;
+    color: #005792;
+    /* line-height: 2.0; */
+}
+
+.tmain-content .tcenter-box .tce-phone {
+    position: relative;
+    display: flex;
+    font-size: 20px;
+    top: 60px;
+    left: -40px;
+    color: #e4d1d3;
+    cursor: pointer;
+}
+
+.tmain-content .tcenter-box .tce-mail {
+    position: relative;
+    display: flex;
+    font-size: 20px;
+    left: -40px;
+    top: 130px;
+    color: #e4d1d3;
+    cursor: pointer;
+}
+
+.tmain-content .tcenter-box .tce-location {
+    position: relative;
+    display: flex;
+    font-size: 20px;
+    left: -40px;
+    top: 200px;
+    color: #e4d1d3;
+}
+
+.tmain-content .tcenter-box .tce-button {
+    border: 3px solid #ff5f5f;
+    position: relative;
+    /* display: flex; */
+    font-size: 20px;
+    color: white;
+    border-radius: 15px;
+    padding: 10px 15px;
+    text-align: center;
+    top: 200px;
+    left: 60px;
+}
+
+.tmain-content .tcenter-box .tce-mail,
+.tmain-content .tcenter-box .tce-phone,
+.tmain-content .tcenter-box .tce-location {
+    font-size: 25px;
+    text-indent: 20px;
+}
+
+.tmain-content .tcenter-box .tce-button:hover {
+    box-shadow: 4px 3px 8px 4px #e79686;
+}
+
+.tmain-content .tright-box {
+    position: relative;
+    display: flex;
+    width: 300px;
+    height: 350px;
+    top: 25px;
+    left: 60%;
+}
+
+.tmain-content .tright-box .trt-h2 {
+    position: absolute;
+    display: flex;
+    font-size: 30px;
+    top: 10px;
+    left: -25px;
+    color: #005792;
+}
+
+.tmain-content .tright-box .tsocial_media .trt-ul {
+    position: relative;
+    top: 150px;
+    left: 90px;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.tmain-content .tright-box .tsocial_media .trt-ul .trt-li {
+    list-style-type: none;
+}
+
+.tmain-content .tright-box .tsocial_media .trt-ul .trt-li .trt-a {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    display: block;
+    text-align: center;
+    margin: 0 10px;
+    border-radius: 50%;
+    padding: 6px;
+    box-sizing: border-box;
+    text-decoration: none;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 3);
+    background: linear-gradient(0deg, #ddd, #fff);
+    transition: 0.5s;
+    background-color: #1f005c;
+    font-size: 25px;
+}
+
+.tsocial_media .trt-ul .trt-li .trt-a:hover {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 3);
+    text-decoration: none;
+    transform: translate(0, -20px);
+}
+
+.trt-ul .trt-li:nth-child(1) .trt-a:hover .fab {
+    color: #3b5998;
+}
+
+.trt-ul .trt-li:nth-child(2) .trt-a:hover .fab {
+    color: #00acee;
+}
+
+.trt-ul .trt-li:nth-child(3) .trt-a:hover .fab {
+    color: #db4a39;
+}
+
+.trt-ul .trt-li:nth-child(4) .trt-a:hover .fab {
+    color: #0e76a8;
+}
+
+.trt-ul .trt-li:nth-child(5) .trt-a:hover .fab {
+    color: #de249f;
+}
+
+
+/* .tmain-content .tright-box .tsocial_media .trt-ul .trt-li .trt-a.fab {
+    width: 70%;
+    height: 70%;
+    display: block;
+    background: linear-gradient(0deg, #fff, #ddd);
+    border-radius: 50%;
+    line-height: calc(6px - 12px);
+    font-size: 50px;
+    color: #262626;
+    transition: 0.5s;
+} */
+
+.tmain-content .tright-box .tsocial_media .trt-ul .trt-li>i {
+    font-size: 25px;
+}

@@ -11,8 +11,12 @@ import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faYoutube } from "@fortawesome/free-brands-svg-icons";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
+import { useEffect } from "react";
 
 function Investors() {
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
   return (
     <div className="invbackground">
       <div className="invhead">

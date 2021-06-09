@@ -9,7 +9,7 @@
     #92fe9d 0%,
     #00c9ff 100%
   ) !important;
-  height: 1400px;
+  height: 3000px;
 }
 
 .losgo {
@@ -228,9 +228,6 @@
   font-style: italic;
   position: relative;
   display: flex;
-  position: absolute;
-  left: 100px;
-  top: 150px;
 }
 .cdntainer .csrd {
   position: relative;
@@ -255,13 +252,13 @@
   clip-path: circle(300px at 80% -20%);
 }
 .cdntainer .csrd::after {
-  content: "Coir Brick";
+  content: "Farmhaat Eco-frindly";
   position: absolute;
   left: 05%;
-  top: 47%;
+  top: 57%;
   width: 100%;
   height: 100%;
-  font-size: 7em;
+  font-size: 4em;
   font-weight: 800;
   font-style: italic;
   color: rgba(255, 255, 255, 0.04) !important;
@@ -288,7 +285,7 @@
 }
 .cdntainer .csrd .contentdBx {
   position: absolute;
-  bottom: 120px;
+  bottom: 160px;
   width: 100%;
   height: 20px;
   text-align: center;
@@ -296,7 +293,7 @@
   z-index: 10;
 }
 .cdntainer .csrd:hover .contentdBx {
-  height: 120px;
+  height: 100px;
 }
 .cdntainer .csrd .contentdBx .h2 {
   position: relative;
@@ -371,7 +368,7 @@
 }
 .footer {
   position: absolute;
-  bottom: -810px;
+  bottom: -2380px;
   width: 100%;
   height: 310px;
   line-height: 30px;
@@ -482,4 +479,20 @@
 
 .centers .cdntent .addplace {
   line-height: 40px;
+}
+.promap {
+  margin: 100px;
+}
+.productcard1 {
+  float: left;
+}
+.procheck {
+  margin: 60px;
+}
+.productarray {
+  display: flex;
+  position: relative;
+  left: 00px;
+  bottom: 0px;
+  padding: 10px;
 }

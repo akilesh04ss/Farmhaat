@@ -1,7 +1,11 @@
 import React from "react";
 import "./register.css";
 import plant from "../../assets/img.gif";
+import { useEffect } from "react";
 function Register() {
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
   return (
     <div className="regbk">
       <div className="regcontainer">

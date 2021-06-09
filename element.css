@@ -1,0 +1,524 @@
+body {
+  font-family: "Times New Roman", Times, serif;
+  background: linear-gradient(
+    90deg,
+    #1f005c,
+    #350168,
+    #4e0274,
+    #6a0380,
+    #8b058b,
+    #970780,
+    #a30971,
+    #af0b5f
+  );
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.ele-logo {
+  position: fixed;
+  left: 15px;
+  top: 10px;
+  width: 50px;
+  border-radius: 40%;
+  border: 3px solid rgb(8, 128, 48);
+  visibility: visible;
+}
+
+.ele-logo1 {
+  position: fixed;
+  font-size: 25px;
+  top: 20px;
+  left: 80px;
+  background: #05f1e6;
+  background: -webkit-linear-gradient(to right, #05f1e6 0%, hotpink 100%);
+  background: -moz-linear-gradient(to right, #05f1e6 0%, hotpink 100%);
+  background: linear-gradient(to right, #05f1e6 0%, hotpink 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.ele-menu {
+  position: relative;
+  top: 10px;
+  left: 30%;
+  width: 45%;
+  height: 8%;
+  border-radius: 20px;
+}
+
+.ele-menu .ele-ul .ele-a {
+  font-size: 25px;
+  text-decoration: none;
+  padding: 10px 15px;
+  float: left;
+  text-align: center;
+  color: greenyellow;
+  display: block;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.ele-menu .ele-ul .ele-li .ele-a:hover {
+  padding-bottom: 10px;
+  border-bottom-style: solid;
+  border-bottom-width: 3.1px;
+  width: fit-content;
+  border-bottom-color: #9dd3a8;
+  background: #f29c08;
+  background: linear-gradient(20deg, #f29c08 0%, #ff0d45 67%);
+  background: -webkit-linear-gradient(20deg, #f29c08 0%, #ff0d45 67%);
+  background: -moz-linear-gradient(20deg, #f29c08 0%, #ff0d45 67%);
+  background: -o-linear-gradient(20deg, #f29c08 0%, #ff0d45 67%);
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='F29C08', endColorstr='#FF0D45', GradientType=1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bolder;
+  /* text-shadow: 0 0 4px #fff, 0 0 4px #fff, 0 0 8px #fff, 0 0 10px #fff, 0 0 12px #0fa, 0 0 16px #0fa, 0 0 20px #0fa, 0 0 22px #0fa, 0 0 24px #0fa; */
+}
+
+.ele-container {
+  position: fixed;
+  top: 70px;
+  width: 20%;
+  height: 100%;
+  background-color: aquamarine;
+  margin-left: 5px;
+}
+
+.ele-container .ele-h3 {
+  font-size: 27px;
+  position: absolute;
+  padding: 10px 15px;
+  left: 20px;
+}
+
+.ele-container .ele-content .elec-a .ele-p {
+  position: relative;
+  line-height: 2;
+  font-size: 20px;
+  padding: 5px 20px;
+  top: 50px;
+  left: 20px;
+  cursor: pointer;
+  color: #1f212b;
+}
+
+.ele-container .ele-content .ele-p:hover {
+  color: #1f005c;
+  font-weight: bold;
+}
+
+.element-tag .ele-head1 {
+  position: absolute;
+  font-size: 30px;
+  top: 150px;
+  left: 48%;
+}
+
+.element-tag .ele-p1 {
+  position: absolute;
+  font-size: 20px;
+  top: 225px;
+  left: 25%;
+}
+
+.element-tag .ele-p2 {
+  position: absolute;
+  font-size: 20px;
+  top: 275px;
+  left: 25%;
+}
+
+.element-tag .ele-x1 {
+  position: absolute;
+  font-size: 25px;
+  font-family: "Times New Roman", Times, serif;
+  top: 300px;
+  left: 270px;
+}
+
+.element-tag .ele-x2 {
+  position: absolute;
+  font-size: 25px;
+  font-family: "Times New Roman", Times, serif;
+  top: 350px;
+  left: 270px;
+}
+
+.element-tag .ele-x3 {
+  position: absolute;
+  font-size: 25px;
+  font-family: "Times New Roman", Times, serif;
+  top: 400px;
+  left: 270px;
+}
+
+.element-tag .ele-p3 {
+  position: absolute;
+  font-size: 20px;
+  font-family: "Times New Roman", Times, serif;
+  top: 490px;
+  left: 300px;
+}
+
+.element .eletabl1,
+.elehd1,
+.eleda1 {
+  position: relative;
+  border: 2px solid black;
+  top: 500px;
+  left: -56px;
+  width: 45%;
+  height: 20px;
+  text-align: center;
+  padding: 8px;
+  font-size: 18px;
+}
+
+.element3 .ele-head2 {
+  position: absolute;
+  font-size: 30px;
+  top: 770px;
+  left: 550px;
+}
+
+.element3 .ele-p4 {
+  position: absolute;
+  font-size: 20px;
+  top: 820px;
+  left: 306px;
+  line-height: 2.5;
+}
+
+.element3 .ele-head4 {
+  position: absolute;
+  font-size: 30px;
+  top: 950px;
+  left: 550px;
+}
+
+.element3 .ele-p5 {
+  position: absolute;
+  font-size: 20px;
+  top: 1025px;
+  left: 300px;
+}
+
+.element3 .ele-x4 {
+  position: absolute;
+  font-size: 20px;
+  top: 1080px;
+  left: 300px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.element3 .ele-p6 {
+  position: absolute;
+  font-size: 20px;
+  top: 1120px;
+  left: 300px;
+}
+
+.element3 .ele-x5 {
+  position: absolute;
+  font-size: 20px;
+  top: 1125px;
+  left: 300px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.ele-btn .ele-next {
+  position: relative;
+  border: 2px solid;
+  border-radius: 15px;
+  border-color: black;
+  background: #060b07;
+  background: linear-gradient(0deg, #060b07 0%, #8cfff8 100%);
+  background: -webkit-linear-gradient(0deg, #060b07 0%, #8cfff8 100%);
+  background: -moz-linear-gradient(0deg, #060b07 0%, #8cfff8 100%);
+  background: -o-linear-gradient(0deg, #060b07 0%, #8cfff8 100%);
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='060B07', endColorstr='#8CFFF8', GradientType=1);
+  color: wheat;
+  font-size: 30px;
+  padding: 5px 30px;
+  top: 1000px;
+  left: 80%;
+}
+
+.ele-btn .ele-next:hover {
+  text-shadow: 1px 1px 1px red, 3px 3px 5px blue;
+}
+
+.ele-btn .ele-previous {
+  position: relative;
+  border: 2px solid;
+  border-radius: 15px;
+  border-color: black;
+  background: #060b07;
+  background: linear-gradient(0deg, #060b07 0%, #8cfff8 100%);
+  background: -webkit-linear-gradient(0deg, #060b07 0%, #8cfff8 100%);
+  background: -moz-linear-gradient(0deg, #060b07 0%, #8cfff8 100%);
+  background: -o-linear-gradient(0deg, #060b07 0%, #8cfff8 100%);
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='060B07', endColorstr='#8CFFF8', GradientType=1);
+  color: wheat;
+  font-size: 30px;
+  padding: 5px 20px;
+  top: 1000px;
+  left: 15%;
+}
+
+.ele-btn .ele-previous:hover {
+  text-shadow: 1px 1px 1px red, 3px 3px 5px blue;
+}
+
+.ele-footer {
+  position: relative;
+  background: #1f212b;
+  width: 79.5%;
+  height: 60%;
+  box-sizing: border-box;
+  bottom: 0px;
+  margin: 0;
+  padding: 0;
+  top: 1100px;
+  left: 251.5px;
+  overflow: hidden;
+}
+
+.ele-main-content {
+  display: flex;
+  /* position: absolute; */
+}
+
+.ele-main-content .ele-left-box {
+  border: none;
+}
+
+.ele-main-content .ele-left-box .ele-quick {
+  font-size: 30px;
+  line-height: 1;
+  color: #005792;
+  left: 50px;
+  top: 30px;
+  position: relative;
+}
+
+.ele-main-content .ele-left-box .ele-leftul .ele-leftli .ele-lefta {
+  position: relative;
+  display: block;
+  font-size: 25px;
+  line-height: 2;
+  padding-top: 10px;
+  margin-left: 10px;
+  color: #e4d1d3;
+  text-align: center;
+  left: 30px;
+  top: 50px;
+  cursor: pointer;
+}
+
+.ele-main-content .ele-left-box > .ele-leftul > .ele-leftli > .ele-lefta:hover {
+  color: white;
+  border-bottom: #f29c08;
+  padding-bottom: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 3.1px;
+}
+
+.ele-main-content .ele-center-box {
+  position: absolute;
+  display: block;
+  border: none;
+  width: 300px;
+  height: 300px;
+  top: 30px;
+  left: 35%;
+}
+
+.ele-main-content .ele-center-box .ele-add {
+  position: absolute;
+  font-size: 30px;
+  left: 45px;
+  top: 4.5px;
+  color: #005792;
+  /* line-height: 2.0; */
+}
+
+.ele-main-content .ele-center-box .ele-phone {
+  position: relative;
+  display: flex;
+  font-size: 20px;
+  top: 0px;
+  left: -40px;
+  color: #e4d1d3;
+  cursor: pointer;
+}
+
+.ele-main-content .ele-center-box .ele-mail {
+  position: relative;
+  display: flex;
+  font-size: 20px;
+  left: -40px;
+  top: 70px;
+  color: #e4d1d3;
+  cursor: pointer;
+}
+
+.ele-main-content .ele-center-box .ele-location {
+  position: relative;
+  display: flex;
+  font-size: 20px;
+  left: -40px;
+  top: 140px;
+  color: #e4d1d3;
+}
+
+.ele-main-content .ele-center-box .ele-button {
+  border: 3px solid #ff5f5f;
+  position: relative;
+  /* display: flex; */
+  font-size: 20px;
+  color: white;
+  border-radius: 15px;
+  padding: 10px 15px;
+  text-align: center;
+  top: 130px;
+  left: 60px;
+}
+
+.ele-main-content .ele-center-box .ele-mail,
+.ele-main-content .ele-center-box .ele-phone,
+.ele-main-content .ele-center-box .ele-location {
+  font-size: 25px;
+  text-indent: 20px;
+}
+
+.ele-main-content .ele-center-box .ele-button:hover {
+  box-shadow: 4px 3px 8px 4px #e79686;
+}
+
+.ele-main-content .ele-right-box {
+  position: relative;
+  display: flex;
+  width: 300px;
+  height: 350px;
+  top: 25px;
+  left: 60%;
+}
+
+.ele-main-content .ele-right-box .ele-contact {
+  position: absolute;
+  display: flex;
+  font-size: 30px;
+  top: 10px;
+  left: -25px;
+  color: #005792;
+}
+
+.ele-main-content .ele-right-box .ele-social_media .ele-socul {
+  position: relative;
+  top: 150px;
+  left: -30px;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.ele-main-content .ele-right-box .ele-social_media .ele-socul .ele-socli {
+  list-style-type: none;
+}
+
+.ele-main-content
+  .ele-right-box
+  .ele-social_media
+  .ele-socul
+  .ele-socli
+  .ele-soca {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  display: block;
+  text-align: center;
+  margin: 0 10px;
+  border-radius: 50%;
+  padding: 6px;
+  box-sizing: border-box;
+  text-decoration: none;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 3);
+  background: linear-gradient(0deg, #ddd, #fff);
+  transition: 0.5s;
+  background-color: #1f005c;
+}
+
+.ele-social_media .ele-socul .ele-socli .ele-soca:hover {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 3);
+  text-decoration: none;
+  transform: translate(0, -20px);
+}
+
+.ele-socul .ele-socli:nth-child(1) .ele-soca:hover .ele-soci {
+  color: #3b5998;
+}
+
+.ele-socul .ele-socli:nth-child(2) .ele-soca:hover .ele-soci {
+  color: #00acee;
+}
+
+.ele-socul .ele-socli:nth-child(3) .ele-soca:hover .ele-soci {
+  color: #db4a39;
+}
+.ele-socul .ele-socli:nth-child(4) .ele-soca:hover .ele-soci {
+  color: #0e76a8 !important;
+}
+.ele-socul .ele-socli:nth-child(5) .ele-soca:hover .ele-soci {
+  color: #de249f;
+}
+
+.ele-main-content
+  .ele-right-box
+  .ele-social_media
+  .ele-socul
+  .ele-socli
+  .ele-soca.ele-soci {
+  width: 70%;
+  height: 70%;
+  display: block;
+  background: linear-gradient(0deg, #fff, #ddd);
+  border-radius: 50%;
+  line-height: calc(6px - 12px);
+  font-size: 50px;
+  color: #262626;
+  transition: 0.5s;
+}
+
+.ele-main-content
+  .ele-right-box
+  .ele-social_media
+  .ele-socul
+  .ele-socli
+  .ele-soci {
+  font-size: 25px;
+}
+.ele-goo {
+  position: relative;
+  left: 60px;
+  bottom: 40px;
+}
+.ele-in {
+  position: relative;
+  left: 120px;
+  bottom: 80px;
+}
+.ele-insta {
+  position: relative;
+  left: 180px;
+  bottom: 120px;
+}

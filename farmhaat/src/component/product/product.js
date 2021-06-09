@@ -3,6 +3,18 @@ import "./product.css";
 import { Link } from "react-router-dom";
 import logo from "../../assets/logonew.png";
 import coir from "../../assets/oir.jpg";
+import peat from "./../../assets/peat.jpg";
+import mix from "../../assets//soil.jpg";
+import comp from "../../assets/compost.jpg";
+import hydro from "../../assets/hydro.jpg";
+import moist from "../../assets/clay.jpg";
+import chip from "../../assets/chips.jpg";
+import manure from "../../assets/cow.jpg";
+import disc from "../../assets/disc.jpg";
+import soil from "../../assets/coco soil.jpg";
+import spl from "../../assets/sl.jpg";
+import mesh from "../../assets/mesh.jpg";
+import Card from "./card";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhoneAlt } from "@fortawesome/free-solid-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
@@ -12,7 +24,87 @@ import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faYoutube } from "@fortawesome/free-brands-svg-icons";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
+import { useEffect } from "react";
 function Product() {
+  var productitems = [
+    {
+      name: "Coir Brick",
+      price: "200",
+      img: coir,
+    },
+    {
+      name: "Coco peat",
+      price: "99",
+      img: peat,
+    },
+    {
+      name: "Soil Mix",
+      price: "499",
+      img: mix,
+    },
+    {
+      name: "Vermicompost",
+      price: "192",
+      img: comp,
+    },
+    {
+      name: "Hydro clay balls",
+      price: "700",
+      img: hydro,
+    },
+    {
+      name: "Moist clay balls ",
+      price: "450",
+      img: moist,
+    },
+    {
+      name: "Coco chips",
+      price: "199",
+      img: chip,
+    },
+    {
+      name: "Coir Disc",
+      price: "450",
+      img: disc,
+    },
+    {
+      name: "Cow Manure",
+      price: "330",
+      img: manure,
+    },
+    {
+      name: "Coir soil",
+      price: "217",
+      img: soil,
+    },
+    {
+      name: "Coir Mesh",
+      price: "950",
+      img: mesh,
+    },
+    {
+      name: "Special organic manure mixture",
+      price: "550",
+      img: spl,
+    },
+  ];
+  var n = productitems.length;
+  var arritem = [];
+  for (let i = 0; i < n; i++) {
+    var arrs = productitems.slice(i * 3, (i + 1) * 3);
+    arritem.push(
+      <div className="productarray">
+        {arrs.map((arr) => (
+          <div>
+            <Card item={arr} />
+          </div>
+        ))}
+      </div>
+    );
+  }
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
   return (
     <div className="pw">
       <div className="hed">
@@ -52,7 +144,8 @@ function Product() {
           </nav>
         </div>
       </div>
-      <div className="cdntainer">
+      <div>{arritem}</div>
+      {/* <div className="cdntainer">
         <div className="csrd">
           <div className="imgdBx">
             <div className="coirs">
@@ -70,7 +163,7 @@ function Product() {
             </Link>
           </div>
         </div>
-      </div>
+      </div> */}
       <div className="footer">
         <div className="mainontent">
           <div className="lefts boxs">

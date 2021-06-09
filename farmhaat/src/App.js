@@ -1,4 +1,6 @@
 import React from "react";
+
+// import Card from "./card";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import About from "./component/about/about";
 import Cart from "./component/cart/cart";
@@ -14,42 +16,20 @@ import Product from "./component/product/product";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/farmhaat">
       <>
         <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route path="/product">
-            <Product />
-          </Route>
-          <Route path="/investors">
-            <Investors />
-          </Route>
-          <Route path="/feedback">
-            <Feedback />
-          </Route>
-          <Route path="/view">
-            <View />
-          </Route>
-          <Route path="/viewdetails">
-            <Viewdetails />
-          </Route>
-          <Route path="/ordereditem">
-            <Ordereditem />
-          </Route>
-          <Route path="/cart">
-            <Cart />
-          </Route>
-          <Route path="/register">
-            <Register />
-          </Route>
-          <Route path="/login">
-            <Login />
-          </Route>
+          <Route exact path="/" component={Home} />
+          <Route path="/about" component={About} />
+          <Route path="/product" component={Product} />
+          <Route path="/investors" component={Investors} />
+          <Route path="/feedback" component={Feedback} />
+          <Route path="/view/:name" component={View} />
+          <Route path="/viewdetails" component={Viewdetails} />
+          <Route path="/ordereditem" component={Ordereditem} />
+          <Route path="/cart" component={Cart} />
+          <Route path="/register" component={Register} />
+          <Route path="/login" component={Login} />
         </Switch>
       </>
     </Router>

@@ -3,6 +3,12 @@ import "./ordereditem.css";
 import { Link } from "react-router-dom";
 import logo from "../../assets/logonew.png";
 import coir from "../../assets/oir.jpg";
+import hydro from "../../assets/hydro.jpg";
+import moist from "../../assets/clay.jpg";
+import chip from "../../assets/chips.jpg";
+import disc from "../../assets/disc.jpg";
+import Similar from "./similar";
+import { useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhoneAlt } from "@fortawesome/free-solid-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
@@ -13,6 +19,49 @@ import { faYoutube } from "@fortawesome/free-brands-svg-icons";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 function Ordereditem() {
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
+  var simitems = [
+    {
+      name: "Hydro clay balls",
+      price: "700",
+      img: hydro,
+      path: "view/:Hydro%20clay%20balls",
+    },
+    {
+      name: "Moist clay balls ",
+      price: "450",
+      img: moist,
+      path: "view/:Moist%20clay%20balls",
+    },
+    {
+      name: "Coco chips",
+      price: "199",
+      img: chip,
+      path: "view/:Coco%20chips",
+    },
+    {
+      name: "Coir Disc",
+      price: "450",
+      img: disc,
+      path: "view/:Coir%20Disc",
+    },
+  ];
+  var n = simitems.length;
+  var arrayitem = [];
+  for (let i = 0; i < n; i++) {
+    var arrays = simitems.slice(i * 4, (i + 1) * 4);
+    arrayitem.push(
+      <div className="productarray">
+        {arrays.map((array) => (
+          <div>
+            <Similar item={array} />
+          </div>
+        ))}
+      </div>
+    );
+  }
   return (
     <div className="oibackground">
       <div className="orihead">
@@ -93,20 +142,8 @@ function Ordereditem() {
           </tr>
         </table>
       </div>
-      <div className="oricontainerc">
-        <h2 className="orisim">Similar Products</h2>
-        <div className="oricard">
-          <div className="oriimgBx">
-            <img className="oriimage" src={coir} alt="coir brick" />
-          </div>
-          <div className="oricontentBx">
-            <h2 className="orih22">Coir Brick</h2>
-            <Link to="/view" className="oriaw">
-              view it!
-            </Link>
-          </div>
-        </div>
-      </div>
+      <h2 className="orisim">Similar Products</h2>
+      <div>{arrayitem}</div>
       <div className="orifooter">
         <div className="orimaincontent">
           <div className="orileft oribox">

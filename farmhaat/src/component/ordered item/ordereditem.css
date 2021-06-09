@@ -269,6 +269,7 @@ td {
   display: inline-block !important;
   width: 100%;
   height: 2px;
+  cursor: pointer;
   background-color: black;
   transition: width 0.3s;
 }
@@ -277,6 +278,7 @@ td {
   left: -05px;
   font-size: 12.8px;
   top: 05px;
+  cursor: pointer;
   text-decoration: none;
 }
 .oriline {
@@ -316,22 +318,22 @@ td {
   font-family: "Poppins", sans-serif;
   position: relative;
   display: flex;
-  position: absolute;
-  left: -100px;
-  top: 550px;
 }
-.oricontainerc .orisim {
+.orisim {
   position: relative;
   font-weight: 600;
   letter-spacing: 1;
+  border-bottom: 3px double;
+  width: 15.6%;
   color: rgb(126, 114, 114);
-  top: -100px;
-  left: 230px;
+  top: -040px;
+  left: 50px;
   font-family: "Times New Roman", Times, serif;
   font-style: italic;
   font-size: 30px;
+  cursor: pointer;
 }
-.oricontainerc .orisim:hover {
+.orisim:hover {
   color: #fff;
 }
 .oricontainerc .oricard {
@@ -357,10 +359,10 @@ td {
   clip-path: circle(300px at 80% -20%);
 }
 .oricontainerc .oricard::after {
-  content: "Coir Brick";
+  content: "Get It! Grow It!";
   position: absolute;
   left: 05%;
-  top: 60%;
+  top: 50%;
   width: 100%;
   height: 100%;
   font-size: 3.5em;
@@ -422,17 +424,19 @@ td {
   font-size: 20px;
   color: #111 !important;
   position: relative;
+  cursor: pointer;
   top: 20px;
   font-family: "Times New Roman", Times, serif;
   font-style: italic;
 }
 .oricontainerc .oricard .oricontentBx .oriaw:hover {
   box-shadow: 0 0 0px;
+  background-color: #9bdc28 !important;
 }
 
 .orifooter {
   position: absolute;
-  bottom: -700px;
+  bottom: -600px;
   width: 100%;
   height: 315px;
   line-height: 30px;
@@ -539,4 +543,12 @@ td {
 
 .oricenter .oricontent .oriplace {
   line-height: 40px;
+}
+
+.simitemas {
+  position: relative;
+  bottom: 050px;
+  left: 00px;
+  margin: 21px;
+  float: left;
 }
