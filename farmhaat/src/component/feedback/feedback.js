@@ -15,7 +15,7 @@ function Feedback() {
           </div>
           <div className="feedformrow">
             <div className="feedinputdata">
-              <input className="feedinput" type="email" required />
+              <input className="feedinput" type="text" required />
               <div className="feedunderline"></div>
               <label className="feedlabel">Email id*</label>
             </div>
