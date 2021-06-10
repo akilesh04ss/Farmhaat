@@ -1,6 +1,4 @@
 import React from "react";
-
-// import Card from "./card";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import About from "./component/about/about";
 import Cart from "./component/cart/cart";

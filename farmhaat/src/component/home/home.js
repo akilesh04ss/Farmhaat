@@ -104,7 +104,7 @@ function Home() {
         </div>
       </div>
       <div className="soc">
-        <a href="www.facebook.com">
+        <a onClick={() => window.open("www.facebook.com", "_blank")}>
           <span>
             <FontAwesomeIcon className="fb" icon={faFacebook} color="black" />
           </span>
