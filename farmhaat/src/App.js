@@ -16,7 +16,7 @@ import Product from "./component/product/product";
 
 function App() {
   return (
-    <Router basename="/farmhaat">
+    <Router basename="/Farmhaat">
       <>
         <Switch>
           <Route exact path="/" component={Home} />

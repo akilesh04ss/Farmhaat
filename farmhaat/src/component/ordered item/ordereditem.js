@@ -3,10 +3,17 @@ import "./ordereditem.css";
 import { Link } from "react-router-dom";
 import logo from "../../assets/logonew.png";
 import coir from "../../assets/oir.jpg";
+import peat from "./../../assets/peat.jpg";
+import mix from "../../assets//soil.jpg";
+import comp from "../../assets/compost.jpg";
 import hydro from "../../assets/hydro.jpg";
 import moist from "../../assets/clay.jpg";
 import chip from "../../assets/chips.jpg";
+import manure from "../../assets/cow.jpg";
 import disc from "../../assets/disc.jpg";
+import soil from "../../assets/coco soil.jpg";
+import spl from "../../assets/sl.jpg";
+import mesh from "../../assets/mesh.jpg";
 import Similar from "./similar";
 import { useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -23,6 +30,30 @@ function Ordereditem() {
     window.scroll(0, 0);
   }, []);
   var simitems = [
+    {
+      name: "Coir Brick",
+      price: "200",
+      img: coir,
+      path: "view/:Coir%20Brick",
+    },
+    {
+      name: "Coco peat",
+      price: "99",
+      img: peat,
+      path: "view/:Coco%20peat",
+    },
+    {
+      name: "Soil Mix",
+      price: "499",
+      img: mix,
+      path: "view/:Soil%20Mix",
+    },
+    {
+      name: "Vermicompost",
+      price: "192",
+      img: comp,
+      path: "view/:Vermicompost",
+    },
     {
       name: "Hydro clay balls",
       price: "700",
@@ -47,11 +78,45 @@ function Ordereditem() {
       img: disc,
       path: "view/:Coir%20Disc",
     },
+    {
+      name: "Cow Manure",
+      price: "330",
+      img: manure,
+      path: "view/:Cow%20Manure",
+    },
+    {
+      name: "Coir soil",
+      price: "217",
+      img: soil,
+      path: "view/:Coir%20soil",
+    },
+    {
+      name: "Coir Mesh",
+      price: "950",
+      img: mesh,
+      path: "view/:Coir%20Mesh",
+    },
+    {
+      name: "Special organic manure mixture",
+      price: "550",
+      img: spl,
+      path: "view/:Special%20organic%20manure%20mixture",
+    },
   ];
-  var n = simitems.length;
+  var randomarray = [];
+  var number = [];
+  for (let j = 0; j < 4; j++) {
+    var random = [Math.floor(Math.random() * simitems.length)];
+    if (number.indexOf(random) >= 0) {
+    } else {
+      number.push(random);
+      randomarray.push(simitems[random]);
+    }
+  }
+  var n = randomarray.length;
   var arrayitem = [];
   for (let i = 0; i < n; i++) {
-    var arrays = simitems.slice(i * 4, (i + 1) * 4);
+    var arrays = randomarray.slice(i * 4, (i + 1) * 4);
     arrayitem.push(
       <div className="productarray">
         {arrays.map((array) => (

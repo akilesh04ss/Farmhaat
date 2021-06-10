@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 function Similar(props) {
-  console.log("im in card");
   return (
     <div className="simitemas">
       <div className="oricontainerc">

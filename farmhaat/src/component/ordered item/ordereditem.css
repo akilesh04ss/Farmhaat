@@ -394,13 +394,13 @@ td {
   position: absolute;
   bottom: 40px;
   width: 100%;
-  height: 60px;
+  height: 80px;
   text-align: center;
   transition: 1s;
   z-index: 10;
 }
 .oricontainerc .oricard:hover .oricontentBx {
-  height: 120px;
+  height: 130px;
 }
 .oricontainerc .oricard .oricontentBx .orih22 {
   position: relative;
@@ -425,7 +425,7 @@ td {
   color: #111 !important;
   position: relative;
   cursor: pointer;
-  top: 20px;
+  top: 30px;
   font-family: "Times New Roman", Times, serif;
   font-style: italic;
 }
