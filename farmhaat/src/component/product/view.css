@@ -15,7 +15,7 @@
 .viewlogo {
   cursor: pointer;
   position: relative;
-  left: 0px;
+  left: 20px;
   top: 20px;
   border-radius: 50%;
   border: 1px rgb(8, 238, 65) solid;
@@ -35,10 +35,10 @@
 .viewo,
 .viewoc,
 .viewbutton1 {
-  font-family: "Red Hat Display", sans-serif;
+  font-family: "Times New Roman", Times, serif !important;
   font-weight: bold;
-  font-size: 20px;
-  font-style: italic;
+  font-size: 28px;
+  font-style: oblique !important;
   color: bisque;
   text-decoration: none;
 }
@@ -250,7 +250,30 @@
 .viewsa > .viewop {
   font-size: 25px;
 }
-
+.viewplus {
+  padding-right: 10px;
+  padding-left: 10px;
+  border-radius: 2px solid black;
+  border-radius: 50%;
+  font-size: 27px;
+  position: relative;
+  bottom: 120px;
+  left: 360px;
+  background: white !important;
+}
+.viewminus {
+  padding-right: 15px;
+  padding-left: 15px;
+  text-align: center;
+  justify-content: center;
+  border-radius: 2px solid black;
+  border-radius: 50%;
+  font-size: 27px;
+  position: relative;
+  bottom: 120px;
+  left: 380px;
+  background: white !important;
+}
 .viewinf > .viewoin {
   position: relative;
   bottom: 10px;
@@ -264,9 +287,9 @@
 .viewcon .viewtable .viewtr .viewtd .viewinf .viewinput {
   width: 40px;
   font-size: 14px;
-  margin: 0 5px;
-  padding-top: 7px;
-  padding-bottom: 7px;
+  margin: 05px, 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   text-align: center;
   padding-right: 0px !important;
   border: 1px white;
@@ -275,7 +298,7 @@
   background: #fff !important;
   position: relative;
   left: 370px;
-  bottom: 120px;
+  bottom: 123px;
 }
 
 .viewbtnss {
@@ -298,7 +321,7 @@
 }
 .viewinf > .viewqt {
   position: relative;
-  bottom: 30px;
+  top: -75px;
   left: 250px;
   font-size: 18px;
 }

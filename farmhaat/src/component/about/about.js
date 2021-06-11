@@ -57,7 +57,7 @@ function About() {
               </li>
             </ul>
             <Link className="abtcta" to="/feedback">
-              <button className="abtbutton1">Get in Touch</button>
+              <button className="abtbutton1">Log out</button>
             </Link>
           </nav>
         </div>

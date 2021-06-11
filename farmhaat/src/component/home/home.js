@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./home.css";
 import { Link } from "react-router-dom";
 import { faFacebook } from "@fortawesome/free-brands-svg-icons";
@@ -17,6 +17,17 @@ import { faTruckLoading } from "@fortawesome/free-solid-svg-icons";
 import { faSignOutAlt } from "@fortawesome/free-solid-svg-icons";
 import { faCopyright } from "@fortawesome/free-solid-svg-icons";
 function Home() {
+  const [login, setlogin] = useState(false);
+  var logout = login ? (
+    <li className="li">
+      <Link className="ak" to="/">
+        <i>
+          <FontAwesomeIcon icon={faSignOutAlt} />
+        </i>
+        Log out
+      </Link>
+    </li>
+  ) : null;
   return (
     <div className="homew">
       <div>
@@ -88,14 +99,7 @@ function Home() {
               Ordered item
             </Link>
           </li>
-          <li className="li">
-            <Link className="ak" to="/">
-              <i>
-                <FontAwesomeIcon icon={faSignOutAlt} />
-              </i>
-              Log out
-            </Link>
-          </li>
+          {logout}
         </ul>
       </div>
       <div>
@@ -104,11 +108,11 @@ function Home() {
         </div>
       </div>
       <div className="soc">
-        <a onClick={() => window.open("www.facebook.com", "_blank")}>
+        <Link to="/privacy-policy" target="_blank">
           <span>
             <FontAwesomeIcon className="fb" icon={faFacebook} color="black" />
           </span>
-        </a>
+        </Link>
         <a href="www.instagram.com">
           <span>
             <FontAwesomeIcon

@@ -32,23 +32,28 @@
 
 .div,
 .ocd {
+  font-family: "Times New Roman", Times, serif !important;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 28px;
+  font-style: oblique !important;
   color: #ececec;
   text-decoration: none;
 }
 .div,
 .od {
+  font-family: "Times New Roman", Times, serif !important;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 28px;
+  font-style: oblique !important;
   color: #ececec;
   text-decoration: none;
 }
 .div,
 .cod {
-  font-family: "Red Hat Display", sans-serif;
+  font-family: "Times New Roman", Times, serif !important;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 28px;
+  font-style: oblique !important;
   color: #ececec;
   text-decoration: none;
 }
@@ -112,7 +117,7 @@
 
 .link {
   position: absolute;
-  left: 130px;
+  left: 80px;
   top: 20px;
 }
 
@@ -197,7 +202,10 @@
   text-decoration: none;
   text-transform: capitalize;
   letter-spacing: 2px;
+  font-family: "Times New Roman", Times, serif !important;
+  font-weight: bold;
   font-size: 20px;
+  font-style: oblique !important;
   border: none;
   overflow: hidden;
   transition: 0.5s;

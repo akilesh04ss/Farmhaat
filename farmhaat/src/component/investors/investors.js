@@ -48,7 +48,7 @@ function Investors() {
               </li>
             </ul>
             <Link className="invcta" to="/feedback">
-              <button className="invbutton1">Get in Touch</button>
+              <button className="invbutton1">Log out</button>
             </Link>
           </nav>
         </div>

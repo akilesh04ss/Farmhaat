@@ -139,7 +139,7 @@ function Product() {
               <button className="bttdn1">Cart</button>
             </Link>
             <Link className="ctda" to="/feedback">
-              <button className="bttdn1">Get in Touch</button>
+              <button className="bttdn1">Log out</button>
             </Link>
           </nav>
         </div>

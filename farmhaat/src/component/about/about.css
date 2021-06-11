@@ -5,7 +5,18 @@
 .abtbackground {
   margin: 0;
   padding: 0;
-  background-image: linear-gradient(to right, #92fe9d 0%, #00c9ff 100%);
+  background: #c4fa15;
+
+  background: linear-gradient(50deg, #c4fa15 0%, #2ff47f 100%);
+
+  background: -webkit-linear-gradient(50deg, #c4fa15 0%, #2ff47f 100%);
+
+  background: -moz-linear-gradient(50deg, #c4fa15 0%, #2ff47f 100%);
+
+  background: -o-linear-gradient(50deg, #c4fa15 0%, #2ff47f 100%);
+
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='C4FA15', endColorstr='#2FF47F',GradientType=1 );
+
   height: 2000px;
 }
 
@@ -14,7 +25,7 @@
   margin: 0;
   padding: 0;
   bottom: 10px;
-  background-color: #111 !important;
+  background-color: #042331 !important;
 }
 
 .abtlogo {
@@ -31,10 +42,10 @@
 .abto,
 .abtoce,
 .abtbutton1 {
-  font-family: "Red Hat Display", sans-serif;
+  font-family: "Times New Roman", Times, serif !important;
   font-weight: bold;
-  font-size: 20px;
-  font-style: italic;
+  font-size: 28px;
+  font-style: oblique !important;
   color: bisque;
   text-decoration: none;
 }
@@ -67,7 +78,7 @@
 }
 .abtlin {
   position: absolute;
-  left: 120px;
+  left: 80px;
   top: 15px;
 }
 .abtlin > .abtli > .abtco::after {

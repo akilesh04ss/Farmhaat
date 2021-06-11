@@ -29,37 +29,41 @@
 }
 .vid,
 .cdo {
-  font-family: "Red Hat Display", sans-serif;
+  font-family: "Times New Roman", Times, serif !important;
   font-weight: bold;
-  font-size: 10px;
+  font-size: 28px;
+  font-style: oblique !important;
   color: bisque;
   text-decoration: none;
   margin-right: 10px;
 }
 .vid,
 .ocde {
-  font-family: "Red Hat Display", sans-serif;
+  font-family: "Times New Roman", Times, serif !important;
   font-weight: bold;
+  font-size: 28px;
+  font-style: oblique !important;
   margin-right: 10px;
-  font-size: 10px;
   color: bisque;
   text-decoration: none;
 }
 .vid,
 .odc {
-  font-family: "Red Hat Display", sans-serif;
+  font-family: "Times New Roman", Times, serif !important;
   font-weight: bold;
+  font-size: 28px;
+  font-style: oblique !important;
   margin-right: 10px;
-  font-size: 10px;
   color: bisque;
   text-decoration: none;
 }
 .vid,
 .do {
-  font-family: "Red Hat Display", sans-serif;
+  font-family: "Times New Roman", Times, serif !important;
   font-weight: bold;
+  font-size: 28px;
+  font-style: oblique !important;
   margin-right: 20px;
-  font-size: 05px;
   color: bisque;
   text-decoration: none;
 }
@@ -83,7 +87,7 @@
 .likn .vid > .cdo,
 .likn .vid > .do {
   margin-bottom: 10px;
-  font-size: 25px;
+  font-size: 28px;
   font-weight: bolder;
   font-style: oblique !important;
   font-family: "Times New Roman", Times, serif !important;
@@ -98,7 +102,7 @@
 }
 .likn {
   position: absolute;
-  left: 120px;
+  left: 80px;
   top: 15px;
 }
 .likn > .vid > .cdo::after {
@@ -176,7 +180,10 @@
   text-decoration: none;
   text-transform: capitalize;
   letter-spacing: 2px;
+  font-family: "Times New Roman", Times, serif !important;
+  font-weight: bold;
   font-size: 20px;
+  font-style: oblique !important;
   border: none;
   overflow: hidden;
   transition: 0.5s;

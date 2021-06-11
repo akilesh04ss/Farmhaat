@@ -158,7 +158,7 @@ function Ordereditem() {
               </li>
             </ul>
             <Link className="oricta" to="/feedback">
-              <button className="oributton1">Get in Touch</button>
+              <button className="oributton1">Log out</button>
             </Link>
           </nav>
         </div>

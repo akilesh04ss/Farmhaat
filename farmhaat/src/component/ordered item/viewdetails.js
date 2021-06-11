@@ -48,7 +48,7 @@ function Viewdetails() {
               </li>
             </ul>
             <Link className="vdcta" to="/feedback">
-              <button className="vdbutton1">Get in Touch</button>
+              <button className="vdbutton1">Log out</button>
             </Link>
           </nav>
         </div>

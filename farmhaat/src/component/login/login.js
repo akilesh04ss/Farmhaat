@@ -14,23 +14,16 @@ function Login() {
           className="loginput"
           type="text"
           name=""
-          value=""
           placeholder="Username"
         />
         <input
           className="loginput"
           type="password"
           name=""
-          value=""
           placeholder="Password"
         />
         <p className="logsign">New user ?</p>
-        <input
-          className="loginput"
-          type="button"
-          value="Sign up"
-          onclick="window.location=''../register/register.js"
-        />
+        <input className="loginput" type="button" value="Sign up" />
         <input className="loginput" type="Submit" name="" value="Login" />
       </form>
     </div>

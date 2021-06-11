@@ -14,7 +14,7 @@ import disc from "../../assets/disc.jpg";
 import soil from "../../assets/coco soil.jpg";
 import spl from "../../assets/sl.jpg";
 import mesh from "../../assets/mesh.jpg";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhoneAlt } from "@fortawesome/free-solid-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
@@ -143,6 +143,12 @@ function View(props) {
   useEffect(() => {
     window.scroll(0, 0);
   }, []);
+  const [count, setCount] = useState(1);
+  var minus = () => {
+    if (count > 1) {
+      setCount(count - 1);
+    }
+  };
   return (
     <div className="viewchdiv">
       <div className="viewhead">
@@ -174,7 +180,7 @@ function View(props) {
               </li>
             </ul>
             <Link className="viewcta" to="/feedback">
-              <button className="viewbutton1">Get in Touch</button>
+              <button className="viewbutton1">Log out</button>
             </Link>
           </nav>
         </div>
@@ -191,7 +197,21 @@ function View(props) {
                 </small>
                 <br></br>
                 <p className="viewqt">Quantity(kg) :</p>
-                <input className="viewinput" type="number" value="1" min="1" />
+                <button
+                  className="viewplus"
+                  onClick={() => setCount(count + 1)}
+                >
+                  +
+                </button>
+                <input
+                  className="viewinput"
+                  type="number"
+                  value={count}
+                  max="2"
+                />
+                <button className="viewminus" onClick={minus}>
+                  -
+                </button>
               </div>
             </td>
           </tr>

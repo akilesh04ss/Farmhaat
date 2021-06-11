@@ -33,10 +33,10 @@
 .invo,
 .invoc,
 .invbutton1 {
-  font-family: "Red Hat Display", sans-serif;
+  font-family: "Times New Roman", Times, serif !important;
   font-weight: bold;
-  font-size: 20px;
-  font-style: italic;
+  font-size: 28px;
+  font-style: oblique !important;
   color: bisque;
   text-decoration: none;
 }
@@ -67,7 +67,7 @@
 }
 .invlin {
   position: absolute;
-  left: 120px;
+  left: 80px;
   top: 15px;
 }
 .invlin > .invli > .invco::after {

@@ -12,12 +12,13 @@ import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faYoutube } from "@fortawesome/free-brands-svg-icons";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 function Cart() {
   useEffect(() => {
     window.scroll(0, 0);
   }, []);
+  const [count, setCount] = useState(1);
   return (
     <div className="cartbackground">
       <div className="carthead">
@@ -49,7 +50,7 @@ function Cart() {
               </li>
             </ul>
             <Link className="cartcta" to="/feedback">
-              <button className="cartbutton1">Get in Touch</button>
+              <button className="cartbutton1">Log out</button>
             </Link>
           </nav>
         </div>
@@ -76,18 +77,29 @@ function Cart() {
               </div>
             </td>
             <td className="cartd ">
+              <button className="cartplus" onClick={() => setCount(count + 1)}>
+                +
+              </button>
               <input
                 className="carinput carinp"
                 type="number"
-                value="1"
-                min="1"
+                value={count}
+                max="2"
               />
+              <button
+                className="cartminus"
+                onClick={() => setCount(count - 1)}
+                min="1"
+                max="10"
+              >
+                -
+              </button>
             </td>
             <td className="cartd carpr">200</td>
           </tr>
-          <tr className="cartr">
-            <div className="carline"></div>
-            <td className="cartd">
+          {/* <tr className="cartr"> */}
+          <div className="carline"></div>
+          {/* <td className="cartd">
               <div classname="carinfo">
                 <img className="cartoh" src={coir} />
                 <div className="carten">
@@ -101,10 +113,26 @@ function Cart() {
               </div>
             </td>
             <td className="cartd">
-              <input className="carinput carinpu" type="number" value="1" />
+              <button className="cartplusa" onClick={() => setCount(count + 1)}>
+                +
+              </button>
+              <input
+                className="carinput carinpu"
+                type="number"
+                value={count}
+                max="2"
+              />
+              <button
+                className="cartminusa"
+                onClick={() => setCount(count - 1)}
+                min="1"
+                max="10"
+              >
+                -
+              </button>
             </td>
             <td class="cartd carpri">200</td>
-          </tr>
+          </tr> */}
         </table>
       </div>
       <div className="carcontainer carcart">
