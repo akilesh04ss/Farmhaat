@@ -19,6 +19,11 @@ function Cart() {
     window.scroll(0, 0);
   }, []);
   const [count, setCount] = useState(1);
+  var minus = () => {
+    if (count > 1) {
+      setCount(count - 1);
+    }
+  };
   return (
     <div className="cartbackground">
       <div className="carthead">
@@ -86,12 +91,7 @@ function Cart() {
                 value={count}
                 max="2"
               />
-              <button
-                className="cartminus"
-                onClick={() => setCount(count - 1)}
-                min="1"
-                max="10"
-              >
+              <button className="cartminus" onClick={minus}>
                 -
               </button>
             </td>
