@@ -1,5 +1,6 @@
 import React from "react";
 import "./login.css";
+import { Link } from "react-router-dom";
 import bk from "../../assets/bk.gif";
 
 function Login() {
@@ -23,7 +24,9 @@ function Login() {
           placeholder="Password"
         />
         <p className="logsign">New user ?</p>
-        <input className="loginput" type="button" value="Sign up" />
+        <Link to="/register">
+          <input className="loginput" type="button" value="Sign up" />
+        </Link>
         <input className="loginput" type="Submit" name="" value="Login" />
       </form>
     </div>
