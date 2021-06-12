@@ -10,7 +10,7 @@
     #92fe9d 0%,
     #00c9ff 100%
   ) !important;
-  height: 1800px;
+  height: 1000px;
 }
 .viewlogo {
   cursor: pointer;
@@ -195,7 +195,7 @@
 .viewcon {
   margin: 60px auto;
   border: 5px double gray;
-  width: 70%;
+  width: 77%;
   height: 600px;
 }
 .viewtable {
@@ -346,7 +346,7 @@
 }
 .viewfooter {
   position: absolute;
-  bottom: -1400px;
+  bottom: -600px;
   width: 100%;
   height: 320px;
   line-height: 30px;

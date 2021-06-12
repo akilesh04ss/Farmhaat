@@ -24,7 +24,7 @@ import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faYoutube } from "@fortawesome/free-brands-svg-icons";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 function Product() {
   var productitems = [
     {
@@ -105,6 +105,51 @@ function Product() {
   useEffect(() => {
     window.scroll(0, 0);
   }, []);
+  const [clicked, setClicked] = useState(false);
+  var fbclick = () => {
+    setClicked(true);
+    if (clicked) {
+      window.open("http://facebook.com", "_blank");
+    }
+  };
+  const [insta, setinsta] = useState(false);
+  var instafn = () => {
+    setinsta(true);
+    if (insta) {
+      window.open("http://instagram.com", "_blank");
+    }
+  };
+  const [whtsapp, setwhtsapp] = useState(false);
+  var whts = () => {
+    setwhtsapp(true);
+    if (whtsapp) {
+      window.open("http://web.whatsapp.com", "_blank");
+    }
+  };
+  const [utbe, setutbe] = useState(false);
+  var utube = () => {
+    setutbe(true);
+    if (utbe) {
+      window.open("http://youtube.com", "_blank");
+    }
+  };
+  const [twt, settwt] = useState(false);
+  var twit = () => {
+    settwt(true);
+    if (twt) {
+      window.open("http://twitter.com", "_blank");
+    }
+  };
+  const [map, setmap] = useState(false);
+  var locate = () => {
+    setmap(true);
+    if (map) {
+      window.open(
+        "https://www.google.co.in/maps/place/Vellagoundan+Thottam/@11.0379345,77.3374261,17z/data=!4m12!1m5!8m4!1e4!2s117202927009810744605!3m1!1e1!3m5!1s0x3ba9a9e86124b215:0xa552b05896b8138e!8m2!3d11.0377253!4d77.3373566!16s%2Fg%2F11pb17br0b?hl=en",
+        "_blank"
+      );
+    }
+  };
   return (
     <div className="pw">
       <div className="hed">
@@ -187,31 +232,31 @@ function Product() {
                 </span>
               </div>
               <div className="prosocial">
-                <a className="proa" href="www.facebook.com">
+                <Link className="proa" onClick={fbclick}>
                   <span className="prospan">
                     <FontAwesomeIcon icon={faFacebook} color=" white" />
                   </span>
-                </a>
-                <a className="proa" href="www.instagram.com">
+                </Link>
+                <Link className="proa" onClick={instafn}>
                   <span className="prospan">
                     <FontAwesomeIcon icon={faInstagram} color=" white" />
                   </span>
-                </a>
-                <a className="proa" href="www.whatsapp.com">
+                </Link>
+                <Link className="proa" onClick={whts}>
                   <span className="prospan">
                     <FontAwesomeIcon icon={faWhatsapp} color=" white" />
                   </span>
-                </a>
-                <a className="proa" href="www.twitter.com">
+                </Link>
+                <Link className="proa" onClick={twit}>
                   <span className="prospan">
                     <FontAwesomeIcon icon={faTwitter} color=" white" />
                   </span>
-                </a>
-                <a className="proa" href="www.youtube.com">
+                </Link>
+                <Link className="proa" onClick={utube}>
                   <span className="prospan">
                     <FontAwesomeIcon icon={faYoutube} color=" white" />
                   </span>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -228,12 +273,9 @@ function Product() {
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tirupur -641605
                 </span>
               </div>
-              <a
-                className="addctas"
-                href="https://www.google.co.in/maps/place/Vellagoundan+Thottam/@11.0379345,77.3374261,17z/data=!4m12!1m5!8m4!1e4!2s117202927009810744605!3m1!1e1!3m5!1s0x3ba9a9e86124b215:0xa552b05896b8138e!8m2!3d11.0377253!4d77.3373566!16s%2Fg%2F11pb17br0b?hl=en"
-              >
+              <Link className="addctas" onClick={locate}>
                 <button className="addbtton">Locate us</button>
-              </a>
+              </Link>
             </div>
           </div>
           <div className="rights boxs">

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./home.css";
 import { Link } from "react-router-dom";
 import { faFacebook } from "@fortawesome/free-brands-svg-icons";
@@ -18,6 +18,42 @@ import { faSignOutAlt } from "@fortawesome/free-solid-svg-icons";
 import { faCopyright } from "@fortawesome/free-solid-svg-icons";
 function Home() {
   const [login, setlogin] = useState(false);
+  const [clicked, setClicked] = useState(false);
+  var fbclick = () => {
+    setClicked(true);
+    if (clicked) {
+      window.open("http://facebook.com", "_blank");
+    }
+  };
+  const [insta, setinsta] = useState(false);
+  var instafn = () => {
+    setinsta(true);
+    if (insta) {
+      window.open("http://instagram.com", "_blank");
+    }
+  };
+  const [whtsapp, setwhtsapp] = useState(false);
+  var whts = () => {
+    setwhtsapp(true);
+    if (whtsapp) {
+      window.open("http://web.whatsapp.com", "_blank");
+    }
+  };
+  const [utbe, setutbe] = useState(false);
+  var utube = () => {
+    setutbe(true);
+    if (utbe) {
+      window.open("http://youtube.com", "_blank");
+    }
+  };
+  const [twt, settwt] = useState(false);
+  var twit = () => {
+    settwt(true);
+    if (twt) {
+      window.open("http://twitter.com", "_blank");
+    }
+  };
+
   var logout = login ? (
     <li className="li">
       <Link className="ak" to="/">
@@ -108,12 +144,12 @@ function Home() {
         </div>
       </div>
       <div className="soc">
-        <Link to="/privacy-policy" target="_blank">
+        <Link onClick={fbclick}>
           <span>
             <FontAwesomeIcon className="fb" icon={faFacebook} color="black" />
           </span>
         </Link>
-        <a href="www.instagram.com">
+        <Link onClick={instafn}>
           <span>
             <FontAwesomeIcon
               className="insta"
@@ -121,22 +157,22 @@ function Home() {
               color="black"
             />
           </span>
-        </a>
-        <a href="www.whatsapp.com">
+        </Link>
+        <Link onClick={whts}>
           <span>
             <FontAwesomeIcon className="wht" icon={faWhatsapp} color="black" />
           </span>
-        </a>
-        <a href="www.twitter.com">
+        </Link>
+        <Link onClick={twit}>
           <span>
             <FontAwesomeIcon className="twt" icon={faTwitter} color="black" />
           </span>
-        </a>
-        <a href="www.youtube.com" target="blank">
+        </Link>
+        <Link onClick={utube}>
           <span>
             <FontAwesomeIcon className="utb" icon={faYoutube} color="black" />
           </span>
-        </a>
+        </Link>
       </div>
       <div className="ce">
         <p>LET US GO WITH THE FLOW OF NATURE!</p>

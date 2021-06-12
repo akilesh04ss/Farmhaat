@@ -28,14 +28,6 @@ function App() {
           <Route path="/cart" component={Cart} />
           <Route path="/register" component={Register} />
           <Route path="/login" component={Login} />
-          <Route
-            path="/privacy-policy"
-            component={() => {
-              window.location = "www.facebook.com";
-              return null;
-            }}
-          />
-          ;
         </Switch>
       </>
     </Router>
