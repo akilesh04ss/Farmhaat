@@ -12,6 +12,7 @@ import { faYoutube } from "@fortawesome/free-brands-svg-icons";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { useEffect, useState } from "react";
+import backy from "../../assets/organic.png";
 
 function Investors() {
   useEffect(() => {
@@ -64,6 +65,7 @@ function Investors() {
   };
   return (
     <div className="invbackground">
+      <img className="invimg2" src={backy} />
       <div className="invhead">
         <div className="invheader">
           <div className="invlj">
@@ -189,7 +191,6 @@ function Investors() {
               </div>
               <div className="invsocial">
                 <Link className="invaleft" onClick={fbclick}>
-                  {" "}
                   <span className="invspanleft">
                     <FontAwesomeIcon icon={faFacebook} color="white" />
                   </span>
