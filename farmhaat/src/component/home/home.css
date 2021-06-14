@@ -504,6 +504,9 @@ label #cancel {
   position: relative;
   bottom: -170px;
   left: 580px;
+  font-family: "Times New Roman", Times, serif !important;
+  font-weight: bold;
+  font-style: oblique;
 }
 
 .we {

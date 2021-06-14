@@ -5,7 +5,10 @@
     "@fortawesome/free-regular-svg-icons": "^5.15.3",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "@fortawesome/react-fontawesome": "^0.1.14",
+    "express": "^4.17.1",
     "font-awesome": "^4.7.0",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.7",
     "react": "^17.0.2"
   }
 }

@@ -1,5 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 
+.feedback {
+  /* background: linear-gradient(115deg, #8fd3f4 5%, #84fab0 95%); */
+  background-color: #7cffcb;
+  background-image: linear-gradient(315deg, #7cffcb 0%, #74f2ce 74%);
+  height: 625px;
+  overflow: hidden;
+}
 .feedbk {
   margin: 0;
   padding: 0;
@@ -11,7 +18,6 @@
   justify-content: center;
   min-height: 150vh;
   padding: 40px;
-  background: linear-gradient(115deg, #8fd3f4 5%, #84fab0 95%);
 }
 .feedcontainer {
   background: #fff;
