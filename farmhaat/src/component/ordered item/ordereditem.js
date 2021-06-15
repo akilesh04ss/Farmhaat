@@ -132,7 +132,7 @@ function Ordereditem() {
       path: "view/:Coir%20Mesh",
     },
     {
-      name: "Special organic manure mixture",
+      name: "Special  mixture",
       price: "550",
       img: spl,
       path: "view/:Special%20organic%20manure%20mixture",

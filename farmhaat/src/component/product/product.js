@@ -190,25 +190,6 @@ function Product() {
         </div>
       </div>
       <div>{arritem}</div>
-      {/* <div className="cdntainer">
-        <div className="csrd">
-          <div className="imgdBx">
-            <div className="coirs">
-              <img src={coir} alt="coir brick" />
-            </div>
-          </div>
-          <div className="contentdBx">
-            <h2 className="h2">Coir Brick</h2>
-            <div className="pricesd">
-              <h3 className="h3">Price(Rs/kg) :</h3>
-              <span className="span">200.00</span>
-            </div>
-            <Link className="tiv" to="/view">
-              View it!
-            </Link>
-          </div>
-        </div>
-      </div> */}
       <div className="footer">
         <div className="mainontent">
           <div className="lefts boxs">

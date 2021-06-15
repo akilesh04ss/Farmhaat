@@ -5,6 +5,8 @@ const register = require("./registerschema");
 const login = require("./loginschema");
 const investor = require("./investorschema");
 const feedback = require("./feedbackschema");
+const cart = require("./cartschema");
+const order = require("./orderschema");
 router.get("/", async (req, res) => {
   var registerform = await register.find();
   res.status(200).json(registerform);
@@ -61,5 +63,31 @@ router.post("/feedback", async (req, res) => {
     Msg: req.body.Msg,
   });
   res.status(200).json(feedbackform);
+});
+router.get("/cart", async (req, res) => {
+  var cartform = await cart.find();
+  res.status(200).json(cartform);
+});
+router.post("/cart", async (req, res) => {
+  var cartform = await cart.create({
+    Name: req.body.Name,
+    Price: req.body.Price,
+    Quantity: req.body.Quantity,
+    Image: req.body.Image,
+  });
+  res.status(200).json(cartform);
+});
+router.get("/order", async (req, res) => {
+  var orderform = await order.find();
+  res.status(200).json(orderform);
+});
+router.post("/order", async (req, res) => {
+  var orderform = await order.create({
+    Name: req.body.Name,
+    Price: req.body.Price,
+    Delivery: req.body.Delivery,
+    Image: req.body.Image,
+  });
+  res.status(200).json(orderform);
 });
 module.exports = router;
