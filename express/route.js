@@ -45,11 +45,13 @@ router.post("/investor", async (req, res) => {
   var investorform = await investor.create({
     Name: req.body.Name,
     Email: req.body.Email,
+    // Kilograms = req.body. Kilograms,
     Material: req.body.Material,
-    Weight: req.body.Weight,
     Description: req.body.Description,
+    Wgt: req.body.Wgt,
   });
   res.status(200).json(investorform);
+  console.log(req.body);
 });
 router.get("/feedback", async (req, res) => {
   var feedbackform = await feedback.find();
@@ -74,8 +76,14 @@ router.post("/cart", async (req, res) => {
     Price: req.body.Price,
     Quantity: req.body.Quantity,
     Image: req.body.Image,
+    des1: req.body.des1,
+    des2: req.body.des2,
+    des3: req.body.des3,
+    des4: req.body.des4,
   });
   res.status(200).json(cartform);
+  console.log("abcc");
+  console.log(req.body);
 });
 router.get("/order", async (req, res) => {
   var orderform = await order.find();

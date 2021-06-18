@@ -12,13 +12,17 @@ const investor = mongoose.Schema({
     type: String,
     required: true,
   },
-  Weight: {
-    type: Number,
+  Wgt: {
+    type: String,
     required: true,
   },
   Description: {
     type: String,
     required: true,
   },
+  // Kilograms: {
+  //   type: String,
+  //   required: true,
+  // },
 });
 module.exports = mongoose.model("investor", investor);

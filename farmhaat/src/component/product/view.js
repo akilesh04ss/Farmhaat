@@ -14,6 +14,7 @@ import disc from "../../assets/disc.jpg";
 import soil from "../../assets/coco soil.jpg";
 import spl from "../../assets/sl.jpg";
 import mesh from "../../assets/mesh.jpg";
+import axios from "axios";
 import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhoneAlt } from "@fortawesome/free-solid-svg-icons";
@@ -138,11 +139,26 @@ function View(props) {
       des4: "Useful for indoor & outdoor potted plants.",
     },
   ];
-  var viewitem = productitems.filter((aa) => aa.name == nameid);
+  var viewitem = productitems.filter((aa) => aa.name === nameid);
   console.log("viewitems", viewitem);
   useEffect(() => {
     window.scroll(0, 0);
   }, []);
+  var arrow = async () => {
+    const arraycart = {
+      Name: viewitem[0].name,
+      Image: viewitem[0].img,
+      Quantity: count,
+      Price: viewitem[0].price,
+      des1: viewitem[0].des1,
+      des2: viewitem[0].des2,
+      des3: viewitem[0].des3,
+      des4: viewitem[0].des4,
+    };
+    console.log(arraycart);
+    await axios.post("http://localhost:2000/farmhaat/cart/", arraycart);
+  };
+
   const [count, setCount] = useState(1);
   var minus = () => {
     if (count > 1) {
@@ -270,7 +286,9 @@ function View(props) {
             </p>
           </tr>
           <tr className="viewtr">
-            <button class="viewbtnss">ADD TO CART</button>
+            <button class="viewbtnss" onClick={arrow}>
+              ADD TO CART
+            </button>
           </tr>
         </table>
       </div>

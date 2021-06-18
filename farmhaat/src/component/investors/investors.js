@@ -2,6 +2,7 @@ import React from "react";
 import "./investors.css";
 import { Link } from "react-router-dom";
 import logo from "../../assets/logonew.png";
+import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhoneAlt } from "@fortawesome/free-solid-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
@@ -63,6 +64,24 @@ function Investors() {
       );
     }
   };
+  var arrw = async () => {
+    const arrayform1 = {
+      Name: name,
+      Email: email,
+      Material: material,
+      Wgt: weight,
+      Description: description,
+    };
+    console.log(arrayform1);
+    await axios.post("http://localhost:2000/farmhaat/investor/", arrayform1);
+  };
+
+  const [name, setname] = useState("");
+  const [email, setemail] = useState("");
+  const [user, setuser] = useState("");
+  const [weight, setweight] = useState("");
+  const [material, setmaterial] = useState("");
+  const [description, setdescription] = useState("");
   return (
     <div className="invbackground">
       <img className="invimg2" src={backy} />
@@ -105,31 +124,56 @@ function Investors() {
         <form action="#" className="invform">
           <div className="invformrow">
             <div className="invinputdata invname">
-              <input className="invinput " type="text" required />
+              <input
+                className="invinput "
+                type="text"
+                required
+                onChange={(e) => setname(e.target.value)}
+              />
               <div className="invunderline"></div>
               <label className="invlabel">Name*</label>
             </div>
           </div>
           <div className="invformrow">
             <div className="invinputdata">
-              <input className="invinput" type="email" required />
+              <input
+                className="invinput"
+                type="email"
+                required
+                onChange={(e) => setemail(e.target.value)}
+              />
               <div className="invunderline"></div>
               <label className="invlabel">Email id*</label>
             </div>
             <div className="invinputdata">
-              <input className="invinput" type="text" required />
+              <input
+                className="invinput"
+                type="text"
+                required
+                onChange={(e) => setuser(e.target.value)}
+              />
               <div className="invunderline"></div>
               <label className="invlabel">User id*</label>
             </div>
           </div>
           <div className="invformrow">
             <div className="invinputdata">
-              <input className="invinput" type="text" required />
+              <input
+                className="invinput"
+                onChange={(e) => setmaterial(e.target.value)}
+                type="text"
+                required
+              />
               <div className="invunderline"></div>
               <label className="invlabel">Material*</label>
             </div>
             <div className="invinputdata">
-              <input className="invinput" type="text" required />
+              <input
+                className="invinput"
+                onChange={(e) => setweight(e.target.value)}
+                type="text"
+                required
+              />
               <div className="invunderline"></div>
               <label className="invlabel">weight*</label>
             </div>
@@ -143,6 +187,7 @@ function Investors() {
                 cols="30"
                 rows="10"
                 required
+                onChange={(e) => setdescription(e.target.value)}
               ></textarea>
               <div className="invunderline"></div>
               <label className="invlabel">Description*</label>
@@ -155,6 +200,7 @@ function Investors() {
                 className="invinput"
                 type="submit"
                 value="Request for pickup"
+                onClick={arrw}
               />
             </div>
           </div>

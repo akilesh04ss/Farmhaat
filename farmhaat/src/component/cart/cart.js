@@ -127,18 +127,18 @@ function Cart() {
               </div>
             </td>
             <td className="cartd ">
-              <button className="cartplus" onClick={() => setCount(count + 1)}>
+              {/* <button className="cartplus" onClick={() => setCount(count + 1)}>
                 +
-              </button>
+              </button> */}
               <input
                 className="carinput carinp"
                 type="number"
                 value={count}
                 max="2"
               />
-              <button className="cartminus" onClick={minus}>
+              {/* <button className="cartminus" onClick={minus}>
                 -
-              </button>
+              </button> */}
             </td>
             <td className="cartd carpr">200</td>
           </tr>
