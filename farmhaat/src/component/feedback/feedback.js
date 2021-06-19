@@ -5,12 +5,14 @@ import { useState } from "react";
 function Feedback() {
   const [name, setname] = useState("");
   const [emails, setemails] = useState("");
+  const [con, setcon] = useState("");
   const [msg, setmsg] = useState("");
   var arrow1 = async () => {
     const arrayform2 = await {
       Name: name,
       Email: emails,
       Msg: msg,
+      Contact: con,
     };
     console.log(arrayform2);
     await axios.post("http://localhost:2000/farmhaat/feedback/", arrayform2);
@@ -45,9 +47,14 @@ function Feedback() {
                 <label className="feedlabel">Email id*</label>
               </div>
               <div className="feedinputdata">
-                <input className="feedinput" type="text" required />
+                <input
+                  className="feedinput"
+                  type="text"
+                  required
+                  onChange={(e) => setcon(e.target.value)}
+                />
                 <div className="feedunderline"></div>
-                <label className="feedlabel">User id*</label>
+                <label className="feedlabel">Contact Number*</label>
               </div>
             </div>
             <div className="feedformrow ">

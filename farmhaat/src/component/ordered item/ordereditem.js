@@ -269,12 +269,18 @@ function Ordereditem() {
               </div>
               <br></br>
               <div className="oriemail">
-                <span>
-                  <FontAwesomeIcon icon={faEnvelope} />
-                </span>
-                <span className="orimail">
-                  &nbsp;&nbsp;contact.farmhaat@gmail.com
-                </span>
+                <a
+                  href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=akilesh04.ss@gmail.com"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <span>
+                    <FontAwesomeIcon icon={faEnvelope} />
+                  </span>
+                  <span className="orimail">
+                    &nbsp;&nbsp;contact.farmhaat@gmail.com
+                  </span>
+                </a>
               </div>
               <div className="orisocial">
                 <Link className="orisociala" onClick={fbclick}>

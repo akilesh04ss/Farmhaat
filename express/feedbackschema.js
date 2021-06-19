@@ -12,5 +12,9 @@ const feedback = mongoose.Schema({
     type: String,
     required: true,
   },
+  Contact: {
+    type: Number,
+    required: true,
+  },
 });
 module.exports = mongoose.model("feedback", feedback);

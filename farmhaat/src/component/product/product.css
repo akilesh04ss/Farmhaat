@@ -493,6 +493,11 @@
 .productcard1 {
   float: left;
 }
+.proemail > a {
+  color: #78fee0;
+  text-decoration: none;
+  font-size: 22px;
+}
 .procheck {
   margin: 60px;
 }

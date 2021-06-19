@@ -16,6 +16,10 @@ const register = mongoose.Schema({
     type: Number,
     required: true,
   },
+  Username: {
+    type: String,
+    required: true,
+  },
   Address: {
     type: String,
     required: true,

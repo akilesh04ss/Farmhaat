@@ -20,6 +20,7 @@ router.post("/", async (req, res) => {
     Phone: req.body.Phone,
     Address: req.body.Address,
     Password: req.body.Password,
+    Username: req.body.Username,
     Confirmpass: req.body.Confirmpass,
   });
   res.status(200).json(registerform);
@@ -63,6 +64,7 @@ router.post("/feedback", async (req, res) => {
     Name: req.body.Name,
     Email: req.body.Email,
     Msg: req.body.Msg,
+    Contact: req.body,
   });
   res.status(200).json(feedbackform);
 });

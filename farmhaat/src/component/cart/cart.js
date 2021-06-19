@@ -18,12 +18,6 @@ function Cart() {
   useEffect(() => {
     window.scroll(0, 0);
   }, []);
-  const [count, setCount] = useState(1);
-  var minus = () => {
-    if (count > 1) {
-      setCount(count - 1);
-    }
-  };
   const [clicked, setClicked] = useState(false);
   var fbclick = () => {
     setClicked(true);
@@ -133,7 +127,7 @@ function Cart() {
               <input
                 className="carinput carinp"
                 type="number"
-                value={count}
+                // value={count}
                 max="2"
               />
               {/* <button className="cartminus" onClick={minus}>
@@ -216,12 +210,18 @@ function Cart() {
               </div>
               <br></br>
               <div className="cartemail">
-                <span>
-                  <FontAwesomeIcon icon={faEnvelope} />
-                </span>
-                <span className="cartmail">
-                  &nbsp;&nbsp;contact.farmhaat@gmail.com
-                </span>
+                <a
+                  href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=akilesh04.ss@gmail.com"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <span>
+                    <FontAwesomeIcon icon={faEnvelope} />
+                  </span>
+                  <span className="cartmail">
+                    &nbsp;&nbsp;contact.farmhaat@gmail.com
+                  </span>
+                </a>
               </div>
               <div className="cartsocial">
                 <Link className="cartsociala" onClick={fbclick}>

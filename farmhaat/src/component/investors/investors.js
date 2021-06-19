@@ -228,19 +228,30 @@ function Investors() {
               </div>
               <br></br>
               <div className="invemail">
-                <span>
-                  <FontAwesomeIcon icon={faEnvelope} />
-                </span>
-                <span className="invmail">
-                  &nbsp;&nbsp;contact.farmhaat@gmail.com
-                </span>
+                <a
+                  href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=akilesh04.ss@gmail.com"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <span>
+                    <FontAwesomeIcon icon={faEnvelope} />
+                  </span>
+                  <span className="invmail">
+                    &nbsp;&nbsp;contact.farmhaat@gmail.com
+                  </span>
+                </a>
               </div>
               <div className="invsocial">
-                <Link className="invaleft" onClick={fbclick}>
+                <a
+                  className="invaleft"
+                  rel="noopener noreferrer"
+                  href="https://www.facebook.com/"
+                  target="_blank"
+                >
                   <span className="invspanleft">
                     <FontAwesomeIcon icon={faFacebook} color="white" />
                   </span>
-                </Link>
+                </a>
                 <Link className="invaleft" onClick={instafn}>
                   <span className="invspanleft">
                     <FontAwesomeIcon icon={faInstagram} color="white" />

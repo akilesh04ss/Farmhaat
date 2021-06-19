@@ -307,12 +307,18 @@ function View(props) {
               </div>
               <br></br>
               <div className="viewemail">
-                <span>
-                  <FontAwesomeIcon icon={faEnvelope} />
-                </span>
-                <span className="viewmail">
-                  &nbsp;&nbsp;contact.farmhaat@gmail.com
-                </span>
+                <a
+                  href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=akilesh04.ss@gmail.com"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <span>
+                    <FontAwesomeIcon icon={faEnvelope} />
+                  </span>
+                  <span className="viewmail">
+                    &nbsp;&nbsp;contact.farmhaat@gmail.com
+                  </span>
+                </a>
               </div>
               <div className="viewsocial">
                 <Link onClick={fbclick} className="viewasoc">

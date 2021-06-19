@@ -475,6 +475,11 @@
   position: relative;
   top: 20px;
 }
+.cartemail > a {
+  color: #78fee0;
+  text-decoration: none;
+  font-size: 22px;
+}
 
 .cartleft .cartcontent .cartsocial .cartsociala .cartsocialspan:hover {
   background: #f12020 !important;
