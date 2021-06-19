@@ -13,8 +13,19 @@ import { faYoutube } from "@fortawesome/free-brands-svg-icons";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { useEffect, useState } from "react";
-
+import axios from "axios";
 function Cart() {
+  const [arrowget, setarrowget] = useState([]);
+  useEffect(async () => {
+    var getarray = await axios.get("http://localhost:2000/farmhaat/cart");
+    console.log(getarray);
+    setarrowget(getarray.data);
+    console.log(arrowget);
+  }, []);
+  var del = async () => {
+    var getid = 1;
+    await axios.delete("http://localhost:2000/farmhaat/cart", getid);
+  };
   useEffect(() => {
     window.scroll(0, 0);
   }, []);
@@ -63,6 +74,37 @@ function Cart() {
       );
     }
   };
+  var get1 = arrowget.map((get) => (
+    <div className="getting">
+      <tr className="cartr">
+        <td className="cartd">
+          <div className="carinfo">
+            <img className="carimg" src={get.Image} />
+            <div className="carcon">
+              <p className="carp1">{get.Name}</p>
+              <small className="carsmall">Price(Rs/kg):{get.Price}</small>
+              <br></br>
+              <a className="cara1" href="#">
+                Remove
+              </a>
+            </div>
+          </div>
+        </td>
+
+        <td className="cartd ">
+          <input
+            className="carinput carinp"
+            type="number"
+            value={get.Quantity}
+            max="2"
+          />
+        </td>
+        <td className="cartd carpr">200</td>
+        <div className="carline"></div>
+      </tr>
+    </div>
+  ));
+
   return (
     <div className="cartbackground">
       <div className="carthead">
@@ -101,77 +143,12 @@ function Cart() {
       </div>
       <div className="carcontainer carcart">
         <table className="cartable">
-          <tr className="cartr">
+          <tr className="cartr carttr">
             <th className="carth">Product</th>
             <th className="carth carquan">Quantity</th>
             <th className="carth carsub">Amount</th>
           </tr>
-          <tr className="cartr">
-            <td className="cartd">
-              <div className="carinfo">
-                <img className="carimg" src={coir} />
-                <div className="carcon">
-                  <p className="carp1">Coir Brick</p>
-                  <small className="carsmall">Price(Rs/kg): 200</small>
-                  <br></br>
-                  <a className="cara1" href="#">
-                    Remove
-                  </a>
-                </div>
-              </div>
-            </td>
-            <td className="cartd ">
-              {/* <button className="cartplus" onClick={() => setCount(count + 1)}>
-                +
-              </button> */}
-              <input
-                className="carinput carinp"
-                type="number"
-                // value={count}
-                max="2"
-              />
-              {/* <button className="cartminus" onClick={minus}>
-                -
-              </button> */}
-            </td>
-            <td className="cartd carpr">200</td>
-          </tr>
-          {/* <tr className="cartr"> */}
-          <div className="carline"></div>
-          {/* <td className="cartd">
-              <div classname="carinfo">
-                <img className="cartoh" src={coir} />
-                <div className="carten">
-                  <p className="carp1">Coir Brick</p>
-                  <small className="carsmall">Price(Rs/kg): 200</small>
-                  <br></br>
-                  <a className="cara1" href="#">
-                    Remove
-                  </a>
-                </div>
-              </div>
-            </td>
-            <td className="cartd">
-              <button className="cartplusa" onClick={() => setCount(count + 1)}>
-                +
-              </button>
-              <input
-                className="carinput carinpu"
-                type="number"
-                value={count}
-                max="2"
-              />
-              <button
-                className="cartminusa"
-                onClick={() => setCount(count - 1)}
-                min="1"
-                max="10"
-              >
-                -
-              </button>
-            </td>
-            <td class="cartd carpri">200</td>
-          </tr> */}
+          {get1}
         </table>
       </div>
       <div className="carcontainer carcart">

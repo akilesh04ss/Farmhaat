@@ -157,6 +157,7 @@ function View(props) {
     };
     console.log(arraycart);
     await axios.post("http://localhost:2000/farmhaat/cart/", arraycart);
+    alert("Added to cart sucessfully!!");
   };
 
   const [count, setCount] = useState(1);

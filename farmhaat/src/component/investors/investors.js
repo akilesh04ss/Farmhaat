@@ -74,6 +74,7 @@ function Investors() {
     };
     console.log(arrayform1);
     await axios.post("http://localhost:2000/farmhaat/investor/", arrayform1);
+    alert("Requested Sucessfully!!");
   };
 
   const [name, setname] = useState("");

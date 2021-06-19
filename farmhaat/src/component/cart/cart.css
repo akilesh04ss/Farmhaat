@@ -10,7 +10,7 @@
     #92fe9d 0%,
     #00c9ff 100%
   ) !important;
-  height: 1000px;
+  height: auto;
 }
 .cartlogo {
   cursor: pointer;
@@ -198,7 +198,7 @@
 }
 
 .carcart {
-  margin: 60px auto;
+  margin: 150px auto;
 }
 .cartable {
   width: 80%;
@@ -209,16 +209,23 @@
   flex-wrap: wrap;
   margin: 0px;
 }
+.carttr {
+  background: green !important;
+  position: absolute;
+  width: 80% !important;
+  left: 140px;
+  bottom: 400px;
+}
 .carth {
   position: relative;
-  left: 150px;
+  left: 0px;
   text-align: left;
   padding: 05px;
   font-family: "Times New Roman", Times, serif !important;
   font-style: italic;
   color: #fff !important;
-  background: green !important;
   font-size: 2.5ch;
+  width: 0 !important;
 }
 .cartd {
   position: relative;
@@ -226,7 +233,12 @@
   font-family: "Times New Roman", Times, serif !important;
   font-style: italic;
   font-size: 18px !important;
-  padding: 15px 00px 5px 5px;
+  padding: 15px 00px 00px 5px;
+  margin-bottom: 0;
+}
+.getting {
+  position: relative;
+  padding-top: 0px;
 }
 .carcon {
   position: relative;
@@ -251,66 +263,22 @@
 }
 .cartd .carinp {
   position: relative;
-  left: -300px;
-  top: -50px;
-}
-.cartd .carinpu {
-  position: absolute;
-  left: -545px;
-  top: -30px;
-}
-.cartplus {
-  padding-right: 10px;
-  padding-left: 10px;
-  border-radius: 2px solid black;
-  border-radius: 50%;
-  font-size: 27px;
-  position: relative;
-  bottom: 10px;
-  left: -345px;
-  background: white !important;
-}
-.cartplusa {
-  padding-right: 10px;
-  padding-left: 10px;
-  border-radius: 2px solid black;
-  border-radius: 50%;
-  font-size: 27px;
-  position: relative;
-  bottom: 145px;
-  left: -600px;
-  background: white !important;
-}
-.cartminus {
-  padding-right: 15px;
-  padding-left: 15px;
-  border-radius: 2px solid black;
-  border-radius: 50%;
-  font-size: 27px;
-  position: relative;
-  bottom: 90px;
-  left: -230px;
-  background: white !important;
+  left: 450px;
+  top: -20px;
 }
 .carpr {
   position: absolute;
-  left: 900px;
-  top: 245px;
-  font-size: 22px !important;
-}
-.carpri {
-  position: absolute;
-  left: 1020px;
-  top: 430px;
+  left: 920px;
+  top: 45px;
   font-size: 22px !important;
 }
 .carquan {
   position: relative;
-  left: -300px;
+  left: 500px;
 }
 .carsub {
   position: relative;
-  left: -200px;
+  left: 600px;
 }
 .cartd .cara1 {
   color: green !important;
@@ -355,17 +323,19 @@
 .cartotal .cartable {
   border-top: 3px solid green !important;
   width: 340px;
+  margin-top: 30px;
+  margin-bottom: 0 !important;
   position: relative;
-  left: -200px;
-  top: -50px;
+  left: -240px;
+  top: -160px;
   max-width: 350px;
 }
 .carline {
   border-top: 1px solid #dddfe6 !important;
   width: 990px;
   position: relative;
-  left: 150px;
-  top: -80px;
+  left: -230px;
+  top: 100px;
   max-width: 1050px;
 }
 .cartd:last-child {
@@ -420,8 +390,9 @@
   left: 100px;
 }
 .cartfooter {
-  position: absolute;
-  bottom: auto;
+  position: relative;
+  top: auto;
+  margin-top: 0 !important;
   width: 100%;
   height: 310px;
   line-height: 30px;

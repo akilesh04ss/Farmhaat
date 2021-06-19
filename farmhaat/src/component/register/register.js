@@ -19,7 +19,11 @@ function Register() {
       Confirmpass: pass1,
     };
     console.log(arrayform3);
-    await axios.post("http://localhost:2000/farmhaat/", arrayform3);
+    if (pass1 === pass2) {
+      await axios.post("http://localhost:2000/farmhaat/", arrayform3);
+    } else {
+      console.log("wrng");
+    }
   };
   const [usr1, setusr1] = useState("");
   const [name2, setname2] = useState("");

@@ -16,6 +16,7 @@ function Feedback() {
     };
     console.log(arrayform2);
     await axios.post("http://localhost:2000/farmhaat/feedback/", arrayform2);
+    alert("Submitted Sucessfully!!");
   };
   return (
     <div className="feedback">

@@ -72,6 +72,7 @@ router.get("/cart", async (req, res) => {
   var cartform = await cart.find();
   res.status(200).json(cartform);
 });
+
 router.post("/cart", async (req, res) => {
   var cartform = await cart.create({
     Name: req.body.Name,
