@@ -8,6 +8,9 @@ const cart = mongoose.Schema({
     type: String,
     required: true,
   },
+  Userid: {
+    type: Number,
+  },
   Image: {
     type: String,
     required: true,
@@ -31,6 +34,16 @@ const cart = mongoose.Schema({
   des4: {
     type: String,
     required: true,
+  },
+  Order: {
+    type: Date,
+    required: true,
+    default: Date.now(),
+  },
+  Delivery: {
+    type: Date,
+    required: true,
+    default: () => Date.now() + 48 * 60 * 60 * 1000,
   },
 });
 module.exports = mongoose.model("cart", cart);

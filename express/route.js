@@ -99,6 +99,7 @@ router.post("/order", async (req, res) => {
     Delivery: req.body.Delivery,
     Image: req.body.Image,
   });
+  // console.log(req.body);
   res.status(200).json(orderform);
 });
 module.exports = router;

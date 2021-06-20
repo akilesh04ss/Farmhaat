@@ -11,7 +11,7 @@
     #92fe9d 0%,
     #00c9ff 100%
   ) !important;
-  height: 1000px;
+  height: auto;
 }
 .orilogo {
   cursor: pointer;
@@ -229,15 +229,17 @@
 td {
   position: relative;
   left: 50px;
-  padding: 15px 00px 5px 15px;
+  padding: 15px 00px 5px 10px;
   font-family: "Times New Roman", Times, serif !important;
   font-style: italic;
 }
 .oripr {
-  position: relative;
-  left: -400px;
+  position: absolute;
+  left: 760px;
+  margin-top: 50px;
   font-size: 17px;
 }
+
 .oribri {
   font-family: "Times New Roman", Times, serif !important;
   font-style: italic;
@@ -252,30 +254,17 @@ td {
   left: -570px;
 }
 .orirs {
-  position: relative;
-  left: -470px;
+  position: absolute;
+  left: 590px;
+  margin-top: 50px;
   font-family: "Times New Roman", Times, serif !important;
   font-style: italic;
   font-size: 20px;
 }
 .oria {
-  position: relative;
-  left: -10px;
-  font-size: 18.8px;
-  top: 10px;
+  position: absolute;
 }
-.oria::after {
-  content: "";
-  position: relative;
-  top: -15px;
-  left: -350px;
-  display: inline-block !important;
-  width: 100%;
-  height: 2px;
-  cursor: pointer;
-  background-color: black;
-  transition: width 0.3s;
-}
+
 .oriview {
   position: relative;
   left: -05px;
@@ -294,21 +283,12 @@ td {
 }
 .oritd > a {
   color: black !important;
-  font-size: 12px;
+  font-size: 18px;
   position: relative;
-  left: -350px;
-  text-decoration: none;
+  left: 100px;
+  top: 70px;
 }
-.oritd > .oriview::after {
-  content: "";
-  position: relative;
-  top: -10px;
-  display: inline-block !important;
-  width: 100%;
-  height: 2px;
-  background-color: black;
-  transition: width 0.3s;
-}
+
 .oritd img {
   width: 80px;
   height: 80px;
@@ -449,7 +429,7 @@ td {
 
 .orifooter {
   position: absolute;
-  bottom: -600px;
+  bottom: auto;
   width: 100%;
   height: 315px;
   line-height: 30px;

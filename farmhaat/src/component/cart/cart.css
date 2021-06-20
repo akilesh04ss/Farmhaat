@@ -388,6 +388,7 @@
   color: #111 !important;
   top: 0px;
   left: 100px;
+  cursor: pointer;
 }
 .cartfooter {
   position: relative;

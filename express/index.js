@@ -11,6 +11,7 @@ app.use("/farmhaat", router);
 app.listen(2000, () => {
   console.log("port working in 2000");
 });
+mongoose.set("useCreateIndex", true);
 mongoose.connect(
   "mongodb://localhost:27017/register",
   {

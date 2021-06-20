@@ -15,6 +15,7 @@ import soil from "../../assets/coco soil.jpg";
 import spl from "../../assets/sl.jpg";
 import mesh from "../../assets/mesh.jpg";
 import Similar from "./similar";
+import axios from "axios";
 import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhoneAlt } from "@fortawesome/free-solid-svg-icons";
@@ -61,9 +62,41 @@ function Ordereditem() {
       window.open("http://twitter.com", "_blank");
     }
   };
+
   useEffect(() => {
     window.scroll(0, 0);
   }, []);
+  const [id, setid] = useState();
+  const [arrowget1, setarrowget1] = useState([]);
+  useEffect(async () => {
+    var getarray = await axios.get("http://localhost:2000/farmhaat/order");
+    console.log(getarray);
+    setarrowget1(getarray.data);
+    console.log(arrowget1);
+  }, []);
+  var get2 = arrowget1.map((get) => (
+    <div className="getting1">
+      <tr>
+        <td className="oritd">
+          <div class="oriinfo">
+            <img className="orimg" src={get.Image} />
+            <div>
+              <br></br>
+              <p className="oribri">{get.Name}</p>
+            </div>
+          </div>
+        </td>
+        <td className="orirs oritd">Rs 200</td>
+        <td className="oripr oritd">{get.Delivery.slice(0, 10)}</td>
+        <td className="oria oritd">
+          <Link to="/viewdetails">View details</Link>
+        </td>
+      </tr>
+      <div className="oriline"></div>
+    </div>
+  ));
+  // arrowget1.map((set) => setid(set._id));
+  // console.log("id", id);
   var simitems = [
     {
       name: "Coir Brick",
@@ -215,41 +248,7 @@ function Ordereditem() {
             <th class="oridd orith"> Delivery Date</th>
             <th class="oriprice orith">Price</th>
           </tr>
-          <tr>
-            <td className="oritd">
-              <div class="oriinfo">
-                <img className="orimg" src={coir} />
-                <div>
-                  <br></br>
-                  <p className="oribri">Coir Brick</p>
-                </div>
-              </div>
-            </td>
-            <td className="orirs oritd">Rs 200</td>
-            <td className="oripr oritd">20th April</td>
-            <td className="oria oritd">
-              <Link to="/viewdetails">View details</Link>
-            </td>
-          </tr>
-          <div className="oriline"></div>
-          <tr>
-            <td className="oritd">
-              <div className="oriinfo">
-                <img className="orimg" src={coir}></img>
-                <div>
-                  <br></br>
-                  <p className="oribri">Coir Brick</p>
-                </div>
-              </div>
-            </td>
-            <td className="orirs oritd">Rs 200</td>
-            <td className="oripr oritd">20th April</td>
-            <td className="oriview oritd">
-              <Link to="/viewdetails" className="oriview">
-                View details
-              </Link>
-            </td>
-          </tr>
+          {get2}
         </table>
       </div>
       <h2 className="orisim">Similar Products</h2>

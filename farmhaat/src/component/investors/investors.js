@@ -19,13 +19,7 @@ function Investors() {
   useEffect(() => {
     window.scroll(0, 0);
   }, []);
-  const [clicked, setClicked] = useState(false);
-  var fbclick = () => {
-    setClicked(true);
-    if (clicked) {
-      window.open("http://facebook.com", "_blank");
-    }
-  };
+
   const [insta, setinsta] = useState(false);
   var instafn = () => {
     setinsta(true);

@@ -2,7 +2,6 @@ import React from "react";
 import "./cart.css";
 import { Link } from "react-router-dom";
 import log from "../../assets/logonew.png";
-import coir from "../../assets/oir.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhoneAlt } from "@fortawesome/free-solid-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
@@ -22,9 +21,15 @@ function Cart() {
     setarrowget(getarray.data);
     console.log(arrowget);
   }, []);
-  var del = async () => {
-    var getid = 1;
-    await axios.delete("http://localhost:2000/farmhaat/cart", getid);
+
+  var post = () => {
+    console.log(arrowget, "post");
+    console.log("post");
+    arrowget.map(
+      async (get) =>
+        await axios.post("http://localhost:2000/farmhaat/order", get)
+    );
+    alert("Order placed!!");
   };
   useEffect(() => {
     window.scroll(0, 0);
@@ -74,6 +79,7 @@ function Cart() {
       );
     }
   };
+
   var get1 = arrowget.map((get) => (
     <div className="getting">
       <tr className="cartr">
@@ -167,7 +173,9 @@ function Cart() {
               <td className="cartd">Rs 410</td>
             </tr>
             <tr className="cartr">
-              <button className="carbuy">Buy</button>
+              <button className="carbuy" onClick={post}>
+                Buy
+              </button>
             </tr>
           </table>
         </div>

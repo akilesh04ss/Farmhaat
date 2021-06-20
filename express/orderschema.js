@@ -12,9 +12,18 @@ const order = mongoose.Schema({
     type: String,
     required: true,
   },
-  Delivery: {
-    type: String,
+  Userid: {
+    type: Number,
+  },
+  Order: {
+    type: Date,
     required: true,
+    default: Date.now(),
+  },
+  Delivery: {
+    type: Date,
+    required: true,
+    default: () => Date.now() + 48 * 60 * 60 * 1000,
   },
 });
 module.exports = mongoose.model("order", order);
