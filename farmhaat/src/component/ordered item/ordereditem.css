@@ -282,7 +282,7 @@ td {
   max-width: 1050px;
 }
 .oritd > a {
-  color: black !important;
+  color: green !important;
   font-size: 18px;
   position: relative;
   left: 100px;

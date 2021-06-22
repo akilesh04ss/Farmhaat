@@ -26,7 +26,7 @@ import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faYoutube } from "@fortawesome/free-brands-svg-icons";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
-function Ordereditem() {
+function Ordereditem(props) {
   const [clicked, setClicked] = useState(false);
   var fbclick = () => {
     setClicked(true);
@@ -66,14 +66,19 @@ function Ordereditem() {
   useEffect(() => {
     window.scroll(0, 0);
   }, []);
-  const [id, setid] = useState();
+  const [id, setid] = useState(" ");
+  // var id = [];
   const [arrowget1, setarrowget1] = useState([]);
   useEffect(async () => {
     var getarray = await axios.get("http://localhost:2000/farmhaat/order");
     console.log(getarray);
     setarrowget1(getarray.data);
-    console.log(arrowget1);
+    // console.log("id", id);
   }, []);
+  // arrowget1.map((get) => console.log(get._id));
+  // console.log("id:", id);
+  console.log(props._id, "ki");
+  var getid = () => {};
   var get2 = arrowget1.map((get) => (
     <div className="getting1">
       <tr>
@@ -89,14 +94,13 @@ function Ordereditem() {
         <td className="orirs oritd">Rs 200</td>
         <td className="oripr oritd">{get.Delivery.slice(0, 10)}</td>
         <td className="oria oritd">
-          <Link to="/viewdetails">View details</Link>
+          <Link to={`/viewdetails/:${get._id}`}>View details</Link>
         </td>
       </tr>
       <div className="oriline"></div>
     </div>
   ));
-  // arrowget1.map((set) => setid(set._id));
-  // console.log("id", id);
+  console.log("id", id);
   var simitems = [
     {
       name: "Coir Brick",
@@ -207,6 +211,7 @@ function Ordereditem() {
   };
   return (
     <div className="oibackground">
+      {getid()}
       <div className="orihead">
         <div className="oriheader">
           <div className="orilj">
@@ -249,6 +254,7 @@ function Ordereditem() {
             <th class="oriprice orith">Price</th>
           </tr>
           {get2}
+          {getid}
         </table>
       </div>
       <h2 className="orisim">Similar Products</h2>

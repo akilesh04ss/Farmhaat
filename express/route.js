@@ -7,6 +7,7 @@ const investor = require("./investorschema");
 const feedback = require("./feedbackschema");
 const cart = require("./cartschema");
 const order = require("./orderschema");
+const { findById } = require("./registerschema");
 router.get("/", async (req, res) => {
   var registerform = await register.find();
   res.status(200).json(registerform);
@@ -96,8 +97,13 @@ router.post("/order", async (req, res) => {
   var orderform = await order.create({
     Name: req.body.Name,
     Price: req.body.Price,
+    Quantity: req.body.Quantity,
     Delivery: req.body.Delivery,
     Image: req.body.Image,
+    des1: req.body.des1,
+    des2: req.body.des2,
+    des3: req.body.des3,
+    des4: req.body.des4,
   });
   // console.log(req.body);
   res.status(200).json(orderform);

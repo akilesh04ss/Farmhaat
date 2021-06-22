@@ -196,12 +196,12 @@
 .vdcon {
   margin: 60px auto;
   border: 5px double gray;
-  width: 70%;
-  height: 450px;
+  width: 75%;
+  height: 500px;
 }
 .vdtable {
   font-size: 1.3rem !important;
-  width: 80%;
+  width: 90%;
   border-collapse: collapse;
   display: flex;
   flex-wrap: wrap;
@@ -248,44 +248,44 @@
 
 .vdqw {
   position: absolute;
-  left: 370px;
+  left: 360px;
+  font-family: "Times New Roman", Times, serif !important;
   font-size: 1.3rem !important;
-  top: 300px;
+  top: 280px;
 }
 .vdqws {
   position: absolute;
-  left: 470px;
+  left: 450px;
+  font-family: "Times New Roman", Times, serif !important;
   font-size: 1.3rem !important;
-  top: 300px;
+  top: 280px;
 }
-.vdad {
-  position: absolute;
-  left: 370px;
-  top: 340px;
-  font-size: 1.3rem !important;
-}
-.vdads {
-  position: absolute;
-  left: 370px;
-  top: 380px;
-  font-size: 1.3rem !important;
-}
+
 .vdsa {
   font-size: 1.3rem !important;
   position: relative;
-  top: 10px;
-  left: 170px;
+  bottom: 80px;
+  left: 050px;
 }
 .vdsas {
   font-size: 1.3rem !important;
   position: relative;
-  top: 0px;
-  left: 170px;
+  bottom: 90px;
+  left: 80px;
+}
+.track {
+  width: 320px;
+  height: 320px;
+  position: relative;
+  bottom: 320px;
+  left: 670px;
+  border: 5px ridge #78fee0;
+  border-radius: 15px;
 }
 .vdbtnss {
   position: relative;
-  top: 140px;
-  left: 180px;
+  top: 120px;
+  right: 350px;
   background-color: #21ebff !important;
   color: #111 !important;
   padding: 9px 25px;
@@ -294,7 +294,8 @@
   text-transform: capitalize;
   letter-spacing: 2px;
   font-size: 20px;
-  border: 5px groove black;
+  border: 5px groove greenyellow;
+  border-radius: 15px;
   transition: 0.5s;
 }
 .vdbtnss:hover {
@@ -304,22 +305,23 @@
 }
 .vdinf .vdh2 {
   position: relative;
-  left: 20px;
-  bottom: 10px;
+  left: 40px;
+  bottom: 20px;
 }
 .vdinf .vdsmall {
   position: relative;
-  left: 20px;
-  bottom: 30px;
+  left: 40px;
+  bottom: 50px;
 }
 .vdtd .vdimg {
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
   margin-left: 150px;
   margin-right: 10px;
   position: relative;
   bottom: -30px;
   left: -50px;
+  border: 1px solid black;
 }
 .vdfooter {
   position: absolute;

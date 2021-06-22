@@ -134,7 +134,7 @@ function View(props) {
       price: "550",
       img: spl,
       des1: "Useful as a fertilizer for every type of plants.",
-      des2: "Special manure prepared out of orgaic wastes (like kitchen wastes), 1kg packet.",
+      des2: "Manure prepared out of  kitchen & farm wastes, 1kg packet.",
       des3: "Improves the nutrirnt content",
       des4: "Useful for indoor & outdoor potted plants.",
     },

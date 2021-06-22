@@ -23,7 +23,7 @@ function App() {
           <Route path="/investors" component={Investors} />
           <Route path="/feedback" component={Feedback} />
           <Route path="/view/:name" component={View} />
-          <Route path="/viewdetails" component={Viewdetails} />
+          <Route path="/viewdetails/:_id" component={Viewdetails} />
           <Route path="/ordereditem" component={Ordereditem} />
           <Route path="/cart" component={Cart} />
           <Route path="/register" component={Register} />

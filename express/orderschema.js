@@ -12,6 +12,26 @@ const order = mongoose.Schema({
     type: String,
     required: true,
   },
+  des1: {
+    type: String,
+    required: true,
+  },
+  des2: {
+    type: String,
+    required: true,
+  },
+  des3: {
+    type: String,
+    required: true,
+  },
+  Quantity: {
+    type: String,
+    required: true,
+  },
+  des4: {
+    type: String,
+    required: true,
+  },
   Userid: {
     type: Number,
   },

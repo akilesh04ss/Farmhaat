@@ -2,7 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/logonew.png";
 import "./viewdetails.css";
-import coir from "../../assets/oir.jpg";
+import track from "../../assets/Team Q.gif";
+import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhoneAlt } from "@fortawesome/free-solid-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
@@ -13,10 +14,22 @@ import { faYoutube } from "@fortawesome/free-brands-svg-icons";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { useEffect, useState } from "react";
-function Viewdetails() {
+function Viewdetails(props) {
   useEffect(() => {
     window.scroll(0, 0);
   }, []);
+  const [arrowget1, setarrowget1] = useState([]);
+  useEffect(async () => {
+    var getarray = await axios.get("http://localhost:2000/farmhaat/order");
+    console.log(getarray);
+    setarrowget1(getarray.data);
+    // console.log("id", id);
+    console.log(arrowget1);
+  }, []);
+  var id = props.match.params._id;
+  var sliceid = id.slice(1);
+  var filterarray = arrowget1.filter((e) => e._id === sliceid);
+  console.log(props.match.params._id);
   const [clicked, setClicked] = useState(false);
   var fbclick = () => {
     setClicked(true);
@@ -62,6 +75,57 @@ function Viewdetails() {
       );
     }
   };
+  var get3 = filterarray.map((get) => (
+    <div className="vdcon">
+      <table className="vdtable">
+        <tr>
+          <td className="vdtd">
+            <img className="vdimg" src={get.Image} alt="" />
+            <div className="vdinf">
+              <h2 className="vdh2">{get.Name}</h2>
+              <small className="vdsmall">Price: {get.Price}</small>
+              <br></br>
+            </div>
+          </td>
+          <td className="vdtd">
+            <div className="vdrpdiv">
+              <p className="vdrp">Ordered Date:</p>
+              <p className="vdrp">{get.Order.slice(0, 10)}</p>
+            </div>
+          </td>
+          <td className="vdtd">
+            <div className="vdprdiv">
+              <p className="vdpr">Delivery Date:</p>
+              <p className="vdpr"> {get.Delivery.slice(0, 10)}</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <div className="vdqwdiv">
+            <p className="vdqw">Quantity:</p>
+            <p className="vdqws">{get.Quantity}</p>
+          </div>
+        </tr>
+
+        <tr>
+          <p className="vdsa">
+            Description:<br></br>
+          </p>
+          <p className="vdsas">
+            * {get.des1} <br></br>* {get.des2}
+            <br></br>* {get.des3}
+            <br></br>* {get.des4}
+          </p>
+          <img src={track} className="track" />
+        </tr>
+        <tr>
+          <Link to="/feedback">
+            <button class="vdbtnss">Feedback</button>
+          </Link>
+        </tr>
+      </table>
+    </div>
+  ));
   return (
     <div className="vdbk">
       <div className="vdhead">
@@ -98,63 +162,7 @@ function Viewdetails() {
           </nav>
         </div>
       </div>
-      <div className="vdcon">
-        <table className="vdtable">
-          <tr>
-            <td className="vdtd">
-              <img className="vdimg" src={coir} alt="" />
-              <div className="vdinf">
-                <h2 className="vdh2">Coir Brick</h2>
-                <small className="vdsmall">Price: 200</small>
-                <br></br>
-              </div>
-            </td>
-            <td className="vdtd">
-              <div className="vdrpdiv">
-                <p className="vdrp">Ordered Date:</p>
-                <p className="vdrp"> 19th April</p>
-              </div>
-            </td>
-            <td className="vdtd">
-              <div className="vdprdiv">
-                <p className="vdpr">Delivery Date:</p>
-                <p className="vdpr"> 20th April</p>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <div className="vdqwdiv">
-              <p className="vdqw">Quantity:</p>
-              <p className="vdqws">2</p>
-            </div>
-          </tr>
-          <tr>
-            <p className="vdad">Adrress: </p>
-            <br></br>
-            <p className="vdads">
-              {" "}
-              2/827,Vellagoundan Thottam, Ganapathipalayam,Tirupur-5
-            </p>
-          </tr>
-
-          <tr>
-            <p className="vdsa">
-              Description:<br></br>
-            </p>
-            <p className="vdsas">
-              * It will come in brick form of 5 KG. <br></br>* Useful for
-              potting mix, maintain water level.<br></br>* Put directly into the
-              water to convert it into powder form.
-              <br></br>* Useful for indoor & outdoor potted plants.
-            </p>
-          </tr>
-          <tr>
-            <Link to="/feedback">
-              <button class="vdbtnss">Feedback</button>
-            </Link>
-          </tr>
-        </table>
-      </div>
+      {get3}
       <div className="vdfooter">
         <div className="vdmaincontent">
           <div className="vdleft vdbox">
