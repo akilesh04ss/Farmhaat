@@ -15,6 +15,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 function Cart() {
   const [arrowget, setarrowget] = useState([]);
+  const [id, setid] = useState("");
   useEffect(async () => {
     var getarray = await axios.get("http://localhost:2000/farmhaat/cart");
     console.log(getarray);
@@ -90,9 +91,32 @@ function Cart() {
               <p className="carp1">{get.Name}</p>
               <small className="carsmall">Price(Rs/kg):{get.Price}</small>
               <br></br>
-              <a className="cara1" href="#">
+              {/* <Link
+                className="cara1"
+                onClick={() => {
+                  axios.delete(
+                    `http://localhost:2000/farmhaat/cart/:${get._id}`
+                  );
+                }}
+              >
                 Remove
-              </a>
+              </Link> */}
+              <button
+                className="cara1"
+                onClick={() => {
+                  axios.delete(
+                    `http://localhost:2000/farmhaat/cart/${get._id}`
+                  );
+                  // .then(() => {
+                  //   window.location.reload();
+                  // }
+                  // .catch((err)=>{
+                  //   console.log("r",err);
+                  // })
+                }}
+              >
+                Remove
+              </button>
             </div>
           </div>
         </td>
@@ -110,7 +134,7 @@ function Cart() {
       </tr>
     </div>
   ));
-
+  console.log("ids:", id);
   return (
     <div className="cartbackground">
       <div className="carthead">

@@ -1,4 +1,4 @@
-const { response } = require("express");
+const { response, json } = require("express");
 const express = require("express");
 const router = express.Router();
 const register = require("./registerschema");
@@ -73,7 +73,17 @@ router.get("/cart", async (req, res) => {
   var cartform = await cart.find();
   res.status(200).json(cartform);
 });
-
+router.delete("/cart/:id", async (req, res) => {
+  try {
+    const deletecart = await cart.deleteOne(
+      { _id: req.params.id },
+      res.redirect("http://localhost:2000/farmhaat/cart")
+    );
+    res.status(200) > json(deletecart);
+  } catch (err) {
+    res.json("err:", err);
+  }
+});
 router.post("/cart", async (req, res) => {
   var cartform = await cart.create({
     Name: req.body.Name,
