@@ -6,6 +6,8 @@ const investor = require("./investorschema");
 const feedback = require("./feedbackschema");
 const cart = require("./cartschema");
 const order = require("./orderschema");
+const bcrypt = require("bcrypt");
+const { json } = require("express");
 router.get("/", async (req, res) => {
   var registerform = await register.find();
   res.status(200).json(registerform);
@@ -30,11 +32,17 @@ router.get("/login", async (req, res) => {
 });
 router.post("/login", async (req, res) => {
   console.log(req.body);
-  var loginform = await login.create({
-    Username: req.body.Username,
-    Password: req.body.Password,
-  });
-  res.status(200).json(loginform);
+  var loginform = await login.find(
+    (loginform) => (loginform.Username = req.body.Username)
+  );
+  if (loginform === null) {
+    res.json("not found!!");
+  }
+  try {
+    bcrypt.compare(req.body.Password, loginform.Password);
+  } catch {
+    res.status(404).json();
+  }
 });
 router.get("/investor", async (req, res) => {
   var investorform = await investor.find();
@@ -77,9 +85,9 @@ router.delete("/cart/:id", async (req, res) => {
       { _id: req.params.id },
       res.redirect("http://localhost:2000/farmhaat/cart")
     );
-    res.status(200) > json(deletecart);
+    res.status(200).json(deletecart);
   } catch (err) {
-    res.json("err:", err);
+    res.status(404).json("err:", err);
   }
 });
 router.post("/cart", async (req, res) => {
@@ -94,7 +102,6 @@ router.post("/cart", async (req, res) => {
     des4: req.body.des4,
   });
   res.status(200).json(cartform);
-  console.log("abcc");
   console.log(req.body);
 });
 router.get("/order", async (req, res) => {
@@ -113,7 +120,6 @@ router.post("/order", async (req, res) => {
     des3: req.body.des3,
     des4: req.body.des4,
   });
-  // console.log(req.body);
   res.status(200).json(orderform);
 });
 module.exports = router;

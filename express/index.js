@@ -2,6 +2,7 @@ const express = require("express");
 const route = require("./routeex");
 const app = express();
 const router = express.Router();
+const bcrypt = require("bcrypt");
 
 const cors = require("cors");
 // const router = require("./route");

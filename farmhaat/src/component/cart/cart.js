@@ -12,7 +12,7 @@ import { faYoutube } from "@fortawesome/free-brands-svg-icons";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { useEffect, useState } from "react";
-import axios from "axios";
+import axios, { AxiosResponse, AxiosInstance } from "axios";
 function Cart() {
   const [arrowget, setarrowget] = useState([]);
   const [id, setid] = useState("");
@@ -331,6 +331,10 @@ function Cart() {
           </div>
         </div>
       </div>
+      {/* <a href="sms:{+91 8190029732}?body={farmhaat}">send</a> */}
+      {/* <a href="mailto:{akilesh04.ss@gmail.com}?subject={farmhaat}&body={farmhaat}"> */}
+      {/* sende */}
+      {/* </a> */}
     </div>
   );
 }
