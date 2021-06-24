@@ -67,7 +67,6 @@ function Ordereditem(props) {
     window.scroll(0, 0);
   }, []);
   const [id, setid] = useState(" ");
-  // var id = [];
   const [arrowget1, setarrowget1] = useState([]);
   useEffect(async () => {
     var getarray = await axios.get("http://localhost:2000/farmhaat/order");
@@ -75,10 +74,7 @@ function Ordereditem(props) {
     setarrowget1(getarray.data);
     // console.log("id", id);
   }, []);
-  // arrowget1.map((get) => console.log(get._id));
-  // console.log("id:", id);
-  console.log(props._id, "ki");
-  var getid = () => {};
+
   var get2 = arrowget1.map((get) => (
     <div className="getting1">
       <tr>
@@ -91,7 +87,7 @@ function Ordereditem(props) {
             </div>
           </div>
         </td>
-        <td className="orirs oritd">Rs 200</td>
+        <td className="orirs oritd">Rs {get.Quantity * get.Price}</td>
         <td className="oripr oritd">{get.Delivery.slice(0, 10)}</td>
         <td className="oria oritd">
           <Link to={`/viewdetails/:${get._id}`}>View details</Link>
@@ -211,7 +207,6 @@ function Ordereditem(props) {
   };
   return (
     <div className="oibackground">
-      {getid()}
       <div className="orihead">
         <div className="oriheader">
           <div className="orilj">
@@ -254,7 +249,6 @@ function Ordereditem(props) {
             <th class="oriprice orith">Price</th>
           </tr>
           {get2}
-          {getid}
         </table>
       </div>
       <h2 className="orisim">Similar Products</h2>

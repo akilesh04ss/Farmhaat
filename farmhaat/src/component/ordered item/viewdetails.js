@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/logonew.png";
 import "./viewdetails.css";
-import track from "../../assets/Team Q.gif";
+import track from "../../assets/Vespa.gif";
 import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhoneAlt } from "@fortawesome/free-solid-svg-icons";
@@ -83,7 +83,9 @@ function Viewdetails(props) {
             <img className="vdimg" src={get.Image} alt="" />
             <div className="vdinf">
               <h2 className="vdh2">{get.Name}</h2>
-              <small className="vdsmall">Price: {get.Price}</small>
+              <small className="vdsmall">
+                Price: {get.Quantity * get.Price}
+              </small>
               <br></br>
             </div>
           </td>
@@ -119,7 +121,7 @@ function Viewdetails(props) {
           <img src={track} className="track" />
         </tr>
         <tr>
-          <Link to="/feedback">
+          <Link to="/feedback" className="vdlink">
             <button class="vdbtnss">Feedback</button>
           </Link>
         </tr>

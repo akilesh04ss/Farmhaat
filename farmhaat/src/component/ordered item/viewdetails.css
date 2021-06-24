@@ -255,10 +255,12 @@
 }
 .vdqws {
   position: absolute;
-  left: 450px;
+  left: 445px;
   font-family: "Times New Roman", Times, serif !important;
-  font-size: 1.3rem !important;
-  top: 280px;
+  font-size: 1.2rem !important;
+  top: 285px;
+  font-style: normal;
+  font-weight: 100;
 }
 
 .vdsa {
@@ -283,9 +285,9 @@
   border-radius: 15px;
 }
 .vdbtnss {
-  position: relative;
+  /* position: relative;
   top: 120px;
-  right: 350px;
+  right: 350px; */
   background-color: #21ebff !important;
   color: #111 !important;
   padding: 9px 25px;
@@ -297,6 +299,13 @@
   border: 5px groove greenyellow;
   border-radius: 15px;
   transition: 0.5s;
+  cursor: pointer;
+}
+.vdlink {
+  position: relative;
+  top: 130px;
+  right: 350px;
+  cursor: pointer;
 }
 .vdbtnss:hover {
   border-radius: 50px;

@@ -18,14 +18,14 @@ function Cart() {
   const [id, setid] = useState("");
   useEffect(async () => {
     var getarray = await axios.get("http://localhost:2000/farmhaat/cart");
-    console.log(getarray);
+    // console.log(getarray);
     setarrowget(getarray.data);
-    console.log(arrowget);
+    // console.log(arrowget);
   }, []);
 
   var post = () => {
-    console.log(arrowget, "post");
-    console.log("post");
+    // console.log(arrowget, "post");
+    // console.log("post");
     arrowget.map(
       async (get) =>
         await axios.post("http://localhost:2000/farmhaat/order", get)
@@ -80,43 +80,55 @@ function Cart() {
       );
     }
   };
+  const [on, seton] = useState(true);
+  var cartotal = [0];
 
+  // var total = cartotal;
   var get1 = arrowget.map((get) => (
     <div className="getting">
       <tr className="cartr">
         <td className="cartd">
           <div className="carinfo">
-            <img className="carimg" src={get.Image} />
+            <div className="borderdiv">
+              <img className="carimg" src={get.Image} />
+              <Link
+                className="cara1"
+                onClick={() => {
+                  if (on) {
+                    axios.delete(
+                      `http://localhost:2000/farmhaat/cart/${get._id}`
+                    );
+                    window.location.reload();
+                    window.scroll(0, 0);
+                    alert.show("Item Removed");
+                  } else {
+                    alert.show("OOPS!! Something went wrong");
+                  }
+                }}
+              >
+                Remove
+              </Link>
+            </div>
             <div className="carcon">
               <p className="carp1">{get.Name}</p>
               <small className="carsmall">Price(Rs/kg):{get.Price}</small>
               <br></br>
-              {/* <Link
+
+              {/* <button
                 className="cara1"
                 onClick={() => {
-                  axios.delete(
-                    `http://localhost:2000/farmhaat/cart/:${get._id}`
-                  );
+                  if (on) {
+                    axios.delete(
+                      `http://localhost:2000/farmhaat/cart/${get._id}`
+                    );
+                    window.location.reload();
+                  } else {
+                    alert.show("OOPS!! Something went wrong");
+                  }
                 }}
               >
                 Remove
-              </Link> */}
-              <button
-                className="cara1"
-                onClick={() => {
-                  axios.delete(
-                    `http://localhost:2000/farmhaat/cart/${get._id}`
-                  );
-                  // .then(() => {
-                  //   window.location.reload();
-                  // }
-                  // .catch((err)=>{
-                  //   console.log("r",err);
-                  // })
-                }}
-              >
-                Remove
-              </button>
+              </button> */}
             </div>
           </div>
         </td>
@@ -129,12 +141,18 @@ function Cart() {
             max="2"
           />
         </td>
-        <td className="cartd carpr">200</td>
+        <td className="cartd carpr">
+          {Number(get.Quantity * get.Price)}
+          {console.log(
+            (cartotal = [Number(cartotal) + Number(get.Quantity * get.Price)])
+          )}
+        </td>
         <div className="carline"></div>
       </tr>
     </div>
   ));
-  console.log("ids:", id);
+  var tax = (cartotal[0] * 5) / 100;
+  var total = cartotal[0] + tax;
   return (
     <div className="cartbackground">
       <div className="carthead">
@@ -186,15 +204,15 @@ function Cart() {
           <table className="cartable">
             <tr className="cartr">
               <td className="cartd">Sub-total</td>
-              <td className="cartd">Rs 400</td>
+              <td className="cartd">Rs {cartotal[0]}</td>
             </tr>
             <tr className="cartr">
               <td className="cartd">tax</td>
-              <td className="cartd">Rs 10</td>
+              <td className="cartd">Rs {tax}</td>
             </tr>
             <tr className="cartr">
               <td className="cartd">Total</td>
-              <td className="cartd">Rs 410</td>
+              <td className="cartd">Rs {total}</td>
             </tr>
             <tr className="cartr">
               <button className="carbuy" onClick={post}>
