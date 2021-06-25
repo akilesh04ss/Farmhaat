@@ -8,42 +8,56 @@ const cart = require("./cartschema");
 const order = require("./orderschema");
 const bcrypt = require("bcrypt");
 const { json } = require("express");
-router.get("/", async (req, res) => {
+router.get("/register", async (req, res) => {
   var registerform = await register.find();
   res.status(200).json(registerform);
 });
-router.post("/", async (req, res) => {
+router.post("/register", async (req, res) => {
   console.log(req.body);
+  const salt = await bcrypt.genSalt();
+  const hash1 = await bcrypt.hash(req.body.Password, salt);
   var registerform = await register.create({
     Fname: req.body.Fname,
     Sname: req.body.Sname,
     Email: req.body.Email,
     Phone: req.body.Phone,
     Address: req.body.Address,
-    Password: req.body.Password,
+    Password: hash1,
     Username: req.body.Username,
-    Confirmpass: req.body.Confirmpass,
+    Confirmpass: hash1,
   });
   res.status(200).json(registerform);
 });
-router.get("/login", async (req, res) => {
-  var loginform = await login.find();
-  res.status(200).json(loginform);
-});
 router.post("/login", async (req, res) => {
   console.log(req.body);
-  var loginform = await login.find(
-    (loginform) => (loginform.Username = req.body.Username)
-  );
-  if (loginform === null) {
-    res.json("not found!!");
-  }
-  try {
-    bcrypt.compare(req.body.Password, loginform.Password);
-  } catch {
-    res.status(404).json();
-  }
+  var loginform = await register.find((register) => {
+    if (register.Username === req.body.Username) {
+      try {
+        bcrypt.compare(req.body.Password, loginform.Password);
+      } catch {
+        res.status(404).json();
+      }
+    }
+  });
 });
+// router.get("/login", async (req, res) => {
+//   var loginform = await login.find();
+//   res.status(200).json(loginform);
+// });
+// router.post("/login", async (req, res) => {
+//   console.log(req.body);
+//   var loginform = await login.find(
+//     (loginform) => (loginform.Username = req.body.Username)
+//   );
+//   if (loginform === null) {
+//     res.json("not found!!");
+//   }
+//   try {
+//     bcrypt.compare(req.body.Password, loginform.Password);
+//   } catch {
+//     res.status(404).json();
+//   }
+// });
 router.get("/investor", async (req, res) => {
   var investorform = await investor.find();
   res.status(200).json(investorform);

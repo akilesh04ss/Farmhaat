@@ -14,6 +14,7 @@ function Login() {
     };
     console.log(arrayform2);
     await axios.post("http://localhost:2000/farmhaat/login/", arrayform2);
+    alert("login");
   };
 
   return (

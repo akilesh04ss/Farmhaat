@@ -15,6 +15,7 @@ import soil from "../../assets/coco soil.jpg";
 import spl from "../../assets/sl.jpg";
 import mesh from "../../assets/mesh.jpg";
 import Similar from "./similar";
+
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -62,7 +63,6 @@ function Ordereditem(props) {
       window.open("http://twitter.com", "_blank");
     }
   };
-
   useEffect(() => {
     window.scroll(0, 0);
   }, []);
@@ -88,7 +88,9 @@ function Ordereditem(props) {
           </div>
         </td>
         <td className="orirs oritd">Rs {get.Quantity * get.Price}</td>
-        <td className="oripr oritd">{get.Delivery.slice(0, 10)}</td>
+        <td className="oripr oritd">
+          {get.Delivery.slice(0, 10).split("-").reverse().join("-")}
+        </td>
         <td className="oria oritd">
           <Link to={`/viewdetails/:${get._id}`}>View details</Link>
         </td>

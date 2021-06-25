@@ -20,7 +20,8 @@ function Register() {
     };
     console.log(arrayform3);
     if (pass1 === pass2) {
-      await axios.post("http://localhost:2000/farmhaat/", arrayform3);
+      await axios.post("http://localhost:2000/farmhaat/register", arrayform3);
+      alert("register");
     } else {
       console.log("wrng");
     }
