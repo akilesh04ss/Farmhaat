@@ -13,7 +13,7 @@ import View from "./component/product/view";
 import Product from "./component/product/product";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Protected from "./component/protected";
+
 function App() {
   return (
     <Router basename="/Farmhaat">
