@@ -105,6 +105,8 @@ function Product() {
   useEffect(() => {
     window.scroll(0, 0);
   }, []);
+  const [login, setlogin]= useState(false);
+  // setlogin
   const [clicked, setClicked] = useState(false);
   var fbclick = () => {
     setClicked(true);

@@ -67,8 +67,14 @@ function Investors() {
       Description: description,
     };
     console.log(arrayform1);
-    await axios.post("http://localhost:2000/farmhaat/investor/", arrayform1);
-    alert("Requested Sucessfully!!");
+    let invs = await axios.post(
+      "http://localhost:2000/farmhaat/investor/",
+      arrayform1
+    );
+
+    if (invs.data.err == null) {
+      alert("Requested for the Pickup!!");
+    }
   };
 
   const [name, setname] = useState("");
@@ -148,7 +154,7 @@ function Investors() {
                 onChange={(e) => setuser(e.target.value)}
               />
               <div className="invunderline"></div>
-              <label className="invlabel">User id*</label>
+              <label className="invlabel">User Name*</label>
             </div>
           </div>
           <div className="invformrow">

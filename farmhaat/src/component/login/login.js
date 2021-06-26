@@ -1,20 +1,45 @@
 import React from "react";
 import "./login.css";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import axios from "axios";
 import { useState } from "react";
 import bk from "../../assets/bk.gif";
-function Login() {
+import { toast } from "react-toastify";
+function Login(props) {
   const [usr, setusr] = useState("");
   const [pass, setpass] = useState("");
-  var arw2 = async () => {
+  const [Login, setLogin] = useState(false);
+  var arw2 = async (e) => {
+    e.preventDefault();
     const arrayform2 = {
       Username: usr,
       Password: pass,
     };
     console.log(arrayform2);
-    await axios.post("http://localhost:2000/farmhaat/login/", arrayform2);
-    alert("login");
+
+    let Data = await axios.post(
+      "http://localhost:2000/farmhaat/login",
+      arrayform2
+    );
+    if (Data.data.err == "Username Not Exists") {
+      alert("Username not exists");
+    }
+    if (Data.data.err == "Password Incorrect") {
+      alert("Password Incorrect");
+      console.log(Data.data.err);
+    }
+    if (Data.data.err == null) {
+      alert("FARMHAAT, Welcomes you!!!");
+      console.log(Data.data.err);
+    }
+    console.log(Data.data.err);
+    console.log(Data);
+    if (Data.status == 204) {
+      setLogin(true);
+      window.open("http://localhost:3000/Farmhaat/", "_self");
+    } else {
+      alert("check your email and password");
+    }
   };
 
   return (

@@ -3,6 +3,7 @@ import "./register.css";
 import plant from "../../assets/img.gif";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { toast } from "react-toastify";
 function Register() {
   useEffect(() => {
     window.scroll(0, 0);
@@ -19,11 +20,22 @@ function Register() {
       Confirmpass: pass1,
     };
     console.log(arrayform3);
-    if (pass1 === pass2) {
-      await axios.post("http://localhost:2000/farmhaat/register", arrayform3);
-      alert("register");
+    if (pass1 == pass2) {
+      let reg = await axios.post(
+        "http://localhost:2000/farmhaat/register",
+        arrayform3
+      );
+      if (reg.data.err == "Username already exists") {
+        alert("Username already exists");
+      }
+      if (reg.data.err == "Email already exists") {
+        alert("Email already exists");
+      }
+      if (reg.data.err == null) {
+        alert("Account Registerd!");
+      }
     } else {
-      console.log("wrng");
+      alert("Enter the same password in both the fields!");
     }
   };
   const [usr1, setusr1] = useState("");

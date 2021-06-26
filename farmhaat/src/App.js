@@ -11,7 +11,9 @@ import Ordereditem from "./component/ordered item/ordereditem";
 import Viewdetails from "./component/ordered item/viewdetails";
 import View from "./component/product/view";
 import Product from "./component/product/product";
-
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import Protected from "./component/protected";
 function App() {
   return (
     <Router basename="/Farmhaat">
@@ -28,6 +30,7 @@ function App() {
           <Route path="/cart" component={Cart} />
           <Route path="/register" component={Register} />
           <Route path="/login" component={Login} />
+          <ToastContainer />
         </Switch>
       </>
     </Router>

@@ -18,6 +18,7 @@ import { faSignOutAlt } from "@fortawesome/free-solid-svg-icons";
 import { faCopyright } from "@fortawesome/free-solid-svg-icons";
 function Home() {
   const [login, setlogin] = useState(false);
+  const [log, setlog] = useState(false);
   const [clicked, setClicked] = useState(false);
   var fbclick = () => {
     setClicked(true);
