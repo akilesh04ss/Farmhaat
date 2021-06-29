@@ -1,11 +1,8 @@
 const express = require("express");
 const route = require("./routeex");
 const app = express();
-const router = express.Router();
-const bcrypt = require("bcrypt");
 const morgan = require("morgan");
 const cors = require("cors");
-// const router = require("./route");
 const mongoose = require("mongoose");
 app.use(cors());
 app.use(express.json());

@@ -96,6 +96,7 @@ router.post("/investor", async (req, res) => {
       Wgt: req.body.Wgt,
     });
     if (investorform) {
+      text1: investorform.Name, investorform.Wgt, "thanks";
       let testAccount1 = await nodemailer.createTestAccount();
       var toemails = investorform.Email;
       let transporter1 = nodemailer.createTransport({
@@ -111,8 +112,8 @@ router.post("/investor", async (req, res) => {
         from: '"Farmhaat" <akileshs917@gmail.com>',
         to: toemails,
         subject: "FARMHAAT REQUESTING",
-        text: "Thanks for requesting",
-        html: "<b>Thanks for requesting</b>",
+        text: "we are glad that ",
+        // html: "<b>text1</b>",
       });
 
       console.log("Message sent: %s", infos.messageId);
