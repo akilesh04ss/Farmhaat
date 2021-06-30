@@ -135,7 +135,7 @@ function View(props) {
       img: spl,
       des1: "Useful as a fertilizer for every type of plants.",
       des2: "Manure prepared out of  kitchen & farm wastes, 1kg packet.",
-      des3: "Improves the nutrirnt content",
+      des3: "Improves the nutrient content",
       des4: "Useful for indoor & outdoor potted plants.",
     },
   ];
@@ -241,6 +241,9 @@ function View(props) {
                 </Link>
               </li>
             </ul>
+            <Link className="viewcta" to="/cart">
+              <button className="bttdn1">Cart</button>
+            </Link>
             <Link className="viewcta" to="/feedback">
               <button className="viewbutton1">Log out</button>
             </Link>

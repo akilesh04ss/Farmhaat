@@ -37,8 +37,6 @@ function Login(props) {
     if (Data.status == 204) {
       setLogin(true);
       window.open("http://localhost:3000/Farmhaat/", "_self");
-    } else {
-      alert("check your email and password");
     }
   };
 

@@ -176,6 +176,10 @@ router.delete("/cart/:id", async (req, res) => {
     res.status(404).json("err:", err);
   }
 });
+router.delete("/cart", async (req, res) => {
+  cartform = await cart.deleteMany();
+  res.status(200).json(cartform);
+});
 router.post("/cart", async (req, res) => {
   var cartform = await cart.create({
     Name: req.body.Name,

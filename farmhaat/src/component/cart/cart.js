@@ -31,6 +31,8 @@ function Cart() {
         await axios.post("http://localhost:2000/farmhaat/order", get)
     );
     alert("Order placed!!");
+    axios.delete("http://localhost:2000/farmhaat/cart");
+    window.open("http://localhost:3000/Farmhaat/ordereditem", "_self");
   };
   useEffect(() => {
     window.scroll(0, 0);
