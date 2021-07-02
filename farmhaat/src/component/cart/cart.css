@@ -369,25 +369,35 @@
   text-align: right;
 }
 .carbuy {
-  background-color: white !important;
   margin: 0 05px;
   padding: 0 15px;
   width: 80px;
   border: none;
   outline: none;
-  border-radius: 8px;
+  font-size: 20px;
+  position: relative;
+  top: 20px;
+  right: 200px;
+}
+.confirm {
+  margin: 0 05px;
+  padding: 0 15px;
+  width: 240px;
+  border: none;
+  outline: none;
   font-size: 20px;
   color: whitesmoke !important;
   position: relative;
-  top: 10px;
-  left: 268px;
   align-items: center;
   height: 45px;
   border: 2px solid greenyellow;
-  border-radius: 40px;
+  cursor: pointer;
+  border-radius: 8px;
   background: #111 !important;
+  bottom: 30px;
+  left: 120px;
 }
-.carbuy:hover {
+.confirm:hover {
   box-shadow: 4px 3px 8px 4px #263859;
 }
 .carcontainer .cartable .cartr .cartd .carinput {
@@ -398,10 +408,10 @@
   border: none;
   border-radius: 8px;
   outline: none;
-  background: #fff !important;
+  /* background: #fff !important; */
 }
 .carcontainer .cartable .cartr .cartd .carbuy {
-  background-color: white !important;
+  /* background-color: white !important; */
   margin: 0 05px;
   padding: 0 5px;
   width: 40px;

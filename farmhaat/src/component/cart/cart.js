@@ -1,7 +1,10 @@
 import React from "react";
 import "./cart.css";
+import GooglePayButton from "@google-pay/button-react";
 import { Link } from "react-router-dom";
 import log from "../../assets/logonew.png";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhoneAlt } from "@fortawesome/free-solid-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
@@ -13,9 +16,10 @@ import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { useEffect, useState } from "react";
 import axios, { AxiosResponse, AxiosInstance } from "axios";
+
 function Cart() {
   const [arrowget, setarrowget] = useState([]);
-  const [id, setid] = useState("");
+  const [paystatus, setpaystatus] = useState(false);
   useEffect(async () => {
     var getarray = await axios.get("http://localhost:2000/farmhaat/cart");
     // console.log(getarray);
@@ -26,13 +30,18 @@ function Cart() {
   var post = () => {
     // console.log(arrowget, "post");
     // console.log("post");
-    arrowget.map(
-      async (get) =>
-        await axios.post("http://localhost:2000/farmhaat/order", get)
-    );
-    alert("Order placed!!");
-    axios.delete("http://localhost:2000/farmhaat/cart");
-    window.open("http://localhost:3000/Farmhaat/ordereditem", "_self");
+    if (paystatus) {
+      arrowget.map(
+        async (get) =>
+          await axios.post("http://localhost:2000/farmhaat/order", get)
+      );
+
+      alert("Order placed!!");
+      axios.delete("http://localhost:2000/farmhaat/cart");
+      window.open("http://localhost:3000/Farmhaat/ordereditem", "_self");
+    } else {
+      alert("OOPS!!  Please make your payment!!");
+    }
   };
   useEffect(() => {
     window.scroll(0, 0);
@@ -85,7 +94,6 @@ function Cart() {
   const [on, seton] = useState(true);
   var cartotal = [0];
 
-  // var total = cartotal;
   var get1 = arrowget.map((get) => (
     <div className="getting">
       <tr className="cartr">
@@ -115,22 +123,6 @@ function Cart() {
               <p className="carp1">{get.Name}</p>
               <small className="carsmall">Price(Rs/kg):{get.Price}</small>
               <br></br>
-
-              {/* <button
-                className="cara1"
-                onClick={() => {
-                  if (on) {
-                    axios.delete(
-                      `http://localhost:2000/farmhaat/cart/${get._id}`
-                    );
-                    window.location.reload();
-                  } else {
-                    alert.show("OOPS!! Something went wrong");
-                  }
-                }}
-              >
-                Remove
-              </button> */}
             </div>
           </div>
         </td>
@@ -157,6 +149,9 @@ function Cart() {
   var total = cartotal[0] + tax;
   return (
     <div className="cartbackground">
+      {/* <div> */}
+      {/* <ToastContainer /> */}
+      {/* </div> */}
       <div className="carthead">
         <div className="cartheader">
           <div className="cartlj">
@@ -217,13 +212,71 @@ function Cart() {
               <td className="cartd">Rs {total}</td>
             </tr>
             <tr className="cartr">
-              <button className="carbuy" onClick={post}>
-                Buy
-              </button>
+              <GooglePayButton
+                className="carbuy"
+                environment="TEST"
+                paymentRequest={{
+                  apiVersion: 2,
+                  apiVersionMinor: 0,
+                  allowedPaymentMethods: [
+                    {
+                      type: "CARD",
+                      parameters: {
+                        allowedAuthMethods: ["PAN_ONLY", "CRYPTOGRAM_3DS"],
+                        allowedCardNetworks: ["MASTERCARD", "VISA"],
+                      },
+                      tokenizationSpecification: {
+                        type: "PAYMENT_GATEWAY",
+                        parameters: {
+                          gateway: "example",
+                          gatewayMerchantId: "exampleGatewayMerchantId",
+                        },
+                      },
+                    },
+                  ],
+                  merchantInfo: {
+                    merchantId: "12345678901234567890",
+                    merchantName: "FARMHAAT",
+                  },
+                  transactionInfo: {
+                    totalPriceStatus: "FINAL",
+                    totalPriceLabel: "Total",
+                    totalPrice: String(total),
+                    currencyCode: "INR",
+                    countryCode: "IN",
+                  },
+                  shippingAddressRequired: true,
+                  callbackIntents: [
+                    "SHIPPING_ADDRESS",
+                    "PAYMENT_AUTHORIZATION",
+                  ],
+                }}
+                onLoadPaymentData={(paymentRequest) => {
+                  console.log("Success", paymentRequest);
+                }}
+                onPaymentAuthorized={(paymentData) => {
+                  console.log("Payment Authorised Success", paymentData);
+                  setpaystatus(true);
+                  return { transactionState: "SUCCESS" };
+                }}
+                onPaymentDataChanged={(paymentData) => {
+                  console.log("On Payment Data Changed", paymentData);
+
+                  return {};
+                }}
+                existingPaymentMethodRequired="false"
+                buttonColor="black"
+                buttonType="Buy"
+              />
             </tr>
+
+            <button className="confirm" onClick={post}>
+              Confirm your order
+            </button>
           </table>
         </div>
       </div>
+
       <div className="cartfooter">
         <div className="cartmaincontent">
           <div className="cartleft cartbox">
