@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./home.css";
 import { Link } from "react-router-dom";
 import { faFacebook } from "@fortawesome/free-brands-svg-icons";
@@ -16,9 +16,17 @@ import { faCartPlus } from "@fortawesome/free-solid-svg-icons";
 import { faTruckLoading } from "@fortawesome/free-solid-svg-icons";
 import { faSignOutAlt } from "@fortawesome/free-solid-svg-icons";
 import { faCopyright } from "@fortawesome/free-solid-svg-icons";
+import Cookies from "universal-cookie";
 function Home() {
-  const [login, setlogin] = useState(false);
-  const [log, setlog] = useState(false);
+  const cookies = new Cookies();
+  var cookie = cookies.get("login");
+  var usercookie = cookies.get("user");
+  var cookieget = cookie === "true" ? "/product" : "/login";
+  var cookieinvs = cookie === "true" ? "/investors" : "/login";
+  var cookieabt = cookie === "true" ? "/about" : "/login";
+  var cookiecart = cookie === "true" ? "/cart" : "/login";
+  var cookiefeedback = cookie === "true" ? "/feedback" : "/login";
+  var cookieorder = cookie === "true" ? "/ordereditem" : "/login";
   const [clicked, setClicked] = useState(false);
   var fbclick = () => {
     setClicked(true);
@@ -54,17 +62,21 @@ function Home() {
       window.open("http://twitter.com", "_blank");
     }
   };
-
-  var logout = login ? (
-    <li className="li">
-      <Link className="ak" to="/">
-        <i>
-          <FontAwesomeIcon icon={faSignOutAlt} />
-        </i>
-        Log out
-      </Link>
-    </li>
-  ) : null;
+  var logouts = () => {
+    cookies.set("login", "false");
+    cookies.set("user", "User");
+  };
+  var logout =
+    cookie == "true" ? (
+      <li className="li">
+        <Link className="ak" to="/" onClick={logouts}>
+          <i>
+            <FontAwesomeIcon icon={faSignOutAlt} />
+          </i>
+          Log out
+        </Link>
+      </li>
+    ) : null;
   return (
     <div className="homew">
       <div>
@@ -79,22 +91,22 @@ function Home() {
           <nav>
             <ul className="link">
               <li className="div">
-                <Link to="/product" className="od">
+                <Link to={cookieget} className="od">
                   Products
                 </Link>
               </li>
               <li className="div">
-                <Link to="/investors" className="cod">
+                <Link to={cookieinvs} className="cod">
                   Investors
                 </Link>
               </li>
               <li className="div">
-                <Link to="/about" className="ocd">
+                <Link to={cookieabt} className="ocd">
                   About
                 </Link>
               </li>
             </ul>
-            <Link className="ctad" to="/feedback">
+            <Link className="ctad" to={cookiefeedback}>
               <button className="btton1">Get in Touch</button>
             </Link>
           </nav>
@@ -117,11 +129,11 @@ function Home() {
               <i>
                 <FontAwesomeIcon icon={faUserCircle} />
               </i>
-              User
+              {usercookie}
             </Link>
           </li>
           <li className="li">
-            <Link className="ak" to="./cart">
+            <Link className="ak" to={cookiecart}>
               <i>
                 <FontAwesomeIcon icon={faCartPlus} />
               </i>
@@ -129,7 +141,7 @@ function Home() {
             </Link>
           </li>
           <li className="li">
-            <Link className="ak" to="/ordereditem">
+            <Link className="ak" to={cookieorder}>
               <i>
                 <FontAwesomeIcon icon={faTruckLoading} />
               </i>
@@ -178,7 +190,7 @@ function Home() {
       <div className="ce">
         <p>LET US GO WITH THE FLOW OF NATURE!</p>
       </div>
-      <Link to="/about">
+      <Link to={cookieabt}>
         <button className="btton3">Take a tour</button>
       </Link>
       <div className="end">

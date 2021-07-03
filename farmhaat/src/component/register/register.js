@@ -3,7 +3,6 @@ import "./register.css";
 import plant from "../../assets/img.gif";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { toast } from "react-toastify";
 function Register() {
   useEffect(() => {
     window.scroll(0, 0);
@@ -20,7 +19,7 @@ function Register() {
       Confirmpass: pass1,
     };
     console.log(arrayform3);
-    if (pass1 == pass2) {
+    if (pass1 === pass2) {
       let reg = await axios.post(
         "http://localhost:2000/farmhaat/register",
         arrayform3

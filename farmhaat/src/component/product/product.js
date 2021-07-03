@@ -25,7 +25,13 @@ import { faYoutube } from "@fortawesome/free-brands-svg-icons";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { useState, useEffect } from "react";
+import Cookies from "universal-cookie";
 function Product() {
+  const cookies = new Cookies();
+  var logouts = () => {
+    cookies.set("login", "false");
+    cookies.set("user", "User");
+  };
   var productitems = [
     {
       name: "Coir Brick",
@@ -48,7 +54,7 @@ function Product() {
       img: comp,
     },
     {
-      name: "Hydro clay balls",
+      name: "Hydro balls",
       price: "700",
       img: hydro,
     },
@@ -83,7 +89,7 @@ function Product() {
       img: mesh,
     },
     {
-      name: "Special organic manure mixture",
+      name: "Blend",
       price: "550",
       img: spl,
     },
@@ -105,8 +111,7 @@ function Product() {
   useEffect(() => {
     window.scroll(0, 0);
   }, []);
-  const [login, setlogin]= useState(false);
-  // setlogin
+
   const [clicked, setClicked] = useState(false);
   var fbclick = () => {
     setClicked(true);
@@ -185,7 +190,7 @@ function Product() {
             <Link className="ctdas" to="/cart">
               <button className="bttdn1">Cart</button>
             </Link>
-            <Link className="ctda" to="/feedback">
+            <Link className="ctda" to="/" onClick={logouts}>
               <button className="bttdn1">Log out</button>
             </Link>
           </nav>

@@ -14,12 +14,16 @@ import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { useEffect, useState } from "react";
 import backy from "../../assets/organic.png";
-
+import Cookies from "universal-cookie";
 function Investors() {
   useEffect(() => {
     window.scroll(0, 0);
   }, []);
-
+  const cookies = new Cookies();
+  var logouts = () => {
+    cookies.set("login", "false");
+    cookies.set("user", "User");
+  };
   const [insta, setinsta] = useState(false);
   var instafn = () => {
     setinsta(true);
@@ -114,7 +118,7 @@ function Investors() {
                 </Link>
               </li>
             </ul>
-            <Link className="invcta" to="/feedback">
+            <Link className="invcta" to="/" onClick={logouts}>
               <button className="invbutton1">Log out</button>
             </Link>
           </nav>

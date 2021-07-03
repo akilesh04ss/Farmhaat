@@ -1,14 +1,17 @@
 import React from "react";
 import "./login.css";
-import { Link, Redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import { useState } from "react";
 import bk from "../../assets/bk.gif";
-import { toast } from "react-toastify";
+import Cookies from "universal-cookie";
 function Login(props) {
+  const cookies = new Cookies();
   const [usr, setusr] = useState("");
   const [pass, setpass] = useState("");
   const [Login, setLogin] = useState(false);
+  cookies.set("login", "false");
+  cookies.set("user", "User");
   var arw2 = async (e) => {
     e.preventDefault();
     const arrayform2 = {
@@ -16,7 +19,6 @@ function Login(props) {
       Password: pass,
     };
     console.log(arrayform2);
-
     let Data = await axios.post(
       "http://localhost:2000/farmhaat/login",
       arrayform2
@@ -36,6 +38,8 @@ function Login(props) {
     console.log(Data);
     if (Data.status == 204) {
       setLogin(true);
+      cookies.set("user", usr);
+      cookies.set("login", "true");
       window.open("http://localhost:3000/Farmhaat/", "_self");
     }
   };

@@ -8,6 +8,10 @@ const order = mongoose.Schema({
     type: String,
     required: true,
   },
+  cartusr: {
+    type: String,
+    required: true,
+  },
   Image: {
     type: String,
     required: true,

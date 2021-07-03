@@ -27,7 +27,13 @@ import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faYoutube } from "@fortawesome/free-brands-svg-icons";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
+import Cookies from "universal-cookie";
 function Ordereditem(props) {
+  const cookies = new Cookies();
+  var logouts = () => {
+    cookies.set("login", "false");
+    cookies.set("user", "User");
+  };
   const [clicked, setClicked] = useState(false);
   var fbclick = () => {
     setClicked(true);
@@ -66,13 +72,16 @@ function Ordereditem(props) {
   useEffect(() => {
     window.scroll(0, 0);
   }, []);
+  var getcookie = cookies.get("user");
   const [id, setid] = useState(" ");
   const [arrowget1, setarrowget1] = useState([]);
   useEffect(async () => {
     var getarray = await axios.get("http://localhost:2000/farmhaat/order");
-    console.log(getarray);
-    setarrowget1(getarray.data);
-    // console.log("id", id);
+    var filtere = getarray.data;
+    console.log("filtere", filtere);
+    var filterf = filtere.filter((user) => user.cartusr === getcookie);
+    console.log("filter", filterf);
+    setarrowget1(filterf);
   }, []);
 
   var get2 = arrowget1.map((get) => (
@@ -237,7 +246,7 @@ function Ordereditem(props) {
                 </Link>
               </li>
             </ul>
-            <Link className="oricta" to="/feedback">
+            <Link className="oricta" to="/" onClick={logouts}>
               <button className="oributton1">Log out</button>
             </Link>
           </nav>

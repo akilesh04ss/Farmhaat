@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/logonew.png";
 import "./viewdetails.css";
+import Cookies from "universal-cookie";
 import track from "../../assets/Vespa.gif";
 import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -15,6 +16,11 @@ import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { useEffect, useState } from "react";
 function Viewdetails(props) {
+  const cookies = new Cookies();
+  var logouts = () => {
+    cookies.set("login", "false");
+    cookies.set("user", "User");
+  };
   useEffect(() => {
     window.scroll(0, 0);
   }, []);
@@ -121,7 +127,7 @@ function Viewdetails(props) {
           <img src={track} className="track" />
         </tr>
         <tr>
-          <Link to="/feedback" className="vdlink">
+          <Link to="/" onClick={logouts} className="vdlink">
             <button class="vdbtnss">Feedback</button>
           </Link>
         </tr>

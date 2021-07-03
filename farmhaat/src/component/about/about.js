@@ -12,6 +12,7 @@ import check from "../../assets/check.svg";
 import thumb from "../../assets/thumb.svg";
 import coin from "../../assets/coins.svg";
 import recycle from "../../assets/recycle.svg";
+import Cookies from "universal-cookie";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhoneAlt } from "@fortawesome/free-solid-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
@@ -22,8 +23,8 @@ import { faYoutube } from "@fortawesome/free-brands-svg-icons";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { useEffect } from "react";
-
 function About() {
+  const cookies = new Cookies();
   useEffect(() => {
     window.scroll(0, 0);
   }, []);
@@ -33,6 +34,10 @@ function About() {
     if (clicked) {
       window.open("http://facebook.com", "_blank");
     }
+  };
+  var logouts = () => {
+    cookies.set("login", "false");
+    cookies.set("user", "User");
   };
   const [map, setmap] = useState(false);
   var locate = () => {
@@ -102,7 +107,7 @@ function About() {
                 </Link>
               </li>
             </ul>
-            <Link className="abtcta" to="/feedback">
+            <Link className="abtcta" to="/" onClick={logouts}>
               <button className="abtbutton1">Log out</button>
             </Link>
           </nav>

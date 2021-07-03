@@ -1,5 +1,6 @@
 import React from "react";
 import "./view.css";
+import Cookies from "universal-cookie";
 import { Link } from "react-router-dom";
 import logo from "../../assets/logonew.png";
 import coir from "../../assets/oir.jpg";
@@ -26,6 +27,11 @@ import { faYoutube } from "@fortawesome/free-brands-svg-icons";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 function View(props) {
+  const cookies = new Cookies();
+  var logouts = () => {
+    cookies.set("login", "false");
+    cookies.set("user", "User");
+  };
   var id = props.match.params.name;
   var nameid = id.slice(1);
   console.log(nameid);
@@ -67,7 +73,7 @@ function View(props) {
       des4: "Repeat fertilizers between 30 to 45 days.",
     },
     {
-      name: "Hydro clay balls",
+      name: "Hydro balls",
       price: "700",
       img: hydro,
       des1: "Combine it with any plant solutions and foundation need for garden.",
@@ -76,7 +82,7 @@ function View(props) {
       des4: "It helps to drain excess water.",
     },
     {
-      name: "Moist clay balls ",
+      name: "Moist balls ",
       price: "450",
       img: moist,
       des1: "1 Kg 16mm Moist ball.",
@@ -130,7 +136,7 @@ function View(props) {
       des4: "Useful for indoor & outdoor potted plants.",
     },
     {
-      name: "Special organic manure mixture",
+      name: "Blend",
       price: "550",
       img: spl,
       des1: "Useful as a fertilizer for every type of plants.",
@@ -144,6 +150,7 @@ function View(props) {
   useEffect(() => {
     window.scroll(0, 0);
   }, []);
+  var carting = cookies.get("user");
   var arrow = async () => {
     const arraycart = {
       Name: viewitem[0].name,
@@ -154,7 +161,9 @@ function View(props) {
       des2: viewitem[0].des2,
       des3: viewitem[0].des3,
       des4: viewitem[0].des4,
+      cartusr: carting,
     };
+
     console.log(arraycart);
     await axios.post("http://localhost:2000/farmhaat/cart/", arraycart);
     alert("Added to cart sucessfully!!");
@@ -244,7 +253,7 @@ function View(props) {
             <Link className="viewcta" to="/cart">
               <button className="bttdn1">Cart</button>
             </Link>
-            <Link className="viewcta" to="/feedback">
+            <Link className="viewcta" to="/" onClick={logouts}>
               <button className="viewbutton1">Log out</button>
             </Link>
           </nav>

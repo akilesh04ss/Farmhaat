@@ -3,7 +3,6 @@ import "./cart.css";
 import GooglePayButton from "@google-pay/button-react";
 import { Link } from "react-router-dom";
 import log from "../../assets/logonew.png";
-import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhoneAlt } from "@fortawesome/free-solid-svg-icons";
@@ -15,21 +14,27 @@ import { faYoutube } from "@fortawesome/free-brands-svg-icons";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { useEffect, useState } from "react";
-import axios, { AxiosResponse, AxiosInstance } from "axios";
-
+import axios from "axios";
+import Cookies from "universal-cookie";
 function Cart() {
+  const cookies = new Cookies();
+  var getcookie = cookies.get("user");
   const [arrowget, setarrowget] = useState([]);
   const [paystatus, setpaystatus] = useState(false);
+  var logouts = () => {
+    cookies.set("login", "false");
+    cookies.set("user", "User");
+  };
   useEffect(async () => {
     var getarray = await axios.get("http://localhost:2000/farmhaat/cart");
-    // console.log(getarray);
-    setarrowget(getarray.data);
-    // console.log(arrowget);
+    var filtere = getarray.data;
+    console.log("filtere", filtere);
+    var filterf = filtere.filter((user) => user.cartusr === getcookie);
+    console.log("filter", filterf);
+    setarrowget(filterf);
   }, []);
 
   var post = () => {
-    // console.log(arrowget, "post");
-    // console.log("post");
     if (paystatus) {
       arrowget.map(
         async (get) =>
@@ -149,9 +154,6 @@ function Cart() {
   var total = cartotal[0] + tax;
   return (
     <div className="cartbackground">
-      {/* <div> */}
-      {/* <ToastContainer /> */}
-      {/* </div> */}
       <div className="carthead">
         <div className="cartheader">
           <div className="cartlj">
@@ -180,7 +182,7 @@ function Cart() {
                 </Link>
               </li>
             </ul>
-            <Link className="cartcta" to="/feedback">
+            <Link className="cartcta" to="/" onClick={logouts}>
               <button className="cartbutton1">Log out</button>
             </Link>
           </nav>
@@ -386,10 +388,6 @@ function Cart() {
           </div>
         </div>
       </div>
-      {/* <a href="sms:{+91 8190029732}?body={farmhaat}">send</a> */}
-      {/* <a href="mailto:{akilesh04.ss@gmail.com}?subject={farmhaat}&body={farmhaat}"> */}
-      {/* sende */}
-      {/* </a> */}
     </div>
   );
 }

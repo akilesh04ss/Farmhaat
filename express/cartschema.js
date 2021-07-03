@@ -45,5 +45,9 @@ const cart = mongoose.Schema({
     required: true,
     default: () => Date.now() + 48 * 60 * 60 * 1000,
   },
+  cartusr: {
+    type: String,
+    required: true,
+  },
 });
 module.exports = mongoose.model("cart", cart);

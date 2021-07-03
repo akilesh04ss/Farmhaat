@@ -1,7 +1,6 @@
 const express = require("express");
 const router = express.Router();
 const register = require("./registerschema");
-const login = require("./loginschema");
 const investor = require("./investorschema");
 const feedback = require("./feedbackschema");
 const cart = require("./cartschema");
@@ -79,7 +78,8 @@ router.post("/login", async (req, res) => {
   } catch (err) {
     res.status(404).json(err);
   }
-  res.status(204).json({ err: null });
+  var usernme = req.body.Username;
+  res.status(204).json({ err: null, usernme: usernme });
 });
 
 router.get("/investor", async (req, res) => {
@@ -181,6 +181,7 @@ router.delete("/cart", async (req, res) => {
   res.status(200).json(cartform);
 });
 router.post("/cart", async (req, res) => {
+  console.log(req.body);
   var cartform = await cart.create({
     Name: req.body.Name,
     Price: req.body.Price,
@@ -190,6 +191,7 @@ router.post("/cart", async (req, res) => {
     des2: req.body.des2,
     des3: req.body.des3,
     des4: req.body.des4,
+    cartusr: req.body.cartusr,
   });
   res.status(200).json(cartform);
   console.log(req.body);
@@ -199,6 +201,7 @@ router.get("/order", async (req, res) => {
   res.status(200).json(orderform);
 });
 router.post("/order", async (req, res) => {
+  console.log(req.body);
   var orderform = await order.create({
     Name: req.body.Name,
     Price: req.body.Price,
@@ -209,6 +212,7 @@ router.post("/order", async (req, res) => {
     des2: req.body.des2,
     des3: req.body.des3,
     des4: req.body.des4,
+    cartusr: req.body.cartusr,
   });
   res.status(200).json(orderform);
 });
