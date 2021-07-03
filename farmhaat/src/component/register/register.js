@@ -3,6 +3,8 @@ import "./register.css";
 import plant from "../../assets/img.gif";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 function Register() {
   useEffect(() => {
     window.scroll(0, 0);
@@ -25,16 +27,23 @@ function Register() {
         arrayform3
       );
       if (reg.data.err == "Username already exists") {
-        alert("Username already exists");
+        toast.error("Username already exists");
       }
       if (reg.data.err == "Email already exists") {
-        alert("Email already exists");
+        toast.error("Email already exists");
+      }
+      if (reg.data.err == "Fname already exists") {
+        toast.error("sname already exists");
+      }
+      if (reg.data.err == "Sname already exists") {
+        toast.error("Sname already exists");
       }
       if (reg.data.err == null) {
-        alert("Account Registerd!");
+        toast.success("Account Registerd!");
+        window.open("http://localhost:3000/Farmhaat/login", "_self");
       }
     } else {
-      alert("Enter the same password in both the fields!");
+      toast.error("Enter the same password in both the fields!");
     }
   };
   const [usr1, setusr1] = useState("");
@@ -47,6 +56,7 @@ function Register() {
   const [pass1, setpass1] = useState("");
   return (
     <div className="regbk">
+      <ToastContainer />
       <div className="regcontainer">
         <div className="regform">
           <div className="regheading">

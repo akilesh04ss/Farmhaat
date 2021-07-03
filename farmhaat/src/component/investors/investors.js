@@ -15,6 +15,8 @@ import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { useEffect, useState } from "react";
 import backy from "../../assets/organic.png";
 import Cookies from "universal-cookie";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 function Investors() {
   useEffect(() => {
     window.scroll(0, 0);
@@ -77,7 +79,7 @@ function Investors() {
     );
 
     if (invs.data.err == null) {
-      alert("Requested for the Pickup!!");
+      toast.success("Requested for the Pickup!!");
     }
   };
 
@@ -89,6 +91,7 @@ function Investors() {
   const [description, setdescription] = useState("");
   return (
     <div className="invbackground">
+      <ToastContainer />
       <img className="invimg2" src={backy} />
       <div className="invhead">
         <div className="invheader">

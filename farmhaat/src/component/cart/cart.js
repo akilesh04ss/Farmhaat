@@ -16,6 +16,7 @@ import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Cookies from "universal-cookie";
+import { ToastContainer, toast } from "react-toastify";
 function Cart() {
   const cookies = new Cookies();
   var getcookie = cookies.get("user");
@@ -41,11 +42,11 @@ function Cart() {
           await axios.post("http://localhost:2000/farmhaat/order", get)
       );
 
-      alert("Order placed!!");
+      toast.success("Order placed!!");
       axios.delete("http://localhost:2000/farmhaat/cart");
       window.open("http://localhost:3000/Farmhaat/ordereditem", "_self");
     } else {
-      alert("OOPS!!  Please make your payment!!");
+      toast.error("Please make your payment!!");
     }
   };
   useEffect(() => {
@@ -115,9 +116,9 @@ function Cart() {
                     );
                     window.location.reload();
                     window.scroll(0, 0);
-                    alert.show("Item Removed");
+                    toast.success("Item Removed");
                   } else {
-                    alert.show("OOPS!! Something went wrong");
+                    toast.error("OOPS!! Something went wrong");
                   }
                 }}
               >
@@ -154,6 +155,7 @@ function Cart() {
   var total = cartotal[0] + tax;
   return (
     <div className="cartbackground">
+      <ToastContainer />
       <div className="carthead">
         <div className="cartheader">
           <div className="cartlj">

@@ -5,6 +5,8 @@ import axios from "axios";
 import { useState } from "react";
 import bk from "../../assets/bk.gif";
 import Cookies from "universal-cookie";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 function Login(props) {
   const cookies = new Cookies();
   const [usr, setusr] = useState("");
@@ -24,14 +26,14 @@ function Login(props) {
       arrayform2
     );
     if (Data.data.err == "Username Not Exists") {
-      alert("Username not exists");
+      toast.error("Username not exists");
     }
     if (Data.data.err == "Password Incorrect") {
-      alert("Password Incorrect");
+      toast.error("Password Incorrect");
       console.log(Data.data.err);
     }
     if (Data.data.err == null) {
-      alert("FARMHAAT, Welcomes you!!!");
+      toast.success("FARMHAAT, Welcomes you!!!");
       console.log(Data.data.err);
     }
     console.log(Data.data.err);
@@ -46,6 +48,7 @@ function Login(props) {
 
   return (
     <div>
+      <ToastContainer />
       <div className="logback">
         <img className="logback" src={bk} />
       </div>

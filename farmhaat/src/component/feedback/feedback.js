@@ -2,6 +2,8 @@ import React from "react";
 import "./feedback.css";
 import axios from "axios";
 import { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 function Feedback() {
   const [name, setname] = useState("");
   const [emails, setemails] = useState("");
@@ -16,10 +18,11 @@ function Feedback() {
     };
     console.log(arrayform2);
     await axios.post("http://localhost:2000/farmhaat/feedback/", arrayform2);
-    alert("Submitted Sucessfully!!");
+    toast.success("Submitted Sucessfully!!");
   };
   return (
     <div className="feedback">
+      <ToastContainer />
       <div className="feedbk">
         <div className="feedcontainer">
           <div className="feedtext">Feedback Form</div>

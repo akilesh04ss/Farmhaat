@@ -27,6 +27,7 @@ function Home() {
   var cookiecart = cookie === "true" ? "/cart" : "/login";
   var cookiefeedback = cookie === "true" ? "/feedback" : "/login";
   var cookieorder = cookie === "true" ? "/ordereditem" : "/login";
+  var Cookielog = cookie === "true" ? "/" : "/login";
   const [clicked, setClicked] = useState(false);
   var fbclick = () => {
     setClicked(true);
@@ -125,7 +126,7 @@ function Home() {
         <div className="heders">Menu</div>
         <ul className="ul">
           <li className="li">
-            <Link className="ak" to="/login">
+            <Link className="ak" to={Cookielog}>
               <i>
                 <FontAwesomeIcon icon={faUserCircle} />
               </i>

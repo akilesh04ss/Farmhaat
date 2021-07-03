@@ -17,11 +17,19 @@ router.post("/register", async (req, res) => {
   try {
     var email = await register.findOne({ Email: req.body.Email });
     var usr = await register.findOne({ Username: req.body.Username });
+    var f = await register.findOne({ Fname: req.body.Fname });
+    var s = await register.findOne({ Sname: req.body.Sname });
     if (usr) {
       return res.status(200).json({ err: "Username already exists" });
     }
     if (email) {
       return res.status(200).json({ err: "Email already exists" });
+    }
+    if (f) {
+      return res.status(200).json({ err: "Fname already exists" });
+    }
+    if (s) {
+      return res.status(200).json({ err: "Sname already exists" });
     }
     const salt = await bcrypt.genSalt();
     const hash1 = await bcrypt.hash(req.body.Password, salt);

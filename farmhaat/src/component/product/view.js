@@ -26,6 +26,8 @@ import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faYoutube } from "@fortawesome/free-brands-svg-icons";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 function View(props) {
   const cookies = new Cookies();
   var logouts = () => {
@@ -166,7 +168,7 @@ function View(props) {
 
     console.log(arraycart);
     await axios.post("http://localhost:2000/farmhaat/cart/", arraycart);
-    alert("Added to cart sucessfully!!");
+    toast.success("Added to cart sucessfully!!");
   };
 
   const [count, setCount] = useState(1);
@@ -222,6 +224,7 @@ function View(props) {
   };
   return (
     <div className="viewchdiv">
+      <ToastContainer />
       <div className="viewhead">
         <div className="headerview">
           <div className="viewlj">
