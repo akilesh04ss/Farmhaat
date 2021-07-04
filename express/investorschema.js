@@ -20,9 +20,5 @@ const investor = mongoose.Schema({
     type: String,
     required: true,
   },
-  // Kilograms: {
-  //   type: String,
-  //   required: true,
-  // },
 });
 module.exports = mongoose.model("investor", investor);
