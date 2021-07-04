@@ -18,7 +18,8 @@ function Feedback() {
     };
     console.log(arrayform2);
     await axios.post("http://localhost:2000/farmhaat/feedback/", arrayform2);
-    toast.success("Submitted Sucessfully!!");
+    toast.success("Thanks for yor Feedback!!");
+    window.open("http://localhost:3000/Farmhaat/", "_self");
   };
   return (
     <div className="feedback">

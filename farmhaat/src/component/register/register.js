@@ -38,6 +38,9 @@ function Register() {
       if (reg.data.err == "Sname already exists") {
         toast.error("Sname already exists");
       }
+      if (reg.data.err == "Phone Number already exists") {
+        toast.error("Phone Number already exists");
+      }
       if (reg.data.err == null) {
         toast.success("Account Registerd!");
         window.open("http://localhost:3000/Farmhaat/login", "_self");
