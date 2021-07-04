@@ -19,6 +19,7 @@ router.post("/register", async (req, res) => {
     var usr = await register.findOne({ Username: req.body.Username });
     var f = await register.findOne({ Fname: req.body.Fname });
     var s = await register.findOne({ Sname: req.body.Sname });
+    var n = await register.findOne({ Phone: req.body.Phone });
     if (usr) {
       return res.status(200).json({ err: "Username already exists" });
     }
@@ -30,6 +31,9 @@ router.post("/register", async (req, res) => {
     }
     if (s) {
       return res.status(200).json({ err: "Sname already exists" });
+    }
+    if (n) {
+      return res.status(200).json({ err: "Phone Number already exists" });
     }
     const salt = await bcrypt.genSalt();
     const hash1 = await bcrypt.hash(req.body.Password, salt);
@@ -59,8 +63,16 @@ router.post("/register", async (req, res) => {
         from: '"Farmhaat" <akileshs917@gmail.com>',
         to: toemail,
         subject: "FARMHAAT REGISTRATION",
-        text: "Thanks for registering with us",
-        html: "<b>Thanks for registering with us</b>",
+        text: "Welcome to FARMHAAT!, we are so glad to have you as part of our growing community of over 10 lakh community  across India who use FARMHAAT to purchase organic manure. GET IT!! GROW IT!!! We can’t wait to have you onboard 😀",
+        html:
+          '<div style="font - family: Festive; max-width:500px; font-size: 40px margin-left">' +
+          "Welcome to FARMHAAT!!" +
+          '<div style="font - family: verdana; max-width:500px; font-size: 40px margin-left">' +
+          "<br/>  We can’t wait to have you onboard " +
+          '<div style="font - family: verdana; max-width:500px; font-size: 40px margin-left">' +
+          " <br/>we are so glad to have you as part of our growing community of over 10 lakh consumers  across India who use FARMHAAT to purchase organic manure." +
+          '<div style="font - family: verdana; max-width:500px; font-size: 40px margin-left">' +
+          " <br/> GET IT!! GROW IT!!! 🌱<br><br>",
       });
 
       console.log("Message sent: %s", info.messageId);
@@ -120,8 +132,10 @@ router.post("/investor", async (req, res) => {
         from: '"Farmhaat" <akileshs917@gmail.com>',
         to: toemails,
         subject: "FARMHAAT REQUESTING",
-        text: "we are glad that ",
-        // html: "<b>text1</b>",
+        text: "FARMHAAT, Welcomes you,Your plan to utilize resources is a great idea. Your wastes should be packed neatly and it should be ready before pickup. It will be picked up today!!",
+        html:
+          '<div style="font - family: Festive; max-width:500px; font-size: 40px margin-left">' +
+          "FARMHAAT, Welcomes you,<br/><br/>Your plan to utilize resources is a great idea<br/><br/>  PLease pack the wastes neatly and make  it ready before pickup. It will be picked up today!!",
       });
 
       console.log("Message sent: %s", infos.messageId);
@@ -161,7 +175,9 @@ router.post("/feedback", async (req, res) => {
       to: toemailc,
       subject: "FARMHAAT FEEDBACK",
       text: "Thanks for giving your Feedback",
-      html: "<b>Thanks for giving your Feedback</b>",
+      html:
+        '<div style="font - family: Festive; max-width:500px; font-size: 40px margin-left">' +
+        "Thanks for giving your Feedback!!!<br/><br/> FARMHAAT, Welcomes you always!!!.<br/><br/> Keep in Touch and continue shopping",
     });
 
     console.log("Message sent: %s", cinfo.messageId);
@@ -184,7 +200,7 @@ router.delete("/cart/:id", async (req, res) => {
     res.status(404).json("err:", err);
   }
 });
-router.delete("/cart", async (req, res) => {
+router.delete("/carts", async (req, res) => {
   cartform = await cart.deleteMany();
   res.status(200).json(cartform);
 });

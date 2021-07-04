@@ -34,7 +34,6 @@ function Cart() {
     console.log("filter", filterf);
     setarrowget(filterf);
   }, []);
-  var succes;
   var post = () => {
     if (paystatus) {
       arrowget.map(
@@ -43,7 +42,7 @@ function Cart() {
       );
 
       toast.success("Order placed!!");
-      axios.delete("http://localhost:2000/farmhaat/cart");
+      axios.delete("http://localhost:2000/farmhaat/carts");
       window.open("http://localhost:3000/Farmhaat/ordereditem", "_self");
     } else {
       toast.error("Please make your payment!!");
