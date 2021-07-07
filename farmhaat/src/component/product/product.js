@@ -59,7 +59,7 @@ function Product() {
       img: hydro,
     },
     {
-      name: "Moist clay balls ",
+      name: "Moist balls ",
       price: "450",
       img: moist,
     },
