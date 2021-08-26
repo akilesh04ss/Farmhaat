@@ -509,6 +509,11 @@ label #cancel {
   font-style: oblique;
   cursor: pointer;
 }
+.bar {
+  position: absolute;
+  bottom: 50%;
+  left: 1000px;
+}
 
 .we {
   font-size: 7ch;

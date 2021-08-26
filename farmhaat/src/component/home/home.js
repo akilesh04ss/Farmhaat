@@ -203,6 +203,7 @@ function Home() {
           2020 - 2021 Farmhaat Industry. Powered by Akilesh
         </p>
       </div>
+      <div></div>
     </div>
   );
 }
