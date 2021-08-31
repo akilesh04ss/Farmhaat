@@ -10,6 +10,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import logo from "../../assets/logonew.png";
 import bk from "../../assets/bk.gif";
 import cancel from "../../assets/more4.png";
+import { faUserLock } from "@fortawesome/free-solid-svg-icons";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { faUserCircle } from "@fortawesome/free-solid-svg-icons";
 import { faCartPlus } from "@fortawesome/free-solid-svg-icons";
@@ -20,14 +21,17 @@ import Cookies from "universal-cookie";
 function Home() {
   const cookies = new Cookies();
   var cookie = cookies.get("login");
-  var usercookie = cookies.get("user");
+  var admincheck = cookies.get("user") === "Akilesh" ? "/admin" : "/product";
+  var usercookie =
+    cookies.get("user") === "Akilesh" ? "Admin" : cookies.get("user");
   var cookieget = cookie === "true" ? "/product" : "/login";
   var cookieinvs = cookie === "true" ? "/investors" : "/login";
   var cookieabt = cookie === "true" ? "/about" : "/login";
   var cookiecart = cookie === "true" ? "/cart" : "/login";
   var cookiefeedback = cookie === "true" ? "/feedback" : "/login";
   var cookieorder = cookie === "true" ? "/ordereditem" : "/login";
-  var Cookielog = cookie === "true" ? "/" : "/login";
+  var Cookielog = cookie === "true" ? admincheck : "/login";
+
   const [clicked, setClicked] = useState(false);
   var fbclick = () => {
     setClicked(true);

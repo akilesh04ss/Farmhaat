@@ -72,6 +72,9 @@ function Ordereditem(props) {
   useEffect(() => {
     window.scroll(0, 0);
   }, []);
+  var clicki = () => {
+    window.open("https://forms.gle/XVmA9JfhMDD2MfiZ8", "_blank");
+  };
   var getcookie = cookies.get("user");
   const [id, setid] = useState(" ");
   const [arrowget1, setarrowget1] = useState([]);
@@ -251,6 +254,11 @@ function Ordereditem(props) {
             </Link>
           </nav>
         </div>
+      </div>
+      <div className="gfeedbackform">
+        <Link className="clicki" onClick={clicki}>
+          Can you help us to improve?
+        </Link>
       </div>
       <div className="oricontainer oricart">
         <table className="oritd">

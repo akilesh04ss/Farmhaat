@@ -239,7 +239,13 @@ td {
   margin-top: 50px;
   font-size: 17px;
 }
-
+.gfeedbackform > .clicki {
+  position: relative;
+  left: 1050px;
+  bottom: -20px;
+  text-decoration: none;
+  color: #111;
+}
 .oribri {
   font-family: "Times New Roman", Times, serif !important;
   font-style: italic;

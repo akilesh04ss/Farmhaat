@@ -11,6 +11,7 @@ import Ordereditem from "./component/ordered item/ordereditem";
 import Viewdetails from "./component/ordered item/viewdetails";
 import View from "./component/product/view";
 import Product from "./component/product/product";
+import Admin from "./component/admin/admin";
 function App() {
   return (
     <Router basename="/Farmhaat">
@@ -18,6 +19,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/about" component={About} />
+          <Route path="/admin" component={Admin} />
           <Route path="/product" component={Product} />
           <Route path="/investors" component={Investors} />
           <Route path="/feedback" component={Feedback} />

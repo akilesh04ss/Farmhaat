@@ -512,6 +512,12 @@ label #cancel {
 .bar {
   position: absolute;
   bottom: 50%;
+  border: 1px solid;
+  border-radius: 15px;
+  -webkit-box-shadow: 5px 5px 10px 7px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 5px 5px 10px 7px rgba(0, 0, 0, 1);
+  box-shadow: 5px 5px 10px 7px #000000;
+
   left: 1000px;
 }
 

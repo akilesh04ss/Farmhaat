@@ -1,0 +1,472 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Recursive:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Reggae+One&display=swap");
+
+.admin {
+  margin: 0;
+  padding: 0;
+  background: #c4fa15;
+
+  background: linear-gradient(50deg, #c4fa15 0%, #2ff47f 100%);
+
+  background: -webkit-linear-gradient(50deg, #c4fa15 0%, #2ff47f 100%);
+
+  background: -moz-linear-gradient(50deg, #c4fa15 0%, #2ff47f 100%);
+
+  background: -o-linear-gradient(50deg, #c4fa15 0%, #2ff47f 100%);
+
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='C4FA15', endColorstr='#2FF47F',GradientType=1 );
+
+  height: 2600px;
+}
+
+.admhead {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0px;
+  bottom: 10px;
+  background-color: #042331 !important;
+}
+
+.admlogo {
+  cursor: pointer;
+  position: relative;
+  left: 0px;
+  bottom: 0px;
+  border-radius: 50%;
+  border: 1px rgb(8, 238, 65) solid;
+}
+
+.admli,
+.admoc,
+.admco,
+.admo,
+.admoce,
+.admbutton1 {
+  font-family: "Times New Roman", Times, serif !important;
+  font-weight: bold;
+  font-size: 28px;
+  font-style: oblique !important;
+  color: bisque;
+  text-decoration: none;
+}
+.admheader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+}
+
+.admlin .admli {
+  list-style: none;
+  align-items: center;
+  display: inline-flex;
+  align-items: center;
+  padding: 0px 10px;
+}
+.admlin .admli .admoc,
+.admco,
+.admo,
+.admoce {
+  margin-right: 10px;
+  transition: all 0.3s ease 0s;
+}
+.admlin .admli .admco:hover,
+.admlin .admli .admo:hover,
+.admlin .admli .admoc:hover,
+.admlin .admli .admoce:hover {
+  color: greenyellow;
+}
+.admlin {
+  position: absolute;
+  left: 80px;
+  top: 15px;
+}
+.admlin > .admli > .admco::after {
+  content: "";
+  position: relative;
+  top: -15px;
+  display: inline-block !important;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s;
+}
+.admlin > .admli > .admco:hover::after {
+  width: 100%;
+  transition: width 0.3s;
+}
+.admlin > .admli > .admoc::after {
+  content: "";
+  position: relative;
+  left: 0px;
+  bottom: 15px;
+  display: inline-block;
+  width: 0%;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s;
+}
+.admlin > .admli > .admoc:hover::after {
+  width: 100%;
+  transition: width 0.3s;
+}
+
+.admlin > .admli > .admo::after {
+  content: "";
+  position: relative;
+  left: 0px;
+  bottom: 15px;
+  display: inline-block;
+  width: 0%;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s;
+}
+.admlin > .admli > .admo:hover::after {
+  width: 100%;
+  transition: width 0.3s;
+}
+.admlin > .admli > .admoce::after {
+  content: "";
+  position: relative;
+  left: 0px;
+  bottom: 15px;
+  display: inline-block;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s;
+}
+.admlin > .admli > .admoce:hover::after {
+  width: 100%;
+  transition: width 0.3s;
+}
+.admcta {
+  position: relative;
+  left: 00px;
+  bottom: -10px;
+}
+
+.admbutton1 {
+  margin: 0 15px;
+  padding: 9px 25px;
+  color: #21ebff;
+  text-decoration: none;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  font-size: 20px;
+  border: none;
+  overflow: hidden;
+  background: rgba(253, 249, 249, 0);
+  transition: 0.5s;
+}
+.admbutton1:hover {
+  background-color: #21ebff !important;
+  color: #111;
+  box-shadow: 0 0 50px #21ebff;
+  transition-delay: 0.5s;
+}
+.admbutton1::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  width: 10px;
+  height: 10px;
+  border-bottom: 2px solid #21ebff !important;
+  border-right: 2px solid #21ebff !important;
+  transition: 0.5s;
+}
+.admbutton1:hover:after {
+  width: 100%;
+  height: 100%;
+}
+.admbutton1::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #21ebff;
+  border-left: 2px solid #21ebff;
+  transition: 0.5s;
+}
+.admbutton1:hover:before {
+  width: 100%;
+  height: 100%;
+}
+.admbutton1 {
+  position: relative;
+  left: 0px;
+  bottom: 20px;
+}
+.admcontainer {
+  background-color: white;
+  height: 16.5%;
+  position: relative;
+  width: 65%;
+  left: 220px;
+  top: 60px;
+  border: 4px double black;
+}
+.admdesbox {
+  background-color: #f12020;
+  width: 10px;
+  height: 30px;
+  position: relative;
+  left: 30px;
+}
+.graph {
+  position: relative;
+  left: 400px;
+  bottom: 290px;
+  border: 2px solid red;
+}
+.admtotalord {
+  position: relative;
+  left: 30px;
+}
+.pie {
+  border: 2px solid black;
+  height: 60%;
+  width: 93%;
+  background-color: white;
+  position: relative;
+  top: 100px;
+  left: 50px;
+}
+.cust {
+  position: relative;
+  left: 600px;
+  top: 40px;
+  border: 2px solid white;
+  border-radius: 15px 50px;
+  -webkit-box-shadow: 5px 5px 10px 7px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 5px 5px 10px 7px rgba(0, 0, 0, 1);
+  box-shadow: 5px 5px 10px 7px rgba(0, 0, 0, 1);
+}
+.custo {
+  color: darkblue;
+  position: relative;
+  left: 70px;
+  top: 230px;
+  width: 50%;
+}
+.span1 {
+  color: #111;
+}
+.exp1 {
+  position: relative;
+  left: 100px;
+  width: 50%;
+  top: 250px;
+}
+.line1 {
+  background-color: grey;
+  width: 300px;
+  height: 03px;
+  position: relative;
+  left: 105px;
+  top: 240px;
+}
+.doughim {
+  position: relative;
+  left: 600px;
+  bottom: -40px;
+  border: 2px solid white;
+  border-radius: 15px 50px;
+  -webkit-box-shadow: 5px 5px 10px 7px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 5px 5px 10px 7px rgba(0, 0, 0, 1);
+  box-shadow: 5px 5px 10px 7px rgba(0, 0, 0, 1);
+}
+.dough1 {
+  color: darkblue;
+  position: relative;
+  left: 70px;
+  bottom: -230px;
+  width: 50%;
+}
+.span2 {
+  color: #111;
+}
+.exp2 {
+  position: relative;
+  left: 100px;
+  width: 50%;
+  bottom: -235px;
+}
+.line2 {
+  background-color: grey;
+  width: 300px;
+  height: 03px;
+  position: relative;
+  left: 100px;
+  bottom: -230px;
+}
+.colim {
+  position: relative;
+  left: 600px;
+  bottom: -30px;
+  border: 2px solid white;
+  border-radius: 15px 50px;
+  -webkit-box-shadow: 5px 5px 10px 7px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 5px 5px 10px 7px rgba(0, 0, 0, 1);
+  box-shadow: 5px 5px 10px 7px rgba(0, 0, 0, 1);
+}
+.col1 {
+  color: darkblue;
+  position: relative;
+  left: 70px;
+  bottom: -230px;
+  width: 50%;
+}
+.span3 {
+  color: #111;
+}
+.exp3 {
+  position: relative;
+  left: 100px;
+  width: 50%;
+  bottom: -245px;
+}
+.line3 {
+  background-color: grey;
+  width: 300px;
+  height: 03px;
+  position: relative;
+  left: 100px;
+  bottom: -240px;
+}
+.admfooter {
+  position: absolute;
+  bottom: -2000px;
+  width: 100%;
+  height: 320px;
+  line-height: 30px;
+  background: #111 !important;
+  color: #78fee0;
+  font-size: 20px !important;
+  font-style: italic;
+}
+.admmaincontent {
+  display: flex;
+}
+.admmaincontent .admbox {
+  flex-basis: 50%;
+  padding: 10px 50px;
+}
+.admmail {
+  position: relative;
+  left: 40px;
+  bottom: 30px;
+}
+.admemail > a {
+  color: #78fee0;
+  text-decoration: none;
+  font-size: 22px;
+}
+.admbox .admh2 {
+  font-size: 4ch;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.admcenter > .admaddress {
+  margin-bottom: 30px;
+  margin-left: 200px;
+}
+.admpho {
+  position: relative;
+  left: 10px;
+}
+.admleft > .admcontact {
+  margin-bottom: 40px;
+  margin-left: 130px;
+}
+.admbox .admcontent {
+  margin: 20px 0 0 0;
+}
+.admleft .admcontent {
+  text-align: justify;
+  margin-left: 50px;
+}
+.admleft .admcontent .admsocial {
+  margin: 0px 0 0 0;
+}
+.admleft .admcontent .admsocial .admsociala {
+  padding: 0 7px;
+}
+.admleft .admcontent .admsocial .admsociala .admsocialspan {
+  height: 40px;
+  width: 40px;
+  background: #1a1a1a !important;
+  line-height: 40px;
+  text-align: center;
+  font-size: 18px;
+  padding: 5px;
+  border-radius: 5px;
+  transition: 0.3s;
+  position: relative;
+  top: 0px;
+}
+
+.admleft .admcontent .admsocial .admsociala .admsocialspan:hover {
+  background: #f12020 !important;
+}
+.admbutton2 {
+  margin: 0 15px;
+  padding: 9px 25px;
+  color: #21ebff;
+  text-decoration: none;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  font-size: 20px;
+  border: none;
+  overflow: hidden !important;
+  transition: 0.5s;
+  background-color: #111;
+}
+.admbutton2:hover {
+  border: 1px #21ebff;
+  border-radius: 50px;
+  background-color: #21ebff !important;
+  color: #111;
+  box-shadow: 0 0 50px #21ebff;
+  transition-delay: 0.5s;
+}
+.admctas {
+  position: absolute;
+  top: 230px;
+  left: 530px;
+}
+.admright > .admquick {
+  font-size: 3ch;
+  margin-bottom: 30px;
+  text-transform: capitalize;
+  font-weight: 600 !important;
+  margin-left: 120px;
+}
+.admcontents .admrightul .admrightli {
+  margin-bottom: 10px;
+  margin-left: 120px;
+  font-weight: 600;
+  font-size: 20px !important;
+}
+.admcontents .admrightul .admrightli .admrighta {
+  font-weight: 600;
+  line-height: 30px;
+  font-size: 20px !important;
+  color: #78fee0 !important;
+  text-decoration: none;
+}
+
+.admcenter .admcontent .admplace {
+  line-height: 40px;
+  position: relative;
+  left: 150px;
+}
+.admcheck {
+  position: relative;
+  left: 20px;
+}
