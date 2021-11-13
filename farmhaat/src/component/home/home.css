@@ -11,7 +11,7 @@
 .background {
   position: absolute;
   width: 1366px;
-  height: 625px;
+  height: 657px;
   z-index: -1;
   opacity: 0.9;
   filter: blur(150%);
@@ -300,6 +300,7 @@
 
 .ul > .li {
   color: #fff;
+  list-style: none;
 }
 
 .sidebar > .ul .li:hover .ak {
@@ -340,7 +341,7 @@ label #btn {
 label #cancel {
   z-index: 1111;
   right: 50px;
-  top: 5px;
+  top: 25px;
   font-size: 30px;
   color: black;
   padding: 4px 9px;
@@ -369,7 +370,7 @@ label #cancel {
   padding: 0;
   display: flex;
   position: relative;
-  bottom: -410px;
+  bottom: -440px;
 }
 
 .soc > a {
@@ -443,7 +444,7 @@ label #cancel {
   letter-spacing: 5px;
   height: 80px;
   left: 90px;
-  top: 290px;
+  top: 310px;
   font-size: 4ch;
 }
 .btton3 {
@@ -502,7 +503,7 @@ label #cancel {
 }
 .btton3 {
   position: relative;
-  bottom: -170px;
+  bottom: -190px;
   left: 580px;
   font-family: "Times New Roman", Times, serif !important;
   font-weight: bold;

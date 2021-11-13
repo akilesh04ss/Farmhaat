@@ -7,7 +7,6 @@ const cart = require("./cartschema");
 const order = require("./orderschema");
 const bcrypt = require("bcrypt");
 var nodemailer = require("nodemailer");
-
 router.get("/register", async (req, res) => {
   var registerform = await register.find();
   res.status(200).json(registerform);
@@ -27,10 +26,10 @@ router.post("/register", async (req, res) => {
       return res.status(200).json({ err: "Email already exists" });
     }
     if (f) {
-      return res.status(200).json({ err: "Fname already exists" });
+      return res.status(200).json({ err: "First name already exists" });
     }
     if (s) {
-      return res.status(200).json({ err: "Sname already exists" });
+      return res.status(200).json({ err: "Second name already exists" });
     }
     if (n) {
       return res.status(200).json({ err: "Phone Number already exists" });
@@ -47,42 +46,11 @@ router.post("/register", async (req, res) => {
       Username: req.body.Username,
       Confirmpass: hash1,
     });
-    if (registerform) {
-      let testAccount = await nodemailer.createTestAccount();
-      var toemail = registerform.Email;
-      let transporter = nodemailer.createTransport({
-        host: "smtp.gmail.com",
-        port: 465,
-        secure: true,
-        auth: {
-          user: "akileshs917@gmail.com",
-          pass: "Akilesh@$&123",
-        },
-      });
-      let info = await transporter.sendMail({
-        from: '"Farmhaat" <akileshs917@gmail.com>',
-        to: toemail,
-        subject: "FARMHAAT REGISTRATION",
-        text: "Welcome to FARMHAAT!, we are so glad to have you as part of our growing community of over 10 lakh community  across India who use FARMHAAT to purchase organic manure. GET IT!! GROW IT!!! We can’t wait to have you onboard 😀",
-        html:
-          '<div style="font - family: Festive; max-width:500px; font-size: 40px margin-left">' +
-          "Welcome to FARMHAAT!!" +
-          '<div style="font - family: verdana; max-width:500px; font-size: 40px margin-left">' +
-          "<br/>  We can’t wait to have you onboard " +
-          '<div style="font - family: verdana; max-width:500px; font-size: 40px margin-left">' +
-          " <br/>we are so glad to have you as part of our growing community of over 10 lakh consumers  across India who use FARMHAAT to purchase organic manure." +
-          '<div style="font - family: verdana; max-width:500px; font-size: 40px margin-left">' +
-          " <br/> GET IT!! GROW IT!!! 🌱<br><br>",
-      });
-
-      console.log("Message sent: %s", info.messageId);
-    }
   } catch (err) {
     res.status(404).json();
     console.log(err);
   }
   res.status(200).json({ err: null });
-  res.status(200).json(registerform);
 });
 router.post("/login", async (req, res) => {
   console.log(req.body);
@@ -107,6 +75,7 @@ router.get("/investor", async (req, res) => {
   res.status(200).json(investorform);
 });
 router.post("/investor", async (req, res) => {
+  console.log(req.body);
   try {
     var investorform = await investor.create({
       Name: req.body.Name,
@@ -115,40 +84,10 @@ router.post("/investor", async (req, res) => {
       Description: req.body.Description,
       Wgt: req.body.Wgt,
     });
-    if (investorform) {
-      text1: investorform.Name, investorform.Wgt, "thanks";
-      let testAccount1 = await nodemailer.createTestAccount();
-      var toemails = investorform.Email;
-      let transporter1 = nodemailer.createTransport({
-        host: "smtp.gmail.com",
-        port: 465,
-        secure: true,
-        auth: {
-          user: "akileshs917@gmail.com",
-          pass: "Akilesh@$&123",
-        },
-      });
-      let infos = await transporter1.sendMail({
-        from: '"Farmhaat" <akileshs917@gmail.com>',
-        to: toemails,
-        subject: "FARMHAAT REQUESTING",
-        text: "FARMHAAT, Welcomes you,Your plan to utilize resources is a great idea. Your wastes should be packed neatly and it should be ready before pickup. It will be picked up today!!",
-        html:
-          '<div style="font - family: Festive; max-width:500px; font-size: 40px margin-left">' +
-          "FARMHAAT, Welcomes you,<br/><br/>Your plan to utilize resources is a great idea<br/><br/>  PLease pack the wastes neatly and make  it ready before pickup. It will be picked up today!!",
-      });
-
-      console.log("Message sent: %s", infos.messageId);
-    }
   } catch (err) {
     res.status(404).json(err);
   }
-  res.status(200).json(investorform);
   res.status(200).json({ err: null });
-});
-router.get("/feedback", async (req, res) => {
-  var feedbackform = await feedback.find();
-  res.status(200).json(feedbackform);
 });
 router.post("/feedback", async (req, res) => {
   console.log(req.body);
@@ -158,32 +97,7 @@ router.post("/feedback", async (req, res) => {
     Msg: req.body.Msg,
     Contact: req.body.Contact,
   });
-  if (feedbackform) {
-    let testAcccount = await nodemailer.createTestAccount();
-    var toemailc = feedbackform.Email;
-    let transporterc = nodemailer.createTransport({
-      host: "smtp.gmail.com",
-      port: 465,
-      secure: true,
-      auth: {
-        user: "akileshs917@gmail.com",
-        pass: "Akilesh@$&123",
-      },
-    });
-    let cinfo = await transporterc.sendMail({
-      from: '"Farmhaat" <akileshs917@gmail.com>',
-      to: toemailc,
-      subject: "FARMHAAT FEEDBACK",
-      text: "Thanks for giving your Feedback",
-      html:
-        '<div style="font - family: Festive; max-width:500px; font-size: 40px margin-left">' +
-        "Thanks for giving your Feedback!!!<br/><br/> FARMHAAT, Welcomes you always!!!.<br/><br/> Keep in Touch and continue shopping",
-    });
-
-    console.log("Message sent: %s", cinfo.messageId);
-  }
-
-  res.status(200).json(feedbackform);
+  res.status(200).json();
 });
 router.get("/cart", async (req, res) => {
   cartform = await cart.find();

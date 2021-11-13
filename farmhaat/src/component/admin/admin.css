@@ -204,7 +204,7 @@
 }
 .admcontainer {
   background-color: white;
-  height: 16.5%;
+  height: auto;
   position: relative;
   width: 65%;
   left: 220px;
@@ -234,7 +234,7 @@
   width: 93%;
   background-color: white;
   position: relative;
-  top: 100px;
+  top: 160px;
   left: 50px;
 }
 .cust {
@@ -469,4 +469,36 @@
 .admcheck {
   position: relative;
   left: 20px;
+}
+.admtable {
+  position: relative;
+  color: #111;
+  left: 50px;
+  bottom: 250px;
+  border-collapse: collapse;
+  width: 90%;
+}
+
+.admsno,
+.admit,
+.admquan,
+.admpr,
+.admtds,
+td {
+  border: 1px solid #dddddd;
+  text-align: center !important;
+  padding: 8px;
+}
+.admit {
+  padding: 15px;
+}
+.admquan {
+  padding: 6px !important;
+}
+
+.admtd {
+  padding-right: 105px !important;
+}
+.admdate {
+  padding-right: 50px;
 }

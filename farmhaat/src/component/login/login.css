@@ -1,7 +1,7 @@
 .logback {
   position: absolute;
   width: 1366px;
-  height: 625px;
+  height: 657px;
   z-index: -1;
   opacity: 0.9;
   filter: blur(150%);

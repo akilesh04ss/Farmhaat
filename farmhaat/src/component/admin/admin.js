@@ -30,10 +30,10 @@ function Admin() {
   var count;
   var getarray;
   useEffect(async () => {
-    getarray = await axios.get("http://localhost:2000/farmhaat/order");
+    var getarray = await axios.get("http://localhost:2000/farmhaat/order");
     var filtere = getarray.data;
-    console.log(filtere);
-    setid(getarray.data.length);
+    console.log("filtere", filtere);
+    setarrowget1(filtere);
   }, []);
 
   const [clicked, setClicked] = useState(false);
@@ -81,6 +81,20 @@ function Admin() {
       window.open("http://twitter.com", "_blank");
     }
   };
+
+  let i = 0;
+  var posti = arrowget1.map((get) => (
+    <tr>
+      <td className="admtd">{(i = i + 1)}</td>
+      <td className="admtd admdate">
+        {get.Order.slice(0, 10).split("-").reverse().join("-")}
+      </td>
+      <td className="admtd">{get.Name}</td>
+      <td className="admtd">{get.Quantity}</td>
+      <td className="admtd">{get.Quantity * get.Price}</td>
+    </tr>
+  ));
+
   return (
     <div className="admin">
       <div className="admhead">
@@ -126,6 +140,17 @@ function Admin() {
         <h3 className="admtotalord">New Pick-ups: {id + 6}</h3>
         <h3 className="admtotalord">Price(waste(Rs)/Kg): 20</h3>
         <img src={graph} className="graph" width="400px" />
+
+        <table className="admtable">
+          <tr>
+            <th className="admsno">S.No.</th>
+            <th className="admtds">Date</th>
+            <th className="admit">Item</th>
+            <th className="admquan">Quantity</th>
+            <th className="admpr">Price</th>
+          </tr>
+          {posti}
+        </table>
       </div>
       <div className="pie">
         <h2 className="custo">

@@ -32,11 +32,11 @@ function Register() {
       if (reg.data.err == "Email already exists") {
         toast.error("Email already exists");
       }
-      if (reg.data.err == "Fname already exists") {
-        toast.error("sname already exists");
+      if (reg.data.err == "First name already exists") {
+        toast.error("First name already exists");
       }
-      if (reg.data.err == "Sname already exists") {
-        toast.error("Sname already exists");
+      if (reg.data.err == "Second name already exists") {
+        toast.error("Second name already exists");
       }
       if (reg.data.err == "Phone Number already exists") {
         toast.error("Phone Number already exists");
