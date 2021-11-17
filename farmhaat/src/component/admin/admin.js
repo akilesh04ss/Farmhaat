@@ -17,6 +17,7 @@ import graph from "../../assets/Dashboard Visualizations_ Pie Chart.gif";
 import axios from "axios";
 function Admin() {
   const cookies = new Cookies();
+  const [search, setsearch] = useState("");
   useEffect(() => {
     window.scroll(0, 0);
   }, []);
@@ -27,8 +28,6 @@ function Admin() {
   var getcookie = cookies.get("user");
   const [id, setid] = useState(" ");
   const [arrowget1, setarrowget1] = useState([]);
-  var count;
-  var getarray;
   useEffect(async () => {
     var getarray = await axios.get("http://localhost:2000/farmhaat/order");
     var filtere = getarray.data;
@@ -82,10 +81,24 @@ function Admin() {
     }
   };
 
+  var itt = arrowget1.filter((it) => it.Name == search);
+  var lent = arrowget1.length;
+  console.log("itt", itt);
+  var items1;
+  var show = [];
+  let k = -1;
+  for (let j = lent; j <= lent && j >= lent - 5; j--) {
+    console.log(arrowget1[j]);
+    items1 = arrowget1[j];
+    show[(k += 1)] = items1;
+  }
+  show.splice(0, 1);
+  console.log(show, "items12", k);
+  let itemss = itt.length == 0 ? arrowget1 : itt;
   let i = 0;
-  var posti = arrowget1.map((get) => (
+  var posti = itemss.map((get) => (
     <tr>
-      <td className="admtd">{(i = i + 1)}</td>
+      <td className="admtd .admsn">{(i = i + 1)}</td>
       <td className="admtd admdate">
         {get.Order.slice(0, 10).split("-").reverse().join("-")}
       </td>
@@ -95,6 +108,17 @@ function Admin() {
     </tr>
   ));
 
+  var postii = itemss.map((get) => (
+    <tr>
+      <td className="admtd">{(i = i + 1)}</td>
+      <td className="admtd admdate">
+        {get.Order.slice(0, 10).split("-").reverse().join("-")}
+      </td>
+      <td className="admtda">{get.Name}</td>
+      <td className="admts">{get.Quantity}</td>
+      <td className="admtd">{get.Quantity * get.Price}</td>
+    </tr>
+  ));
   return (
     <div className="admin">
       <div className="admhead">
@@ -142,6 +166,10 @@ function Admin() {
         <img src={graph} className="graph" width="400px" />
 
         <table className="admtable">
+          <input
+            placeholder="search"
+            onChange={(e) => setsearch(e.target.value)}
+          />
           <tr>
             <th className="admsno">S.No.</th>
             <th className="admtds">Date</th>

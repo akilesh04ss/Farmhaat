@@ -7,6 +7,7 @@ const cart = require("./cartschema");
 const order = require("./orderschema");
 const bcrypt = require("bcrypt");
 var nodemailer = require("nodemailer");
+const sendmail = require("sendmail")();
 router.get("/register", async (req, res) => {
   var registerform = await register.find();
   res.status(200).json(registerform);
@@ -46,6 +47,18 @@ router.post("/register", async (req, res) => {
       Username: req.body.Username,
       Confirmpass: hash1,
     });
+    sendmail(
+      {
+        from: "no-reply@yourdomain.com",
+        to: req.body.Email,
+        subject: "test sendmail",
+        html: "Mail of test sendmail ",
+      },
+      function (err, reply) {
+        console.log(err && err.stack);
+        console.dir(reply);
+      }
+    );
   } catch (err) {
     res.status(404).json();
     console.log(err);

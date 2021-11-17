@@ -478,8 +478,12 @@
   border-collapse: collapse;
   width: 90%;
 }
-
-.admsno,
+.admit,
+.admquan,
+.admpr,
+.admtds {
+  padding: 8px;
+}
 .admit,
 .admquan,
 .admpr,
@@ -487,10 +491,18 @@
 td {
   border: 1px solid #dddddd;
   text-align: center !important;
-  padding: 8px;
 }
-.admit {
-  padding: 15px;
+.admsn,
+.admdate,
+.admta,
+.admtda,
+.admta {
+  padding: 8px;
+  padding-right: 50px;
+  text-align: center;
+}
+/* .admit {
+  padding: 28px;
 }
 .admquan {
   padding: 6px !important;
@@ -501,4 +513,11 @@ td {
 }
 .admdate {
   padding-right: 50px;
+  padding-left: 30px !important;
 }
+.admsno {
+  /* padding: -20px !important; */
+/* padding-left: 0px; */
+/* } */
+/* .admsno { */
+/* } */
