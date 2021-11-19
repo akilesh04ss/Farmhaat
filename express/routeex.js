@@ -47,18 +47,6 @@ router.post("/register", async (req, res) => {
       Username: req.body.Username,
       Confirmpass: hash1,
     });
-    sendmail(
-      {
-        from: "no-reply@yourdomain.com",
-        to: req.body.Email,
-        subject: "test sendmail",
-        html: "Mail of test sendmail ",
-      },
-      function (err, reply) {
-        console.log(err && err.stack);
-        console.dir(reply);
-      }
-    );
   } catch (err) {
     res.status(404).json();
     console.log(err);
@@ -76,6 +64,18 @@ router.post("/login", async (req, res) => {
     if (!validation) {
       return res.status(200).json({ err: "Password Incorrect" });
     }
+    // sendmail(
+    //   {
+    //     from: "akileshs917@gmail.com",
+    //     to: "akilesh04.ss@gmail.com",
+    //     subject: "test sendmail",
+    //     html: "Mail of test sendmail ",
+    //   },
+    //   function (err, reply) {
+    //     console.log(err && err.stack);
+    //     console.dir(reply);
+    //   }
+    // );
   } catch (err) {
     res.status(404).json(err);
   }

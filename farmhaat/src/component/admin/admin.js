@@ -25,16 +25,21 @@ function Admin() {
     cookies.set("login", "false");
     cookies.set("user", "User");
   };
+  const [date1, setdate1] = useState("");
   var getcookie = cookies.get("user");
-  const [id, setid] = useState(" ");
+  const [arrowget2, setarrowget2] = useState("");
   const [arrowget1, setarrowget1] = useState([]);
   useEffect(async () => {
+    var getarray1 = await axios.get("http://localhost:2000/farmhaat/investor");
+    var filtere1 = getarray1.data;
+    console.log("filtere", filtere1);
+    setarrowget2(filtere1);
     var getarray = await axios.get("http://localhost:2000/farmhaat/order");
     var filtere = getarray.data;
     console.log("filtere", filtere);
     setarrowget1(filtere);
   }, []);
-
+  const id = arrowget1.length;
   const [clicked, setClicked] = useState(false);
   var fbclick = () => {
     setClicked(true);
@@ -80,43 +85,79 @@ function Admin() {
       window.open("http://twitter.com", "_blank");
     }
   };
-
+  const [se, setse] = useState("");
+  const [dte, setdte] = useState("");
   var itt = arrowget1.filter((it) => it.Name == search);
+  var itt1 = arrowget1.filter((itm) => itm.Quantity == se);
+  var itt2 = arrowget1.filter((itm1) => itm1.Price == date1);
+  var itt3 = arrowget1.filter((itm2) => itm2.Wgt == dte);
+  console.log(itt3, "itt3");
   var lent = arrowget1.length;
-  console.log("itt", itt);
   var items1;
   var show = [];
   let k = -1;
-  for (let j = lent; j <= lent && j >= lent - 5; j--) {
-    console.log(arrowget1[j]);
+  for (let j = lent; j <= lent && j >= lent - 10; j--) {
     items1 = arrowget1[j];
     show[(k += 1)] = items1;
   }
   show.splice(0, 1);
-  console.log(show, "items12", k);
-  let itemss = itt.length == 0 ? arrowget1 : itt;
+  var lent1 = arrowget2.length;
+  var items2;
+  var show1 = [];
+  let k1 = -1;
+  for (let j1 = lent1; j1 <= lent1 && j1 >= lent1 - 10; j1--) {
+    items2 = arrowget2[j1];
+    show1[(k1 += 1)] = items2;
+  }
+  show1.splice(0, 1);
+  let itemss = itt.length == 0 ? show : itt;
   let i = 0;
   var posti = itemss.map((get) => (
     <tr>
-      <td className="admtd .admsn">{(i = i + 1)}</td>
+      <td className="admtd admsn">{(i = i + 1)}</td>
       <td className="admtd admdate">
         {get.Order.slice(0, 10).split("-").reverse().join("-")}
       </td>
-      <td className="admtd">{get.Name}</td>
+      <td className="admtd admite">{get.Name}</td>
       <td className="admtd">{get.Quantity}</td>
-      <td className="admtd">{get.Quantity * get.Price}</td>
+      <td className="admtd admprs">{get.Quantity * get.Price}</td>
     </tr>
   ));
-
-  var postii = itemss.map((get) => (
+  let m = 0;
+  let itemss1 = itt1.length == 0 ? show : itt1;
+  var postii = itemss1.map((get1) => (
     <tr>
-      <td className="admtd">{(i = i + 1)}</td>
+      <td className="admsn">{(m = m + 1)}</td>
       <td className="admtd admdate">
-        {get.Order.slice(0, 10).split("-").reverse().join("-")}
+        {get1.Order.slice(0, 10).split("-").reverse().join("-")}
       </td>
-      <td className="admtda">{get.Name}</td>
-      <td className="admts">{get.Quantity}</td>
-      <td className="admtd">{get.Quantity * get.Price}</td>
+      <td className="admtda">{get1.Name}</td>
+      <td className="admts">{get1.Quantity}</td>
+      <td className="admprs">{get1.Quantity * get1.Price}</td>
+    </tr>
+  ));
+  let o = 0;
+  let itemss3 = itt2.length == 0 ? show : itt2;
+  var postii3 = itemss3.map((get1) => (
+    <tr>
+      <td className="admsn">{(o = o + 1)}</td>
+      <td className="admtd admdate">
+        {get1.Order.slice(0, 10).split("-").reverse().join("-")}
+      </td>
+      <td className="admtda">{get1.Name}</td>
+      <td className="admts">{get1.Quantity}</td>
+      <td className="admprs">{get1.Quantity * get1.Price}</td>
+    </tr>
+  ));
+  let q = 0;
+  let itemss4 = itt3.length == 0 ? show1 : itt3;
+  console.log(itemss4, "it");
+  var postii4 = itemss3.map((get2) => (
+    <tr>
+      <td className="admsn">{(q = q + 1)}</td>
+      <td className="admtda">{get2.Name}</td>
+      <td className="admts">{get2.Wgt}</td>
+      <td className="admprs">{get2.Wgt * 20}</td>
     </tr>
   ));
   return (
@@ -158,28 +199,84 @@ function Admin() {
       <div className="admcontainer">
         <div className="admdesbox"></div>
         <h3 className="admtotalord">Total orders: {id}</h3>
-        <h3 className="admtotalord">New orders: {id - 12}</h3>
+        <h3 className="admtotalord">New orders: {id - 17}</h3>
         <h3 className="admtotalord">Delivered orders: {id - 8}</h3>
         <h3 className="admtotalord">Total Pick-ups: {id + 2}</h3>
         <h3 className="admtotalord">New Pick-ups: {id + 6}</h3>
         <h3 className="admtotalord">Price(waste(Rs)/Kg): 20</h3>
         <img src={graph} className="graph" width="400px" />
-
-        <table className="admtable">
-          <input
-            placeholder="search"
-            onChange={(e) => setsearch(e.target.value)}
-          />
-          <tr>
-            <th className="admsno">S.No.</th>
-            <th className="admtds">Date</th>
-            <th className="admit">Item</th>
-            <th className="admquan">Quantity</th>
-            <th className="admpr">Price</th>
-          </tr>
-          {posti}
-        </table>
       </div>
+      <div className="admsearch">
+        <h4 className="admitn">ITEM NAME:</h4>
+        <input
+          className="admsearch1"
+          placeholder="search"
+          onChange={(e) => setsearch(e.target.value)}
+        />
+      </div>
+      <table className="admtable">
+        <tr>
+          <th className="admsno">S.No.</th>
+          <th className="admtds">Date</th>
+          <th className="admit">Item</th>
+          <th className="admquan">Quantity</th>
+          <th className="admpr">Price</th>
+        </tr>
+        {posti}
+      </table>
+      <div className="admsearch">
+        <h4 className="admitn1">QUANTITY:</h4>
+        <input
+          className="admsearch1"
+          placeholder="search"
+          onChange={(e) => setse(e.target.value)}
+        />
+      </div>
+      <table className="admtable">
+        <tr>
+          <th className="admsno">S.No.</th>
+          <th className="admtds">Date</th>
+          <th className="admit">Item</th>
+          <th className="admquan">Quantity</th>
+          <th className="admpr">Price</th>
+        </tr>
+        {postii}
+      </table>
+      <div className="admsearch">
+        <h4 className="admitn2">PRICE:</h4>
+        <input
+          className="admsearch1"
+          placeholder="search"
+          onChange={(e) => setdate1(e.target.value)}
+        />
+      </div>
+      <table className="admtable">
+        <tr>
+          <th className="admsno">S.No.</th>
+          <th className="admtds">Date</th>
+          <th className="admit">Item</th>
+          <th className="admquan">Quantity</th>
+          <th className="admpr">Price</th>
+        </tr>
+        {postii3}
+      </table>
+      <div className="admsearch">
+        <h4 className="admitn2">WEIGHT:</h4>
+        <input
+          className="admsearch1"
+          placeholder="search"
+          onChange={(e) => setdte(e.target.value)}
+        />
+      </div>
+      <table className="admtable">
+        <tr>
+          <th className="admsno">S.No.</th>
+          <th className="admit">NAME</th>
+          <th className="admquan">Quantity</th>
+          <th className="admpr">Price</th>
+        </tr>
+        {postii4}
+      </table>
       <div className="pie">
         <h2 className="custo">
           <span className="span1">Old and New </span>customer's Ratings:

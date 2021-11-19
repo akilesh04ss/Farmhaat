@@ -17,7 +17,7 @@
 
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='C4FA15', endColorstr='#2FF47F',GradientType=1 );
 
-  height: 2600px;
+  height: 4200px;
 }
 
 .admhead {
@@ -204,7 +204,7 @@
 }
 .admcontainer {
   background-color: white;
-  height: auto;
+  height: 350px;
   position: relative;
   width: 65%;
   left: 220px;
@@ -230,11 +230,11 @@
 }
 .pie {
   border: 2px solid black;
-  height: 60%;
+  height: 1500px;
   width: 93%;
   background-color: white;
   position: relative;
-  top: 160px;
+  top: 100px;
   left: 50px;
 }
 .cust {
@@ -341,7 +341,7 @@
 }
 .admfooter {
   position: absolute;
-  bottom: -2000px;
+  bottom: -3800px;
   width: 100%;
   height: 320px;
   line-height: 30px;
@@ -472,52 +472,83 @@
 }
 .admtable {
   position: relative;
-  color: #111;
-  left: 50px;
-  bottom: 250px;
+  left: 330px;
+  bottom: -50px;
+  background-color: transparent;
+  width: 50%;
+  border: 1px solid black;
   border-collapse: collapse;
-  width: 90%;
 }
-.admit,
-.admquan,
-.admpr,
-.admtds {
-  padding: 8px;
+.admtable .admsno,
+.admtable .admit,
+.admtable .admtda,
+.admtable .admts,
+.admtable .admtds,
+.admtable .admquan,
+.admtable .admpr,
+.admtable .admprs,
+.admtable .admsn {
+  position: relative;
+  left: 0px;
+  border: 1px solid black;
+  /* background-color: #21ebff; */
 }
-.admit,
-.admquan,
-.admpr,
-.admtds,
-td {
-  border: 1px solid #dddddd;
-  text-align: center !important;
+.admtable .admts,
+.admtable .admtda {
+  position: relative;
+  left: 50px;
 }
-.admsn,
-.admdate,
-.admta,
-.admtda,
-.admta {
-  padding: 8px;
-  padding-right: 50px;
-  text-align: center;
+.admtable .admprs {
+  position: relative;
+  left: 20px;
 }
-/* .admit {
-  padding: 28px;
+.admtable .admsno,
+.admtable .admpr {
+  position: relative;
+  left: 0px;
 }
-.admquan {
-  padding: 6px !important;
+.admtable .admtd {
+  border: 1px solid black;
 }
-
-.admtd {
-  padding-right: 105px !important;
+.admprs {
+  position: relative;
+  left: 25px;
 }
-.admdate {
-  padding-right: 50px;
-  padding-left: 30px !important;
+.admtable .admsn {
+  position: relative;
+  left: 30px;
 }
-.admsno {
-  /* padding: -20px !important; */
-/* padding-left: 0px; */
-/* } */
-/* .admsno { */
-/* } */
+.admite {
+  position: relative;
+  left: 30px;
+}
+.admsn {
+  position: relative;
+  left: 20px;
+}
+.admsearch {
+  position: relative;
+  left: 600px;
+  bottom: -230px;
+  width: fit-content;
+}
+.admsearch1 {
+  position: relative;
+  bottom: 195px;
+  border: 1px solid black;
+  border-radius: 50px;
+  background-color: transparent !important;
+  width: fit-content;
+  height: 20px;
+}
+.admitn {
+  position: relative;
+  left: -110px;
+  bottom: 150px;
+}
+.admitn1,
+.admitn2 {
+  position: relative;
+  left: -100px;
+  bottom: 150px;
+}
