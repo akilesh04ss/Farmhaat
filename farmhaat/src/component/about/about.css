@@ -5,11 +5,9 @@
 .abtbackground {
   margin: 0;
   padding: 0;
-  background-image: linear-gradient(
-    to right,
-    #92fe9d 0%,
-    #00c9ff 100%
-  ) !important;
+  background-color: #74ebd5;
+  background-image: linear-gradient(90deg, #74ebd5 0%, #9face6 100%);
+
   height: 2000px;
 }
 

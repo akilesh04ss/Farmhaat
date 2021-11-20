@@ -16,6 +16,7 @@ import "./admin.css";
 import graph from "../../assets/Dashboard Visualizations_ Pie Chart.gif";
 import axios from "axios";
 function Admin() {
+  const [load, setload] = useState(true);
   const cookies = new Cookies();
   const [search, setsearch] = useState("");
   useEffect(() => {
@@ -27,27 +28,37 @@ function Admin() {
   };
   const [date1, setdate1] = useState("");
   var getcookie = cookies.get("user");
-  const [arrowget2, setarrowget2] = useState("");
+  const [clicked, setClicked] = useState(false);
+  const [arrowget2, setarrowget2] = useState([]);
+  const [whtsapp, setwhtsapp] = useState(false);
+  const [insta, setinsta] = useState(false);
   const [arrowget1, setarrowget1] = useState([]);
+  const [utbe, setutbe] = useState(false);
+  const [map, setmap] = useState(false);
+  const [twt, settwt] = useState(false);
+  const [se, setse] = useState("");
+  const [dte, setdte] = useState("");
   useEffect(async () => {
     var getarray1 = await axios.get("http://localhost:2000/farmhaat/investor");
     var filtere1 = getarray1.data;
-    console.log("filtere", filtere1);
+    console.log("filtere111", filtere1);
     setarrowget2(filtere1);
     var getarray = await axios.get("http://localhost:2000/farmhaat/order");
     var filtere = getarray.data;
     console.log("filtere", filtere);
     setarrowget1(filtere);
+    setload(false);
   }, []);
+  if (load) {
+    return <h1>Loading!!!!!</h1>;
+  }
   const id = arrowget1.length;
-  const [clicked, setClicked] = useState(false);
   var fbclick = () => {
     setClicked(true);
     if (clicked) {
       window.open("http://facebook.com", "_blank");
     }
   };
-  const [map, setmap] = useState(false);
   var locate = () => {
     setmap(true);
     if (map) {
@@ -57,107 +68,129 @@ function Admin() {
       );
     }
   };
-  const [insta, setinsta] = useState(false);
   var instafn = () => {
     setinsta(true);
     if (insta) {
       window.open("http://instagram.com", "_blank");
     }
   };
-  const [whtsapp, setwhtsapp] = useState(false);
   var whts = () => {
     setwhtsapp(true);
     if (whtsapp) {
       window.open("http://web.whatsapp.com", "_blank");
     }
   };
-  const [utbe, setutbe] = useState(false);
   var utube = () => {
     setutbe(true);
     if (utbe) {
       window.open("http://youtube.com", "_blank");
     }
   };
-  const [twt, settwt] = useState(false);
   var twit = () => {
     settwt(true);
     if (twt) {
       window.open("http://twitter.com", "_blank");
     }
   };
-  const [se, setse] = useState("");
-  const [dte, setdte] = useState("");
   var itt = arrowget1.filter((it) => it.Name == search);
   var itt1 = arrowget1.filter((itm) => itm.Quantity == se);
   var itt2 = arrowget1.filter((itm1) => itm1.Price == date1);
-  var itt3 = arrowget1.filter((itm2) => itm2.Wgt == dte);
+  var itt3 = arrowget2.filter((itm2) => itm2.Wgt == dte);
   console.log(itt3, "itt3");
   var lent = arrowget1.length;
+  console.log("l111", lent);
   var items1;
   var show = [];
   let k = -1;
-  for (let j = lent; j <= lent && j >= lent - 10; j--) {
+  for (let j = lent - 1; j <= lent && j >= lent - 10; j--) {
     items1 = arrowget1[j];
-    show[(k += 1)] = items1;
+    show.push(items1);
   }
-  show.splice(0, 1);
-  var lent1 = arrowget2.length;
+  console.log("arrowget1", arrowget1);
+  console.log("show ", show);
+  var lent1 = arrowget2.length - 1;
+  console.log("length", lent1);
   var items2;
   var show1 = [];
   let k1 = -1;
-  for (let j1 = lent1; j1 <= lent1 && j1 >= lent1 - 10; j1--) {
+  for (let j1 = lent1 - 1; j1 <= lent1 && j1 >= lent1 - 11; j1--) {
     items2 = arrowget2[j1];
-    show1[(k1 += 1)] = items2;
+    show1.push(items2);
   }
   show1.splice(0, 1);
   let itemss = itt.length == 0 ? show : itt;
+  if (itemss.length == 0) {
+    return <h1>Loading!!!</h1>;
+  }
   let i = 0;
+  var total2 = 0;
+  var quan2 = 0;
   var posti = itemss.map((get) => (
     <tr>
-      <td className="admtd admsn">{(i = i + 1)}</td>
+      <td className="admtd admsn1">{(i = i + 1)}</td>
       <td className="admtd admdate">
         {get.Order.slice(0, 10).split("-").reverse().join("-")}
       </td>
       <td className="admtd admite">{get.Name}</td>
-      <td className="admtd">{get.Quantity}</td>
-      <td className="admtd admprs">{get.Quantity * get.Price}</td>
+      <td className="admtd admqu">{get.Quantity}</td>
+      <td className="admtd admprs1">{get.Quantity * get.Price}</td>
+      {console.log(
+        (total2 = [Number(total2) + Number(get.Quantity * get.Price)])
+      )}
+      {console.log((quan2 = [Number(quan2) + Number(get.Quantity)]))}
     </tr>
   ));
   let m = 0;
+  var total1 = 0;
+  var quan1 = 0;
   let itemss1 = itt1.length == 0 ? show : itt1;
   var postii = itemss1.map((get1) => (
     <tr>
-      <td className="admsn">{(m = m + 1)}</td>
+      <td className="admsnom">{(m = m + 1)}</td>
       <td className="admtd admdate">
         {get1.Order.slice(0, 10).split("-").reverse().join("-")}
       </td>
       <td className="admtda">{get1.Name}</td>
       <td className="admts">{get1.Quantity}</td>
       <td className="admprs">{get1.Quantity * get1.Price}</td>
+      {console.log(
+        (total1 = [Number(total1) + Number(get1.Quantity * get1.Price)])
+      )}
+      {console.log((quan1 = [Number(quan1) + Number(get1.Quantity)]))}
     </tr>
   ));
   let o = 0;
+  var total4 = 0;
+  var quan4 = 0;
   let itemss3 = itt2.length == 0 ? show : itt2;
   var postii3 = itemss3.map((get1) => (
     <tr>
-      <td className="admsn">{(o = o + 1)}</td>
+      <td className="admsn2">{(o = o + 1)}</td>
       <td className="admtd admdate">
         {get1.Order.slice(0, 10).split("-").reverse().join("-")}
       </td>
       <td className="admtda">{get1.Name}</td>
       <td className="admts">{get1.Quantity}</td>
       <td className="admprs">{get1.Quantity * get1.Price}</td>
+      {console.log(
+        (total4 = [Number(total4) + Number(get1.Quantity * get1.Price)])
+      )}
+      {console.log((quan4 = [Number(quan4) + Number(get1.Quantity)]))}
     </tr>
   ));
   let q = 0;
+  var total3 = 0;
+  var quan3 = 0;
   let itemss4 = itt3.length == 0 ? show1 : itt3;
   console.log(itemss4, "it");
-  var postii4 = itemss3.map((get2) => (
+  var postii4 = itemss4.map((get2) => (
     <tr>
-      <td className="admsn">{(q = q + 1)}</td>
-      <td className="admtda">{get2.Name}</td>
-      <td className="admts">{get2.Wgt}</td>
-      <td className="admprs">{get2.Wgt * 20}</td>
+      <td className="admsn1">{(q = q + 1)}</td>
+      <td className="admtda1">{get2.Name}</td>
+      <td className="admts1">{get2.Wgt}</td>
+      <td className="admprs1">{get2.Wgt * 20}</td>
+      {console.log((total3 = [Number(total3) + Number(get2.Wgt * 20)]))}
+      {console.log((quan3 = [Number(quan3) + Number(get2.Wgt)]))}
     </tr>
   ));
   return (
@@ -223,6 +256,8 @@ function Admin() {
           <th className="admpr">Price</th>
         </tr>
         {posti}
+        <th className="admqwt">QUANTITY: {quan2}</th>
+        <th className="admvalue1">GRAND TOTAL: {total2}</th>
       </table>
       <div className="admsearch">
         <h4 className="admitn1">QUANTITY:</h4>
@@ -241,6 +276,8 @@ function Admin() {
           <th className="admpr">Price</th>
         </tr>
         {postii}
+        <th className="admqwt">QUANTITY: {quan1}</th>
+        <th className="admvalue1">GRAND TOTAL: {total1}</th>
       </table>
       <div className="admsearch">
         <h4 className="admitn2">PRICE:</h4>
@@ -259,6 +296,8 @@ function Admin() {
           <th className="admpr">Price</th>
         </tr>
         {postii3}
+        <th className="admqwt">QUANTITY: {quan4}</th>
+        <th className="admvalue1">GRAND TOTAL: {total4}</th>
       </table>
       <div className="admsearch">
         <h4 className="admitn2">WEIGHT:</h4>
@@ -276,6 +315,8 @@ function Admin() {
           <th className="admpr">Price</th>
         </tr>
         {postii4}
+        <th className="admqwt">QUANTITY: {quan3}</th>
+        <th className="admvalue1">GRAND TOTAL: {total3}</th>
       </table>
       <div className="pie">
         <h2 className="custo">

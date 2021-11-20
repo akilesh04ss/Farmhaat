@@ -17,7 +17,7 @@
 
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='C4FA15', endColorstr='#2FF47F',GradientType=1 );
 
-  height: 4200px;
+  height: 4300px;
 }
 
 .admhead {
@@ -341,7 +341,7 @@
 }
 .admfooter {
   position: absolute;
-  bottom: -3800px;
+  bottom: -3900px;
   width: 100%;
   height: 320px;
   line-height: 30px;
@@ -487,7 +487,9 @@
 .admtable .admquan,
 .admtable .admpr,
 .admtable .admprs,
-.admtable .admsn {
+.admtable .admsnom,
+.admtable .admtdas1,
+.admtable .admsn2 {
   position: relative;
   left: 0px;
   border: 1px solid black;
@@ -496,7 +498,11 @@
 .admtable .admts,
 .admtable .admtda {
   position: relative;
-  left: 50px;
+  left: 40px;
+}
+.admtable .admtda {
+  position: relative;
+  left: 20px;
 }
 .admtable .admprs {
   position: relative;
@@ -512,19 +518,27 @@
 }
 .admprs {
   position: relative;
-  left: 25px;
+  left: 10px !important;
 }
-.admtable .admsn {
+.admtable .admsnom {
   position: relative;
-  left: 30px;
+  left: 60px;
 }
 .admite {
   position: relative;
+  left: 20px;
+}
+.admqu {
+  position: relative;
   left: 30px;
 }
-.admsn {
+.admsnom {
   position: relative;
-  left: 20px;
+  left: 60px;
+}
+.admtable .admsn2 {
+  position: relative;
+  left: 60px;
 }
 .admsearch {
   position: relative;
@@ -551,4 +565,52 @@
   position: relative;
   left: -100px;
   bottom: 150px;
+}
+.admsn1,
+.admtda1,
+.admts1,
+.admprs1 {
+  position: relative;
+  left: 35px;
+  border: 1px solid black;
+}
+.admtda1,
+.admts1 {
+  position: relative;
+  left: 45px;
+}
+.admtda1 {
+  position: relative;
+  left: 100px;
+}
+.admqwt {
+  position: relative;
+  left: 100px;
+  width: fit-content;
+}
+.admvalue1 {
+  position: relative;
+  left: 200px;
+  width: fit-content;
+}
+.admsn1 {
+  position: relative;
+  left: 75px;
+}
+.admdate {
+  position: relative;
+  left: 70px;
+}
+.admtable .admprs1 {
+  position: relative;
+  left: 10px;
+}
+.admtdas1 {
+  position: relative;
+  left: 70px;
+  background-color: #042331;
+}
+.admts1 {
+  position: relative;
+  right: 50px;
 }
