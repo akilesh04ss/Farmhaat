@@ -17,11 +17,13 @@ import backy from "../../assets/organic.png";
 import Cookies from "universal-cookie";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+
 function Investors() {
   useEffect(() => {
     window.scroll(0, 0);
   }, []);
   const cookies = new Cookies();
+  var getcookie2 = cookies.get("user");
   var logouts = () => {
     cookies.set("login", "false");
     cookies.set("user", "User");
@@ -77,9 +79,13 @@ function Investors() {
       "http://localhost:2000/farmhaat/investor/",
       arrayform1
     );
-
-    if (invs.data.err == null) {
+    console.log(invs.data.err);
+    if (invs.data.err == "good") {
       toast.success("Requested for the Pickup!!");
+      toast.info(
+        "Your request has been accepted and it will be picked up today!!",
+        8000
+      );
     }
   };
 
@@ -89,10 +95,11 @@ function Investors() {
   const [weight, setweight] = useState("");
   const [material, setmaterial] = useState("");
   const [description, setdescription] = useState("");
+
   return (
     <div className="invbackground">
       <ToastContainer />
-      <img className="invimg2" src={backy} />
+      {/* <img className="invimg2" src={backy} /> */}
       <div className="invhead">
         <div className="invheader">
           <div className="invlj">

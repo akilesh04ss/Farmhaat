@@ -6,8 +6,8 @@ const feedback = require("./feedbackschema");
 const cart = require("./cartschema");
 const order = require("./orderschema");
 const bcrypt = require("bcrypt");
-var nodemailer = require("nodemailer");
-const sendmail = require("sendmail")();
+("use strict");
+const nodemailer = require("nodemailer");
 router.get("/register", async (req, res) => {
   var registerform = await register.find();
   res.status(200).json(registerform);
@@ -64,18 +64,6 @@ router.post("/login", async (req, res) => {
     if (!validation) {
       return res.status(200).json({ err: "Password Incorrect" });
     }
-    // sendmail(
-    //   {
-    //     from: "akileshs917@gmail.com",
-    //     to: "akilesh04.ss@gmail.com",
-    //     subject: "test sendmail",
-    //     html: "Mail of test sendmail ",
-    //   },
-    //   function (err, reply) {
-    //     console.log(err && err.stack);
-    //     console.dir(reply);
-    //   }
-    // );
   } catch (err) {
     res.status(404).json(err);
   }
@@ -100,7 +88,7 @@ router.post("/investor", async (req, res) => {
   } catch (err) {
     res.status(404).json(err);
   }
-  res.status(200).json({ err: null });
+  res.status(200).json({ err: "good" });
 });
 router.post("/feedback", async (req, res) => {
   console.log(req.body);
@@ -144,6 +132,7 @@ router.post("/cart", async (req, res) => {
     des4: req.body.des4,
     cartusr: req.body.cartusr,
   });
+
   res.status(200).json(cartform);
   console.log(req.body);
 });
@@ -167,4 +156,5 @@ router.post("/order", async (req, res) => {
   });
   res.status(200).json(orderform);
 });
+
 module.exports = router;

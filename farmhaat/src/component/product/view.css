@@ -5,11 +5,27 @@
 .viewchdiv {
   margin: 0;
   padding: 0;
-  background-image: linear-gradient(
-    to right,
-    #92fe9d 0%,
-    #00c9ff 100%
-  ) !important;
+  background: hsla(77, 93%, 57%, 1);
+
+  background: linear-gradient(
+    0deg,
+    hsla(77, 93%, 57%, 1) 10%,
+    hsla(0, 0%, 100%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    0deg,
+    hsla(77, 93%, 57%, 1) 10%,
+    hsla(0, 0%, 100%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    0deg,
+    hsla(77, 93%, 57%, 1) 10%,
+    hsla(0, 0%, 100%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#BEF72D", endColorstr="#FFFFFF", GradientType=1 );
   height: 1000px;
 }
 .viewlogo {

@@ -5,17 +5,27 @@
 .admin {
   margin: 0;
   padding: 0;
-  background: #c4fa15;
+  background: hsla(77, 93%, 57%, 1);
 
-  background: linear-gradient(50deg, #c4fa15 0%, #2ff47f 100%);
+  background: linear-gradient(
+    0deg,
+    hsla(77, 93%, 57%, 1) 10%,
+    hsla(0, 0%, 100%, 1) 100%
+  );
 
-  background: -webkit-linear-gradient(50deg, #c4fa15 0%, #2ff47f 100%);
+  background: -moz-linear-gradient(
+    0deg,
+    hsla(77, 93%, 57%, 1) 10%,
+    hsla(0, 0%, 100%, 1) 100%
+  );
 
-  background: -moz-linear-gradient(50deg, #c4fa15 0%, #2ff47f 100%);
+  background: -webkit-linear-gradient(
+    0deg,
+    hsla(77, 93%, 57%, 1) 10%,
+    hsla(0, 0%, 100%, 1) 100%
+  );
 
-  background: -o-linear-gradient(50deg, #c4fa15 0%, #2ff47f 100%);
-
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='C4FA15', endColorstr='#2FF47F',GradientType=1 );
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#BEF72D", endColorstr="#FFFFFF", GradientType=1 );
 
   height: 4300px;
 }
