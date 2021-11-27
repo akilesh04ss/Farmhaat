@@ -81,10 +81,10 @@ function Investors() {
     );
     console.log(invs.data.err);
     if (invs.data.err == "good") {
-      toast.success("Requested for the Pickup!!");
+      toast.success("Requested for the Pickup!!", 9000);
       toast.info(
         "Your request has been accepted and it will be picked up today!!",
-        8000
+        9000
       );
     }
   };

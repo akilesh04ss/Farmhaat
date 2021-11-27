@@ -113,7 +113,7 @@ function Admin() {
   var items2;
   var show1 = [];
   let k1 = -1;
-  for (let j1 = lent1 - 1; j1 <= lent1 && j1 >= lent1 - 11; j1--) {
+  for (let j1 = lent1 - 1; j1 <= lent1 && j1 >= lent1 - 7; j1--) {
     items2 = arrowget2[j1];
     show1.push(items2);
   }
@@ -183,6 +183,7 @@ function Admin() {
   var quan3 = 0;
   let itemss4 = itt3.length == 0 ? show1 : itt3;
   console.log(itemss4, "it");
+  console.log("final", itemss4);
   var postii4 = itemss4.map((get2) => (
     <tr>
       <td className="admsn1">{(q = q + 1)}</td>
@@ -232,7 +233,7 @@ function Admin() {
       <div className="admcontainer">
         <div className="admdesbox"></div>
         <h3 className="admtotalord">Total orders: {id}</h3>
-        <h3 className="admtotalord">New orders: {id - 17}</h3>
+        <h3 className="admtotalord">New orders: {id - 15}</h3>
         <h3 className="admtotalord">Delivered orders: {id - 8}</h3>
         <h3 className="admtotalord">Total Pick-ups: {id + 2}</h3>
         <h3 className="admtotalord">New Pick-ups: {id + 6}</h3>
